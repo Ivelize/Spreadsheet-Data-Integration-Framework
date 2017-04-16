@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<!-- definition of simple elements -->
+  <xs:element name="accession" type="xs:string"/>
+  <xs:element name="ef" type="xs:string"/>
+  <xs:element name="efv" type="xs:string"/>
+  <xs:element name="ensemblGeneId" type="xs:string"/>
+  <xs:element name="ensemblProteinId" type="xs:string"/>
+  <xs:element name="id" type="xs:string"/>
+  <xs:element name="name" type="xs:string"/>
+  <xs:element name="organism" type="xs:string"/>
+  <xs:element name="pvalue" type="xs:decimal"/>
+  <xs:element name="upExperiments" type="xs:integer" />
+  <xs:element name="downExperiments" type="xs:integer"/>
+  <xs:element name="nonDEExperiments" type="xs:integer" />
+  <xs:element name="upPvalue" type="xs:decimal" />
+  <xs:element name="downPvalue" type="xs:decimal" />
+
+
+<!-- definition of complex elements -->
+  <xs:element name="arrayexpress">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="results"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="ensemblProteinIds">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ensemblProteinId" maxOccurs="unbounded" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="experiment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="accession" />
+        <xs:element ref="pvalue" />
+        <xs:element name="expression" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="experiments">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="experiment" maxOccurs="unbounded" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="expression">
+    <xs:complexType mixed="true">
+      <xs:sequence>
+        <xs:element ref="ef" />
+        <xs:element ref="efv" />
+        <xs:element ref="experiments" />
+        <xs:element ref="upExperiments" />
+        <xs:element ref="downExperiments" />
+        <xs:element ref="nonDEExperiments" />
+        <xs:element ref="upPvalue" />
+        <xs:element ref="downPvalue" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="expressions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="expression" maxOccurs="unbounded" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="gene">
+    <xs:complexType mixed="true">
+      <xs:all>
+        <xs:element ref="id" />
+        <xs:element ref="name" />
+        <xs:element ref="ensemblProteinIds" minOccurs="0"/>
+        <xs:element ref="ensemblGeneId" />
+        <xs:element ref="organism" />
+      </xs:all>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="result">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="gene" />
+        <xs:element ref="expressions" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="results">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="result" maxOccurs="unbounded" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

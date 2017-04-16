@@ -1,0 +1,73 @@
+@relation biodiversityTest
+
+
+@attribute standard {DWCTaxon, DWCOccurrence}
+@attribute fields relational
+  @attribute f1 string
+  @attribute f2 string
+  @attribute f3 string
+  @attribute f4 string
+  @attribute f5 string
+@end fields
+
+
+@data
+DWCOccurrence,"sitename,altitude,date,phylum,class"
+DWCOccurrence,"sitename,altitude,date,phylum,class"
+DWCOccurrence,"sitename,altitude,date,phylum,class"
+DWCOccurrence,"locus,accession,nid,size,phylum"
+DWCOccurrence,"datelastmodified,institutioncode,collectioncode,catalognumber,scientificname"
+DWCOccurrence,"datelastmodified,institutioncode,collectioncode,catalognumber,scientificname"
+DWCOccurrence,"datelastmodified,institutioncode,collectioncode,catalognumber,scientificname"
+DWCTaxon,"kingdom,phylum,class,order,family"
+DWCTaxon,"lineage,complex,allnum,phylum,subphylum"
+DWCOccurrence,"datelastmodified,institutioncode,collectioncode,catalognumber,scientificname"
+DWCOccurrence,"colleventidcollector,enteredby,country,yearcollected,monthcollected"
+DWCOccurrence,"stationid,streamname,town,bensampid,repnum"
+DWCOccurrence,"season,county,trailname,groupname,boxnum"
+DWCTaxon,"taxonname,authority,phylumdivision,class,order"
+DWCOccurrence,"areaname,kingdom,phylum,class,order"
+DWCTaxon,"nameofgroup,commonname,examples,habitat,symmetrybodyplan"
+DWCTaxon,"datapublisher,dataset,datasetrights,scientificname,author"
+DWCOccurrence,"species,phylum,numberofindividuals,datecollected,cruise"
+DWCTaxon,"kingdom,phylum,class,order,family"
+DWCTaxon,"kingdom,phylum,class,order,superfamily"
+DWCTaxon,"kingdom,phylum,class,order,superfamily"
+DWCTaxon,"kingdom,phylum,class,order,superfamily"
+DWCTaxon,"specimennumber,phylum,class,order,family"
+DWCOccurrence,"park,family,scientificname,commonname,parkstatus"
+DWCOccurrence,"nomsilvestre,datelastmodified,institutioncode,collectioncode,catalognumber"
+DWCTaxon,"nombrecientfico,nombrescomunes,reino,phylum,clase"
+DWCTaxon,"taxonname,authority,phylumdivision,class,order"
+DWCTaxon,"scientificname,scientificnameauthor,kingdom,phylum,class"
+DWCOccurrence,"id,setor,biotopo,habitat,esecie"
+DWCTaxon,"kingdom,phylum,subphylum,class,organism"
+DWCTaxon,"grupo,phylum,clase,orden,familia"
+DWCTaxon,"phylum,higher,genus,taxon,iastype"
+DWCOccurrence,"siteid,date,time,sampleid,slideid"
+DWCOccurrence,"specimennumber,datediscovered,storage,tray,locality"
+DWCTaxon,"total,domain,kingdom,phylumdiv,class"
+DWCTaxon,"spcrecid,genre,espece,auteur,regne"
+DWCTaxon,"phylum,familia,especie,estacion1,profundidad"
+DWCOccurrence,"longitude,latitude,nomsilvestre,datelastmodified,institutioncode"
+DWCTaxon,"finalid,phylum,class,subclass,order"
+DWCTaxon,"family,genus,name,authority,commonname"
+DWCTaxon,"phylum,class,order,suborder,family"
+DWCTaxon,"picture,commonname,phylum,superclass,scientificname"
+DWCTaxon,"species,phylumdivision,class,order,assemblynameversionnumber"
+DWCTaxon,"phylum,subphylum,class,classauthor,subclass"
+DWCOccurrence,"sampleid,stationid,waterbody,location,latitude"
+DWCTaxon,"phylum,class,order,family,sf"
+DWCTaxon,"commonname,numberofsamplesininventory,taxonomicid,phylum,subphylum"
+DWCTaxon,"name,kingdom,phylum,class,order"
+DWCOccurrence,"stationid,phylum,class,order,family"
+DWCTaxon,"class,order,family,genusorspecies,specimens"
+DWCOccurrence,"datelastmodified,institutioncode,collectioncode,catalognumber,recordurl"
+DWCOccurrence,"datelastmodified,institutioncode,collectioncode,catalognumber,recordurl"
+DWCOccurrence,"site,dredge,bag,comment,distancedredgetowedinmeters"
+DWCOccurrence,"groupi,islname,region,latitude,longitude"
+DWCTaxon,"phylum,class,order,strain,abbreviation"
+DWCOccurrence,"nomsilvestre,datelastmodified,institutioncode,collectioncode,catalognumber"
+DWCOccurrence,"collectiondate,examiner,genus,species,subspeciesorvariety"
+DWCTaxon,"phylum,class,order,suborder,superfamily"
+DWCTaxon,"phylum,subphylum,class,order,suborder"

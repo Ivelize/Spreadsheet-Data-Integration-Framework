@@ -1,0 +1,6 @@
+select c.name, c.code
+from country c
+where c.code in
+(select c1.code
+from country c1, borders b
+where c1.code = b.country1);

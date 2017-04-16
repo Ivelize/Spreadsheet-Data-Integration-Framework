@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified">
+	
+	<xs:element name="Schemas">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element maxOccurs="unbounded" minOccurs="1"
+					ref="Schema" />
+			</xs:sequence> 
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name = "Schema">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="name"/>
+				<xs:element maxOccurs="1" minOccurs="1" ref = "ElementsToInclude"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name = "ElementsToInclude">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element maxOccurs="unbounded" minOccurs="0" ref="Table"/>
+				<xs:element maxOccurs="unbounded" minOccurs="0" ref="ComplexElement"/>	
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="Table">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="name"/>
+				<xs:element ref="include"/>
+				<xs:element maxOccurs="unbounded" minOccurs="0" ref="Column"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="Column">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="name"/>
+				<xs:element ref="include"/>
+			</xs:sequence>
+		</xs:complexType>	
+	</xs:element>
+	
+	<xs:element name="ComplexElement">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="name"/>
+				<xs:element ref="include"/>
+				<xs:element maxOccurs="unbounded" minOccurs="0" ref="ComplexElement"/>
+				<xs:element maxOccurs="unbounded" minOccurs="0" ref="SimpleElement"/>
+				<xs:element maxOccurs="unbounded" minOccurs="0" ref="Attribute"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="SimpleElement">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="name"/>
+				<xs:element ref="include"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="Attribute">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="name"/>
+				<xs:element ref="include"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="name" type="xs:string" />
+	<xs:element name="include" type = "xs:boolean" />
+
+</xs:schema>

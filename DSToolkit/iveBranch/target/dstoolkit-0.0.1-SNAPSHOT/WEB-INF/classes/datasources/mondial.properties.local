@@ -1,0 +1,6 @@
+databaseName = MondialLocal
+connectionURL = jdbc:postgresql://localhost/Mondial
+driverClass = org.postgresql.Driver
+username = postgres
+password = P0stGr8S3B
+description = MondialLocal

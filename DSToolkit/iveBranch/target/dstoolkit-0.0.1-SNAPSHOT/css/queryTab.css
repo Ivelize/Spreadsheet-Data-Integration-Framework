@@ -1,0 +1,187 @@
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * General tab setup
+ */
+h1 {
+	margin-top: 0.5em;
+	font-size: 1.8em;
+	font-weight: normal;
+	line-height: 1.6em;
+	color: #4E6CA3;
+	border-bottom: 1px solid #B0BED9;
+	clear: both;
+}
+
+#myDataspace #tabs #query_tab {
+	width: 100%;
+	height: 80%;
+	font: 100%/1.55em "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+	color: #333;
+	background-color: #fff;
+}
+
+#myDataspace #tabs #query_tab #tab_container {
+	width: 99%;
+	height:auto;
+	margin: 10px auto;
+	padding: 0;
+	float:left;
+	border:1px;
+}
+
+#myDataspace #tabs #query_tab #tab_container #queryTable_container {
+	width: 99%;
+	height: 400px;
+	margin: 1px auto;
+	padding: 0;
+	float:left;
+	border:1px;
+}
+
+#myDataspace #tabs #query_tab #tab_container #queryTable_container #queriesTable_container #queriesTable{
+	width: 99%;
+	height: auto;
+	margin: 1px;
+	padding: 0;
+	float:left;
+	border:1px;
+}
+
+#myDataspace #tabs #query_tab #tab_container #PrecisionAndRecallChooser{
+	width: 99%;
+	height: auto;
+	margin-top: 10px;
+	padding: 0;
+	float:left;
+	border:1px;
+}
+
+#myDataspace #tabs #query_tab #tab_container #PrecisionAndRecallChooser #queryButtons{
+	width: 99%;
+	height: auto;
+	margin-top: 0px;
+	padding: 0px;
+	float:right;
+	border:1px;
+}
+
+#myDataspace #tabs #query_tab #tab_container #PrecisionAndRecallChooser #PrecisionAndRecallSliders{
+	width: 99%;
+	height:auto;
+	margin: 0 auto;
+	padding: 0;
+	float:left;
+	border:1px;
+}
+
+#myDataspace #tabs #query_tab #tab_container #PrecisionAndRecallChooser #PrecisionAndRecallSliders #precisionAndRecallControls{
+	width: 80%;
+	height:auto;
+	margin: 0 auto;
+	padding: 0;
+	float:left;
+	border:1px;
+}
+
+#myDataspace #tabs #query_tab #tab_container #PrecisionAndRecallChooser #PrecisionAndRecallSliders #precisionAndRecallControls #precisionRecallSelector{
+	font-size: 1.2em;
+}
+
+#slider{
+	width: 150px;
+}
+
+#sliderValue{
+	width: 40px;
+}
+
+#addQuery{
+	width: 100px;
+	height: 30px;
+	float:right;
+	font-size: 0.9em;
+	margin-bottom: 10px;
+}
+
+#runQuery{
+	width: 100px;
+	height: 30px;
+	float:right;
+	font-size: 1.1em;
+}
+
+#myDataspace #tabs #query_tab #footer {
+	margin: 0px auto 0 auto;
+	padding: 0;
+}
+
+#myDataspace #tabs #query_tab #demo {
+	margin: 0px auto 0 auto;
+}
+
+#myDataspace #tabs #query_tab .demo_jui {
+	margin: 10px auto 0 auto;
+}
+
+#myDataspace #tabs #query_tab .big {
+	font-size: 1.1em;
+	font-weight: bold;
+	line-height: 1.6em;
+	color: #4E6CA3;
+}
+
+#myDataspace #tabs #query_tab #tab_container .spacer {
+	height: 50px;
+	clear: both;
+}
+
+#myDataspace #tabs #query_tab .clear {
+	clear: both;
+}
+
+#myDataspace #tabs #query_tab pre {
+	padding: 5px;
+	background-color: #F5F5F5;
+	border: 1px solid #CCCCCC;
+}
+
+#myDataspace #tabs #query_tab h1 {
+	margin-top: 0.5em;
+	font-size: 1.4em;
+	font-weight: normal;
+	line-height: 1.6em;
+	color: #4E6CA3;
+	border-bottom: 1px solid #B0BED9;
+	clear: both;
+}
+
+#myDataspace #tabs #query_tab h2 {
+	font-size: 1.3em;
+	font-weight: normal;
+	line-height: 1.6em;
+	color: #4E6CA3;
+	clear: both;
+}
+
+#myDataspace #tabs #query_tab a {
+	color: #0063DC;
+	text-decoration: none;
+}
+
+#myDataspace #tabs #query_tab a:hover {
+	text-decoration: underline;
+}
+
+#myDataspace #tabs #query_tab ul {
+	color: #B0BED9;
+}
+
+.css_right {
+	float: right;
+}
+
+.css_left {
+	float: left;
+}

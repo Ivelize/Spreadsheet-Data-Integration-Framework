@@ -1,0 +1,234 @@
+<?xml version="1.0"?>
+<RDFEntityTypes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="RDFSchema.xsd">
+  <!-- RDF Schema: mondial RDF (EU) -->
+  <RDFSchemaMetadata>
+    <NameSpace>=http://www.semwebtech.org/mondial/10/meta#</NameSpace>
+    <NameSpace>rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#</NameSpace>
+  </RDFSchemaMetadata>
+  <RDFEntityType rdftype="http://www.semwebtech.org/mondial/10/meta#Country">
+    <RDFEntityTypeName>Country</RDFEntityTypeName>
+    <SimpleAttrOfRDFEntityType namespace="http://www.semwebtech.org/mondial/10/meta#">gdpServ</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://www.semwebtech.org/mondial/10/meta#">gdpAgri</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://www.semwebtech.org/mondial/10/meta#">area</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://www.semwebtech.org/mondial/10/meta#">infantMortality</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://www.semwebtech.org/mondial/10/meta#">name</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://www.semwebtech.org/mondial/10/meta#">populationGrowth</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://www.semwebtech.org/mondial/10/meta#">gdpTotal</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://www.semwebtech.org/mondial/10/meta#">carCode</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://www.semwebtech.org/mondial/10/meta#">inflation</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://www.semwebtech.org/mondial/10/meta#">government</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://www.semwebtech.org/mondial/10/meta#">gdpInd</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://www.semwebtech.org/mondial/10/meta#">population</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://www.semwebtech.org/mondial/10/meta#">capital</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://www.semwebtech.org/mondial/10/meta#">isMember</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://www.semwebtech.org/mondial/10/meta#">hasProvince</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://www.semwebtech.org/mondial/10/meta#">neighbour</SimpleAttrOfRDFEntityType>
+    <RDFBinaryRelationshipType namespace="http://www.semwebtech.org/mondial/10/meta#">
+      <RDFRelationshipName>capital</RDFRelationshipName>
+      <FromRDFEntityType>Country</FromRDFEntityType>
+      <ToRDFEntityType>City</ToRDFEntityType>
+      <CardinalityRatio>1:1</CardinalityRatio>
+    </RDFBinaryRelationshipType>
+    <RDFBinaryRelationshipType namespace="http://www.semwebtech.org/mondial/10/meta#">
+      <RDFRelationshipName>isMember</RDFRelationshipName>
+      <FromRDFEntityType>Country</FromRDFEntityType>
+      <ToRDFEntityType>Organization</ToRDFEntityType>
+      <CardinalityRatio>N:M</CardinalityRatio>
+    </RDFBinaryRelationshipType>
+    <RDFBinaryRelationshipType namespace="http://www.semwebtech.org/mondial/10/meta#">
+      <RDFRelationshipName>hasProvince</RDFRelationshipName>
+      <FromRDFEntityType>Country</FromRDFEntityType>
+      <ToRDFEntityType>Province</ToRDFEntityType>
+      <CardinalityRatio>N:M</CardinalityRatio>
+    </RDFBinaryRelationshipType>
+    <RDFBinaryRelationshipType namespace="http://www.semwebtech.org/mondial/10/meta#">
+      <RDFRelationshipName>neighbor</RDFRelationshipName>
+      <FromRDFEntityType>Country</FromRDFEntityType>
+      <ToRDFEntityType>Country</ToRDFEntityType>
+      <CardinalityRatio>N:M</CardinalityRatio>
+    </RDFBinaryRelationshipType>
+  </RDFEntityType>
+  <RDFEntityType rdftype="http://www.semwebtech.org/mondial/10/meta#Lake">
+    <RDFEntityTypeName>Lake</RDFEntityTypeName>
+    <SimpleAttrOfRDFEntityType namespace="http://www.semwebtech.org/mondial/10/meta#">area</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://www.semwebtech.org/mondial/10/meta#">name</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://www.semwebtech.org/mondial/10/meta#">longitude</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://www.semwebtech.org/mondial/10/meta#">latitude</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://www.semwebtech.org/mondial/10/meta#">flowsInto</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://www.semwebtech.org/mondial/10/meta#">locatedIn</SimpleAttrOfRDFEntityType>
+    <RDFBinaryRelationshipType namespace="http://www.semwebtech.org/mondial/10/meta#">
+      <RDFRelationshipName>flowsInto</RDFRelationshipName>
+      <FromRDFEntityType>Lake</FromRDFEntityType>
+      <ToRDFEntityType>River</ToRDFEntityType>
+      <CardinalityRatio>1:1</CardinalityRatio>
+    </RDFBinaryRelationshipType>
+    <RDFBinaryRelationshipType namespace="http://www.semwebtech.org/mondial/10/meta#">
+      <RDFRelationshipName>locatedIn</RDFRelationshipName>
+      <FromRDFEntityType>Lake</FromRDFEntityType>
+      <ToRDFEntityType>Province</ToRDFEntityType>
+      <CardinalityRatio>N:M</CardinalityRatio>
+    </RDFBinaryRelationshipType>
+  </RDFEntityType>
+  <RDFEntityType rdftype="http://www.semwebtech.org/mondial/10/meta#City">
+    <RDFEntityTypeName>City</RDFEntityTypeName>
+    <SimpleAttrOfRDFEntityType namespace="http://www.semwebtech.org/mondial/10/meta#">name</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://www.semwebtech.org/mondial/10/meta#">longitude</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://www.semwebtech.org/mondial/10/meta#">latitude</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://www.semwebtech.org/mondial/10/meta#">cityIn</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://www.semwebtech.org/mondial/10/meta#">locatedOnIsland</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://www.semwebtech.org/mondial/10/meta#">locatedAt</SimpleAttrOfRDFEntityType>
+    <RDFBinaryRelationshipType namespace="http://www.semwebtech.org/mondial/10/meta#">
+      <RDFRelationshipName>cityIn</RDFRelationshipName>
+      <FromRDFEntityType>City</FromRDFEntityType>
+      <ToRDFEntityType>Country</ToRDFEntityType>
+      <CardinalityRatio>1:1</CardinalityRatio>
+    </RDFBinaryRelationshipType>
+    <RDFBinaryRelationshipType namespace="http://www.semwebtech.org/mondial/10/meta#">
+      <RDFRelationshipName>locatedOnIsland</RDFRelationshipName>
+      <FromRDFEntityType>City</FromRDFEntityType>
+      <ToRDFEntityType>Island</ToRDFEntityType>
+      <CardinalityRatio>1:1</CardinalityRatio>
+    </RDFBinaryRelationshipType>
+    <RDFBinaryRelationshipType namespace="http://www.semwebtech.org/mondial/10/meta#">
+      <RDFRelationshipName>locatedAt</RDFRelationshipName>
+      <FromRDFEntityType>City</FromRDFEntityType>
+      <ToRDFEntityType>Sea</ToRDFEntityType>
+      <CardinalityRatio>1:1</CardinalityRatio>
+    </RDFBinaryRelationshipType>
+  </RDFEntityType>
+  <RDFEntityType rdftype="http://www.semwebtech.org/mondial/10/meta#Island">
+    <RDFEntityTypeName>Island</RDFEntityTypeName>
+    <SimpleAttrOfRDFEntityType namespace="http://www.semwebtech.org/mondial/10/meta#">area</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://www.semwebtech.org/mondial/10/meta#">name</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://www.semwebtech.org/mondial/10/meta#">longitude</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://www.semwebtech.org/mondial/10/meta#">latitude</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://www.semwebtech.org/mondial/10/meta#">type</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://www.semwebtech.org/mondial/10/meta#">locatedInSea</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://www.semwebtech.org/mondial/10/meta#">locatedIn</SimpleAttrOfRDFEntityType>
+    <RDFBinaryRelationshipType namespace="http://www.semwebtech.org/mondial/10/meta#">
+      <RDFRelationshipName>locatedInSea</RDFRelationshipName>
+      <FromRDFEntityType>Island</FromRDFEntityType>
+      <ToRDFEntityType>Sea</ToRDFEntityType>
+      <CardinalityRatio>1:N</CardinalityRatio>
+    </RDFBinaryRelationshipType>
+    <RDFBinaryRelationshipType namespace="http://www.semwebtech.org/mondial/10/meta#">
+      <RDFRelationshipName>locatedIn</RDFRelationshipName>
+      <FromRDFEntityType>Island</FromRDFEntityType>
+      <ToRDFEntityType>Province</ToRDFEntityType>
+      <CardinalityRatio>N:M</CardinalityRatio>
+    </RDFBinaryRelationshipType>
+  </RDFEntityType>
+  <RDFEntityType rdftype="http://www.semwebtech.org/mondial/10/meta#Mountain">
+    <RDFEntityTypeName>Mountain</RDFEntityTypeName>
+    <SimpleAttrOfRDFEntityType namespace="http://www.semwebtech.org/mondial/10/meta#">height</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://www.semwebtech.org/mondial/10/meta#">name</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://www.semwebtech.org/mondial/10/meta#">longitude</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://www.semwebtech.org/mondial/10/meta#">latitude</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://www.semwebtech.org/mondial/10/meta#">locatedOnIsland</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://www.semwebtech.org/mondial/10/meta#">locatedIn</SimpleAttrOfRDFEntityType>
+    <RDFBinaryRelationshipType namespace="http://www.semwebtech.org/mondial/10/meta#">
+      <RDFRelationshipName>locatedOnIsland</RDFRelationshipName>
+      <FromRDFEntityType>Mountain</FromRDFEntityType>
+      <ToRDFEntityType>Island</ToRDFEntityType>
+      <CardinalityRatio>1:1</CardinalityRatio>
+    </RDFBinaryRelationshipType>
+    <RDFBinaryRelationshipType namespace="http://www.semwebtech.org/mondial/10/meta#">
+      <RDFRelationshipName>locatedIn</RDFRelationshipName>
+      <FromRDFEntityType>Mountain</FromRDFEntityType>
+      <ToRDFEntityType>Province</ToRDFEntityType>
+      <CardinalityRatio>N:M</CardinalityRatio>
+    </RDFBinaryRelationshipType>
+  </RDFEntityType>
+  <RDFEntityType rdftype="http://www.semwebtech.org/mondial/10/meta#River">
+    <RDFEntityTypeName>River</RDFEntityTypeName>
+    <SimpleAttrOfRDFEntityType namespace="http://www.semwebtech.org/mondial/10/meta#">area</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://www.semwebtech.org/mondial/10/meta#">name</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://www.semwebtech.org/mondial/10/meta#">length</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://www.semwebtech.org/mondial/10/meta#">hasEstuary</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://www.semwebtech.org/mondial/10/meta#">flowsInto</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://www.semwebtech.org/mondial/10/meta#">locatedIn</SimpleAttrOfRDFEntityType>
+    <RDFBinaryRelationshipType namespace="http://www.semwebtech.org/mondial/10/meta#">
+      <RDFRelationshipName>hasEstuary</RDFRelationshipName>
+      <FromRDFEntityType>River</FromRDFEntityType>
+      <ToRDFEntityType>Estuary</ToRDFEntityType>
+      <CardinalityRatio>1:1</CardinalityRatio>
+    </RDFBinaryRelationshipType>
+    <RDFBinaryRelationshipType namespace="http://www.semwebtech.org/mondial/10/meta#">
+      <RDFRelationshipName>flowsInto</RDFRelationshipName>
+      <FromRDFEntityType>River</FromRDFEntityType>
+      <ToRDFEntityType>River</ToRDFEntityType>
+      <CardinalityRatio>1:1</CardinalityRatio>
+    </RDFBinaryRelationshipType>
+    <RDFBinaryRelationshipType namespace="http://www.semwebtech.org/mondial/10/meta#">
+      <RDFRelationshipName>locatedIn</RDFRelationshipName>
+      <FromRDFEntityType>River</FromRDFEntityType>
+      <ToRDFEntityType>Province</ToRDFEntityType>
+      <CardinalityRatio>N:M</CardinalityRatio>
+    </RDFBinaryRelationshipType>
+  </RDFEntityType>
+  <RDFEntityType rdftype="http://www.semwebtech.org/mondial/10/meta#Source">
+    <RDFEntityTypeName>Source</RDFEntityTypeName>
+    <SimpleAttrOfRDFEntityType namespace="http://www.semwebtech.org/mondial/10/meta#">longitude</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://www.semwebtech.org/mondial/10/meta#">latitude</SimpleAttrOfRDFEntityType>
+  </RDFEntityType>
+  <RDFEntityType rdftype="http://www.semwebtech.org/mondial/10/meta#Organization">
+    <RDFEntityTypeName>Organization</RDFEntityTypeName>
+    <SimpleAttrOfRDFEntityType namespace="http://www.semwebtech.org/mondial/10/meta#">name</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://www.semwebtech.org/mondial/10/meta#">abbrev</SimpleAttrOfRDFEntityType>
+  </RDFEntityType>
+  <RDFEntityType rdftype="http://www.semwebtech.org/mondial/10/meta#Province">
+    <RDFEntityTypeName>Province</RDFEntityTypeName>
+    <SimpleAttrOfRDFEntityType namespace="http://www.semwebtech.org/mondial/10/meta#">name</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://www.semwebtech.org/mondial/10/meta#">population</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://www.semwebtech.org/mondial/10/meta#">capital</SimpleAttrOfRDFEntityType>
+    <RDFBinaryRelationshipType namespace="http://www.semwebtech.org/mondial/10/meta#">
+      <RDFRelationshipName>capital</RDFRelationshipName>
+      <FromRDFEntityType>Province</FromRDFEntityType>
+      <ToRDFEntityType>City</ToRDFEntityType>
+      <CardinalityRatio>1:1</CardinalityRatio>
+    </RDFBinaryRelationshipType>
+  </RDFEntityType>
+  <RDFEntityType rdftype="http://www.semwebtech.org/mondial/10/meta#Sea">
+    <RDFEntityTypeName>Sea</RDFEntityTypeName>
+    <SimpleAttrOfRDFEntityType namespace="http://www.semwebtech.org/mondial/10/meta#">name</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://www.semwebtech.org/mondial/10/meta#">depth</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://www.semwebtech.org/mondial/10/meta#">locatedIn</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://www.semwebtech.org/mondial/10/meta#">borders</SimpleAttrOfRDFEntityType>
+    <RDFBinaryRelationshipType namespace="http://www.semwebtech.org/mondial/10/meta#">
+      <RDFRelationshipName>locatedIn</RDFRelationshipName>
+      <FromRDFEntityType>Sea</FromRDFEntityType>
+      <ToRDFEntityType>Province</ToRDFEntityType>
+      <CardinalityRatio>N:M</CardinalityRatio>
+    </RDFBinaryRelationshipType>
+    <RDFBinaryRelationshipType namespace="http://www.semwebtech.org/mondial/10/meta#">
+      <RDFRelationshipName>borders</RDFRelationshipName>
+      <FromRDFEntityType>Sea</FromRDFEntityType>
+      <ToRDFEntityType>Sea</ToRDFEntityType>
+      <CardinalityRatio>N:M</CardinalityRatio>
+    </RDFBinaryRelationshipType>
+  </RDFEntityType>
+  <RDFEntityType rdftype="http://www.semwebtech.org/mondial/10/meta#Estuary">
+    <RDFEntityTypeName>Estuary</RDFEntityTypeName>
+    <SimpleAttrOfRDFEntityType namespace="http://www.semwebtech.org/mondial/10/meta#">longitude</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://www.semwebtech.org/mondial/10/meta#">latitude</SimpleAttrOfRDFEntityType>
+  </RDFEntityType>
+  <RDFEntityType rdftype="http://www.semwebtech.org/mondial/10/meta#Continent">
+    <RDFEntityTypeName>Continent</RDFEntityTypeName>
+    <SimpleAttrOfRDFEntityType namespace="http://www.semwebtech.org/mondial/10/meta#">area</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://www.semwebtech.org/mondial/10/meta#">name</SimpleAttrOfRDFEntityType>
+  </RDFEntityType>
+  <RDFEntityType rdftype="http://www.semwebtech.org/mondial/10/meta#Desert">
+    <RDFEntityTypeName>Desert</RDFEntityTypeName>
+    <SimpleAttrOfRDFEntityType namespace="http://www.semwebtech.org/mondial/10/meta#">area</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://www.semwebtech.org/mondial/10/meta#">name</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://www.semwebtech.org/mondial/10/meta#">longitude</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://www.semwebtech.org/mondial/10/meta#">latitude</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://www.semwebtech.org/mondial/10/meta#">locatedIn</SimpleAttrOfRDFEntityType>
+    <RDFBinaryRelationshipType namespace="http://www.semwebtech.org/mondial/10/meta#">
+      <RDFRelationshipName>locatedIn</RDFRelationshipName>
+      <FromRDFEntityType>Desert</FromRDFEntityType>
+      <ToRDFEntityType>Province</ToRDFEntityType>
+      <CardinalityRatio>1:1</CardinalityRatio>
+    </RDFBinaryRelationshipType>
+  </RDFEntityType>
+</RDFEntityTypes>

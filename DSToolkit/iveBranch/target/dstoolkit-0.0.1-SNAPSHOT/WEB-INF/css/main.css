@@ -1,0 +1,113 @@
+body {}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-weight: bold;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: .5em
+}
+
+
+h1 { font-size: 150%;}
+h2 { font-size: 140%;}
+h3 { font-size: 130%; }
+
+p, li, dd, dt, table{
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 120%;
+  text-align: left;
+  margin-top: .5em;
+  margin-bottom: 1em;
+  margin-left: .5em
+}
+
+/* ----- Uncomment the global selector below to over-ride the default margin and padding added to all tags  ----- */
+
+
+*{padding: 0; margin: 0;}
+
+/* ----- global default/initial styles ----- */
+body {background-color:#fff; margin: 20px; padding: 0;height:100%}
+
+/* ----- base default font size, type, and line height ----- */
+html body{font: 70.5%/1.4em Arial, Helvetica, sans-serif;color:#333333;}
+html>body{font: 70.5%/1.4em Arial, Helvetica, sans-serif;color:#333333;}
+html {height:100%}
+
+/* ----- add selectors here for font sizing ----- */
+.alert{font-size: 1.1em}
+p, table, ul, dl {font-size: 1.2em}
+code {font-size: 1.4em}
+h2 {font-size: 1.6em}
+
+/* ----- base links ----- */
+a:link {color: #CC6633;}
+a:visited {color: #CC6633;}
+a:hover {color: #999966;}
+a:active {color: #CC6633;}
+a:focus{color: #CC6633;}
+
+h2{padding-top:20px;}
+p {line-height:1.4em;margin-right:10px;}
+div.contentToChange p {margin:10px 30px 10px 30px;}
+ul li {display:inline}
+hr{margin:10px 0;}
+
+pre {
+border: 1px solid black;
+border-color: #BBB #DDD #DDD #BBB;
+margin:5px 10px 0 0;
+padding: 1em;
+line-height: 1.5;
+background: white;
+overflow: auto;
+display:none;
+}
+
+code{color:#000000}
+
+.javascript .comment {
+		color:#999999;
+	}
+
+	.javascript .string{
+		color:blue;
+	}
+
+	.javascript .keywords {
+		color:blue;
+		font-weight:bold;
+	}
+
+	.javascript .global {
+		color : #0000FF;
+	}
+
+	.javascript .brackets {
+		color:#FF0000;
+	}
+
+.changeP{
+	color: #FFFFFF;
+	border: 2px solid #CC6633;
+	position: absolute;
+	z-index: 1;
+	width: 150px;
+	left: 0px;
+	top: 0px;
+	background-color: #CC6633;
+	padding:10px;
+	line-height:1.4em;
+}
+.alert {
+	font-weight: bold;
+	color: #FFFFFF;
+	background-color: #FF0000;
+	padding: 10px;
+	text-transform:uppercase;
+}
+
+.addedtext{
+color:#FF0000;
+}

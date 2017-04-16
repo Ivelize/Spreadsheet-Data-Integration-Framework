@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+     	<mapping class="uk.ac.manchester.dstoolkit.domain.Dataspace"/>
+		<mapping class="uk.ac.manchester.dstoolkit.domain.DomainEntity"/>
+		
+		<mapping class="uk.ac.manchester.dstoolkit.domain.models.ModelManagementConstruct"/>
+		
+		<mapping class="uk.ac.manchester.dstoolkit.domain.annotation.Annotation"/>
+		<mapping class="uk.ac.manchester.dstoolkit.domain.annotation.OntologyTerm"/>
+		
+    	<mapping class="uk.ac.manchester.dstoolkit.domain.models.canonical.CanonicalModelConstruct"/>
+    	<mapping class="uk.ac.manchester.dstoolkit.domain.models.canonical.ParticipationOfCMCInSuperRelationship"/>
+    	<mapping class="uk.ac.manchester.dstoolkit.domain.models.canonical.SuperAbstract"/>
+    	<mapping class="uk.ac.manchester.dstoolkit.domain.models.canonical.SuperLexical"/>
+    	<mapping class="uk.ac.manchester.dstoolkit.domain.models.canonical.SuperRelationship"/>
+		
+		<mapping class="uk.ac.manchester.dstoolkit.domain.models.morphisms.Morphism"/>
+		
+		<mapping class="uk.ac.manchester.dstoolkit.domain.models.morphisms.mapping.Mapping"/>
+		
+    	<mapping class="uk.ac.manchester.dstoolkit.domain.models.morphisms.mapping.operators.MappingOperator"/>
+    	<mapping class="uk.ac.manchester.dstoolkit.domain.models.morphisms.mapping.operators.ReduceOperator"/>
+    	<mapping class="uk.ac.manchester.dstoolkit.domain.models.morphisms.mapping.operators.ScanOperator"/>
+    	<mapping class="uk.ac.manchester.dstoolkit.domain.models.morphisms.mapping.operators.RenameOperator"/>
+    	<mapping class="uk.ac.manchester.dstoolkit.domain.models.morphisms.mapping.operators.TypeCastOperator"/>
+    	<mapping class="uk.ac.manchester.dstoolkit.domain.models.morphisms.mapping.operators.JoinOperator"/>
+    	<mapping class="uk.ac.manchester.dstoolkit.domain.models.morphisms.mapping.operators.SetOperator"/>
+    	<mapping class="uk.ac.manchester.dstoolkit.domain.models.morphisms.mapping.operators.Predicate"/>
+    	
+    	<mapping class="uk.ac.manchester.dstoolkit.domain.models.morphisms.matching.Matching"/>
+    	<mapping class="uk.ac.manchester.dstoolkit.domain.models.morphisms.matching.OneToOneMatching"/>
+    	
+    	<mapping class="uk.ac.manchester.dstoolkit.domain.models.morphisms.schematiccorrespondence.SchematicCorrespondence"/>
+    	<mapping class="uk.ac.manchester.dstoolkit.domain.models.morphisms.schematiccorrespondence.Parameter"/>
+    	<mapping class="uk.ac.manchester.dstoolkit.domain.models.morphisms.schematiccorrespondence.ReconcilingExpression"/> 
+		
+		<mapping class="uk.ac.manchester.dstoolkit.domain.models.meta.Schema"/>
+    	<mapping class="uk.ac.manchester.dstoolkit.domain.models.meta.DataSource"/>
+		
+		<mapping class="uk.ac.manchester.dstoolkit.domain.models.query.Query"/>
+	
+		<mapping class="uk.ac.manchester.dstoolkit.domain.models.query.queryresults.QueryResult"/>
+		<mapping class="uk.ac.manchester.dstoolkit.domain.models.query.queryresults.ResultField"/>
+		<mapping class="uk.ac.manchester.dstoolkit.domain.models.query.queryresults.ResultType"/>
+		<mapping class="uk.ac.manchester.dstoolkit.domain.models.query.queryresults.ResultInstance"/>
+		<mapping class="uk.ac.manchester.dstoolkit.domain.models.query.queryresults.ResultValue"/>	
+		
+    	<mapping class="uk.ac.manchester.dstoolkit.domain.provenance.Provenance"/>
+    	<mapping class="uk.ac.manchester.dstoolkit.domain.provenance.SchematicCorrespondencesToMappingProvenance"/>
+		
+		<mapping class="uk.ac.manchester.dstoolkit.domain.user.User"/>
+		<mapping class="uk.ac.manchester.dstoolkit.domain.user.Role"/>
+   
+	</session-factory>
+</hibernate-configuration>

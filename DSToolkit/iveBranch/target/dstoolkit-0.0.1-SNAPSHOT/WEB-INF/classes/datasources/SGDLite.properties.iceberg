@@ -1,0 +1,6 @@
+databaseName = SGDLite
+connectionURL = jdbc:postgresql://iceberg.cs.man.ac.uk/SGDLite
+driverClass = org.postgresql.Driver
+username = postgres
+password = P0stGr8S3B
+description = SGDLite

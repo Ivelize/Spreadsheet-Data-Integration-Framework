@@ -1,0 +1,3 @@
+INDEX VERSION 1.126+D:\Dropbox\DSToolkit\.metadata\.plugins\org.eclipse.jdt.core
+3568093162.index
+1979496670.index

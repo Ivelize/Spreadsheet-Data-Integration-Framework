@@ -1,0 +1,7 @@
+SELECT c.name, c.code, c.population, t.name, t.population, p.government
+FROM country c, city t, politics p
+WHERE c.code = t.country
+AND p.country = c.code
+AND t.population > 1000000
+AND c.population > 50000000
+AND p.government = 'constitutional';

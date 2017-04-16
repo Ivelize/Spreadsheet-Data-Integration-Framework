@@ -1,0 +1,41 @@
+<!-- These are the results from building the contingency tables from the LOV sparql endpoint -->
+
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.0="x-ns://train.metadata/#" > 
+  <rdf:Description rdf:nodeID="A0">
+    <j.0:onEvidence>CSN</j.0:onEvidence>
+    <j.0:evidenceAndEqui rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">52</j.0:evidenceAndEqui>
+    <j.0:evidenceAndNonEqui rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2435</j.0:evidenceAndNonEqui>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A1">
+    <j.0:onEvidence>CSR</j.0:onEvidence>
+    <j.0:evidenceAndEqui rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</j.0:evidenceAndEqui>
+    <j.0:evidenceAndNonEqui rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</j.0:evidenceAndNonEqui>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A2">
+    <j.0:onEvidence>CSA</j.0:onEvidence>
+    <j.0:evidenceAndEqui rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22</j.0:evidenceAndEqui>
+    <j.0:evidenceAndNonEqui rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</j.0:evidenceAndNonEqui>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A3">
+    <j.0:onEvidence>CBSR</j.0:onEvidence>
+    <j.0:evidenceAndEqui rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</j.0:evidenceAndEqui>
+    <j.0:evidenceAndNonEqui rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</j.0:evidenceAndNonEqui>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A4">
+    <j.0:onEvidence>CEC</j.0:onEvidence>
+    <j.0:evidenceAndEqui rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">305</j.0:evidenceAndEqui>
+    <j.0:evidenceAndNonEqui rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</j.0:evidenceAndNonEqui>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A5">
+    <j.0:onEvidence>CSP</j.0:onEvidence>
+    <j.0:evidenceAndEqui rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">47</j.0:evidenceAndEqui>
+    <j.0:evidenceAndNonEqui rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1395</j.0:evidenceAndNonEqui>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A6">
+    <j.0:onEvidence>CEM</j.0:onEvidence>
+    <j.0:evidenceAndEqui rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">43</j.0:evidenceAndEqui>
+    <j.0:evidenceAndNonEqui rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</j.0:evidenceAndNonEqui>
+  </rdf:Description>
+</rdf:RDF>

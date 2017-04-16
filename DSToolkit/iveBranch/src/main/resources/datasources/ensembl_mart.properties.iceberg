@@ -1,0 +1,6 @@
+databaseName = EnsemblMart
+connectionURL = jdbc:mysql://iceberg.cs.man.ac.uk/ensembl_mart_57
+driverClass = com.mysql.jdbc.Driver
+username = root
+password = root
+description = EnsemblMart

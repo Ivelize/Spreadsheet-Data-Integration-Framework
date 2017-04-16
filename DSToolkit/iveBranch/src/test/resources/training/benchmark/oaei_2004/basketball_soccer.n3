@@ -1,0 +1,700 @@
+#Disclaimer: http://www.lockheedmartin.com/disclaimer.html
+#This is the "correct" mapping of the basketball and soccer ontologies. 
+
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/10/XMLSchema#> .
+@prefix dc: <http://www.dublincore.org/2003/03/24/dces#>.
+@prefix dct: <http://dublincore.org/2003/03/24/dcq#>.
+@prefix ao: <http://www.atl.lmco.com/projects/ontology/ontologies/core/alignment/Alignment.n3#>.
+
+@prefix a: <http://www.atl.lmco.com/projects/ontology/ontologies/basketball_soccer/basketball.daml#>.
+@prefix b: <http://www.atl.lmco.com/projects/ontology/ontologies/basketball_soccer/soccer.daml#>.
+@prefix : <http://www.atl.lmco.com/projects/ontology/ontologies/basketball_soccer/basketball_soccer.owl#>.
+
+<http://www.atl.lmco.com/projects/ontology/ontologies/core/alignment/basketball_soccer.owl>=<>;
+	a ao:AlignmentFile;
+	dc:title "Correct Alignment for basketball and soccer";
+	dc:publisher "Lockheed Martin Advanced Technology Laboratories";
+	dc:creator "Zhongli Ding, <zding1@umbc.edu>; Rong Pan, <pan.rong@umbc.edu>";
+	dct:created "2004-07-14";
+	owl:versionInfo "0.0.1";
+	dc:format"text/n3";
+	dc:language "en";
+	rdfs:label "basketball_soccer";
+	ao:inputA <http://www.atl.lmco.com/projects/ontology/ontologies/basketball_soccer/basketball.daml>;
+	ao:inputB <http://www.atl.lmco.com/projects/ontology/ontologies/basketball_soccer/soccer.daml>.
+
+:Alignment1
+	a ao:Alignment;
+	ao:elementA a:Action ;
+	ao:elementB b:Action ;
+	ao:alignmentConfidence "1". 
+
+:Alignment2
+	a ao:Alignment;
+	ao:elementA a:Match_action ;
+	ao:elementB b:Match_action ;
+	ao:alignmentConfidence "1". 
+
+:Alignment3
+	a ao:Alignment;
+	ao:elementA a:Begin ;
+	ao:elementB b:Begin ;
+	ao:alignmentConfidence "1". 
+
+:Alignment4
+	a ao:Alignment;
+	ao:elementA a:End ;
+	ao:elementB b:End ;
+	ao:alignmentConfidence "1". 
+
+:Alignment5
+	a ao:Alignment;
+	ao:elementA a:Offical_action ;
+	ao:elementB b:Offical_action ;
+	ao:alignmentConfidence "1". 
+
+:Alignment6
+	a ao:Alignment;
+	ao:elementA a:Referee_action ;
+	ao:elementB b:Referee_action ;
+	ao:alignmentConfidence "1". 
+
+:Alignment7
+	a ao:Alignment;
+	ao:elementA a:Drop_ball ;
+	ao:elementB b:Drop_ball ;
+	ao:alignmentConfidence "1". 
+
+:Alignment8
+	a ao:Alignment;
+	ao:elementA a:Give_Sanction ;
+	ao:elementB b:Give_Sanction ;
+	ao:alignmentConfidence "1". 
+
+:Alignment9
+	a ao:Alignment;
+	ao:elementA a:Whistle ;
+	ao:elementB b:Whistle ;
+	ao:alignmentConfidence "1". 
+
+:Alignment10
+	a ao:Alignment;
+	ao:elementA a:Player_Action ;
+	ao:elementB b:Player_Action ;
+	ao:alignmentConfidence "1". 
+
+:Alignment11
+	a ao:Alignment;
+	ao:elementA a:BeReplaced ;
+	ao:elementB b:BeReplaced ;
+	ao:alignmentConfidence "1". 
+
+:Alignment12
+	a ao:Alignment;
+	ao:elementA a:CounterAttack ;
+	ao:elementB b:Counter_attack ;
+	ao:alignmentConfidence "1". 
+
+:Alignment13
+	a ao:Alignment;
+	ao:elementA a:Dribble ;
+	ao:elementB b:Dribble ;
+	ao:alignmentConfidence "1". 
+
+:Alignment14
+	a ao:Alignment;
+	ao:elementA a:Feint ;
+	ao:elementB b:Feint ;
+	ao:alignmentConfidence "1". 
+
+:Alignment15
+	a ao:Alignment;
+	ao:elementA a:Hit ;
+	ao:elementB b:Hit ;
+	ao:alignmentConfidence "1". 
+
+:Alignment16
+	a ao:Alignment;
+	ao:elementA a:InfractionAction ;
+	ao:elementB b:Do_foul ;
+	ao:alignmentConfidence "1". 
+
+:Alignment17
+	a ao:Alignment;
+	ao:elementA a:FoulAction ;
+	ao:elementB b:Do_foul ;
+	ao:alignmentConfidence "1". 
+
+:Alignment18
+	a ao:Alignment;
+	ao:elementA a:Blocking ;
+	ao:elementB b:Block ;
+	ao:alignmentConfidence "1". 
+
+:Alignment19
+	a ao:Alignment;
+	ao:elementA a:Charging ;
+	ao:elementB b:Charge ;
+	ao:alignmentConfidence "1". 
+
+:Alignment20
+	a ao:Alignment;
+	ao:elementA a:Hacking ;
+	ao:elementB b:Hacking ;
+	ao:alignmentConfidence "1". 
+
+	
+:Alignment21
+	a ao:Alignment;
+	ao:elementA a:Mark ;
+	ao:elementB b:Marking ;
+	ao:alignmentConfidence "1". 
+
+:Alignment22
+	a ao:Alignment;
+	ao:elementA a:Pass ;
+	ao:elementB b:Pass ;
+	ao:alignmentConfidence "1". 
+
+:Alignment23
+	a ao:Alignment;
+	ao:elementA a:leadPass ;
+	ao:elementB b:Lead_pass ;
+	ao:alignmentConfidence "1". 
+
+:Alignment24
+	a ao:Alignment;
+	ao:elementA a:Score ;
+	ao:elementB b:Score ;
+	ao:alignmentConfidence "1". 
+
+:Alignment25
+	a ao:Alignment;
+	ao:elementA a:Shoot ;
+	ao:elementB b:Shoot ;
+	ao:alignmentConfidence "1". 
+
+:Alignment26
+	a ao:Alignment;
+	ao:elementA a:Steal ;
+	ao:elementB b:Steal ;
+	ao:alignmentConfidence "1". 
+
+:Alignment27
+	a ao:Alignment;
+	ao:elementA a:SpectatorAction ;
+	ao:elementB b:Spectator_action ;
+	ao:alignmentConfidence "1". 
+
+:Alignment28
+	a ao:Alignment;
+	ao:elementA a:Applaud ;
+	ao:elementB b:Applause ;
+	ao:alignmentConfidence "1". 
+
+:Alignment29
+	a ao:Alignment;
+	ao:elementA a:Boo ;
+	ao:elementB b:Boo ;
+	ao:alignmentConfidence "1". 
+
+:Alignment30
+	a ao:Alignment;
+	ao:elementA a:Cheer ;
+	ao:elementB b:Encourage ;
+	ao:alignmentConfidence "1". 
+
+:Alignment31
+	a ao:Alignment;
+	ao:elementA a:Yell ;
+	ao:elementB b:Shout ;
+	ao:alignmentConfidence "1". 
+
+:Alignment32
+	a ao:Alignment;
+	ao:elementA a:Attribute ;
+	ao:elementB b:Attribute ;
+	ao:alignmentConfidence "1". 
+
+:Alignment33
+	a ao:Alignment;
+	ao:elementA a:QualitativeAttribute ;
+	ao:elementB b:Qualitative_attribute ;
+	ao:alignmentConfidence "1". 
+
+:Alignment34
+	a ao:Alignment;
+	ao:elementA a:RuleAttribute ;
+	ao:elementB b:Soccer_rule_attribute ;
+	ao:alignmentConfidence "1". 
+
+:Alignment35
+	a ao:Alignment;
+	ao:elementA a:Entity ;
+	ao:elementB b:Entity ;
+	ao:alignmentConfidence "1". 
+
+:Alignment36
+	a ao:Alignment;
+	ao:elementA a:ActingEntity ;
+	ao:elementB b:Actor ;
+	ao:alignmentConfidence "1". 
+
+:Alignment37
+	a ao:Alignment;
+	ao:elementA a:Division ;
+	ao:elementB b:League ;
+	ao:alignmentConfidence "1". 
+
+:Alignment38
+	a ao:Alignment;
+	ao:elementA a:Match ;
+	ao:elementB b:Match ;
+	ao:alignmentConfidence "1". 
+
+:Alignment39
+	a ao:Alignment;
+	ao:elementA a:Object ;
+	ao:elementB b:Object ;
+	ao:alignmentConfidence "1". 
+
+:Alignment40
+	a ao:Alignment;
+	ao:elementA a:Audience ;
+	ao:elementB b:Audience ;
+	ao:alignmentConfidence "1". 
+
+:Alignment41
+	a ao:Alignment;
+	ao:elementA a:Ball ;
+	ao:elementB b:Ball ;
+	ao:alignmentConfidence "1". 
+
+:Alignment42
+	a ao:Alignment;
+	ao:elementA a:Net ;
+	ao:elementB b:Net ;
+	ao:alignmentConfidence "1". 
+
+:Alignment43
+	a ao:Alignment;
+	ao:elementA a:Team ;
+	ao:elementB b:Team ;
+	ao:alignmentConfidence "1". 
+
+:Alignment44
+	a ao:Alignment;
+	ao:elementA a:Oraganization ;
+	ao:elementB b:Oraganization ;
+	ao:alignmentConfidence "1". 
+
+:Alignment45
+	a ao:Alignment;
+	ao:elementA a:Person ;
+	ao:elementB b:Person ;
+	ao:alignmentConfidence "1". 
+
+:Alignment46
+	a ao:Alignment;
+	ao:elementA a:Offical ;
+	ao:elementB b:Offical ;
+	ao:alignmentConfidence "1". 
+
+:Alignment47
+	a ao:Alignment;
+	ao:elementA a:Referee ;
+	ao:elementB b:Referee ;
+	ao:alignmentConfidence "1". 
+
+:Alignment48
+	a ao:Alignment;
+	ao:elementA a:Player ;
+	ao:elementB b:Player ;
+	ao:alignmentConfidence "1". 
+
+:Alignment49
+	a ao:Alignment;
+	ao:elementA a:Court ;
+	ao:elementB b:Field ;
+	ao:alignmentConfidence "1". 
+
+:Alignment50
+	a ao:Alignment;
+	ao:elementA a:Substitute ;
+	ao:elementB b:Substitute ;
+	ao:alignmentConfidence "1". 
+
+:Alignment51
+	a ao:Alignment;
+	ao:elementA a:President ;
+	ao:elementB b:President ;
+	ao:alignmentConfidence "1". 
+
+:Alignment52
+	a ao:Alignment;
+	ao:elementA a:Spectator ;
+	ao:elementB b:Spectator ;
+	ao:alignmentConfidence "1". 
+
+:Alignment53
+	a ao:Alignment;
+	ao:elementA a:Coach ;
+	ao:elementB b:Trainer ;
+	ao:alignmentConfidence "1". 
+
+:Alignment54
+	a ao:Alignment;
+	ao:elementA a:Fan ;
+	ao:elementB b:Supporter ;
+	ao:alignmentConfidence "1". 
+
+:Alignment55
+	a ao:Alignment;
+	ao:elementA a:Speaker ;
+	ao:elementB b:Speaker ;
+	ao:alignmentConfidence "1". 
+
+:Alignment56
+	a ao:Alignment;
+	ao:elementA a:TVFan ;
+	ao:elementB b:TV-spectator ;
+	ao:alignmentConfidence "1". 
+
+:Alignment57
+	a ao:Alignment;
+	ao:elementA a:VIP ;
+	ao:elementB b:VIP ;
+	ao:alignmentConfidence "1". 
+
+:Alignment58
+	a ao:Alignment;
+	ao:elementA a:Tournament ;
+	ao:elementB b:Tournament ;
+	ao:alignmentConfidence "1". 
+
+:Alignment59
+	a ao:Alignment;
+	ao:elementA a:Place ;
+	ao:elementB b:Place ;
+	ao:alignmentConfidence "1". 
+
+:Alignment60
+	a ao:Alignment;
+	ao:elementA a:Area ;
+	ao:elementB b:Area ;
+	ao:alignmentConfidence "1". 
+
+:Alignment61
+	a ao:Alignment;
+	ao:elementA a:CornerArea ;
+	ao:elementB b:Corner_Area ;
+	ao:alignmentConfidence "1". 
+
+:Alignment62
+	a ao:Alignment;
+	ao:elementA a:Line ;
+	ao:elementB b:Line ;
+	ao:alignmentConfidence "1". 
+
+:Alignment63
+	a ao:Alignment;
+	ao:elementA a:CenterCircle ;
+	ao:elementB b:Center_Circle ;
+	ao:alignmentConfidence "1". 
+
+:Alignment64
+	a ao:Alignment;
+	ao:elementA a:CenterLine ;
+	ao:elementB b:Center_line ;
+	ao:alignmentConfidence "1". 
+
+:Alignment65
+	a ao:Alignment;
+	ao:elementA a:Point ;
+	ao:elementB b:Point ;
+	ao:alignmentConfidence "1". 
+
+:Alignment66
+	a ao:Alignment;
+	ao:elementA a:CenterPoint ;
+	ao:elementB b:Center_Spot ;
+	ao:alignmentConfidence "1". 
+
+:Alignment67
+	a ao:Alignment;
+	ao:elementA a:Sanction ;
+	ao:elementB b:Sanction ;
+	ao:alignmentConfidence "1". 
+
+:Alignment68
+	a ao:Alignment;
+	ao:elementA a:SendOut ;
+	ao:elementB b:Sending_off ;
+	ao:alignmentConfidence "1". 
+
+:Alignment69
+	a ao:Alignment;
+	ao:elementA a:Stoppage ;
+	ao:elementB b:Stoppage ;
+	ao:alignmentConfidence "1". 
+
+:Alignment70
+	a ao:Alignment;
+	ao:elementA a:InfractionMade ;
+	ao:elementB b:Fault ;
+	ao:alignmentConfidence "1". 
+
+:Alignment71
+	a ao:Alignment;
+	ao:elementA a:OutOfBounds ;
+	ao:elementB b:Out_of_bounds ;
+	ao:alignmentConfidence "1". 
+
+:Alignment72
+	a ao:Alignment;
+	ao:elementA a:Measure ;
+	ao:elementB b:Measure ;
+	ao:alignmentConfidence "1". 
+
+:Alignment73
+	a ao:Alignment;
+	ao:elementA a:Boolean-type ;
+	ao:elementB b:Boolean-type ;
+	ao:alignmentConfidence "1". 
+
+:Alignment74
+	a ao:Alignment;
+	ao:elementA a:False_value ;
+	ao:elementB b:False_value ;
+	ao:alignmentConfidence "1". 
+
+:Alignment75
+	a ao:Alignment;
+	ao:elementA a:True_value ;
+	ao:elementB b:True_value ;
+	ao:alignmentConfidence "1". 
+
+:Alignment76
+	a ao:Alignment;
+	ao:elementA a:integer-type ;
+	ao:elementB b:integer-type ;
+	ao:alignmentConfidence "1". 
+
+:Alignment77
+	a ao:Alignment;
+	ao:elementA a:Real-type ;
+	ao:elementB b:Real-type ;
+	ao:alignmentConfidence "1". 
+
+:Alignment78
+	a ao:Alignment;
+	ao:elementA a:Time ;
+	ao:elementB b:Time ;
+	ao:alignmentConfidence "1". 
+
+:Alignment79
+	a ao:Alignment;
+	ao:elementA a:Duration ;
+	ao:elementB b:Duration ;
+	ao:alignmentConfidence "1". 
+
+:Alignment80
+	a ao:Alignment;
+	ao:elementA a:Halftime ;
+	ao:elementB b:Halftime ;
+	ao:alignmentConfidence "1". 
+
+:Alignment81
+	a ao:Alignment;
+	ao:elementA a:Injury_time ;
+	ao:elementB b:Injury_time ;
+	ao:alignmentConfidence "1". 
+
+:Alignment82
+	a ao:Alignment;
+	ao:elementA a:Overtime ;
+	ao:elementB b:Overtime ;
+	ao:alignmentConfidence "1". 
+
+:Alignment83
+	a ao:Alignment;
+	ao:elementA a:Period ;
+	ao:elementB b:Period ;
+	ao:alignmentConfidence "1". 
+
+:Alignment84
+	a ao:Alignment;
+	ao:elementA a:Point_in_time ;
+	ao:elementB b:Point_in_time ;
+	ao:alignmentConfidence "1". 
+
+:Alignment85
+	a ao:Alignment;
+	ao:elementA a:End_Time ;
+	ao:elementB b:End_Time ;
+	ao:alignmentConfidence "1". 
+
+:Alignment86
+	a ao:Alignment;
+	ao:elementA a:Start_time ;
+	ao:elementB b:Start_time ;
+	ao:alignmentConfidence "1". 
+
+:Alignment87
+	a ao:Alignment;
+	ao:elementA a:object ;
+	ao:elementB b:object ;
+	ao:alignmentConfidence "1". 
+
+:Alignment88
+	a ao:Alignment;
+	ao:elementA a:user_specific ;
+	ao:elementB b:user_specific ;
+	ao:alignmentConfidence "1". 
+
+:Alignment89
+	a ao:Alignment;
+	ao:elementA a:agent ;
+	ao:elementB b:agent ;
+	ao:alignmentConfidence "1". 
+
+:Alignment90
+	a ao:Alignment;
+	ao:elementA a:ephemeral_instance ;
+	ao:elementB b:ephemeral_instance ;
+	ao:alignmentConfidence "1". 
+
+:Alignment91
+	a ao:Alignment;
+	ao:elementA a:match_date ;
+	ao:elementB b:match_date ;
+	ao:alignmentConfidence "1". 
+
+:Alignment92
+	a ao:Alignment;
+	ao:elementA a:match_first_team ;
+	ao:elementB b:match_first_team ;
+	ao:alignmentConfidence "1". 
+
+:Alignment93
+	a ao:Alignment;
+	ao:elementA a:match_hour ;
+	ao:elementB b:match_hour ;
+	ao:alignmentConfidence "1". 
+
+:Alignment94
+	a ao:Alignment;
+	ao:elementA a:match_name ;
+	ao:elementB b:match_name ;
+	ao:alignmentConfidence "1". 
+
+:Alignment95
+	a ao:Alignment;
+	ao:elementA a:match_referee ;
+	ao:elementB b:match_referee ;
+	ao:alignmentConfidence "1". 
+
+:Alignment96
+	a ao:Alignment;
+	ao:elementA a:match_second_team ;
+	ao:elementB b:match_second_team ;
+	ao:alignmentConfidence "1". 
+
+:Alignment97
+	a ao:Alignment;
+	ao:elementA a:match_tournament ;
+	ao:elementB b:match_tournament ;
+	ao:alignmentConfidence "1". 
+
+:Alignment98
+	a ao:Alignment;
+	ao:elementA a:match_town ;
+	ao:elementB b:match_town ;
+	ao:alignmentConfidence "1". 
+
+:Alignment99
+	a ao:Alignment;
+	ao:elementA a:aggregate ;
+	ao:elementB b:aggregate ;
+	ao:alignmentConfidence "1". 
+
+:Alignment100
+	a ao:Alignment;
+	ao:elementA a:name ;
+	ao:elementB b:name ;
+	ao:alignmentConfidence "1". 
+
+:Alignment101
+	a ao:Alignment;
+	ao:elementA a:team_substitute ;
+	ao:elementB b:team_substitute ;
+	ao:alignmentConfidence "1". 
+
+:Alignment102
+	a ao:Alignment;
+	ao:elementA a:team_trainer ;
+	ao:elementB b:team_trainer ;
+	ao:alignmentConfidence "1". 
+
+:Alignment103
+	a ao:Alignment;
+	ao:elementA a:supporter_colors ;
+	ao:elementB b:supporter_colors ;
+	ao:alignmentConfidence "1". 
+
+:Alignment104
+	a ao:Alignment;
+	ao:elementA a:team_supported ;
+	ao:elementB b:team_supported ;
+	ao:alignmentConfidence "1". 
+
+:Alignment105
+	a ao:Alignment;
+	ao:elementA a:height ;
+	ao:elementB b:height ;
+	ao:alignmentConfidence "1". 
+
+:Alignment106
+	a ao:Alignment;
+	ao:elementA a:national_team ;
+	ao:elementB b:national_team ;
+	ao:alignmentConfidence "1". 
+
+:Alignment107
+	a ao:Alignment;
+	ao:elementA a:weight ;
+	ao:elementB b:weight ;
+	ao:alignmentConfidence "1". 
+
+:Alignment108
+	a ao:Alignment;
+	ao:elementA a:date_of_birth ;
+	ao:elementB b:date_of_birth ;
+	ao:alignmentConfidence "1". 
+
+:Alignment109
+	a ao:Alignment;
+	ao:elementA a:club_president ;
+	ao:elementB b:club_president ;
+	ao:alignmentConfidence "1". 
+
+:Alignment110
+	a ao:Alignment;
+	ao:elementA a:nationality ;
+	ao:elementB b:nationality ;
+	ao:alignmentConfidence "1". 
+
+:Alignment111
+	a ao:Alignment;
+	ao:elementA a:forname ;
+	ao:elementB b:forname ;
+	ao:alignmentConfidence "1". 
+
+:Alignment112
+	a ao:Alignment;
+	ao:elementA a:Holding ;
+	ao:elementB b:Hold_opponent ;
+	ao:alignmentConfidence "1". 	

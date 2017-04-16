@@ -1,0 +1,57 @@
+<dataset>
+	
+	<Economy Country="D" GDP="1.4522e+06" Agriculture="1" Service="34.2" Industry="64.8" Inflation="0"/>
+	<Economy Country="DK" GDP="112800" Agriculture="3" Service="23.5" Industry="73.5" Inflation="2.4"/>
+	<Economy Country="GB" GDP="1.1384e+06" Agriculture="1.7" Service="27.7" Industry="70.6" Inflation="3.1"/>
+	<Economy Country="IRL" GDP="54600" Agriculture="6.8" Service="35.3" Industry="57.9" Inflation="2.8"/>
+	
+	<Population Country="D" Population_Growth="0.67" Infant_Mortality="6"/>
+	<Population Country="DK" Population_Growth="0.38" Infant_Mortality="4.8"/>
+	<Population Country="GB" Population_Growth="0.22" Infant_Mortality="6.4"/>
+	<Population Country="IRL" Population_Growth="-0.22" Infant_Mortality="6.4"/>
+	
+	<Politics Country="D" Independence="1871-01-18" Dependent="NA" Government="federal republic"/>
+	<Politics Country="DK" Independence="1000-01-01" Dependent="NA" Government="constitutional monarchy"/>
+	<Politics Country="GB" Independence="1801-01-01" Dependent="NA" Government="constitutional monarchy"/>	
+	<Politics Country="IRL" Independence="1921-12-06" Dependent="NA" Government="republic"/>
+
+	<Language Country="D" Name="German" Percentage="100"/>
+	
+	<Religion Country="D" Name="Protestant" Percentage="45"/>
+	<Religion Country="D" Name="Roman Catholic" Percentage="37"/>
+	<Religion Country="DK" Name="Protestant" Percentage="91"/>
+	<Religion Country="DK" Name="Roman Catholic" Percentage="2"/>
+	<Religion Country="IRL" Name="Anglican" Percentage="3"/>
+	<Religion Country="IRL" Name="Roman Catholic" Percentage="93"/>
+	
+	<EthnicGroup Country="D" Name="German" Percentage="95.1"/>
+	<EthnicGroup Country="D" Name="Greek" Percentage="0.4"/>
+	<EthnicGroup Country="D" Name="Italian" Percentage="0.7"/>
+	<EthnicGroup Country="D" Name="Polish" Percentage="0.4"/>
+	<EthnicGroup Country="D" Name="Turkish" Percentage="2.3"/>
+	<EthnicGroup Country="GB" Name="English" Percentage="81.5"/>
+	<EthnicGroup Country="GB" Name="Irish" Percentage="2.4"/>
+	<EthnicGroup Country="GB" Name="Scottish" Percentage="9.6"/>
+	<EthnicGroup Country="GB" Name="Ulster" Percentage="1.8"/>
+	<EthnicGroup Country="GB" Name="Welsh" Percentage="1.9"/>
+	
+	<Organization Abbreviation="C" Name="Commonwealth" City="London" Country="GB" Province="Greater London" Established="1931-12-31"/>
+	<Organization Abbreviation="EBRD" Name="European Bank for Reconstruction and Development" City="London" Country="GB" Province="Greater London" Established="1991-04-15"/>
+	<Organization Abbreviation="IMO" Name="International Maritime Organization" City="London" Country="GB" Province="Greater London" Established="1958-03-17"/>
+	<Organization Abbreviation="Inmarsat" Name="International Mobile Satellite Organization" City="London" Country="GB" Province="Greater London" Established="1976-09-03"/>
+	
+	<isMember Country="GB" Organization="C" Type="member"/>
+	<isMember Country="D" Organization="EBRD" Type="member"/>
+	<isMember Country="DK" Organization="EBRD" Type="member"/>
+	<isMember Country="GB" Organization="EBRD" Type="member"/>
+	<isMember Country="IRL" Organization="EBRD" Type="member"/>
+	<isMember Country="D" Organization="IMO" Type="member"/>
+	<isMember Country="DK" Organization="IMO" Type="member"/>
+	<isMember Country="GB" Organization="IMO" Type="member"/>
+	<isMember Country="IRL" Organization="IMO" Type="member"/>
+	<isMember Country="D" Organization="Inmarsat" Type="member"/>
+	<isMember Country="DK" Organization="Inmarsat" Type="member"/>
+	<isMember Country="GB" Organization="Inmarsat" Type="member"/>
+	
+</dataset>
+

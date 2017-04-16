@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+  <!-- This file runs every time a JUnit class is called -->
+  <!-- Add beans related to this category of test cases  -->
+  <!-- A beans allows the creation of a single instance of some class, this instance is stored as a been and
+  it can be reused within the application  -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns:context="http://www.springframework.org/schema/context"
+		xmlns:tx="http://www.springframework.org/schema/tx"
+		xmlns:aop="http://www.springframework.org/schema/aop"
+		xsi:schemaLocation="http://www.springframework.org/schema/beans
+							http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+							http://www.springframework.org/schema/tx
+           					http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+							http://www.springframework.org/schema/context
+           					http://www.springframework.org/schema/context/spring-context-2.5.xsd
+           					http://www.springframework.org/schema/aop
+           					http://www.springframework.org/schema/aop/spring-aop-2.5.xsd">
+          					
+	<context:property-placeholder location="classpath:META-INF/spring/**/*.properties"/>
+
+	<!-- The core application context -->
+	<!-- The following line points to the location META-INF as shown below to load the application-context.xml -->
+	<import resource="classpath:META-INF/spring/*.xml"/>
+	
+	<!-- Simulate part of the web application context -->
+	<context:component-scan base-package="uk.ac.manchester.dstoolkit.web" />  
+
+	<!-- Test matching Beans 
+	<bean id="match1" class="uk.ac.manchester.dstoolkit.service.impl.morphisms.matching.NGramMatcherServiceImpl">
+		<constructor-arg index="0">
+			<value>2</value>
+		</constructor-arg>
+	</bean>
+    -->  
+
+
+</beans>

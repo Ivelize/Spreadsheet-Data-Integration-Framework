@@ -1,0 +1,6 @@
+databaseName = BioIntegrationSchema
+connectionURL = jdbc:mysql://iceberg.cs.man.ac.uk/integration
+driverClass = com.mysql.jdbc.Driver
+username = root
+password = root
+description = BioIntegrationSchema

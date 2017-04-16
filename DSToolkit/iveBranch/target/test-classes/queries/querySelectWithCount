@@ -1,0 +1,5 @@
+SELECT COUNT(*)
+FROM country c, city t
+WHERE c.population > 1000000
+AND c.code = t.country
+AND c.code = "GB";

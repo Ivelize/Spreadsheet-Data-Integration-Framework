@@ -1,0 +1,3802 @@
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 9.1.14
+-- Dumped by pg_dump version 9.1.14
+-- Started on 2015-05-29 14:57:23
+
+SET statement_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SET check_function_bodies = false;
+SET client_min_messages = warning;
+
+--
+-- TOC entry 220 (class 3079 OID 11639)
+-- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: 
+--
+
+CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
+
+
+--
+-- TOC entry 2408 (class 0 OID 0)
+-- Dependencies: 220
+-- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: 
+--
+
+COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
+
+
+SET search_path = public, pg_catalog;
+
+SET default_tablespace = '';
+
+SET default_with_oids = false;
+
+--
+-- TOC entry 162 (class 1259 OID 238342)
+-- Dependencies: 6
+-- Name: annotation_annotated_constructs; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE annotation_annotated_constructs (
+    annotation_id bigint NOT NULL,
+    annotated_construct_id bigint NOT NULL
+);
+
+
+ALTER TABLE public.annotation_annotated_constructs OWNER TO postgres;
+
+--
+-- TOC entry 163 (class 1259 OID 238347)
+-- Dependencies: 6
+-- Name: annotation_constraining_constructs; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE annotation_constraining_constructs (
+    annotation_id bigint NOT NULL,
+    constraining_construct_id bigint NOT NULL
+);
+
+
+ALTER TABLE public.annotation_constraining_constructs OWNER TO postgres;
+
+--
+-- TOC entry 161 (class 1259 OID 238337)
+-- Dependencies: 6
+-- Name: annotations; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE annotations (
+    id bigint NOT NULL,
+    obj_version integer,
+    "timestamp" time without time zone,
+    annotation_value character varying(255) NOT NULL,
+    annotation_ontology_term_id bigint,
+    annotation_user_id bigint
+);
+
+
+ALTER TABLE public.annotations OWNER TO postgres;
+
+--
+-- TOC entry 164 (class 1259 OID 238352)
+-- Dependencies: 6
+-- Name: constructs_morphisms; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE constructs_morphisms (
+    construct_id bigint NOT NULL,
+    morphism_id bigint NOT NULL
+);
+
+
+ALTER TABLE public.constructs_morphisms OWNER TO postgres;
+
+--
+-- TOC entry 165 (class 1259 OID 238357)
+-- Dependencies: 6
+-- Name: datasources; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE datasources (
+    id bigint NOT NULL,
+    obj_version integer,
+    construct_is_user_specified boolean,
+    mmc_dataspace_id bigint,
+    connection_url character varying(255) NOT NULL,
+    description character varying(255),
+    driver_class character varying(255),
+    is_rdf character varying(255),
+    data_source_name character varying(255),
+    password character varying(255),
+    schema_url character varying(255),
+    sparql_url character varying(255),
+    user_name character varying(255)
+);
+
+
+ALTER TABLE public.datasources OWNER TO postgres;
+
+--
+-- TOC entry 167 (class 1259 OID 238370)
+-- Dependencies: 6
+-- Name: dataspace_datasources; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE dataspace_datasources (
+    dataspace_id bigint NOT NULL,
+    datasource_id bigint NOT NULL
+);
+
+
+ALTER TABLE public.dataspace_datasources OWNER TO postgres;
+
+--
+-- TOC entry 168 (class 1259 OID 238375)
+-- Dependencies: 6
+-- Name: dataspace_schemas; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE dataspace_schemas (
+    dataspace_id bigint NOT NULL,
+    schema_id bigint NOT NULL
+);
+
+
+ALTER TABLE public.dataspace_schemas OWNER TO postgres;
+
+--
+-- TOC entry 169 (class 1259 OID 238380)
+-- Dependencies: 6
+-- Name: dataspace_users; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE dataspace_users (
+    dataspace_id bigint NOT NULL,
+    user_id bigint NOT NULL
+);
+
+
+ALTER TABLE public.dataspace_users OWNER TO postgres;
+
+--
+-- TOC entry 166 (class 1259 OID 238365)
+-- Dependencies: 6
+-- Name: dataspaces; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE dataspaces (
+    id bigint NOT NULL,
+    obj_version integer,
+    dataspace_name character varying(255)
+);
+
+
+ALTER TABLE public.dataspaces OWNER TO postgres;
+
+--
+-- TOC entry 219 (class 1259 OID 239303)
+-- Dependencies: 6
+-- Name: hibernate_sequence; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE hibernate_sequence
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.hibernate_sequence OWNER TO postgres;
+
+--
+-- TOC entry 170 (class 1259 OID 238385)
+-- Dependencies: 6
+-- Name: joinoperator; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE joinoperator (
+    id bigint NOT NULL,
+    obj_version integer,
+    construct_is_user_specified boolean,
+    mmc_dataspace_id bigint,
+    mapping_operator_and_or character varying(255),
+    mapping_operator_variable_name character varying(255),
+    mapping_operator_data_source_id bigint,
+    mapping_operator_lhs_input_operator_id bigint,
+    mapping_operator_mapping_id bigint,
+    reconcilingexpression_id bigint,
+    mapping_operator_result_type_id bigint,
+    mapping_operator_rhs_input_operator_id bigint
+);
+
+
+ALTER TABLE public.joinoperator OWNER TO postgres;
+
+--
+-- TOC entry 171 (class 1259 OID 238393)
+-- Dependencies: 6
+-- Name: kernel_density_estimators; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE kernel_density_estimators (
+    id bigint NOT NULL,
+    obj_version integer,
+    estimator_name character varying(255) NOT NULL,
+    kernel_smoothing double precision,
+    estimator_is_bounded boolean,
+    case_type character varying(255),
+    estimator_type character varying(255),
+    kernel_type character varying(255)
+);
+
+
+ALTER TABLE public.kernel_density_estimators OWNER TO postgres;
+
+--
+-- TOC entry 172 (class 1259 OID 238401)
+-- Dependencies: 6
+-- Name: mappings; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE mappings (
+    id bigint NOT NULL,
+    obj_version integer,
+    construct_is_user_specified boolean,
+    mmc_dataspace_id bigint,
+    cardinality_type character varying(255),
+    mapping_query1_string character varying(1000),
+    mapping_query2_string character varying(1000),
+    mapping_query1_id bigint,
+    mapping_query2_id bigint
+);
+
+
+ALTER TABLE public.mappings OWNER TO postgres;
+
+--
+-- TOC entry 173 (class 1259 OID 238409)
+-- Dependencies: 6
+-- Name: morphism_constructs1; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE morphism_constructs1 (
+    morphism_id bigint NOT NULL,
+    construct1_id bigint NOT NULL
+);
+
+
+ALTER TABLE public.morphism_constructs1 OWNER TO postgres;
+
+--
+-- TOC entry 174 (class 1259 OID 238414)
+-- Dependencies: 6
+-- Name: morphism_constructs2; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE morphism_constructs2 (
+    morphism_id bigint NOT NULL,
+    construct2_id bigint NOT NULL
+);
+
+
+ALTER TABLE public.morphism_constructs2 OWNER TO postgres;
+
+--
+-- TOC entry 175 (class 1259 OID 238419)
+-- Dependencies: 6
+-- Name: one_to_one_matchings; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE one_to_one_matchings (
+    id bigint NOT NULL,
+    obj_version integer,
+    construct_is_user_specified boolean,
+    mmc_dataspace_id bigint,
+    cardinality_type character varying(255),
+    abs_error double precision,
+    class_label character varying(255),
+    matcher_name character varying(255),
+    matching_score double precision,
+    squared_error double precision,
+    parent_match_id bigint,
+    matching_construct1_id bigint,
+    matching_construct2_id bigint
+);
+
+
+ALTER TABLE public.one_to_one_matchings OWNER TO postgres;
+
+--
+-- TOC entry 177 (class 1259 OID 238435)
+-- Dependencies: 6
+-- Name: ontology_term_enum_values; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE ontology_term_enum_values (
+    enum_id bigint NOT NULL,
+    enum_value character varying(255)
+);
+
+
+ALTER TABLE public.ontology_term_enum_values OWNER TO postgres;
+
+--
+-- TOC entry 176 (class 1259 OID 238427)
+-- Dependencies: 6
+-- Name: ontology_terms; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE ontology_terms (
+    id bigint NOT NULL,
+    obj_version integer,
+    ontology_term_data_type character varying(255),
+    ontology_term_name character varying(255) NOT NULL,
+    parent_ontology_term_id bigint
+);
+
+
+ALTER TABLE public.ontology_terms OWNER TO postgres;
+
+--
+-- TOC entry 179 (class 1259 OID 238446)
+-- Dependencies: 6
+-- Name: parameter_applied_to_construct; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE parameter_applied_to_construct (
+    parameter_id bigint NOT NULL,
+    construct_id bigint NOT NULL
+);
+
+
+ALTER TABLE public.parameter_applied_to_construct OWNER TO postgres;
+
+--
+-- TOC entry 178 (class 1259 OID 238438)
+-- Dependencies: 6
+-- Name: parameters; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE parameters (
+    id bigint NOT NULL,
+    obj_version integer,
+    parameter_direction character varying(255) NOT NULL,
+    parameter_name character varying(255) NOT NULL,
+    parameter_value character varying(255) NOT NULL,
+    schematic_correspondence_id bigint NOT NULL
+);
+
+
+ALTER TABLE public.parameters OWNER TO postgres;
+
+--
+-- TOC entry 180 (class 1259 OID 238451)
+-- Dependencies: 6
+-- Name: participation_of_cmc_in_super_relationship; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE participation_of_cmc_in_super_relationship (
+    id bigint NOT NULL,
+    obj_version integer,
+    construct_is_user_specified boolean,
+    mmc_dataspace_id bigint,
+    role_of_construct_in_super_relationship character varying(255),
+    construct_id bigint,
+    super_relationship_id bigint
+);
+
+
+ALTER TABLE public.participation_of_cmc_in_super_relationship OWNER TO postgres;
+
+--
+-- TOC entry 181 (class 1259 OID 238456)
+-- Dependencies: 6
+-- Name: participation_specifying_super_lexical; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE participation_specifying_super_lexical (
+    super_lexical_id bigint NOT NULL,
+    participation_in_super_relationship_id bigint NOT NULL
+);
+
+
+ALTER TABLE public.participation_specifying_super_lexical OWNER TO postgres;
+
+--
+-- TOC entry 182 (class 1259 OID 238461)
+-- Dependencies: 6
+-- Name: predicates; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE predicates (
+    id bigint NOT NULL,
+    obj_version integer,
+    construct_is_user_specified boolean,
+    mmc_dataspace_id bigint,
+    andor character varying(255),
+    literal1 character varying(255),
+    literal2 character varying(255),
+    operator character varying(255),
+    predicate_super_lexical1_id bigint,
+    predicate_super_lexical2_id bigint,
+    scan_predicate_id bigint,
+    join_predicate_id bigint
+);
+
+
+ALTER TABLE public.predicates OWNER TO postgres;
+
+--
+-- TOC entry 183 (class 1259 OID 238469)
+-- Dependencies: 6
+-- Name: properties; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE properties (
+    id bigint NOT NULL,
+    obj_version integer,
+    property_data_type character varying(255),
+    property_lang character varying(255),
+    property_name character varying(255) NOT NULL,
+    property_value character varying(255) NOT NULL,
+    property_id bigint NOT NULL
+);
+
+
+ALTER TABLE public.properties OWNER TO postgres;
+
+--
+-- TOC entry 184 (class 1259 OID 238477)
+-- Dependencies: 6
+-- Name: queries; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE queries (
+    id bigint NOT NULL,
+    obj_version integer,
+    construct_is_user_specified boolean,
+    mmc_dataspace_id bigint,
+    query_description character varying(255),
+    query_name character varying(255),
+    query_string character varying(1000),
+    query_dataspace_id bigint,
+    query_root_operator_id bigint,
+    query_user_id bigint
+);
+
+
+ALTER TABLE public.queries OWNER TO postgres;
+
+--
+-- TOC entry 185 (class 1259 OID 238485)
+-- Dependencies: 6
+-- Name: query_datasources; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE query_datasources (
+    query_id bigint NOT NULL,
+    datasource_id bigint NOT NULL
+);
+
+
+ALTER TABLE public.query_datasources OWNER TO postgres;
+
+--
+-- TOC entry 187 (class 1259 OID 238495)
+-- Dependencies: 6
+-- Name: query_result_mapping; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE query_result_mapping (
+    query_result_id bigint NOT NULL,
+    mapping_id bigint NOT NULL
+);
+
+
+ALTER TABLE public.query_result_mapping OWNER TO postgres;
+
+--
+-- TOC entry 188 (class 1259 OID 238500)
+-- Dependencies: 6
+-- Name: query_result_result_instance; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE query_result_result_instance (
+    query_result_id bigint NOT NULL,
+    result_instance_id bigint NOT NULL
+);
+
+
+ALTER TABLE public.query_result_result_instance OWNER TO postgres;
+
+--
+-- TOC entry 189 (class 1259 OID 238503)
+-- Dependencies: 6
+-- Name: query_result_schema_of_data_source; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE query_result_schema_of_data_source (
+    query_result_id bigint NOT NULL,
+    schema_of_data_source_id bigint NOT NULL
+);
+
+
+ALTER TABLE public.query_result_schema_of_data_source OWNER TO postgres;
+
+--
+-- TOC entry 186 (class 1259 OID 238490)
+-- Dependencies: 6
+-- Name: query_results; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE query_results (
+    id bigint NOT NULL,
+    obj_version integer,
+    construct_is_user_specified boolean,
+    mmc_dataspace_id bigint,
+    query_result_dataspace_id bigint,
+    query_result_query_id bigint,
+    query_result_result_type_id bigint
+);
+
+
+ALTER TABLE public.query_results OWNER TO postgres;
+
+--
+-- TOC entry 190 (class 1259 OID 238508)
+-- Dependencies: 6
+-- Name: query_schemas; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE query_schemas (
+    query_id bigint NOT NULL,
+    schema_id bigint NOT NULL
+);
+
+
+ALTER TABLE public.query_schemas OWNER TO postgres;
+
+--
+-- TOC entry 191 (class 1259 OID 238513)
+-- Dependencies: 6
+-- Name: query_super_abstracts; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE query_super_abstracts (
+    query_id bigint NOT NULL,
+    super_abstract_id bigint NOT NULL
+);
+
+
+ALTER TABLE public.query_super_abstracts OWNER TO postgres;
+
+--
+-- TOC entry 192 (class 1259 OID 238518)
+-- Dependencies: 6
+-- Name: reconciling_expression; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE reconciling_expression (
+    id bigint NOT NULL,
+    obj_version integer,
+    reconciling_expression_expression character varying(10000),
+    reconciling_expression_type character varying(255),
+    reconciling_expression_applied_to_canonical_model_construct bigint,
+    reconciling_expression_join_pred_1 bigint,
+    reconciling_expression_join_pred_2 bigint,
+    reconciling_expression_selection_target_super_abstract bigint
+);
+
+
+ALTER TABLE public.reconciling_expression OWNER TO postgres;
+
+--
+-- TOC entry 202 (class 1259 OID 238579)
+-- Dependencies: 6
+-- Name: reduceoperator; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE reduceoperator (
+    id bigint NOT NULL,
+    obj_version integer,
+    construct_is_user_specified boolean,
+    mmc_dataspace_id bigint,
+    mapping_operator_and_or character varying(255),
+    mapping_operator_variable_name character varying(255),
+    mapping_operator_data_source_id bigint,
+    mapping_operator_lhs_input_operator_id bigint,
+    mapping_operator_mapping_id bigint,
+    reconcilingexpression_id bigint,
+    mapping_operator_result_type_id bigint,
+    mapping_operator_rhs_input_operator_id bigint
+);
+
+
+ALTER TABLE public.reduceoperator OWNER TO postgres;
+
+--
+-- TOC entry 203 (class 1259 OID 238587)
+-- Dependencies: 6
+-- Name: renameoperator; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE renameoperator (
+    id bigint NOT NULL,
+    obj_version integer,
+    construct_is_user_specified boolean,
+    mmc_dataspace_id bigint,
+    mapping_operator_and_or character varying(255),
+    mapping_operator_variable_name character varying(255),
+    mapping_operator_data_source_id bigint,
+    mapping_operator_lhs_input_operator_id bigint,
+    mapping_operator_mapping_id bigint,
+    reconcilingexpression_id bigint,
+    mapping_operator_result_type_id bigint,
+    mapping_operator_rhs_input_operator_id bigint,
+    rename_new_name character varying(255),
+    rename_canonical_model_construct_id bigint
+);
+
+
+ALTER TABLE public.renameoperator OWNER TO postgres;
+
+--
+-- TOC entry 194 (class 1259 OID 238534)
+-- Dependencies: 6
+-- Name: result_field_result_values; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE result_field_result_values (
+    id bigint NOT NULL,
+    obj_version integer,
+    construct_is_user_specified boolean,
+    mmc_dataspace_id bigint,
+    result_field_name character varying(10000),
+    result_value_value character varying(50000)
+);
+
+
+ALTER TABLE public.result_field_result_values OWNER TO postgres;
+
+--
+-- TOC entry 193 (class 1259 OID 238526)
+-- Dependencies: 6
+-- Name: result_fields; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE result_fields (
+    id bigint NOT NULL,
+    obj_version integer,
+    result_field_name character varying(255),
+    result_field_type character varying(255),
+    result_field_index integer,
+    construct_id bigint
+);
+
+
+ALTER TABLE public.result_fields OWNER TO postgres;
+
+--
+-- TOC entry 196 (class 1259 OID 238547)
+-- Dependencies: 6
+-- Name: result_instance_mapping; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE result_instance_mapping (
+    result_instance_id bigint NOT NULL,
+    mapping_id bigint NOT NULL
+);
+
+
+ALTER TABLE public.result_instance_mapping OWNER TO postgres;
+
+--
+-- TOC entry 197 (class 1259 OID 238552)
+-- Dependencies: 6
+-- Name: result_instance_result_values; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE result_instance_result_values (
+    result_instance_id bigint NOT NULL,
+    result_field_result_values_id bigint NOT NULL
+);
+
+
+ALTER TABLE public.result_instance_result_values OWNER TO postgres;
+
+--
+-- TOC entry 195 (class 1259 OID 238542)
+-- Dependencies: 6
+-- Name: result_instances; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE result_instances (
+    id bigint NOT NULL,
+    obj_version integer,
+    construct_is_user_specified boolean,
+    mmc_dataspace_id bigint,
+    result_instance_query_id bigint,
+    result_type_id bigint
+);
+
+
+ALTER TABLE public.result_instances OWNER TO postgres;
+
+--
+-- TOC entry 199 (class 1259 OID 238562)
+-- Dependencies: 6
+-- Name: result_type_result_fields; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE result_type_result_fields (
+    result_type_id bigint NOT NULL,
+    result_field_id bigint NOT NULL
+);
+
+
+ALTER TABLE public.result_type_result_fields OWNER TO postgres;
+
+--
+-- TOC entry 198 (class 1259 OID 238557)
+-- Dependencies: 6
+-- Name: result_types; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE result_types (
+    id bigint NOT NULL,
+    obj_version integer
+);
+
+
+ALTER TABLE public.result_types OWNER TO postgres;
+
+--
+-- TOC entry 201 (class 1259 OID 238574)
+-- Dependencies: 6
+-- Name: role_users; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE role_users (
+    role_id bigint NOT NULL,
+    user_id bigint NOT NULL
+);
+
+
+ALTER TABLE public.role_users OWNER TO postgres;
+
+--
+-- TOC entry 200 (class 1259 OID 238569)
+-- Dependencies: 6
+-- Name: roles; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE roles (
+    id bigint NOT NULL,
+    obj_version integer,
+    role_role_type character varying(255)
+);
+
+
+ALTER TABLE public.roles OWNER TO postgres;
+
+--
+-- TOC entry 204 (class 1259 OID 238595)
+-- Dependencies: 6
+-- Name: sample_kde; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE sample_kde (
+    id bigint NOT NULL,
+    obj_version integer,
+    sample_value double precision NOT NULL,
+    estimator_id bigint NOT NULL
+);
+
+
+ALTER TABLE public.sample_kde OWNER TO postgres;
+
+--
+-- TOC entry 214 (class 1259 OID 238664)
+-- Dependencies: 6
+-- Name: scanoperator; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE scanoperator (
+    id bigint NOT NULL,
+    obj_version integer,
+    construct_is_user_specified boolean,
+    mmc_dataspace_id bigint,
+    mapping_operator_and_or character varying(255),
+    mapping_operator_variable_name character varying(255),
+    mapping_operator_data_source_id bigint,
+    mapping_operator_lhs_input_operator_id bigint,
+    mapping_operator_mapping_id bigint,
+    reconcilingexpression_id bigint,
+    mapping_operator_result_type_id bigint,
+    mapping_operator_rhs_input_operator_id bigint,
+    scan_super_abstract_id bigint
+);
+
+
+ALTER TABLE public.scanoperator OWNER TO postgres;
+
+--
+-- TOC entry 205 (class 1259 OID 238600)
+-- Dependencies: 6
+-- Name: schemas; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE schemas (
+    id bigint NOT NULL,
+    obj_version integer,
+    construct_is_user_specified boolean,
+    mmc_dataspace_id bigint,
+    model_type character varying(255),
+    schema_name character varying(255) NOT NULL,
+    data_source_id bigint
+);
+
+
+ALTER TABLE public.schemas OWNER TO postgres;
+
+--
+-- TOC entry 209 (class 1259 OID 238626)
+-- Dependencies: 6
+-- Name: schematic_correspondence_reconciling_expressions_1; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE schematic_correspondence_reconciling_expressions_1 (
+    schematic_correspondence_id bigint NOT NULL,
+    reconciling_expression_id bigint NOT NULL
+);
+
+
+ALTER TABLE public.schematic_correspondence_reconciling_expressions_1 OWNER TO postgres;
+
+--
+-- TOC entry 210 (class 1259 OID 238633)
+-- Dependencies: 6
+-- Name: schematic_correspondence_reconciling_expressions_2; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE schematic_correspondence_reconciling_expressions_2 (
+    schematic_correspondence_id bigint NOT NULL,
+    reconciling_expression_id bigint NOT NULL
+);
+
+
+ALTER TABLE public.schematic_correspondence_reconciling_expressions_2 OWNER TO postgres;
+
+--
+-- TOC entry 206 (class 1259 OID 238608)
+-- Dependencies: 6
+-- Name: schematic_correspondences; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE schematic_correspondences (
+    id bigint NOT NULL,
+    obj_version integer,
+    construct_is_user_specified boolean,
+    mmc_dataspace_id bigint,
+    cardinality_type character varying(255),
+    construct_related_schematic_correspondence_type character varying(255),
+    schematic_correspondence_description character varying(255),
+    parameter_direction character varying(255) NOT NULL,
+    schematic_correspondence_name character varying(255),
+    schematic_correspondence_type character varying(255),
+    schematic_correspondence_short_name character varying(255),
+    parent_schematic_correspondence_id bigint
+);
+
+
+ALTER TABLE public.schematic_correspondences OWNER TO postgres;
+
+--
+-- TOC entry 207 (class 1259 OID 238616)
+-- Dependencies: 6
+-- Name: schematic_correspondences_to_mapping_provenance; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE schematic_correspondences_to_mapping_provenance (
+    id bigint NOT NULL,
+    obj_version integer,
+    mapping_id bigint
+);
+
+
+ALTER TABLE public.schematic_correspondences_to_mapping_provenance OWNER TO postgres;
+
+--
+-- TOC entry 208 (class 1259 OID 238621)
+-- Dependencies: 6
+-- Name: schematic_correspondences_utilised_for_mappings_provenance; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE schematic_correspondences_utilised_for_mappings_provenance (
+    provenance_id bigint NOT NULL,
+    schematic_correspondence_id bigint NOT NULL
+);
+
+
+ALTER TABLE public.schematic_correspondences_utilised_for_mappings_provenance OWNER TO postgres;
+
+--
+-- TOC entry 215 (class 1259 OID 238672)
+-- Dependencies: 6
+-- Name: setoperator; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE setoperator (
+    id bigint NOT NULL,
+    obj_version integer,
+    construct_is_user_specified boolean,
+    mmc_dataspace_id bigint,
+    mapping_operator_and_or character varying(255),
+    mapping_operator_variable_name character varying(255),
+    mapping_operator_data_source_id bigint,
+    mapping_operator_lhs_input_operator_id bigint,
+    mapping_operator_mapping_id bigint,
+    reconcilingexpression_id bigint,
+    mapping_operator_result_type_id bigint,
+    mapping_operator_rhs_input_operator_id bigint,
+    setop_type character varying(255)
+);
+
+
+ALTER TABLE public.setoperator OWNER TO postgres;
+
+--
+-- TOC entry 211 (class 1259 OID 238640)
+-- Dependencies: 6
+-- Name: super_abstracts; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE super_abstracts (
+    id bigint NOT NULL,
+    obj_version integer,
+    construct_is_user_specified boolean,
+    mmc_dataspace_id bigint,
+    canonical_model_construct_is_global boolean,
+    canonical_model_construct_is_virtual boolean,
+    canonical_model_construct_name character varying(255) NOT NULL,
+    canonical_model_construct_type character varying(255),
+    canonical_model_construct_schema_id bigint,
+    super_abstract_cardinality integer,
+    super_abstract_midst_super_model_type character varying(255),
+    super_abstract_model_specific_type character varying(255),
+    parent_super_abstract_id bigint
+);
+
+
+ALTER TABLE public.super_abstracts OWNER TO postgres;
+
+--
+-- TOC entry 212 (class 1259 OID 238648)
+-- Dependencies: 6
+-- Name: super_lexicals; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE super_lexicals (
+    id bigint NOT NULL,
+    obj_version integer,
+    construct_is_user_specified boolean,
+    mmc_dataspace_id bigint,
+    canonical_model_construct_is_global boolean,
+    canonical_model_construct_is_virtual boolean,
+    canonical_model_construct_name character varying(255) NOT NULL,
+    canonical_model_construct_type character varying(255),
+    canonical_model_construct_schema_id bigint,
+    super_lexical_data_type character varying(255),
+    super_lexical_is_identifier boolean,
+    super_lexical_is_nullable boolean,
+    super_lexical_is_optional boolean,
+    super_lexical_max_value_size integer,
+    super_lexical_midst_super_model_type character varying(255),
+    super_lexical_model_specific_type character varying(255),
+    super_lexical_number_of_distinct_values integer,
+    super_lexical_parent_super_abstract_id bigint,
+    parent_super_lexical_id bigint,
+    parent_super_relationship_id bigint,
+    super_lexical_id bigint,
+    mapkey character varying(255)
+);
+
+
+ALTER TABLE public.super_lexicals OWNER TO postgres;
+
+--
+-- TOC entry 213 (class 1259 OID 238656)
+-- Dependencies: 6
+-- Name: super_relationships; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE super_relationships (
+    id bigint NOT NULL,
+    obj_version integer,
+    construct_is_user_specified boolean,
+    mmc_dataspace_id bigint,
+    canonical_model_construct_is_global boolean,
+    canonical_model_construct_is_virtual boolean,
+    canonical_model_construct_name character varying(255) NOT NULL,
+    canonical_model_construct_type character varying(255),
+    canonical_model_construct_schema_id bigint,
+    super_relationship_midst_super_model_type character varying(255),
+    super_relationship_model_specific_type character varying(255),
+    super_relationship_type character varying(255),
+    super_relationship_generalised_super_abstract_id bigint
+);
+
+
+ALTER TABLE public.super_relationships OWNER TO postgres;
+
+--
+-- TOC entry 216 (class 1259 OID 238680)
+-- Dependencies: 6
+-- Name: temp_construct; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE temp_construct (
+    id bigint NOT NULL,
+    obj_version integer,
+    construct_is_user_specified boolean,
+    mmc_dataspace_id bigint,
+    canonical_model_construct_is_global boolean,
+    canonical_model_construct_is_virtual boolean,
+    canonical_model_construct_name character varying(255) NOT NULL,
+    canonical_model_construct_type character varying(255),
+    canonical_model_construct_schema_id bigint
+);
+
+
+ALTER TABLE public.temp_construct OWNER TO postgres;
+
+--
+-- TOC entry 217 (class 1259 OID 238688)
+-- Dependencies: 6
+-- Name: typecastoperator; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE typecastoperator (
+    id bigint NOT NULL,
+    obj_version integer,
+    construct_is_user_specified boolean,
+    mmc_dataspace_id bigint,
+    mapping_operator_and_or character varying(255),
+    mapping_operator_variable_name character varying(255),
+    mapping_operator_data_source_id bigint,
+    mapping_operator_lhs_input_operator_id bigint,
+    mapping_operator_mapping_id bigint,
+    reconcilingexpression_id bigint,
+    mapping_operator_result_type_id bigint,
+    mapping_operator_rhs_input_operator_id bigint,
+    type_cast_new_type character varying(255),
+    type_cast_canonical_model_construct_id bigint
+);
+
+
+ALTER TABLE public.typecastoperator OWNER TO postgres;
+
+--
+-- TOC entry 218 (class 1259 OID 238696)
+-- Dependencies: 6
+-- Name: users; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE users (
+    id bigint NOT NULL,
+    obj_version integer,
+    accept_terms boolean,
+    date_created timestamp without time zone,
+    email character varying(255) NOT NULL,
+    first_name character varying(255),
+    institution_name character varying(255),
+    last_name character varying(255),
+    password character varying(255) NOT NULL,
+    user_name character varying(255) NOT NULL
+);
+
+
+ALTER TABLE public.users OWNER TO postgres;
+
+--
+-- TOC entry 2343 (class 0 OID 238342)
+-- Dependencies: 162 2401
+-- Data for Name: annotation_annotated_constructs; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY annotation_annotated_constructs (annotation_id, annotated_construct_id) FROM stdin;
+\.
+
+
+--
+-- TOC entry 2344 (class 0 OID 238347)
+-- Dependencies: 163 2401
+-- Data for Name: annotation_constraining_constructs; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY annotation_constraining_constructs (annotation_id, constraining_construct_id) FROM stdin;
+\.
+
+
+--
+-- TOC entry 2342 (class 0 OID 238337)
+-- Dependencies: 161 2401
+-- Data for Name: annotations; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY annotations (id, obj_version, "timestamp", annotation_value, annotation_ontology_term_id, annotation_user_id) FROM stdin;
+\.
+
+
+--
+-- TOC entry 2345 (class 0 OID 238352)
+-- Dependencies: 164 2401
+-- Data for Name: constructs_morphisms; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY constructs_morphisms (construct_id, morphism_id) FROM stdin;
+\.
+
+
+--
+-- TOC entry 2346 (class 0 OID 238357)
+-- Dependencies: 165 2401
+-- Data for Name: datasources; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY datasources (id, obj_version, construct_is_user_specified, mmc_dataspace_id, connection_url, description, driver_class, is_rdf, data_source_name, password, schema_url, sparql_url, user_name) FROM stdin;
+4	0	f	\N	jdbc:mysql://localhost/	This package contains the Magnatune catalogue in RDF format	com.mysql.jdbc.Driver	true	MagnatuneRDFSmpl	4321rene	./src/test/resources/schemas/magnatuneRDFSchema.xml	\N	root
+136	0	f	\N	jdbc:mysql://localhost/	The package contains raw data from Jamendo website in RDF format	com.mysql.jdbc.Driver	true	JamendoRDFSmpl	4321rene	./src/test/resources/schemas/jamendoRDFSchema.xml	\N	root
+\.
+
+
+--
+-- TOC entry 2348 (class 0 OID 238370)
+-- Dependencies: 167 2401
+-- Data for Name: dataspace_datasources; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY dataspace_datasources (dataspace_id, datasource_id) FROM stdin;
+\.
+
+
+--
+-- TOC entry 2349 (class 0 OID 238375)
+-- Dependencies: 168 2401
+-- Data for Name: dataspace_schemas; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY dataspace_schemas (dataspace_id, schema_id) FROM stdin;
+\.
+
+
+--
+-- TOC entry 2350 (class 0 OID 238380)
+-- Dependencies: 169 2401
+-- Data for Name: dataspace_users; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY dataspace_users (dataspace_id, user_id) FROM stdin;
+\.
+
+
+--
+-- TOC entry 2347 (class 0 OID 238365)
+-- Dependencies: 166 2401
+-- Data for Name: dataspaces; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY dataspaces (id, obj_version, dataspace_name) FROM stdin;
+\.
+
+
+--
+-- TOC entry 2409 (class 0 OID 0)
+-- Dependencies: 219
+-- Name: hibernate_sequence; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('hibernate_sequence', 914, true);
+
+
+--
+-- TOC entry 2351 (class 0 OID 238385)
+-- Dependencies: 170 2401
+-- Data for Name: joinoperator; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY joinoperator (id, obj_version, construct_is_user_specified, mmc_dataspace_id, mapping_operator_and_or, mapping_operator_variable_name, mapping_operator_data_source_id, mapping_operator_lhs_input_operator_id, mapping_operator_mapping_id, reconcilingexpression_id, mapping_operator_result_type_id, mapping_operator_rhs_input_operator_id) FROM stdin;
+\.
+
+
+--
+-- TOC entry 2352 (class 0 OID 238393)
+-- Dependencies: 171 2401
+-- Data for Name: kernel_density_estimators; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY kernel_density_estimators (id, obj_version, estimator_name, kernel_smoothing, estimator_is_bounded, case_type, estimator_type, kernel_type) FROM stdin;
+\.
+
+
+--
+-- TOC entry 2353 (class 0 OID 238401)
+-- Dependencies: 172 2401
+-- Data for Name: mappings; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY mappings (id, obj_version, construct_is_user_specified, mmc_dataspace_id, cardinality_type, mapping_query1_string, mapping_query2_string, mapping_query1_id, mapping_query2_id) FROM stdin;
+\.
+
+
+--
+-- TOC entry 2354 (class 0 OID 238409)
+-- Dependencies: 173 2401
+-- Data for Name: morphism_constructs1; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY morphism_constructs1 (morphism_id, construct1_id) FROM stdin;
+\.
+
+
+--
+-- TOC entry 2355 (class 0 OID 238414)
+-- Dependencies: 174 2401
+-- Data for Name: morphism_constructs2; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY morphism_constructs2 (morphism_id, construct2_id) FROM stdin;
+\.
+
+
+--
+-- TOC entry 2356 (class 0 OID 238419)
+-- Dependencies: 175 2401
+-- Data for Name: one_to_one_matchings; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY one_to_one_matchings (id, obj_version, construct_is_user_specified, mmc_dataspace_id, cardinality_type, abs_error, class_label, matcher_name, matching_score, squared_error, parent_match_id, matching_construct1_id, matching_construct2_id) FROM stdin;
+\.
+
+
+--
+-- TOC entry 2358 (class 0 OID 238435)
+-- Dependencies: 177 2401
+-- Data for Name: ontology_term_enum_values; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY ontology_term_enum_values (enum_id, enum_value) FROM stdin;
+\.
+
+
+--
+-- TOC entry 2357 (class 0 OID 238427)
+-- Dependencies: 176 2401
+-- Data for Name: ontology_terms; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY ontology_terms (id, obj_version, ontology_term_data_type, ontology_term_name, parent_ontology_term_id) FROM stdin;
+\.
+
+
+--
+-- TOC entry 2360 (class 0 OID 238446)
+-- Dependencies: 179 2401
+-- Data for Name: parameter_applied_to_construct; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY parameter_applied_to_construct (parameter_id, construct_id) FROM stdin;
+\.
+
+
+--
+-- TOC entry 2359 (class 0 OID 238438)
+-- Dependencies: 178 2401
+-- Data for Name: parameters; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY parameters (id, obj_version, parameter_direction, parameter_name, parameter_value, schematic_correspondence_id) FROM stdin;
+\.
+
+
+--
+-- TOC entry 2361 (class 0 OID 238451)
+-- Dependencies: 180 2401
+-- Data for Name: participation_of_cmc_in_super_relationship; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY participation_of_cmc_in_super_relationship (id, obj_version, construct_is_user_specified, mmc_dataspace_id, role_of_construct_in_super_relationship, construct_id, super_relationship_id) FROM stdin;
+99	0	f	\N	REFERENCING	9	6
+100	0	f	\N	REFERENCED	42	6
+104	0	f	\N	REFERENCING	18	101
+105	0	f	\N	REFERENCED	57	101
+109	0	f	\N	REFERENCING	18	106
+110	0	f	\N	REFERENCED	78	106
+114	0	f	\N	REFERENCING	33	111
+115	0	f	\N	REFERENCED	9	111
+119	0	f	\N	REFERENCING	33	116
+120	0	f	\N	REFERENCED	78	116
+124	0	f	\N	REFERENCING	45	121
+125	0	f	\N	REFERENCED	33	121
+129	0	f	\N	REFERENCING	45	126
+130	0	f	\N	REFERENCED	57	126
+134	0	f	\N	REFERENCING	78	131
+135	0	f	\N	REFERENCED	57	131
+252	0	f	\N	REFERENCING	150	138
+253	0	f	\N	REFERENCED	204	138
+257	0	f	\N	REFERENCING	150	254
+258	0	f	\N	REFERENCED	231	254
+262	0	f	\N	REFERENCING	150	259
+263	0	f	\N	REFERENCED	186	259
+267	0	f	\N	REFERENCING	150	264
+268	0	f	\N	REFERENCED	225	264
+272	0	f	\N	REFERENCING	177	269
+273	0	f	\N	REFERENCED	144	269
+277	0	f	\N	REFERENCING	177	274
+278	0	f	\N	REFERENCED	231	274
+282	0	f	\N	REFERENCING	204	279
+283	0	f	\N	REFERENCED	150	279
+287	0	f	\N	REFERENCING	231	284
+288	0	f	\N	REFERENCED	141	284
+292	0	f	\N	REFERENCING	231	289
+293	0	f	\N	REFERENCED	192	289
+\.
+
+
+--
+-- TOC entry 2362 (class 0 OID 238456)
+-- Dependencies: 181 2401
+-- Data for Name: participation_specifying_super_lexical; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY participation_specifying_super_lexical (super_lexical_id, participation_in_super_relationship_id) FROM stdin;
+\.
+
+
+--
+-- TOC entry 2363 (class 0 OID 238461)
+-- Dependencies: 182 2401
+-- Data for Name: predicates; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY predicates (id, obj_version, construct_is_user_specified, mmc_dataspace_id, andor, literal1, literal2, operator, predicate_super_lexical1_id, predicate_super_lexical2_id, scan_predicate_id, join_predicate_id) FROM stdin;
+\.
+
+
+--
+-- TOC entry 2364 (class 0 OID 238469)
+-- Dependencies: 183 2401
+-- Data for Name: properties; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY properties (id, obj_version, property_data_type, property_lang, property_name, property_value, property_id) FROM stdin;
+7	0	\N	\N	constructURI	http://purl.org/NET/c4dm/timeline.owl#onTimeLine	6
+8	0	\N	\N	namespaceURI	http://purl.org/NET/c4dm/timeline.owl#	6
+10	0	\N	\N	rdfTypeValue	http://www.w3.org/TR/owl-time/Interval	9
+11	0	\N	\N	namespaceURI	http://www.w3.org/TR/owl-time/	9
+13	0	\N	\N	constructURI	http://purl.org/NET/c4dm/timeline.owl#duration	12
+14	0	\N	\N	namespaceURI	http://purl.org/NET/c4dm/timeline.owl#	12
+16	0	\N	\N	constructURI	http://purl.org/NET/c4dm/timeline.owl#onTimeLine	15
+17	0	\N	\N	namespaceURI	http://purl.org/NET/c4dm/timeline.owl#	15
+19	0	\N	\N	rdfTypeValue	http://purl.org/ontology/mo/Record	18
+20	0	\N	\N	namespaceURI	http://purl.org/ontology/mo/	18
+22	0	\N	\N	constructURI	http://purl.org/dc/elements/1.1/title	21
+23	0	\N	\N	namespaceURI	http://purl.org/dc/elements/1.1/	21
+25	0	\N	\N	constructURI	http://purl.org/ontology/mo/publishing_location	24
+26	0	\N	\N	namespaceURI	http://purl.org/ontology/mo/	24
+28	0	\N	\N	constructURI	http://xmlns.com/foaf/0.1/maker	27
+29	0	\N	\N	namespaceURI	http://xmlns.com/foaf/0.1/	27
+31	0	\N	\N	constructURI	http://purl.org/ontology/mo/track	30
+32	0	\N	\N	namespaceURI	http://purl.org/ontology/mo/	30
+34	0	\N	\N	rdfTypeValue	http://purl.org/ontology/mo/Signal	33
+35	0	\N	\N	namespaceURI	http://purl.org/ontology/mo/	33
+37	0	\N	\N	constructURI	http://purl.org/ontology/mo/time	36
+38	0	\N	\N	namespaceURI	http://purl.org/ontology/mo/	36
+40	0	\N	\N	constructURI	http://purl.org/ontology/mo/published_as	39
+41	0	\N	\N	namespaceURI	http://purl.org/ontology/mo/	39
+43	0	\N	\N	rdfTypeValue	http://purl.org/NET/c4dm/timeline.owl#RelativeTimeLine	42
+44	0	\N	\N	namespaceURI	http://purl.org/NET/c4dm/timeline.owl#	42
+46	0	\N	\N	rdfTypeValue	http://purl.org/ontology/mo/Performance	45
+47	0	\N	\N	namespaceURI	http://purl.org/ontology/mo/	45
+49	0	\N	\N	constructURI	http://purl.org/NET/c4dm/event.owl#place	48
+50	0	\N	\N	namespaceURI	http://purl.org/NET/c4dm/event.owl#	48
+52	0	\N	\N	constructURI	http://purl.org/ontology/mo/recorded_as	51
+53	0	\N	\N	namespaceURI	http://purl.org/ontology/mo/	51
+55	0	\N	\N	constructURI	http://purl.org/ontology/mo/performer	54
+56	0	\N	\N	namespaceURI	http://purl.org/ontology/mo/	54
+58	0	\N	\N	rdfTypeValue	http://purl.org/ontology/mo/MusicArtist	57
+59	0	\N	\N	namespaceURI	http://purl.org/ontology/mo/	57
+61	0	\N	\N	constructURI	http://purl.org/vocab/bio/0.1/olb	60
+62	0	\N	\N	namespaceURI	http://purl.org/vocab/bio/0.1/	60
+64	0	\N	\N	constructURI	http://purl.org/dc/elements/1.1/description	63
+65	0	\N	\N	namespaceURI	http://purl.org/dc/elements/1.1/	63
+67	0	\N	\N	constructURI	http://xmlns.com/foaf/0.1/name	66
+68	0	\N	\N	namespaceURI	http://xmlns.com/foaf/0.1/	66
+70	0	\N	\N	constructURI	http://xmlns.com/foaf/0.1/img	69
+71	0	\N	\N	namespaceURI	http://xmlns.com/foaf/0.1/	69
+73	0	\N	\N	constructURI	http://xmlns.com/foaf/0.1/homepage	72
+74	0	\N	\N	namespaceURI	http://xmlns.com/foaf/0.1/	72
+76	0	\N	\N	constructURI	http://xmlns.com/foaf/0.1/based_near	75
+77	0	\N	\N	namespaceURI	http://xmlns.com/foaf/0.1/	75
+79	0	\N	\N	rdfTypeValue	http://purl.org/ontology/mo/Track	78
+80	0	\N	\N	namespaceURI	http://purl.org/ontology/mo/	78
+82	0	\N	\N	constructURI	http://purl.org/dc/elements/1.1/title	81
+83	0	\N	\N	namespaceURI	http://purl.org/dc/elements/1.1/	81
+85	0	\N	\N	constructURI	http://purl.org/dc/elements/1.1/created	84
+86	0	\N	\N	namespaceURI	http://purl.org/dc/elements/1.1/	84
+88	0	\N	\N	constructURI	http://purl.org/ontology/mo/paid_download	87
+89	0	\N	\N	namespaceURI	http://purl.org/ontology/mo/	87
+91	0	\N	\N	constructURI	http://purl.org/ontology/mo/track_number	90
+92	0	\N	\N	namespaceURI	http://purl.org/ontology/mo/	90
+94	0	\N	\N	constructURI	http://purl.org/ontology/mo/available_as	93
+95	0	\N	\N	namespaceURI	http://purl.org/ontology/mo/	93
+97	0	\N	\N	constructURI	http://xmlns.com/foaf/0.1/maker	96
+98	0	\N	\N	namespaceURI	http://xmlns.com/foaf/0.1/	96
+102	0	\N	\N	constructURI	http://xmlns.com/foaf/0.1/maker	101
+103	0	\N	\N	namespaceURI	http://xmlns.com/foaf/0.1/	101
+107	0	\N	\N	constructURI	http://purl.org/ontology/mo/track	106
+108	0	\N	\N	namespaceURI	http://purl.org/ontology/mo/	106
+112	0	\N	\N	constructURI	http://purl.org/ontology/mo/time	111
+113	0	\N	\N	namespaceURI	http://purl.org/ontology/mo/	111
+117	0	\N	\N	constructURI	http://purl.org/ontology/mo/published_as	116
+118	0	\N	\N	namespaceURI	http://purl.org/ontology/mo/	116
+122	0	\N	\N	constructURI	http://purl.org/ontology/mo/recorded_as	121
+123	0	\N	\N	namespaceURI	http://purl.org/ontology/mo/	121
+127	0	\N	\N	constructURI	http://purl.org/ontology/mo/performer	126
+128	0	\N	\N	namespaceURI	http://purl.org/ontology/mo/	126
+132	0	\N	\N	constructURI	http://xmlns.com/foaf/0.1/maker	131
+133	0	\N	\N	namespaceURI	http://xmlns.com/foaf/0.1/	131
+139	0	\N	\N	constructURI	http://xmlns.com/foaf/0.1/maker	138
+140	0	\N	\N	namespaceURI	http://xmlns.com/foaf/0.1/	138
+142	0	\N	\N	rdfTypeValue	http://xmlns.com/foaf/0.1/Document	141
+143	0	\N	\N	namespaceURI	http://xmlns.com/foaf/0.1/	141
+145	0	\N	\N	rdfTypeValue	http://www.w3.org/2006/time#Interval	144
+146	0	\N	\N	namespaceURI	http://www.w3.org/2006/time#	144
+148	0	\N	\N	constructURI	http://purl.org/NET/c4dm/timeline.owl#onTimeLine	147
+149	0	\N	\N	namespaceURI	http://purl.org/NET/c4dm/timeline.owl#	147
+151	0	\N	\N	rdfTypeValue	http://purl.org/ontology/mo/Record	150
+152	0	\N	\N	namespaceURI	http://purl.org/ontology/mo/	150
+154	0	\N	\N	constructURI	http://purl.org/dc/elements/1.1/title	153
+155	0	\N	\N	namespaceURI	http://purl.org/dc/elements/1.1/	153
+157	0	\N	\N	constructURI	http://purl.org/dc/elements/1.1/description	156
+158	0	\N	\N	namespaceURI	http://purl.org/dc/elements/1.1/	156
+160	0	\N	\N	constructURI	http://purl.org/ontology/mo/image	159
+161	0	\N	\N	namespaceURI	http://purl.org/ontology/mo/	159
+163	0	\N	\N	constructURI	http://purl.org/dc/elements/1.1/date	162
+164	0	\N	\N	namespaceURI	http://purl.org/dc/elements/1.1/	162
+166	0	\N	\N	constructURI	http://xmlns.com/foaf/0.1/maker	165
+167	0	\N	\N	namespaceURI	http://xmlns.com/foaf/0.1/	165
+169	0	\N	\N	constructURI	http://purl.org/ontology/mo/track	168
+170	0	\N	\N	namespaceURI	http://purl.org/ontology/mo/	168
+172	0	\N	\N	constructURI	http://www.holygoat.co.uk/owl/redwood/0.1/tags/taggedWithTag	171
+173	0	\N	\N	namespaceURI	http://www.holygoat.co.uk/owl/redwood/0.1/tags/	171
+175	0	\N	\N	constructURI	http://purl.org/ontology/mo/available_as	174
+176	0	\N	\N	namespaceURI	http://purl.org/ontology/mo/	174
+178	0	\N	\N	rdfTypeValue	http://purl.org/ontology/mo/Signal	177
+179	0	\N	\N	namespaceURI	http://purl.org/ontology/mo/	177
+181	0	\N	\N	constructURI	http://purl.org/ontology/mo/time	180
+182	0	\N	\N	namespaceURI	http://purl.org/ontology/mo/	180
+184	0	\N	\N	constructURI	http://purl.org/ontology/mo/published_as	183
+185	0	\N	\N	namespaceURI	http://purl.org/ontology/mo/	183
+187	0	\N	\N	rdfTypeValue	http://www.holygoat.co.uk/owl/redwood/0.1/tags/Tag	186
+188	0	\N	\N	namespaceURI	http://www.holygoat.co.uk/owl/redwood/0.1/tags/	186
+190	0	\N	\N	constructURI	http://www.holygoat.co.uk/owl/redwood/0.1/tags/tagName	189
+191	0	\N	\N	namespaceURI	http://www.holygoat.co.uk/owl/redwood/0.1/tags/	189
+193	0	\N	\N	rdfTypeValue	http://purl.org/ontology/mo/Playlist	192
+194	0	\N	\N	namespaceURI	http://purl.org/ontology/mo/	192
+196	0	\N	\N	constructURI	http://purl.org/dc/elements/1.1/format	195
+197	0	\N	\N	namespaceURI	http://purl.org/dc/elements/1.1/	195
+199	0	\N	\N	rdfTypeValue	http://purl.org/ontology/mo/Torrent	198
+200	0	\N	\N	namespaceURI	http://purl.org/ontology/mo/	198
+202	0	\N	\N	constructURI	http://purl.org/dc/elements/1.1/format	201
+203	0	\N	\N	namespaceURI	http://purl.org/dc/elements/1.1/	201
+205	0	\N	\N	rdfTypeValue	http://purl.org/ontology/mo/MusicArtist	204
+206	0	\N	\N	namespaceURI	http://purl.org/ontology/mo/	204
+208	0	\N	\N	constructURI	http://xmlns.com/foaf/0.1/name	207
+209	0	\N	\N	namespaceURI	http://xmlns.com/foaf/0.1/	207
+211	0	\N	\N	constructURI	http://xmlns.com/foaf/0.1/img	210
+212	0	\N	\N	namespaceURI	http://xmlns.com/foaf/0.1/	210
+214	0	\N	\N	constructURI	http://purl.org/ontology/mo/biography	213
+215	0	\N	\N	namespaceURI	http://purl.org/ontology/mo/	213
+217	0	\N	\N	constructURI	http://xmlns.com/foaf/0.1/homepage	216
+218	0	\N	\N	namespaceURI	http://xmlns.com/foaf/0.1/	216
+220	0	\N	\N	constructURI	http://xmlns.com/foaf/0.1/based_near	219
+221	0	\N	\N	namespaceURI	http://xmlns.com/foaf/0.1/	219
+223	0	\N	\N	constructURI	http://xmlns.com/foaf/0.1/made	222
+224	0	\N	\N	namespaceURI	http://xmlns.com/foaf/0.1/	222
+226	0	\N	\N	rdfTypeValue	http://purl.org/ontology/mo/ED2K	225
+227	0	\N	\N	namespaceURI	http://purl.org/ontology/mo/	225
+229	0	\N	\N	constructURI	http://purl.org/dc/elements/1.1/format	228
+230	0	\N	\N	namespaceURI	http://purl.org/dc/elements/1.1/	228
+232	0	\N	\N	rdfTypeValue	http://purl.org/ontology/mo/Track	231
+233	0	\N	\N	namespaceURI	http://purl.org/ontology/mo/	231
+235	0	\N	\N	constructURI	http://purl.org/dc/elements/1.1/title	234
+236	0	\N	\N	namespaceURI	http://purl.org/dc/elements/1.1/	234
+238	0	\N	\N	constructURI	http://purl.org/ontology/mo/track_number	237
+239	0	\N	\N	namespaceURI	http://purl.org/ontology/mo/	237
+241	0	\N	\N	constructURI	http://purl.org/ontology/mo/license	240
+242	0	\N	\N	namespaceURI	http://purl.org/ontology/mo/	240
+244	0	\N	\N	constructURI	http://purl.org/ontology/mo/available_as	243
+245	0	\N	\N	namespaceURI	http://purl.org/ontology/mo/	243
+247	0	\N	\N	rdfTypeValue	http://purl.org/ontology/mo/Lyrics	246
+248	0	\N	\N	namespaceURI	http://purl.org/ontology/mo/	246
+250	0	\N	\N	constructURI	http://purl.org/ontology/mo/text	249
+251	0	\N	\N	namespaceURI	http://purl.org/ontology/mo/	249
+255	0	\N	\N	constructURI	http://purl.org/ontology/mo/track	254
+256	0	\N	\N	namespaceURI	http://purl.org/ontology/mo/	254
+260	0	\N	\N	constructURI	http://www.holygoat.co.uk/owl/redwood/0.1/tags/taggedWithTag	259
+261	0	\N	\N	namespaceURI	http://www.holygoat.co.uk/owl/redwood/0.1/tags/	259
+265	0	\N	\N	constructURI	http://purl.org/ontology/mo/available_as	264
+266	0	\N	\N	namespaceURI	http://purl.org/ontology/mo/	264
+270	0	\N	\N	constructURI	http://purl.org/ontology/mo/time	269
+271	0	\N	\N	namespaceURI	http://purl.org/ontology/mo/	269
+275	0	\N	\N	constructURI	http://purl.org/ontology/mo/published_as	274
+276	0	\N	\N	namespaceURI	http://purl.org/ontology/mo/	274
+280	0	\N	\N	constructURI	http://xmlns.com/foaf/0.1/made	279
+281	0	\N	\N	namespaceURI	http://xmlns.com/foaf/0.1/	279
+285	0	\N	\N	constructURI	http://purl.org/ontology/mo/license	284
+286	0	\N	\N	namespaceURI	http://purl.org/ontology/mo/	284
+290	0	\N	\N	constructURI	http://purl.org/ontology/mo/available_as	289
+291	0	\N	\N	namespaceURI	http://purl.org/ontology/mo/	289
+\.
+
+
+--
+-- TOC entry 2365 (class 0 OID 238477)
+-- Dependencies: 184 2401
+-- Data for Name: queries; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY queries (id, obj_version, construct_is_user_specified, mmc_dataspace_id, query_description, query_name, query_string, query_dataspace_id, query_root_operator_id, query_user_id) FROM stdin;
+\.
+
+
+--
+-- TOC entry 2366 (class 0 OID 238485)
+-- Dependencies: 185 2401
+-- Data for Name: query_datasources; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY query_datasources (query_id, datasource_id) FROM stdin;
+\.
+
+
+--
+-- TOC entry 2368 (class 0 OID 238495)
+-- Dependencies: 187 2401
+-- Data for Name: query_result_mapping; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY query_result_mapping (query_result_id, mapping_id) FROM stdin;
+\.
+
+
+--
+-- TOC entry 2369 (class 0 OID 238500)
+-- Dependencies: 188 2401
+-- Data for Name: query_result_result_instance; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY query_result_result_instance (query_result_id, result_instance_id) FROM stdin;
+\.
+
+
+--
+-- TOC entry 2370 (class 0 OID 238503)
+-- Dependencies: 189 2401
+-- Data for Name: query_result_schema_of_data_source; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY query_result_schema_of_data_source (query_result_id, schema_of_data_source_id) FROM stdin;
+\.
+
+
+--
+-- TOC entry 2367 (class 0 OID 238490)
+-- Dependencies: 186 2401
+-- Data for Name: query_results; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY query_results (id, obj_version, construct_is_user_specified, mmc_dataspace_id, query_result_dataspace_id, query_result_query_id, query_result_result_type_id) FROM stdin;
+\.
+
+
+--
+-- TOC entry 2371 (class 0 OID 238508)
+-- Dependencies: 190 2401
+-- Data for Name: query_schemas; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY query_schemas (query_id, schema_id) FROM stdin;
+\.
+
+
+--
+-- TOC entry 2372 (class 0 OID 238513)
+-- Dependencies: 191 2401
+-- Data for Name: query_super_abstracts; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY query_super_abstracts (query_id, super_abstract_id) FROM stdin;
+\.
+
+
+--
+-- TOC entry 2373 (class 0 OID 238518)
+-- Dependencies: 192 2401
+-- Data for Name: reconciling_expression; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY reconciling_expression (id, obj_version, reconciling_expression_expression, reconciling_expression_type, reconciling_expression_applied_to_canonical_model_construct, reconciling_expression_join_pred_1, reconciling_expression_join_pred_2, reconciling_expression_selection_target_super_abstract) FROM stdin;
+\.
+
+
+--
+-- TOC entry 2383 (class 0 OID 238579)
+-- Dependencies: 202 2401
+-- Data for Name: reduceoperator; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY reduceoperator (id, obj_version, construct_is_user_specified, mmc_dataspace_id, mapping_operator_and_or, mapping_operator_variable_name, mapping_operator_data_source_id, mapping_operator_lhs_input_operator_id, mapping_operator_mapping_id, reconcilingexpression_id, mapping_operator_result_type_id, mapping_operator_rhs_input_operator_id) FROM stdin;
+\.
+
+
+--
+-- TOC entry 2384 (class 0 OID 238587)
+-- Dependencies: 203 2401
+-- Data for Name: renameoperator; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY renameoperator (id, obj_version, construct_is_user_specified, mmc_dataspace_id, mapping_operator_and_or, mapping_operator_variable_name, mapping_operator_data_source_id, mapping_operator_lhs_input_operator_id, mapping_operator_mapping_id, reconcilingexpression_id, mapping_operator_result_type_id, mapping_operator_rhs_input_operator_id, rename_new_name, rename_canonical_model_construct_id) FROM stdin;
+\.
+
+
+--
+-- TOC entry 2375 (class 0 OID 238534)
+-- Dependencies: 194 2401
+-- Data for Name: result_field_result_values; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY result_field_result_values (id, obj_version, construct_is_user_specified, mmc_dataspace_id, result_field_name, result_value_value) FROM stdin;
+\.
+
+
+--
+-- TOC entry 2374 (class 0 OID 238526)
+-- Dependencies: 193 2401
+-- Data for Name: result_fields; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY result_fields (id, obj_version, result_field_name, result_field_type, result_field_index, construct_id) FROM stdin;
+\.
+
+
+--
+-- TOC entry 2377 (class 0 OID 238547)
+-- Dependencies: 196 2401
+-- Data for Name: result_instance_mapping; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY result_instance_mapping (result_instance_id, mapping_id) FROM stdin;
+\.
+
+
+--
+-- TOC entry 2378 (class 0 OID 238552)
+-- Dependencies: 197 2401
+-- Data for Name: result_instance_result_values; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY result_instance_result_values (result_instance_id, result_field_result_values_id) FROM stdin;
+\.
+
+
+--
+-- TOC entry 2376 (class 0 OID 238542)
+-- Dependencies: 195 2401
+-- Data for Name: result_instances; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY result_instances (id, obj_version, construct_is_user_specified, mmc_dataspace_id, result_instance_query_id, result_type_id) FROM stdin;
+\.
+
+
+--
+-- TOC entry 2380 (class 0 OID 238562)
+-- Dependencies: 199 2401
+-- Data for Name: result_type_result_fields; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY result_type_result_fields (result_type_id, result_field_id) FROM stdin;
+\.
+
+
+--
+-- TOC entry 2379 (class 0 OID 238557)
+-- Dependencies: 198 2401
+-- Data for Name: result_types; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY result_types (id, obj_version) FROM stdin;
+\.
+
+
+--
+-- TOC entry 2382 (class 0 OID 238574)
+-- Dependencies: 201 2401
+-- Data for Name: role_users; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY role_users (role_id, user_id) FROM stdin;
+\.
+
+
+--
+-- TOC entry 2381 (class 0 OID 238569)
+-- Dependencies: 200 2401
+-- Data for Name: roles; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY roles (id, obj_version, role_role_type) FROM stdin;
+\.
+
+
+--
+-- TOC entry 2385 (class 0 OID 238595)
+-- Dependencies: 204 2401
+-- Data for Name: sample_kde; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY sample_kde (id, obj_version, sample_value, estimator_id) FROM stdin;
+\.
+
+
+--
+-- TOC entry 2395 (class 0 OID 238664)
+-- Dependencies: 214 2401
+-- Data for Name: scanoperator; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY scanoperator (id, obj_version, construct_is_user_specified, mmc_dataspace_id, mapping_operator_and_or, mapping_operator_variable_name, mapping_operator_data_source_id, mapping_operator_lhs_input_operator_id, mapping_operator_mapping_id, reconcilingexpression_id, mapping_operator_result_type_id, mapping_operator_rhs_input_operator_id, scan_super_abstract_id) FROM stdin;
+\.
+
+
+--
+-- TOC entry 2386 (class 0 OID 238600)
+-- Dependencies: 205 2401
+-- Data for Name: schemas; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY schemas (id, obj_version, construct_is_user_specified, mmc_dataspace_id, model_type, schema_name, data_source_id) FROM stdin;
+5	25	f	\N	RDF	magnatuneRDFSchema	4
+137	28	f	\N	RDF	jamendoRDFSchema	136
+\.
+
+
+--
+-- TOC entry 2390 (class 0 OID 238626)
+-- Dependencies: 209 2401
+-- Data for Name: schematic_correspondence_reconciling_expressions_1; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY schematic_correspondence_reconciling_expressions_1 (schematic_correspondence_id, reconciling_expression_id) FROM stdin;
+\.
+
+
+--
+-- TOC entry 2391 (class 0 OID 238633)
+-- Dependencies: 210 2401
+-- Data for Name: schematic_correspondence_reconciling_expressions_2; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY schematic_correspondence_reconciling_expressions_2 (schematic_correspondence_id, reconciling_expression_id) FROM stdin;
+\.
+
+
+--
+-- TOC entry 2387 (class 0 OID 238608)
+-- Dependencies: 206 2401
+-- Data for Name: schematic_correspondences; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY schematic_correspondences (id, obj_version, construct_is_user_specified, mmc_dataspace_id, cardinality_type, construct_related_schematic_correspondence_type, schematic_correspondence_description, parameter_direction, schematic_correspondence_name, schematic_correspondence_type, schematic_correspondence_short_name, parent_schematic_correspondence_id) FROM stdin;
+\.
+
+
+--
+-- TOC entry 2388 (class 0 OID 238616)
+-- Dependencies: 207 2401
+-- Data for Name: schematic_correspondences_to_mapping_provenance; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY schematic_correspondences_to_mapping_provenance (id, obj_version, mapping_id) FROM stdin;
+\.
+
+
+--
+-- TOC entry 2389 (class 0 OID 238621)
+-- Dependencies: 208 2401
+-- Data for Name: schematic_correspondences_utilised_for_mappings_provenance; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY schematic_correspondences_utilised_for_mappings_provenance (provenance_id, schematic_correspondence_id) FROM stdin;
+\.
+
+
+--
+-- TOC entry 2396 (class 0 OID 238672)
+-- Dependencies: 215 2401
+-- Data for Name: setoperator; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY setoperator (id, obj_version, construct_is_user_specified, mmc_dataspace_id, mapping_operator_and_or, mapping_operator_variable_name, mapping_operator_data_source_id, mapping_operator_lhs_input_operator_id, mapping_operator_mapping_id, reconcilingexpression_id, mapping_operator_result_type_id, mapping_operator_rhs_input_operator_id, setop_type) FROM stdin;
+\.
+
+
+--
+-- TOC entry 2392 (class 0 OID 238640)
+-- Dependencies: 211 2401
+-- Data for Name: super_abstracts; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY super_abstracts (id, obj_version, construct_is_user_specified, mmc_dataspace_id, canonical_model_construct_is_global, canonical_model_construct_is_virtual, canonical_model_construct_name, canonical_model_construct_type, canonical_model_construct_schema_id, super_abstract_cardinality, super_abstract_midst_super_model_type, super_abstract_model_specific_type, parent_super_abstract_id) FROM stdin;
+42	1	f	\N	t	f	RelativeTimeLine	SUPER_ABSTRACT	5	0	\N	RDF_CLASS	\N
+18	2	f	\N	t	f	Record	SUPER_ABSTRACT	5	0	\N	RDF_CLASS	\N
+9	2	f	\N	t	f	Interval	SUPER_ABSTRACT	5	0	\N	RDF_CLASS	\N
+33	3	f	\N	t	f	Signal	SUPER_ABSTRACT	5	0	\N	RDF_CLASS	\N
+45	2	f	\N	t	f	Performance	SUPER_ABSTRACT	5	0	\N	RDF_CLASS	\N
+57	3	f	\N	t	f	MusicArtist	SUPER_ABSTRACT	5	0	\N	RDF_CLASS	\N
+78	3	f	\N	t	f	Track	SUPER_ABSTRACT	5	0	\N	RDF_CLASS	\N
+198	0	f	\N	t	f	Torrent	SUPER_ABSTRACT	137	0	\N	RDF_CLASS	\N
+246	0	f	\N	t	f	Lyrics	SUPER_ABSTRACT	137	0	\N	RDF_CLASS	\N
+186	1	f	\N	t	f	Tag	SUPER_ABSTRACT	137	0	\N	RDF_CLASS	\N
+225	1	f	\N	t	f	ED2K	SUPER_ABSTRACT	137	0	\N	RDF_CLASS	\N
+144	1	f	\N	t	f	Interval	SUPER_ABSTRACT	137	0	\N	RDF_CLASS	\N
+177	2	f	\N	t	f	Signal	SUPER_ABSTRACT	137	0	\N	RDF_CLASS	\N
+150	5	f	\N	t	f	Record	SUPER_ABSTRACT	137	0	\N	RDF_CLASS	\N
+204	2	f	\N	t	f	MusicArtist	SUPER_ABSTRACT	137	0	\N	RDF_CLASS	\N
+141	1	f	\N	t	f	Document	SUPER_ABSTRACT	137	0	\N	RDF_CLASS	\N
+192	1	f	\N	t	f	Playlist	SUPER_ABSTRACT	137	0	\N	RDF_CLASS	\N
+231	4	f	\N	t	f	Track	SUPER_ABSTRACT	137	0	\N	RDF_CLASS	\N
+\.
+
+
+--
+-- TOC entry 2393 (class 0 OID 238648)
+-- Dependencies: 212 2401
+-- Data for Name: super_lexicals; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY super_lexicals (id, obj_version, construct_is_user_specified, mmc_dataspace_id, canonical_model_construct_is_global, canonical_model_construct_is_virtual, canonical_model_construct_name, canonical_model_construct_type, canonical_model_construct_schema_id, super_lexical_data_type, super_lexical_is_identifier, super_lexical_is_nullable, super_lexical_is_optional, super_lexical_max_value_size, super_lexical_midst_super_model_type, super_lexical_model_specific_type, super_lexical_number_of_distinct_values, super_lexical_parent_super_abstract_id, parent_super_lexical_id, parent_super_relationship_id, super_lexical_id, mapkey) FROM stdin;
+12	0	f	\N	t	f	duration	SUPER_LEXICAL	5	STRING	f	t	\N	0	\N	RDF_PROPERTY	0	9	\N	\N	\N	\N
+15	0	f	\N	t	f	onTimeLine	SUPER_LEXICAL	5	STRING	f	t	\N	0	\N	RDF_PROPERTY	0	9	\N	\N	\N	\N
+21	0	f	\N	t	f	title	SUPER_LEXICAL	5	STRING	f	t	\N	0	\N	RDF_PROPERTY	0	18	\N	\N	\N	\N
+24	0	f	\N	t	f	publishing_location	SUPER_LEXICAL	5	STRING	f	t	\N	0	\N	RDF_PROPERTY	0	18	\N	\N	\N	\N
+27	0	f	\N	t	f	maker	SUPER_LEXICAL	5	STRING	f	t	\N	0	\N	RDF_PROPERTY	0	18	\N	\N	\N	\N
+30	0	f	\N	t	f	track	SUPER_LEXICAL	5	STRING	f	t	\N	0	\N	RDF_PROPERTY	0	18	\N	\N	\N	\N
+36	0	f	\N	t	f	time	SUPER_LEXICAL	5	STRING	f	t	\N	0	\N	RDF_PROPERTY	0	33	\N	\N	\N	\N
+39	0	f	\N	t	f	published_as	SUPER_LEXICAL	5	STRING	f	t	\N	0	\N	RDF_PROPERTY	0	33	\N	\N	\N	\N
+48	0	f	\N	t	f	place	SUPER_LEXICAL	5	STRING	f	t	\N	0	\N	RDF_PROPERTY	0	45	\N	\N	\N	\N
+51	0	f	\N	t	f	recorded_as	SUPER_LEXICAL	5	STRING	f	t	\N	0	\N	RDF_PROPERTY	0	45	\N	\N	\N	\N
+54	0	f	\N	t	f	performer	SUPER_LEXICAL	5	STRING	f	t	\N	0	\N	RDF_PROPERTY	0	45	\N	\N	\N	\N
+60	0	f	\N	t	f	olb	SUPER_LEXICAL	5	STRING	f	t	\N	0	\N	RDF_PROPERTY	0	57	\N	\N	\N	\N
+63	0	f	\N	t	f	description	SUPER_LEXICAL	5	STRING	f	t	\N	0	\N	RDF_PROPERTY	0	57	\N	\N	\N	\N
+66	0	f	\N	t	f	name	SUPER_LEXICAL	5	STRING	f	t	\N	0	\N	RDF_PROPERTY	0	57	\N	\N	\N	\N
+69	0	f	\N	t	f	img	SUPER_LEXICAL	5	STRING	f	t	\N	0	\N	RDF_PROPERTY	0	57	\N	\N	\N	\N
+72	0	f	\N	t	f	homepage	SUPER_LEXICAL	5	STRING	f	t	\N	0	\N	RDF_PROPERTY	0	57	\N	\N	\N	\N
+75	0	f	\N	t	f	based_near	SUPER_LEXICAL	5	STRING	f	t	\N	0	\N	RDF_PROPERTY	0	57	\N	\N	\N	\N
+81	0	f	\N	t	f	title	SUPER_LEXICAL	5	STRING	f	t	\N	0	\N	RDF_PROPERTY	0	78	\N	\N	\N	\N
+84	0	f	\N	t	f	created	SUPER_LEXICAL	5	STRING	f	t	\N	0	\N	RDF_PROPERTY	0	78	\N	\N	\N	\N
+87	0	f	\N	t	f	paid_download	SUPER_LEXICAL	5	STRING	f	t	\N	0	\N	RDF_PROPERTY	0	78	\N	\N	\N	\N
+90	0	f	\N	t	f	track_number	SUPER_LEXICAL	5	STRING	f	t	\N	0	\N	RDF_PROPERTY	0	78	\N	\N	\N	\N
+93	0	f	\N	t	f	available_as	SUPER_LEXICAL	5	STRING	f	t	\N	0	\N	RDF_PROPERTY	0	78	\N	\N	\N	\N
+96	0	f	\N	t	f	maker	SUPER_LEXICAL	5	STRING	f	t	\N	0	\N	RDF_PROPERTY	0	78	\N	\N	\N	\N
+147	0	f	\N	t	f	onTimeLine	SUPER_LEXICAL	137	STRING	f	t	\N	0	\N	RDF_PROPERTY	0	144	\N	\N	\N	\N
+153	0	f	\N	t	f	title	SUPER_LEXICAL	137	STRING	f	t	\N	0	\N	RDF_PROPERTY	0	150	\N	\N	\N	\N
+156	0	f	\N	t	f	description	SUPER_LEXICAL	137	STRING	f	t	\N	0	\N	RDF_PROPERTY	0	150	\N	\N	\N	\N
+159	0	f	\N	t	f	image	SUPER_LEXICAL	137	STRING	f	t	\N	0	\N	RDF_PROPERTY	0	150	\N	\N	\N	\N
+162	0	f	\N	t	f	date	SUPER_LEXICAL	137	STRING	f	t	\N	0	\N	RDF_PROPERTY	0	150	\N	\N	\N	\N
+165	0	f	\N	t	f	maker	SUPER_LEXICAL	137	STRING	f	t	\N	0	\N	RDF_PROPERTY	0	150	\N	\N	\N	\N
+168	0	f	\N	t	f	track	SUPER_LEXICAL	137	STRING	f	t	\N	0	\N	RDF_PROPERTY	0	150	\N	\N	\N	\N
+171	0	f	\N	t	f	taggedWithTag	SUPER_LEXICAL	137	STRING	f	t	\N	0	\N	RDF_PROPERTY	0	150	\N	\N	\N	\N
+174	0	f	\N	t	f	available_as	SUPER_LEXICAL	137	STRING	f	t	\N	0	\N	RDF_PROPERTY	0	150	\N	\N	\N	\N
+180	0	f	\N	t	f	time	SUPER_LEXICAL	137	STRING	f	t	\N	0	\N	RDF_PROPERTY	0	177	\N	\N	\N	\N
+183	0	f	\N	t	f	published_as	SUPER_LEXICAL	137	STRING	f	t	\N	0	\N	RDF_PROPERTY	0	177	\N	\N	\N	\N
+189	0	f	\N	t	f	tagName	SUPER_LEXICAL	137	STRING	f	t	\N	0	\N	RDF_PROPERTY	0	186	\N	\N	\N	\N
+195	0	f	\N	t	f	format	SUPER_LEXICAL	137	STRING	f	t	\N	0	\N	RDF_PROPERTY	0	192	\N	\N	\N	\N
+201	0	f	\N	t	f	format	SUPER_LEXICAL	137	STRING	f	t	\N	0	\N	RDF_PROPERTY	0	198	\N	\N	\N	\N
+207	0	f	\N	t	f	name	SUPER_LEXICAL	137	STRING	f	t	\N	0	\N	RDF_PROPERTY	0	204	\N	\N	\N	\N
+210	0	f	\N	t	f	img	SUPER_LEXICAL	137	STRING	f	t	\N	0	\N	RDF_PROPERTY	0	204	\N	\N	\N	\N
+213	0	f	\N	t	f	biography	SUPER_LEXICAL	137	STRING	f	t	\N	0	\N	RDF_PROPERTY	0	204	\N	\N	\N	\N
+216	0	f	\N	t	f	homepage	SUPER_LEXICAL	137	STRING	f	t	\N	0	\N	RDF_PROPERTY	0	204	\N	\N	\N	\N
+219	0	f	\N	t	f	based_near	SUPER_LEXICAL	137	STRING	f	t	\N	0	\N	RDF_PROPERTY	0	204	\N	\N	\N	\N
+222	0	f	\N	t	f	made	SUPER_LEXICAL	137	STRING	f	t	\N	0	\N	RDF_PROPERTY	0	204	\N	\N	\N	\N
+228	0	f	\N	t	f	format	SUPER_LEXICAL	137	STRING	f	t	\N	0	\N	RDF_PROPERTY	0	225	\N	\N	\N	\N
+234	0	f	\N	t	f	title	SUPER_LEXICAL	137	STRING	f	t	\N	0	\N	RDF_PROPERTY	0	231	\N	\N	\N	\N
+237	0	f	\N	t	f	track_number	SUPER_LEXICAL	137	STRING	f	t	\N	0	\N	RDF_PROPERTY	0	231	\N	\N	\N	\N
+240	0	f	\N	t	f	license	SUPER_LEXICAL	137	STRING	f	t	\N	0	\N	RDF_PROPERTY	0	231	\N	\N	\N	\N
+243	0	f	\N	t	f	available_as	SUPER_LEXICAL	137	STRING	f	t	\N	0	\N	RDF_PROPERTY	0	231	\N	\N	\N	\N
+249	0	f	\N	t	f	text	SUPER_LEXICAL	137	STRING	f	t	\N	0	\N	RDF_PROPERTY	0	246	\N	\N	\N	\N
+\.
+
+
+--
+-- TOC entry 2394 (class 0 OID 238656)
+-- Dependencies: 213 2401
+-- Data for Name: super_relationships; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY super_relationships (id, obj_version, construct_is_user_specified, mmc_dataspace_id, canonical_model_construct_is_global, canonical_model_construct_is_virtual, canonical_model_construct_name, canonical_model_construct_type, canonical_model_construct_schema_id, super_relationship_midst_super_model_type, super_relationship_model_specific_type, super_relationship_type, super_relationship_generalised_super_abstract_id) FROM stdin;
+6	1	f	\N	t	f	onTimeLine	SUPER_RELATIONSHIP	5	\N	RDF_PREDICATE	\N	\N
+101	1	f	\N	t	f	maker	SUPER_RELATIONSHIP	5	\N	RDF_PREDICATE	\N	\N
+106	1	f	\N	t	f	track	SUPER_RELATIONSHIP	5	\N	RDF_PREDICATE	\N	\N
+111	1	f	\N	t	f	time	SUPER_RELATIONSHIP	5	\N	RDF_PREDICATE	\N	\N
+116	1	f	\N	t	f	published_as	SUPER_RELATIONSHIP	5	\N	RDF_PREDICATE	\N	\N
+121	1	f	\N	t	f	recorded_as	SUPER_RELATIONSHIP	5	\N	RDF_PREDICATE	\N	\N
+126	1	f	\N	t	f	performer	SUPER_RELATIONSHIP	5	\N	RDF_PREDICATE	\N	\N
+131	1	f	\N	t	f	maker	SUPER_RELATIONSHIP	5	\N	RDF_PREDICATE	\N	\N
+138	1	f	\N	t	f	maker	SUPER_RELATIONSHIP	137	\N	RDF_PREDICATE	\N	\N
+254	1	f	\N	t	f	track	SUPER_RELATIONSHIP	137	\N	RDF_PREDICATE	\N	\N
+259	1	f	\N	t	f	taggedWithTag	SUPER_RELATIONSHIP	137	\N	RDF_PREDICATE	\N	\N
+264	1	f	\N	t	f	available_as	SUPER_RELATIONSHIP	137	\N	RDF_PREDICATE	\N	\N
+269	1	f	\N	t	f	time	SUPER_RELATIONSHIP	137	\N	RDF_PREDICATE	\N	\N
+274	1	f	\N	t	f	published_as	SUPER_RELATIONSHIP	137	\N	RDF_PREDICATE	\N	\N
+279	1	f	\N	t	f	made	SUPER_RELATIONSHIP	137	\N	RDF_PREDICATE	\N	\N
+284	1	f	\N	t	f	license	SUPER_RELATIONSHIP	137	\N	RDF_PREDICATE	\N	\N
+289	1	f	\N	t	f	available_as	SUPER_RELATIONSHIP	137	\N	RDF_PREDICATE	\N	\N
+\.
+
+
+--
+-- TOC entry 2397 (class 0 OID 238680)
+-- Dependencies: 216 2401
+-- Data for Name: temp_construct; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY temp_construct (id, obj_version, construct_is_user_specified, mmc_dataspace_id, canonical_model_construct_is_global, canonical_model_construct_is_virtual, canonical_model_construct_name, canonical_model_construct_type, canonical_model_construct_schema_id) FROM stdin;
+\.
+
+
+--
+-- TOC entry 2398 (class 0 OID 238688)
+-- Dependencies: 217 2401
+-- Data for Name: typecastoperator; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY typecastoperator (id, obj_version, construct_is_user_specified, mmc_dataspace_id, mapping_operator_and_or, mapping_operator_variable_name, mapping_operator_data_source_id, mapping_operator_lhs_input_operator_id, mapping_operator_mapping_id, reconcilingexpression_id, mapping_operator_result_type_id, mapping_operator_rhs_input_operator_id, type_cast_new_type, type_cast_canonical_model_construct_id) FROM stdin;
+\.
+
+
+--
+-- TOC entry 2399 (class 0 OID 238696)
+-- Dependencies: 218 2401
+-- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY users (id, obj_version, accept_terms, date_created, email, first_name, institution_name, last_name, password, user_name) FROM stdin;
+\.
+
+
+--
+-- TOC entry 2003 (class 2606 OID 238346)
+-- Dependencies: 162 162 162 2402
+-- Name: annotation_annotated_constructs_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY annotation_annotated_constructs
+    ADD CONSTRAINT annotation_annotated_constructs_pkey PRIMARY KEY (annotation_id, annotated_construct_id);
+
+
+--
+-- TOC entry 2005 (class 2606 OID 238351)
+-- Dependencies: 163 163 163 2402
+-- Name: annotation_constraining_constructs_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY annotation_constraining_constructs
+    ADD CONSTRAINT annotation_constraining_constructs_pkey PRIMARY KEY (annotation_id, constraining_construct_id);
+
+
+--
+-- TOC entry 2001 (class 2606 OID 238341)
+-- Dependencies: 161 161 2402
+-- Name: annotations_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY annotations
+    ADD CONSTRAINT annotations_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2007 (class 2606 OID 238356)
+-- Dependencies: 164 164 164 2402
+-- Name: constructs_morphisms_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY constructs_morphisms
+    ADD CONSTRAINT constructs_morphisms_pkey PRIMARY KEY (construct_id, morphism_id);
+
+
+--
+-- TOC entry 2009 (class 2606 OID 238364)
+-- Dependencies: 165 165 2402
+-- Name: datasources_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY datasources
+    ADD CONSTRAINT datasources_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2013 (class 2606 OID 238374)
+-- Dependencies: 167 167 167 2402
+-- Name: dataspace_datasources_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY dataspace_datasources
+    ADD CONSTRAINT dataspace_datasources_pkey PRIMARY KEY (dataspace_id, datasource_id);
+
+
+--
+-- TOC entry 2015 (class 2606 OID 238379)
+-- Dependencies: 168 168 168 2402
+-- Name: dataspace_schemas_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY dataspace_schemas
+    ADD CONSTRAINT dataspace_schemas_pkey PRIMARY KEY (dataspace_id, schema_id);
+
+
+--
+-- TOC entry 2017 (class 2606 OID 238384)
+-- Dependencies: 169 169 169 2402
+-- Name: dataspace_users_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY dataspace_users
+    ADD CONSTRAINT dataspace_users_pkey PRIMARY KEY (dataspace_id, user_id);
+
+
+--
+-- TOC entry 2011 (class 2606 OID 238369)
+-- Dependencies: 166 166 2402
+-- Name: dataspaces_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY dataspaces
+    ADD CONSTRAINT dataspaces_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2019 (class 2606 OID 238392)
+-- Dependencies: 170 170 2402
+-- Name: joinoperator_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY joinoperator
+    ADD CONSTRAINT joinoperator_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2021 (class 2606 OID 238400)
+-- Dependencies: 171 171 2402
+-- Name: kernel_density_estimators_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY kernel_density_estimators
+    ADD CONSTRAINT kernel_density_estimators_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2023 (class 2606 OID 238408)
+-- Dependencies: 172 172 2402
+-- Name: mappings_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY mappings
+    ADD CONSTRAINT mappings_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2025 (class 2606 OID 238413)
+-- Dependencies: 173 173 173 2402
+-- Name: morphism_constructs1_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY morphism_constructs1
+    ADD CONSTRAINT morphism_constructs1_pkey PRIMARY KEY (morphism_id, construct1_id);
+
+
+--
+-- TOC entry 2027 (class 2606 OID 238418)
+-- Dependencies: 174 174 174 2402
+-- Name: morphism_constructs2_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY morphism_constructs2
+    ADD CONSTRAINT morphism_constructs2_pkey PRIMARY KEY (morphism_id, construct2_id);
+
+
+--
+-- TOC entry 2029 (class 2606 OID 238426)
+-- Dependencies: 175 175 2402
+-- Name: one_to_one_matchings_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY one_to_one_matchings
+    ADD CONSTRAINT one_to_one_matchings_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2031 (class 2606 OID 238434)
+-- Dependencies: 176 176 2402
+-- Name: ontology_terms_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY ontology_terms
+    ADD CONSTRAINT ontology_terms_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2035 (class 2606 OID 238450)
+-- Dependencies: 179 179 179 2402
+-- Name: parameter_applied_to_construct_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY parameter_applied_to_construct
+    ADD CONSTRAINT parameter_applied_to_construct_pkey PRIMARY KEY (parameter_id, construct_id);
+
+
+--
+-- TOC entry 2033 (class 2606 OID 238445)
+-- Dependencies: 178 178 2402
+-- Name: parameters_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY parameters
+    ADD CONSTRAINT parameters_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2037 (class 2606 OID 238455)
+-- Dependencies: 180 180 2402
+-- Name: participation_of_cmc_in_super_relationship_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY participation_of_cmc_in_super_relationship
+    ADD CONSTRAINT participation_of_cmc_in_super_relationship_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2039 (class 2606 OID 238460)
+-- Dependencies: 181 181 181 2402
+-- Name: participation_specifying_super_lexical_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY participation_specifying_super_lexical
+    ADD CONSTRAINT participation_specifying_super_lexical_pkey PRIMARY KEY (super_lexical_id, participation_in_super_relationship_id);
+
+
+--
+-- TOC entry 2041 (class 2606 OID 238468)
+-- Dependencies: 182 182 2402
+-- Name: predicates_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY predicates
+    ADD CONSTRAINT predicates_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2043 (class 2606 OID 238476)
+-- Dependencies: 183 183 2402
+-- Name: properties_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY properties
+    ADD CONSTRAINT properties_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2045 (class 2606 OID 238484)
+-- Dependencies: 184 184 2402
+-- Name: queries_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY queries
+    ADD CONSTRAINT queries_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2047 (class 2606 OID 238489)
+-- Dependencies: 185 185 185 2402
+-- Name: query_datasources_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY query_datasources
+    ADD CONSTRAINT query_datasources_pkey PRIMARY KEY (query_id, datasource_id);
+
+
+--
+-- TOC entry 2051 (class 2606 OID 238499)
+-- Dependencies: 187 187 187 2402
+-- Name: query_result_mapping_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY query_result_mapping
+    ADD CONSTRAINT query_result_mapping_pkey PRIMARY KEY (query_result_id, mapping_id);
+
+
+--
+-- TOC entry 2053 (class 2606 OID 238507)
+-- Dependencies: 189 189 189 2402
+-- Name: query_result_schema_of_data_source_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY query_result_schema_of_data_source
+    ADD CONSTRAINT query_result_schema_of_data_source_pkey PRIMARY KEY (query_result_id, schema_of_data_source_id);
+
+
+--
+-- TOC entry 2049 (class 2606 OID 238494)
+-- Dependencies: 186 186 2402
+-- Name: query_results_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY query_results
+    ADD CONSTRAINT query_results_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2055 (class 2606 OID 238512)
+-- Dependencies: 190 190 190 2402
+-- Name: query_schemas_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY query_schemas
+    ADD CONSTRAINT query_schemas_pkey PRIMARY KEY (query_id, schema_id);
+
+
+--
+-- TOC entry 2057 (class 2606 OID 238517)
+-- Dependencies: 191 191 191 2402
+-- Name: query_super_abstracts_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY query_super_abstracts
+    ADD CONSTRAINT query_super_abstracts_pkey PRIMARY KEY (query_id, super_abstract_id);
+
+
+--
+-- TOC entry 2059 (class 2606 OID 238525)
+-- Dependencies: 192 192 2402
+-- Name: reconciling_expression_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY reconciling_expression
+    ADD CONSTRAINT reconciling_expression_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2081 (class 2606 OID 238586)
+-- Dependencies: 202 202 2402
+-- Name: reduceoperator_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY reduceoperator
+    ADD CONSTRAINT reduceoperator_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2083 (class 2606 OID 238594)
+-- Dependencies: 203 203 2402
+-- Name: renameoperator_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY renameoperator
+    ADD CONSTRAINT renameoperator_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2063 (class 2606 OID 238541)
+-- Dependencies: 194 194 2402
+-- Name: result_field_result_values_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY result_field_result_values
+    ADD CONSTRAINT result_field_result_values_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2061 (class 2606 OID 238533)
+-- Dependencies: 193 193 2402
+-- Name: result_fields_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY result_fields
+    ADD CONSTRAINT result_fields_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2067 (class 2606 OID 238551)
+-- Dependencies: 196 196 196 2402
+-- Name: result_instance_mapping_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY result_instance_mapping
+    ADD CONSTRAINT result_instance_mapping_pkey PRIMARY KEY (result_instance_id, mapping_id);
+
+
+--
+-- TOC entry 2069 (class 2606 OID 238556)
+-- Dependencies: 197 197 197 2402
+-- Name: result_instance_result_values_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY result_instance_result_values
+    ADD CONSTRAINT result_instance_result_values_pkey PRIMARY KEY (result_instance_id, result_field_result_values_id);
+
+
+--
+-- TOC entry 2065 (class 2606 OID 238546)
+-- Dependencies: 195 195 2402
+-- Name: result_instances_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY result_instances
+    ADD CONSTRAINT result_instances_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2073 (class 2606 OID 238566)
+-- Dependencies: 199 199 199 2402
+-- Name: result_type_result_fields_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY result_type_result_fields
+    ADD CONSTRAINT result_type_result_fields_pkey PRIMARY KEY (result_type_id, result_field_id);
+
+
+--
+-- TOC entry 2075 (class 2606 OID 238568)
+-- Dependencies: 199 199 2402
+-- Name: result_type_result_fields_result_field_id_key; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY result_type_result_fields
+    ADD CONSTRAINT result_type_result_fields_result_field_id_key UNIQUE (result_field_id);
+
+
+--
+-- TOC entry 2071 (class 2606 OID 238561)
+-- Dependencies: 198 198 2402
+-- Name: result_types_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY result_types
+    ADD CONSTRAINT result_types_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2079 (class 2606 OID 238578)
+-- Dependencies: 201 201 201 2402
+-- Name: role_users_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY role_users
+    ADD CONSTRAINT role_users_pkey PRIMARY KEY (role_id, user_id);
+
+
+--
+-- TOC entry 2077 (class 2606 OID 238573)
+-- Dependencies: 200 200 2402
+-- Name: roles_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY roles
+    ADD CONSTRAINT roles_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2085 (class 2606 OID 238599)
+-- Dependencies: 204 204 2402
+-- Name: sample_kde_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY sample_kde
+    ADD CONSTRAINT sample_kde_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2109 (class 2606 OID 238671)
+-- Dependencies: 214 214 2402
+-- Name: scanoperator_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY scanoperator
+    ADD CONSTRAINT scanoperator_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2087 (class 2606 OID 238607)
+-- Dependencies: 205 205 2402
+-- Name: schemas_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY schemas
+    ADD CONSTRAINT schemas_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2099 (class 2606 OID 238639)
+-- Dependencies: 210 210 2402
+-- Name: schematic_correspondence_reconci_reconciling_expression_id_key1; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY schematic_correspondence_reconciling_expressions_2
+    ADD CONSTRAINT schematic_correspondence_reconci_reconciling_expression_id_key1 UNIQUE (reconciling_expression_id);
+
+
+--
+-- TOC entry 2095 (class 2606 OID 238632)
+-- Dependencies: 209 209 2402
+-- Name: schematic_correspondence_reconcil_reconciling_expression_id_key; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY schematic_correspondence_reconciling_expressions_1
+    ADD CONSTRAINT schematic_correspondence_reconcil_reconciling_expression_id_key UNIQUE (reconciling_expression_id);
+
+
+--
+-- TOC entry 2097 (class 2606 OID 238630)
+-- Dependencies: 209 209 209 2402
+-- Name: schematic_correspondence_reconciling_expressions_1_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY schematic_correspondence_reconciling_expressions_1
+    ADD CONSTRAINT schematic_correspondence_reconciling_expressions_1_pkey PRIMARY KEY (schematic_correspondence_id, reconciling_expression_id);
+
+
+--
+-- TOC entry 2101 (class 2606 OID 238637)
+-- Dependencies: 210 210 210 2402
+-- Name: schematic_correspondence_reconciling_expressions_2_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY schematic_correspondence_reconciling_expressions_2
+    ADD CONSTRAINT schematic_correspondence_reconciling_expressions_2_pkey PRIMARY KEY (schematic_correspondence_id, reconciling_expression_id);
+
+
+--
+-- TOC entry 2089 (class 2606 OID 238615)
+-- Dependencies: 206 206 2402
+-- Name: schematic_correspondences_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY schematic_correspondences
+    ADD CONSTRAINT schematic_correspondences_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2091 (class 2606 OID 238620)
+-- Dependencies: 207 207 2402
+-- Name: schematic_correspondences_to_mapping_provenance_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY schematic_correspondences_to_mapping_provenance
+    ADD CONSTRAINT schematic_correspondences_to_mapping_provenance_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2093 (class 2606 OID 238625)
+-- Dependencies: 208 208 208 2402
+-- Name: schematic_correspondences_utilised_for_mappings_provenance_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY schematic_correspondences_utilised_for_mappings_provenance
+    ADD CONSTRAINT schematic_correspondences_utilised_for_mappings_provenance_pkey PRIMARY KEY (provenance_id, schematic_correspondence_id);
+
+
+--
+-- TOC entry 2111 (class 2606 OID 238679)
+-- Dependencies: 215 215 2402
+-- Name: setoperator_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY setoperator
+    ADD CONSTRAINT setoperator_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2103 (class 2606 OID 238647)
+-- Dependencies: 211 211 2402
+-- Name: super_abstracts_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY super_abstracts
+    ADD CONSTRAINT super_abstracts_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2105 (class 2606 OID 238655)
+-- Dependencies: 212 212 2402
+-- Name: super_lexicals_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY super_lexicals
+    ADD CONSTRAINT super_lexicals_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2107 (class 2606 OID 238663)
+-- Dependencies: 213 213 2402
+-- Name: super_relationships_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY super_relationships
+    ADD CONSTRAINT super_relationships_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2113 (class 2606 OID 238687)
+-- Dependencies: 216 216 2402
+-- Name: temp_construct_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY temp_construct
+    ADD CONSTRAINT temp_construct_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2115 (class 2606 OID 238695)
+-- Dependencies: 217 217 2402
+-- Name: typecastoperator_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY typecastoperator
+    ADD CONSTRAINT typecastoperator_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2117 (class 2606 OID 238705)
+-- Dependencies: 218 218 2402
+-- Name: users_email_key; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY users
+    ADD CONSTRAINT users_email_key UNIQUE (email);
+
+
+--
+-- TOC entry 2119 (class 2606 OID 238703)
+-- Dependencies: 218 218 2402
+-- Name: users_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY users
+    ADD CONSTRAINT users_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2121 (class 2606 OID 238707)
+-- Dependencies: 218 218 2402
+-- Name: users_user_name_key; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY users
+    ADD CONSTRAINT users_user_name_key UNIQUE (user_name);
+
+
+--
+-- TOC entry 2171 (class 2606 OID 238953)
+-- Dependencies: 2044 190 184 2402
+-- Name: fk1c06aa3b5914c355; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY query_schemas
+    ADD CONSTRAINT fk1c06aa3b5914c355 FOREIGN KEY (query_id) REFERENCES queries(id);
+
+
+--
+-- TOC entry 2170 (class 2606 OID 238948)
+-- Dependencies: 205 190 2086 2402
+-- Name: fk1c06aa3b880c25a4; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY query_schemas
+    ADD CONSTRAINT fk1c06aa3b880c25a4 FOREIGN KEY (schema_id) REFERENCES schemas(id);
+
+
+--
+-- TOC entry 2129 (class 2606 OID 238743)
+-- Dependencies: 2086 205 168 2402
+-- Name: fk21d2c10f880c25a4; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY dataspace_schemas
+    ADD CONSTRAINT fk21d2c10f880c25a4 FOREIGN KEY (schema_id) REFERENCES schemas(id);
+
+
+--
+-- TOC entry 2130 (class 2606 OID 238748)
+-- Dependencies: 168 166 2010 2402
+-- Name: fk21d2c10fa5346195; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY dataspace_schemas
+    ADD CONSTRAINT fk21d2c10fa5346195 FOREIGN KEY (dataspace_id) REFERENCES dataspaces(id);
+
+
+--
+-- TOC entry 2186 (class 2606 OID 239028)
+-- Dependencies: 198 199 2070 2402
+-- Name: fk31aec838398bd4f0; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY result_type_result_fields
+    ADD CONSTRAINT fk31aec838398bd4f0 FOREIGN KEY (result_type_id) REFERENCES result_types(id);
+
+
+--
+-- TOC entry 2185 (class 2606 OID 239023)
+-- Dependencies: 2060 193 199 2402
+-- Name: fk31aec838e80d60c4; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY result_type_result_fields
+    ADD CONSTRAINT fk31aec838e80d60c4 FOREIGN KEY (result_field_id) REFERENCES result_fields(id);
+
+
+--
+-- TOC entry 2145 (class 2606 OID 238823)
+-- Dependencies: 178 2032 179 2402
+-- Name: fk35575e8b58e9243e; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY parameter_applied_to_construct
+    ADD CONSTRAINT fk35575e8b58e9243e FOREIGN KEY (parameter_id) REFERENCES parameters(id);
+
+
+--
+-- TOC entry 2168 (class 2606 OID 238938)
+-- Dependencies: 2086 205 189 2402
+-- Name: fk3d200fdb8af976df; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY query_result_schema_of_data_source
+    ADD CONSTRAINT fk3d200fdb8af976df FOREIGN KEY (schema_of_data_source_id) REFERENCES schemas(id);
+
+
+--
+-- TOC entry 2169 (class 2606 OID 238943)
+-- Dependencies: 186 189 2048 2402
+-- Name: fk3d200fdba8a2e650; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY query_result_schema_of_data_source
+    ADD CONSTRAINT fk3d200fdba8a2e650 FOREIGN KEY (query_result_id) REFERENCES query_results(id);
+
+
+--
+-- TOC entry 2125 (class 2606 OID 238723)
+-- Dependencies: 163 2000 161 2402
+-- Name: fk47c8342045ade094; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY annotation_constraining_constructs
+    ADD CONSTRAINT fk47c8342045ade094 FOREIGN KEY (annotation_id) REFERENCES annotations(id);
+
+
+--
+-- TOC entry 2173 (class 2606 OID 238963)
+-- Dependencies: 184 191 2044 2402
+-- Name: fk482186f65914c355; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY query_super_abstracts
+    ADD CONSTRAINT fk482186f65914c355 FOREIGN KEY (query_id) REFERENCES queries(id);
+
+
+--
+-- TOC entry 2172 (class 2606 OID 238958)
+-- Dependencies: 211 191 2102 2402
+-- Name: fk482186f6bc26ce98; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY query_super_abstracts
+    ADD CONSTRAINT fk482186f6bc26ce98 FOREIGN KEY (super_abstract_id) REFERENCES super_abstracts(id);
+
+
+--
+-- TOC entry 2184 (class 2606 OID 239018)
+-- Dependencies: 2062 197 194 2402
+-- Name: fk52a767bc7f33a796; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY result_instance_result_values
+    ADD CONSTRAINT fk52a767bc7f33a796 FOREIGN KEY (result_field_result_values_id) REFERENCES result_field_result_values(id);
+
+
+--
+-- TOC entry 2183 (class 2606 OID 239013)
+-- Dependencies: 197 195 2064 2402
+-- Name: fk52a767bcdebf6810; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY result_instance_result_values
+    ADD CONSTRAINT fk52a767bcdebf6810 FOREIGN KEY (result_instance_id) REFERENCES result_instances(id);
+
+
+--
+-- TOC entry 2204 (class 2606 OID 239118)
+-- Dependencies: 207 2022 172 2402
+-- Name: fk5371733ec94546c5; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY schematic_correspondences_to_mapping_provenance
+    ADD CONSTRAINT fk5371733ec94546c5 FOREIGN KEY (mapping_id) REFERENCES mappings(id);
+
+
+--
+-- TOC entry 2124 (class 2606 OID 238718)
+-- Dependencies: 161 162 2000 2402
+-- Name: fk57a47cb345ade094; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY annotation_annotated_constructs
+    ADD CONSTRAINT fk57a47cb345ade094 FOREIGN KEY (annotation_id) REFERENCES annotations(id);
+
+
+--
+-- TOC entry 2151 (class 2606 OID 238853)
+-- Dependencies: 182 2108 214 2402
+-- Name: fk6218799c19d4357a; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY predicates
+    ADD CONSTRAINT fk6218799c19d4357a FOREIGN KEY (scan_predicate_id) REFERENCES scanoperator(id);
+
+
+--
+-- TOC entry 2153 (class 2606 OID 238863)
+-- Dependencies: 182 2018 170 2402
+-- Name: fk6218799cfd52399a; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY predicates
+    ADD CONSTRAINT fk6218799cfd52399a FOREIGN KEY (join_predicate_id) REFERENCES joinoperator(id);
+
+
+--
+-- TOC entry 2143 (class 2606 OID 238813)
+-- Dependencies: 2030 176 177 2402
+-- Name: fk660937bd79ff3e2e; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY ontology_term_enum_values
+    ADD CONSTRAINT fk660937bd79ff3e2e FOREIGN KEY (enum_id) REFERENCES ontology_terms(id);
+
+
+--
+-- TOC entry 2205 (class 2606 OID 239123)
+-- Dependencies: 208 206 2088 2402
+-- Name: fk757b51091820cbd9; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY schematic_correspondences_utilised_for_mappings_provenance
+    ADD CONSTRAINT fk757b51091820cbd9 FOREIGN KEY (schematic_correspondence_id) REFERENCES schematic_correspondences(id);
+
+
+--
+-- TOC entry 2206 (class 2606 OID 239128)
+-- Dependencies: 208 207 2090 2402
+-- Name: fk757b51097eb1d99; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY schematic_correspondences_utilised_for_mappings_provenance
+    ADD CONSTRAINT fk757b51097eb1d99 FOREIGN KEY (provenance_id) REFERENCES schematic_correspondences_to_mapping_provenance(id);
+
+
+--
+-- TOC entry 2128 (class 2606 OID 238738)
+-- Dependencies: 2010 166 167 2402
+-- Name: fk90a07c6ba5346195; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY dataspace_datasources
+    ADD CONSTRAINT fk90a07c6ba5346195 FOREIGN KEY (dataspace_id) REFERENCES dataspaces(id);
+
+
+--
+-- TOC entry 2127 (class 2606 OID 238733)
+-- Dependencies: 167 165 2008 2402
+-- Name: fk90a07c6bfee88a44; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY dataspace_datasources
+    ADD CONSTRAINT fk90a07c6bfee88a44 FOREIGN KEY (datasource_id) REFERENCES datasources(id);
+
+
+--
+-- TOC entry 2122 (class 2606 OID 238708)
+-- Dependencies: 176 161 2030 2402
+-- Name: fk_annotation_ontology_term_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY annotations
+    ADD CONSTRAINT fk_annotation_ontology_term_id FOREIGN KEY (annotation_ontology_term_id) REFERENCES ontology_terms(id);
+
+
+--
+-- TOC entry 2123 (class 2606 OID 238713)
+-- Dependencies: 161 218 2118 2402
+-- Name: fk_annotation_user_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY annotations
+    ADD CONSTRAINT fk_annotation_user_id FOREIGN KEY (annotation_user_id) REFERENCES users(id);
+
+
+--
+-- TOC entry 2211 (class 2606 OID 239153)
+-- Dependencies: 205 211 2086 2402
+-- Name: fk_canonical_model_construct_schema_id3d29608d; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY super_abstracts
+    ADD CONSTRAINT fk_canonical_model_construct_schema_id3d29608d FOREIGN KEY (canonical_model_construct_schema_id) REFERENCES schemas(id);
+
+
+--
+-- TOC entry 2220 (class 2606 OID 239198)
+-- Dependencies: 213 2086 205 2402
+-- Name: fk_canonical_model_construct_schema_id63923737; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY super_relationships
+    ADD CONSTRAINT fk_canonical_model_construct_schema_id63923737 FOREIGN KEY (canonical_model_construct_schema_id) REFERENCES schemas(id);
+
+
+--
+-- TOC entry 2234 (class 2606 OID 239268)
+-- Dependencies: 205 2086 216 2402
+-- Name: fk_canonical_model_construct_schema_id7232f10c; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY temp_construct
+    ADD CONSTRAINT fk_canonical_model_construct_schema_id7232f10c FOREIGN KEY (canonical_model_construct_schema_id) REFERENCES schemas(id);
+
+
+--
+-- TOC entry 2214 (class 2606 OID 239168)
+-- Dependencies: 2086 212 205 2402
+-- Name: fk_canonical_model_construct_schema_idedb2b7f3; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY super_lexicals
+    ADD CONSTRAINT fk_canonical_model_construct_schema_idedb2b7f3 FOREIGN KEY (canonical_model_construct_schema_id) REFERENCES schemas(id);
+
+
+--
+-- TOC entry 2227 (class 2606 OID 239233)
+-- Dependencies: 214 198 2070 2402
+-- Name: fk_mapping_operator_result_type_id3e49da61; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY scanoperator
+    ADD CONSTRAINT fk_mapping_operator_result_type_id3e49da61 FOREIGN KEY (mapping_operator_result_type_id) REFERENCES result_types(id);
+
+
+--
+-- TOC entry 2192 (class 2606 OID 239058)
+-- Dependencies: 198 2070 202 2402
+-- Name: fk_mapping_operator_result_type_id5e11884a; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY reduceoperator
+    ADD CONSTRAINT fk_mapping_operator_result_type_id5e11884a FOREIGN KEY (mapping_operator_result_type_id) REFERENCES result_types(id);
+
+
+--
+-- TOC entry 2197 (class 2606 OID 239083)
+-- Dependencies: 2070 198 203 2402
+-- Name: fk_mapping_operator_result_type_id94027222; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY renameoperator
+    ADD CONSTRAINT fk_mapping_operator_result_type_id94027222 FOREIGN KEY (mapping_operator_result_type_id) REFERENCES result_types(id);
+
+
+--
+-- TOC entry 2136 (class 2606 OID 238778)
+-- Dependencies: 170 198 2070 2402
+-- Name: fk_mapping_operator_result_type_id960ef40e; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY joinoperator
+    ADD CONSTRAINT fk_mapping_operator_result_type_id960ef40e FOREIGN KEY (mapping_operator_result_type_id) REFERENCES result_types(id);
+
+
+--
+-- TOC entry 2239 (class 2606 OID 239293)
+-- Dependencies: 217 198 2070 2402
+-- Name: fk_mapping_operator_result_type_ida776797d; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY typecastoperator
+    ADD CONSTRAINT fk_mapping_operator_result_type_ida776797d FOREIGN KEY (mapping_operator_result_type_id) REFERENCES result_types(id);
+
+
+--
+-- TOC entry 2232 (class 2606 OID 239258)
+-- Dependencies: 215 198 2070 2402
+-- Name: fk_mapping_operator_result_type_idbc266f06; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY setoperator
+    ADD CONSTRAINT fk_mapping_operator_result_type_idbc266f06 FOREIGN KEY (mapping_operator_result_type_id) REFERENCES result_types(id);
+
+
+--
+-- TOC entry 2139 (class 2606 OID 238793)
+-- Dependencies: 184 2044 172 2402
+-- Name: fk_mapping_query1_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY mappings
+    ADD CONSTRAINT fk_mapping_query1_id FOREIGN KEY (mapping_query1_id) REFERENCES queries(id);
+
+
+--
+-- TOC entry 2140 (class 2606 OID 238798)
+-- Dependencies: 172 184 2044 2402
+-- Name: fk_mapping_query2_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY mappings
+    ADD CONSTRAINT fk_mapping_query2_id FOREIGN KEY (mapping_query2_id) REFERENCES queries(id);
+
+
+--
+-- TOC entry 2146 (class 2606 OID 238828)
+-- Dependencies: 166 180 2010 2402
+-- Name: fk_mmc_dataspace_id26f08d46; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY participation_of_cmc_in_super_relationship
+    ADD CONSTRAINT fk_mmc_dataspace_id26f08d46 FOREIGN KEY (mmc_dataspace_id) REFERENCES dataspaces(id);
+
+
+--
+-- TOC entry 2126 (class 2606 OID 238728)
+-- Dependencies: 2010 165 166 2402
+-- Name: fk_mmc_dataspace_id4c4e2cae; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY datasources
+    ADD CONSTRAINT fk_mmc_dataspace_id4c4e2cae FOREIGN KEY (mmc_dataspace_id) REFERENCES dataspaces(id);
+
+
+--
+-- TOC entry 2156 (class 2606 OID 238878)
+-- Dependencies: 2010 166 184 2402
+-- Name: fk_mmc_dataspace_id51d76346; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY queries
+    ADD CONSTRAINT fk_mmc_dataspace_id51d76346 FOREIGN KEY (mmc_dataspace_id) REFERENCES dataspaces(id);
+
+
+--
+-- TOC entry 2213 (class 2606 OID 239163)
+-- Dependencies: 2010 166 211 2402
+-- Name: fk_mmc_dataspace_id558d94a23d29608d; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY super_abstracts
+    ADD CONSTRAINT fk_mmc_dataspace_id558d94a23d29608d FOREIGN KEY (mmc_dataspace_id) REFERENCES dataspaces(id);
+
+
+--
+-- TOC entry 2221 (class 2606 OID 239203)
+-- Dependencies: 213 166 2010 2402
+-- Name: fk_mmc_dataspace_id558d94a263923737; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY super_relationships
+    ADD CONSTRAINT fk_mmc_dataspace_id558d94a263923737 FOREIGN KEY (mmc_dataspace_id) REFERENCES dataspaces(id);
+
+
+--
+-- TOC entry 2235 (class 2606 OID 239273)
+-- Dependencies: 166 216 2010 2402
+-- Name: fk_mmc_dataspace_id558d94a27232f10c; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY temp_construct
+    ADD CONSTRAINT fk_mmc_dataspace_id558d94a27232f10c FOREIGN KEY (mmc_dataspace_id) REFERENCES dataspaces(id);
+
+
+--
+-- TOC entry 2215 (class 2606 OID 239173)
+-- Dependencies: 212 2010 166 2402
+-- Name: fk_mmc_dataspace_id558d94a2edb2b7f3; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY super_lexicals
+    ADD CONSTRAINT fk_mmc_dataspace_id558d94a2edb2b7f3 FOREIGN KEY (mmc_dataspace_id) REFERENCES dataspaces(id);
+
+
+--
+-- TOC entry 2178 (class 2606 OID 238988)
+-- Dependencies: 195 2010 166 2402
+-- Name: fk_mmc_dataspace_id582304bc; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY result_instances
+    ADD CONSTRAINT fk_mmc_dataspace_id582304bc FOREIGN KEY (mmc_dataspace_id) REFERENCES dataspaces(id);
+
+
+--
+-- TOC entry 2152 (class 2606 OID 238858)
+-- Dependencies: 2010 166 182 2402
+-- Name: fk_mmc_dataspace_id6218799c; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY predicates
+    ADD CONSTRAINT fk_mmc_dataspace_id6218799c FOREIGN KEY (mmc_dataspace_id) REFERENCES dataspaces(id);
+
+
+--
+-- TOC entry 2177 (class 2606 OID 238983)
+-- Dependencies: 194 2010 166 2402
+-- Name: fk_mmc_dataspace_id72e875bd; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY result_field_result_values
+    ADD CONSTRAINT fk_mmc_dataspace_id72e875bd FOREIGN KEY (mmc_dataspace_id) REFERENCES dataspaces(id);
+
+
+--
+-- TOC entry 2200 (class 2606 OID 239098)
+-- Dependencies: 166 2010 205 2402
+-- Name: fk_mmc_dataspace_id9d110ad2; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY schemas
+    ADD CONSTRAINT fk_mmc_dataspace_id9d110ad2 FOREIGN KEY (mmc_dataspace_id) REFERENCES dataspaces(id);
+
+
+--
+-- TOC entry 2224 (class 2606 OID 239218)
+-- Dependencies: 214 166 2010 2402
+-- Name: fk_mmc_dataspace_ide9fcaf723e49da61; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY scanoperator
+    ADD CONSTRAINT fk_mmc_dataspace_ide9fcaf723e49da61 FOREIGN KEY (mmc_dataspace_id) REFERENCES dataspaces(id);
+
+
+--
+-- TOC entry 2190 (class 2606 OID 239048)
+-- Dependencies: 2010 166 202 2402
+-- Name: fk_mmc_dataspace_ide9fcaf725e11884a; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY reduceoperator
+    ADD CONSTRAINT fk_mmc_dataspace_ide9fcaf725e11884a FOREIGN KEY (mmc_dataspace_id) REFERENCES dataspaces(id);
+
+
+--
+-- TOC entry 2195 (class 2606 OID 239073)
+-- Dependencies: 203 2010 166 2402
+-- Name: fk_mmc_dataspace_ide9fcaf7294027222; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY renameoperator
+    ADD CONSTRAINT fk_mmc_dataspace_ide9fcaf7294027222 FOREIGN KEY (mmc_dataspace_id) REFERENCES dataspaces(id);
+
+
+--
+-- TOC entry 2134 (class 2606 OID 238768)
+-- Dependencies: 166 170 2010 2402
+-- Name: fk_mmc_dataspace_ide9fcaf72960ef40e; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY joinoperator
+    ADD CONSTRAINT fk_mmc_dataspace_ide9fcaf72960ef40e FOREIGN KEY (mmc_dataspace_id) REFERENCES dataspaces(id);
+
+
+--
+-- TOC entry 2237 (class 2606 OID 239283)
+-- Dependencies: 2010 166 217 2402
+-- Name: fk_mmc_dataspace_ide9fcaf72a776797d; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY typecastoperator
+    ADD CONSTRAINT fk_mmc_dataspace_ide9fcaf72a776797d FOREIGN KEY (mmc_dataspace_id) REFERENCES dataspaces(id);
+
+
+--
+-- TOC entry 2230 (class 2606 OID 239248)
+-- Dependencies: 2010 215 166 2402
+-- Name: fk_mmc_dataspace_ide9fcaf72bc266f06; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY setoperator
+    ADD CONSTRAINT fk_mmc_dataspace_ide9fcaf72bc266f06 FOREIGN KEY (mmc_dataspace_id) REFERENCES dataspaces(id);
+
+
+--
+-- TOC entry 2161 (class 2606 OID 238903)
+-- Dependencies: 2010 166 186 2402
+-- Name: fk_mmc_dataspace_ideb2c673f; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY query_results
+    ADD CONSTRAINT fk_mmc_dataspace_ideb2c673f FOREIGN KEY (mmc_dataspace_id) REFERENCES dataspaces(id);
+
+
+--
+-- TOC entry 2141 (class 2606 OID 238803)
+-- Dependencies: 175 166 2010 2402
+-- Name: fk_mmc_dataspace_idf771ce9b158d101d25461f52; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY one_to_one_matchings
+    ADD CONSTRAINT fk_mmc_dataspace_idf771ce9b158d101d25461f52 FOREIGN KEY (mmc_dataspace_id) REFERENCES dataspaces(id);
+
+
+--
+-- TOC entry 2138 (class 2606 OID 238788)
+-- Dependencies: 172 166 2010 2402
+-- Name: fk_mmc_dataspace_idf771ce9b3a3cf165; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY mappings
+    ADD CONSTRAINT fk_mmc_dataspace_idf771ce9b3a3cf165 FOREIGN KEY (mmc_dataspace_id) REFERENCES dataspaces(id);
+
+
+--
+-- TOC entry 2203 (class 2606 OID 239113)
+-- Dependencies: 206 166 2010 2402
+-- Name: fk_mmc_dataspace_idf771ce9b4971e6e7; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY schematic_correspondences
+    ADD CONSTRAINT fk_mmc_dataspace_idf771ce9b4971e6e7 FOREIGN KEY (mmc_dataspace_id) REFERENCES dataspaces(id);
+
+
+--
+-- TOC entry 2142 (class 2606 OID 238808)
+-- Dependencies: 176 2030 176 2402
+-- Name: fk_ontology_term_parent_ontology_term_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY ontology_terms
+    ADD CONSTRAINT fk_ontology_term_parent_ontology_term_id FOREIGN KEY (parent_ontology_term_id) REFERENCES ontology_terms(id);
+
+
+--
+-- TOC entry 2226 (class 2606 OID 239228)
+-- Dependencies: 214 165 2008 2402
+-- Name: fk_operator_data_source_id3e49da61; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY scanoperator
+    ADD CONSTRAINT fk_operator_data_source_id3e49da61 FOREIGN KEY (mapping_operator_data_source_id) REFERENCES datasources(id);
+
+
+--
+-- TOC entry 2191 (class 2606 OID 239053)
+-- Dependencies: 165 2008 202 2402
+-- Name: fk_operator_data_source_id5e11884a; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY reduceoperator
+    ADD CONSTRAINT fk_operator_data_source_id5e11884a FOREIGN KEY (mapping_operator_data_source_id) REFERENCES datasources(id);
+
+
+--
+-- TOC entry 2196 (class 2606 OID 239078)
+-- Dependencies: 203 2008 165 2402
+-- Name: fk_operator_data_source_id94027222; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY renameoperator
+    ADD CONSTRAINT fk_operator_data_source_id94027222 FOREIGN KEY (mapping_operator_data_source_id) REFERENCES datasources(id);
+
+
+--
+-- TOC entry 2135 (class 2606 OID 238773)
+-- Dependencies: 2008 165 170 2402
+-- Name: fk_operator_data_source_id960ef40e; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY joinoperator
+    ADD CONSTRAINT fk_operator_data_source_id960ef40e FOREIGN KEY (mapping_operator_data_source_id) REFERENCES datasources(id);
+
+
+--
+-- TOC entry 2238 (class 2606 OID 239288)
+-- Dependencies: 217 2008 165 2402
+-- Name: fk_operator_data_source_ida776797d; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY typecastoperator
+    ADD CONSTRAINT fk_operator_data_source_ida776797d FOREIGN KEY (mapping_operator_data_source_id) REFERENCES datasources(id);
+
+
+--
+-- TOC entry 2231 (class 2606 OID 239253)
+-- Dependencies: 165 2008 215 2402
+-- Name: fk_operator_data_source_idbc266f06; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY setoperator
+    ADD CONSTRAINT fk_operator_data_source_idbc266f06 FOREIGN KEY (mapping_operator_data_source_id) REFERENCES datasources(id);
+
+
+--
+-- TOC entry 2223 (class 2606 OID 239213)
+-- Dependencies: 214 172 2022 2402
+-- Name: fk_operator_mapping_id3e49da61; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY scanoperator
+    ADD CONSTRAINT fk_operator_mapping_id3e49da61 FOREIGN KEY (mapping_operator_mapping_id) REFERENCES mappings(id);
+
+
+--
+-- TOC entry 2189 (class 2606 OID 239043)
+-- Dependencies: 172 202 2022 2402
+-- Name: fk_operator_mapping_id5e11884a; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY reduceoperator
+    ADD CONSTRAINT fk_operator_mapping_id5e11884a FOREIGN KEY (mapping_operator_mapping_id) REFERENCES mappings(id);
+
+
+--
+-- TOC entry 2194 (class 2606 OID 239068)
+-- Dependencies: 203 2022 172 2402
+-- Name: fk_operator_mapping_id94027222; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY renameoperator
+    ADD CONSTRAINT fk_operator_mapping_id94027222 FOREIGN KEY (mapping_operator_mapping_id) REFERENCES mappings(id);
+
+
+--
+-- TOC entry 2133 (class 2606 OID 238763)
+-- Dependencies: 2022 170 172 2402
+-- Name: fk_operator_mapping_id960ef40e; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY joinoperator
+    ADD CONSTRAINT fk_operator_mapping_id960ef40e FOREIGN KEY (mapping_operator_mapping_id) REFERENCES mappings(id);
+
+
+--
+-- TOC entry 2236 (class 2606 OID 239278)
+-- Dependencies: 217 2022 172 2402
+-- Name: fk_operator_mapping_ida776797d; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY typecastoperator
+    ADD CONSTRAINT fk_operator_mapping_ida776797d FOREIGN KEY (mapping_operator_mapping_id) REFERENCES mappings(id);
+
+
+--
+-- TOC entry 2229 (class 2606 OID 239243)
+-- Dependencies: 172 2022 215 2402
+-- Name: fk_operator_mapping_idbc266f06; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY setoperator
+    ADD CONSTRAINT fk_operator_mapping_idbc266f06 FOREIGN KEY (mapping_operator_mapping_id) REFERENCES mappings(id);
+
+
+--
+-- TOC entry 2144 (class 2606 OID 238818)
+-- Dependencies: 206 2088 178 2402
+-- Name: fk_parameter_schematic_correspondence_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY parameters
+    ADD CONSTRAINT fk_parameter_schematic_correspondence_id FOREIGN KEY (schematic_correspondence_id) REFERENCES schematic_correspondences(id);
+
+
+--
+-- TOC entry 2147 (class 2606 OID 238833)
+-- Dependencies: 2106 213 180 2402
+-- Name: fk_participation_super_relationship_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY participation_of_cmc_in_super_relationship
+    ADD CONSTRAINT fk_participation_super_relationship_id FOREIGN KEY (super_relationship_id) REFERENCES super_relationships(id);
+
+
+--
+-- TOC entry 2150 (class 2606 OID 238848)
+-- Dependencies: 2104 182 212 2402
+-- Name: fk_predicate_super_lexical1_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY predicates
+    ADD CONSTRAINT fk_predicate_super_lexical1_id FOREIGN KEY (predicate_super_lexical1_id) REFERENCES super_lexicals(id);
+
+
+--
+-- TOC entry 2154 (class 2606 OID 238868)
+-- Dependencies: 182 212 2104 2402
+-- Name: fk_predicate_super_lexical2_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY predicates
+    ADD CONSTRAINT fk_predicate_super_lexical2_id FOREIGN KEY (predicate_super_lexical2_id) REFERENCES super_lexicals(id);
+
+
+--
+-- TOC entry 2157 (class 2606 OID 238883)
+-- Dependencies: 166 2010 184 2402
+-- Name: fk_query_dataspace_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY queries
+    ADD CONSTRAINT fk_query_dataspace_id FOREIGN KEY (query_dataspace_id) REFERENCES dataspaces(id);
+
+
+--
+-- TOC entry 2163 (class 2606 OID 238913)
+-- Dependencies: 2010 186 166 2402
+-- Name: fk_query_result_dataspace_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY query_results
+    ADD CONSTRAINT fk_query_result_dataspace_id FOREIGN KEY (query_result_dataspace_id) REFERENCES dataspaces(id);
+
+
+--
+-- TOC entry 2162 (class 2606 OID 238908)
+-- Dependencies: 184 2044 186 2402
+-- Name: fk_query_result_query_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY query_results
+    ADD CONSTRAINT fk_query_result_query_id FOREIGN KEY (query_result_query_id) REFERENCES queries(id);
+
+
+--
+-- TOC entry 2160 (class 2606 OID 238898)
+-- Dependencies: 198 186 2070 2402
+-- Name: fk_query_result_result_type_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY query_results
+    ADD CONSTRAINT fk_query_result_result_type_id FOREIGN KEY (query_result_result_type_id) REFERENCES result_types(id);
+
+
+--
+-- TOC entry 2155 (class 2606 OID 238873)
+-- Dependencies: 184 2118 218 2402
+-- Name: fk_query_user_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY queries
+    ADD CONSTRAINT fk_query_user_id FOREIGN KEY (query_user_id) REFERENCES users(id);
+
+
+--
+-- TOC entry 2174 (class 2606 OID 238968)
+-- Dependencies: 192 2102 211 2402
+-- Name: fk_reconciling_expression_join_pred1_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY reconciling_expression
+    ADD CONSTRAINT fk_reconciling_expression_join_pred1_id FOREIGN KEY (reconciling_expression_join_pred_1) REFERENCES super_abstracts(id);
+
+
+--
+-- TOC entry 2176 (class 2606 OID 238978)
+-- Dependencies: 2102 211 192 2402
+-- Name: fk_reconciling_expression_join_pred2_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY reconciling_expression
+    ADD CONSTRAINT fk_reconciling_expression_join_pred2_id FOREIGN KEY (reconciling_expression_join_pred_2) REFERENCES super_abstracts(id);
+
+
+--
+-- TOC entry 2175 (class 2606 OID 238973)
+-- Dependencies: 2102 211 192 2402
+-- Name: fk_reconciling_expression_target_super_abstract_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY reconciling_expression
+    ADD CONSTRAINT fk_reconciling_expression_target_super_abstract_id FOREIGN KEY (reconciling_expression_selection_target_super_abstract) REFERENCES super_abstracts(id);
+
+
+--
+-- TOC entry 2180 (class 2606 OID 238998)
+-- Dependencies: 195 184 2044 2402
+-- Name: fk_result_instance_query_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY result_instances
+    ADD CONSTRAINT fk_result_instance_query_id FOREIGN KEY (result_instance_query_id) REFERENCES queries(id);
+
+
+--
+-- TOC entry 2179 (class 2606 OID 238993)
+-- Dependencies: 2070 198 195 2402
+-- Name: fk_result_instance_result_type_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY result_instances
+    ADD CONSTRAINT fk_result_instance_result_type_id FOREIGN KEY (result_type_id) REFERENCES result_types(id);
+
+
+--
+-- TOC entry 2199 (class 2606 OID 239093)
+-- Dependencies: 2020 171 204 2402
+-- Name: fk_sample_estimator_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY sample_kde
+    ADD CONSTRAINT fk_sample_estimator_id FOREIGN KEY (estimator_id) REFERENCES kernel_density_estimators(id);
+
+
+--
+-- TOC entry 2225 (class 2606 OID 239223)
+-- Dependencies: 214 211 2102 2402
+-- Name: fk_scan_super_abstract_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY scanoperator
+    ADD CONSTRAINT fk_scan_super_abstract_id FOREIGN KEY (scan_super_abstract_id) REFERENCES super_abstracts(id);
+
+
+--
+-- TOC entry 2201 (class 2606 OID 239103)
+-- Dependencies: 165 205 2008 2402
+-- Name: fk_schema_datasource_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY schemas
+    ADD CONSTRAINT fk_schema_datasource_id FOREIGN KEY (data_source_id) REFERENCES datasources(id);
+
+
+--
+-- TOC entry 2202 (class 2606 OID 239108)
+-- Dependencies: 206 206 2088 2402
+-- Name: fk_schematic_correspondence_parent_correspondence_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY schematic_correspondences
+    ADD CONSTRAINT fk_schematic_correspondence_parent_correspondence_id FOREIGN KEY (parent_schematic_correspondence_id) REFERENCES schematic_correspondences(id);
+
+
+--
+-- TOC entry 2212 (class 2606 OID 239158)
+-- Dependencies: 2102 211 211 2402
+-- Name: fk_super_abstract_parent_super_abstract_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY super_abstracts
+    ADD CONSTRAINT fk_super_abstract_parent_super_abstract_id FOREIGN KEY (parent_super_abstract_id) REFERENCES super_abstracts(id);
+
+
+--
+-- TOC entry 2216 (class 2606 OID 239178)
+-- Dependencies: 211 212 2102 2402
+-- Name: fk_super_lexical_parent_super_abstract_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY super_lexicals
+    ADD CONSTRAINT fk_super_lexical_parent_super_abstract_id FOREIGN KEY (super_lexical_parent_super_abstract_id) REFERENCES super_abstracts(id);
+
+
+--
+-- TOC entry 2217 (class 2606 OID 239183)
+-- Dependencies: 2104 212 212 2402
+-- Name: fk_super_lexical_parent_super_lexical_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY super_lexicals
+    ADD CONSTRAINT fk_super_lexical_parent_super_lexical_id FOREIGN KEY (parent_super_lexical_id) REFERENCES super_lexicals(id);
+
+
+--
+-- TOC entry 2218 (class 2606 OID 239188)
+-- Dependencies: 213 2106 212 2402
+-- Name: fk_super_lexical_parent_super_relationship_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY super_lexicals
+    ADD CONSTRAINT fk_super_lexical_parent_super_relationship_id FOREIGN KEY (parent_super_relationship_id) REFERENCES super_relationships(id);
+
+
+--
+-- TOC entry 2222 (class 2606 OID 239208)
+-- Dependencies: 213 211 2102 2402
+-- Name: fk_super_relationship_generalised_super_abstract_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY super_relationships
+    ADD CONSTRAINT fk_super_relationship_generalised_super_abstract_id FOREIGN KEY (super_relationship_generalised_super_abstract_id) REFERENCES super_abstracts(id);
+
+
+--
+-- TOC entry 2208 (class 2606 OID 239138)
+-- Dependencies: 209 2088 206 2402
+-- Name: fkac37d9461820cbd9; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY schematic_correspondence_reconciling_expressions_1
+    ADD CONSTRAINT fkac37d9461820cbd9 FOREIGN KEY (schematic_correspondence_id) REFERENCES schematic_correspondences(id);
+
+
+--
+-- TOC entry 2207 (class 2606 OID 239133)
+-- Dependencies: 209 2058 192 2402
+-- Name: fkac37d94625773a15; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY schematic_correspondence_reconciling_expressions_1
+    ADD CONSTRAINT fkac37d94625773a15 FOREIGN KEY (reconciling_expression_id) REFERENCES reconciling_expression(id);
+
+
+--
+-- TOC entry 2210 (class 2606 OID 239148)
+-- Dependencies: 210 2088 206 2402
+-- Name: fkac37d9471820cbd9; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY schematic_correspondence_reconciling_expressions_2
+    ADD CONSTRAINT fkac37d9471820cbd9 FOREIGN KEY (schematic_correspondence_id) REFERENCES schematic_correspondences(id);
+
+
+--
+-- TOC entry 2209 (class 2606 OID 239143)
+-- Dependencies: 210 2058 192 2402
+-- Name: fkac37d94725773a15; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY schematic_correspondence_reconciling_expressions_2
+    ADD CONSTRAINT fkac37d94725773a15 FOREIGN KEY (reconciling_expression_id) REFERENCES reconciling_expression(id);
+
+
+--
+-- TOC entry 2188 (class 2606 OID 239038)
+-- Dependencies: 2118 218 201 2402
+-- Name: fkc07cc0df85bf07b8; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY role_users
+    ADD CONSTRAINT fkc07cc0df85bf07b8 FOREIGN KEY (user_id) REFERENCES users(id);
+
+
+--
+-- TOC entry 2187 (class 2606 OID 239033)
+-- Dependencies: 2076 201 200 2402
+-- Name: fkc07cc0dfe09443d8; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY role_users
+    ADD CONSTRAINT fkc07cc0dfe09443d8 FOREIGN KEY (role_id) REFERENCES roles(id);
+
+
+--
+-- TOC entry 2131 (class 2606 OID 238753)
+-- Dependencies: 218 2118 169 2402
+-- Name: fkca18b76585bf07b8; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY dataspace_users
+    ADD CONSTRAINT fkca18b76585bf07b8 FOREIGN KEY (user_id) REFERENCES users(id);
+
+
+--
+-- TOC entry 2132 (class 2606 OID 238758)
+-- Dependencies: 166 169 2010 2402
+-- Name: fkca18b765a5346195; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY dataspace_users
+    ADD CONSTRAINT fkca18b765a5346195 FOREIGN KEY (dataspace_id) REFERENCES dataspaces(id);
+
+
+--
+-- TOC entry 2165 (class 2606 OID 238923)
+-- Dependencies: 186 187 2048 2402
+-- Name: fkd0118303a8a2e650; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY query_result_mapping
+    ADD CONSTRAINT fkd0118303a8a2e650 FOREIGN KEY (query_result_id) REFERENCES query_results(id);
+
+
+--
+-- TOC entry 2164 (class 2606 OID 238918)
+-- Dependencies: 172 2022 187 2402
+-- Name: fkd0118303c94546c5; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY query_result_mapping
+    ADD CONSTRAINT fkd0118303c94546c5 FOREIGN KEY (mapping_id) REFERENCES mappings(id);
+
+
+--
+-- TOC entry 2182 (class 2606 OID 239008)
+-- Dependencies: 172 196 2022 2402
+-- Name: fkd3d32ee6c94546c5; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY result_instance_mapping
+    ADD CONSTRAINT fkd3d32ee6c94546c5 FOREIGN KEY (mapping_id) REFERENCES mappings(id);
+
+
+--
+-- TOC entry 2181 (class 2606 OID 239003)
+-- Dependencies: 2064 196 195 2402
+-- Name: fkd3d32ee6debf6810; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY result_instance_mapping
+    ADD CONSTRAINT fkd3d32ee6debf6810 FOREIGN KEY (result_instance_id) REFERENCES result_instances(id);
+
+
+--
+-- TOC entry 2148 (class 2606 OID 238838)
+-- Dependencies: 2036 181 180 2402
+-- Name: fkd87f88e056d57076; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY participation_specifying_super_lexical
+    ADD CONSTRAINT fkd87f88e056d57076 FOREIGN KEY (participation_in_super_relationship_id) REFERENCES participation_of_cmc_in_super_relationship(id);
+
+
+--
+-- TOC entry 2149 (class 2606 OID 238843)
+-- Dependencies: 212 2104 181 2402
+-- Name: fkd87f88e0900e635c; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY participation_specifying_super_lexical
+    ADD CONSTRAINT fkd87f88e0900e635c FOREIGN KEY (super_lexical_id) REFERENCES super_lexicals(id);
+
+
+--
+-- TOC entry 2167 (class 2606 OID 238933)
+-- Dependencies: 186 188 2048 2402
+-- Name: fkd9fb03cca8a2e650; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY query_result_result_instance
+    ADD CONSTRAINT fkd9fb03cca8a2e650 FOREIGN KEY (query_result_id) REFERENCES query_results(id);
+
+
+--
+-- TOC entry 2166 (class 2606 OID 238928)
+-- Dependencies: 195 2064 188 2402
+-- Name: fkd9fb03ccdebf6810; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY query_result_result_instance
+    ADD CONSTRAINT fkd9fb03ccdebf6810 FOREIGN KEY (result_instance_id) REFERENCES result_instances(id);
+
+
+--
+-- TOC entry 2228 (class 2606 OID 239238)
+-- Dependencies: 214 192 2058 2402
+-- Name: fke9fcaf724913581e3e49da61; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY scanoperator
+    ADD CONSTRAINT fke9fcaf724913581e3e49da61 FOREIGN KEY (reconcilingexpression_id) REFERENCES reconciling_expression(id);
+
+
+--
+-- TOC entry 2193 (class 2606 OID 239063)
+-- Dependencies: 202 2058 192 2402
+-- Name: fke9fcaf724913581e5e11884a; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY reduceoperator
+    ADD CONSTRAINT fke9fcaf724913581e5e11884a FOREIGN KEY (reconcilingexpression_id) REFERENCES reconciling_expression(id);
+
+
+--
+-- TOC entry 2198 (class 2606 OID 239088)
+-- Dependencies: 2058 192 203 2402
+-- Name: fke9fcaf724913581e94027222; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY renameoperator
+    ADD CONSTRAINT fke9fcaf724913581e94027222 FOREIGN KEY (reconcilingexpression_id) REFERENCES reconciling_expression(id);
+
+
+--
+-- TOC entry 2137 (class 2606 OID 238783)
+-- Dependencies: 192 170 2058 2402
+-- Name: fke9fcaf724913581e960ef40e; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY joinoperator
+    ADD CONSTRAINT fke9fcaf724913581e960ef40e FOREIGN KEY (reconcilingexpression_id) REFERENCES reconciling_expression(id);
+
+
+--
+-- TOC entry 2240 (class 2606 OID 239298)
+-- Dependencies: 217 2058 192 2402
+-- Name: fke9fcaf724913581ea776797d; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY typecastoperator
+    ADD CONSTRAINT fke9fcaf724913581ea776797d FOREIGN KEY (reconcilingexpression_id) REFERENCES reconciling_expression(id);
+
+
+--
+-- TOC entry 2233 (class 2606 OID 239263)
+-- Dependencies: 192 215 2058 2402
+-- Name: fke9fcaf724913581ebc266f06; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY setoperator
+    ADD CONSTRAINT fke9fcaf724913581ebc266f06 FOREIGN KEY (reconcilingexpression_id) REFERENCES reconciling_expression(id);
+
+
+--
+-- TOC entry 2219 (class 2606 OID 239193)
+-- Dependencies: 2080 212 202 2402
+-- Name: fkedb2b7f3192a9458; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY super_lexicals
+    ADD CONSTRAINT fkedb2b7f3192a9458 FOREIGN KEY (super_lexical_id) REFERENCES reduceoperator(id);
+
+
+--
+-- TOC entry 2159 (class 2606 OID 238893)
+-- Dependencies: 184 185 2044 2402
+-- Name: fkf23ef975914c355; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY query_datasources
+    ADD CONSTRAINT fkf23ef975914c355 FOREIGN KEY (query_id) REFERENCES queries(id);
+
+
+--
+-- TOC entry 2158 (class 2606 OID 238888)
+-- Dependencies: 165 185 2008 2402
+-- Name: fkf23ef97fee88a44; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY query_datasources
+    ADD CONSTRAINT fkf23ef97fee88a44 FOREIGN KEY (datasource_id) REFERENCES datasources(id);
+
+
+--
+-- TOC entry 2407 (class 0 OID 0)
+-- Dependencies: 6
+-- Name: public; Type: ACL; Schema: -; Owner: postgres
+--
+
+REVOKE ALL ON SCHEMA public FROM PUBLIC;
+REVOKE ALL ON SCHEMA public FROM postgres;
+GRANT ALL ON SCHEMA public TO postgres;
+GRANT ALL ON SCHEMA public TO PUBLIC;
+
+
+-- Completed on 2015-05-29 14:57:25
+
+--
+-- PostgreSQL database dump complete
+--
+

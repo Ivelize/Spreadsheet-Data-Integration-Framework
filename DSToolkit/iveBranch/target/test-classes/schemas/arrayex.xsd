@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="atlasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="results"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="results">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="result"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="result">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="gene"/>
+        <xs:element ref="expressions"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="gene">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="emblIds"/>
+        <xs:element ref="orthologs"/>
+        <xs:element ref="enstranscripts"/>
+        <xs:element ref="goTerms"/>
+        <xs:element ref="goIds"/>
+        <xs:choice maxOccurs="unbounded">
+          <xs:element ref="ensemblProteinIds"/>
+          <xs:element ref="synonyms"/>
+        </xs:choice>
+        <xs:element ref="ensemblGeneId"/>
+        <xs:element minOccurs="0" ref="interProIds"/>
+        <xs:element ref="uniprotIds"/>
+        <xs:element ref="organism"/>
+        <xs:element ref="id"/>
+        <xs:element ref="designelements"/>
+        <xs:element ref="name"/>
+        <xs:element minOccurs="0" ref="interProTerms"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="emblIds">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="emblId"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="emblId" type="xs:NCName"/>
+  <xs:element name="orthologs">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="enstranscripts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="enstranscript"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="enstranscript" type="xs:NCName"/>
+  <xs:element name="goTerms">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="goTerm"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="goTerm" type="xs:string"/>
+  <xs:element name="goIds">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="goId"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="goId" type="xs:NMTOKEN"/>
+  <xs:element name="ensemblProteinIds">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ensemblProteinId"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ensemblProteinId" type="xs:NCName"/>
+  <xs:element name="synonyms">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="synonym"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="synonym" type="xs:NCName"/>
+  <xs:element name="ensemblGeneId" type="xs:NCName"/>
+  <xs:element name="interProIds">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="interProId"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="interProId" type="xs:NCName"/>
+  <xs:element name="uniprotIds">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="uniprotId"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="uniprotId" type="xs:NCName"/>
+  <xs:element name="organism" type="xs:string"/>
+  <xs:element name="id" type="xs:NCName"/>
+  <xs:element name="designelements">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="designelement"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="designelement" type="xs:NMTOKEN"/>
+  <xs:element name="name" type="xs:NCName"/>
+  <xs:element name="interProTerms">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="interProTerm"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="interProTerm" type="xs:string"/>
+  <xs:element name="expressions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="expression"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="expression">
+    <xs:complexType mixed="true">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="downExperiments"/>
+        <xs:element ref="downPvalue"/>
+        <xs:element ref="ef"/>
+        <xs:element ref="efv"/>
+        <xs:element ref="experiments"/>
+        <xs:element ref="nonDEExperiments"/>
+        <xs:element ref="upExperiments"/>
+        <xs:element ref="upPvalue"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="downExperiments" type="xs:integer"/>
+  <xs:element name="downPvalue" type="xs:decimal"/>
+  <xs:element name="ef" type="xs:NCName"/>
+  <xs:element name="efv" type="xs:string"/>
+  <xs:element name="experiments">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="experiment"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="experiment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="accession"/>
+        <xs:element ref="pvalue"/>
+        <xs:element ref="expression"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="accession" type="xs:NCName"/>
+  <xs:element name="pvalue" type="xs:decimal"/>
+  <xs:element name="nonDEExperiments" type="xs:integer"/>
+  <xs:element name="upExperiments" type="xs:integer"/>
+  <xs:element name="upPvalue" type="xs:decimal"/>
+</xs:schema>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified">
+	<xs:element name="Correspondences">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element maxOccurs="unbounded" minOccurs="1"
+					ref="Correspondence" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="Correspondence">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="name" />
+				<xs:element ref="shortName" />
+				<xs:element ref="type" />
+				<xs:element ref="description" minOccurs="0" />
+				<xs:element ref="direction" />
+				<xs:element maxOccurs="unbounded" minOccurs="0" ref="Param" />
+				<xs:element maxOccurs="1" minOccurs="1" ref="Constructs1" />
+				<xs:element maxOccurs="1" minOccurs="1" ref="Constructs2" />
+				<xs:element maxOccurs="unbounded" minOccurs="0" ref="Correspondence" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="Constructs1">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element maxOccurs="unbounded" minOccurs="1" ref="Constr" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="Constructs2">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element maxOccurs="unbounded" minOccurs="1" ref="Constr" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="name" type="xs:string" />
+	<xs:element name="shortName" type="xs:string" />
+	<xs:element name="type" type="xs:string" />
+	<xs:element name="description" type="xs:string" />
+	<xs:element name="direction" type="xs:string" />
+
+	<xs:element name="Param">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="name" />
+				<xs:element ref="value" />
+				<xs:element ref="direction" />
+				<xs:element maxOccurs="unbounded" minOccurs="0" ref="Constr" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="value" type="xs:string" />
+
+	<xs:element name="Constr">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="name" />
+				<xs:element ref="parentConstrName"/>
+				<xs:element ref="kind" />
+				<xs:element ref="schemaName" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="parentConstrName" type="xs:string"/>
+	<xs:element name="kind" type="xs:string" />
+	<xs:element name="schemaName" type="xs:string" />
+</xs:schema>

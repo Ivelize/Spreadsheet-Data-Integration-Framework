@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<RDFEntityTypes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="RDFSchema.xsd">
+
+  <RDFSchemaMetadata>
+    <NameSpace>dc=http://purl.org/dc/elements/1.1/</NameSpace>
+    <NameSpace>db=http://dbtune.org/magnatune/</NameSpace>
+    <NameSpace>tl=http://purl.org/NET/c4dm/timeline.owl#</NameSpace>
+    <NameSpace>mo=http://purl.org/ontology/mo/</NameSpace>
+    <NameSpace>foaf=http://xmlns.com/foaf/0.1/</NameSpace>
+    <NameSpace>rdfs=http://www.w3.org/2000/01/rdf-schema#</NameSpace>
+    <NameSpace>time=http://www.w3.org/TR/owl-time/</NameSpace>
+    <NameSpace>bio=http://purl.org/vocab/bio/0.1/</NameSpace>
+    <NameSpace>event=http://purl.org/NET/c4dm/event.owl#</NameSpace>
+    <NameSpace>d2r=http://sites.wiwiss.fu-berlin.de/suhl/bizer/d2r-server/config.rdf#</NameSpace>
+    <NameSpace>map=file:///home/moustaki/work/workspace/opendata/d2r-server-0.3.1/mapping.n3#</NameSpace>
+    <NameSpace>xsd=http://www.w3.org/2001/XMLSchema#</NameSpace>
+    <NameSpace>rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#</NameSpace>
+    <NameSpace>vocab=http://dbtune.org/magnatune/vocab/</NameSpace>
+  </RDFSchemaMetadata>
+  <!-- MusicArtist to Agent -->
+  <RDFEntityType rdftype="http://xmlns.com/foaf/0.1/Agent"> 
+    <RDFEntityTypeName>Agent</RDFEntityTypeName>
+    <SimpleAttrOfRDFEntityType namespace="http://purl.org/vocab/bio/0.1/">olb</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://purl.org/dc/elements/1.1/">description</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://xmlns.com/foaf/0.1/">name</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://xmlns.com/foaf/0.1/">img</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://xmlns.com/foaf/0.1/">homepage</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://xmlns.com/foaf/0.1/">based_near</SimpleAttrOfRDFEntityType>
+    <MultiAttrOfRDFEntityType namespace="http://xmlns.com/foaf/0.1/">name</MultiAttrOfRDFEntityType>
+  </RDFEntityType>
+  <RDFEntityType rdftype="http://www.w3.org/TR/owl-time/Interval">
+    <RDFEntityTypeName>Interval</RDFEntityTypeName>
+    <SimpleAttrOfRDFEntityType namespace="http://purl.org/NET/c4dm/timeline.owl#">duration</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://purl.org/NET/c4dm/timeline.owl#">onTimeLine</SimpleAttrOfRDFEntityType>
+    <RDFBinaryRelationshipType namespace="http://purl.org/NET/c4dm/timeline.owl#">
+      <RDFRelationshipName>onTimeLine</RDFRelationshipName>
+      <FromRDFEntityType>Interval</FromRDFEntityType>
+      <ToRDFEntityType>RelativeTimeLine</ToRDFEntityType>
+      <CardinalityRatio>1:1</CardinalityRatio>
+    </RDFBinaryRelationshipType>
+  </RDFEntityType>
+  <!-- Signal to MusicalExpression -->
+  <RDFEntityType rdftype="http://purl.org/ontology/mo/MusicalExpression">
+    <RDFEntityTypeName>MusicalExpression</RDFEntityTypeName>
+    <SimpleAttrOfRDFEntityType namespace="http://purl.org/ontology/mo/">time</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://purl.org/ontology/mo/">published_as</SimpleAttrOfRDFEntityType>
+    <RDFBinaryRelationshipType namespace="http://purl.org/ontology/mo/">
+      <RDFRelationshipName>time</RDFRelationshipName>
+      <FromRDFEntityType>Signal</FromRDFEntityType>
+      <ToRDFEntityType>Interval</ToRDFEntityType>
+      <CardinalityRatio>1:1</CardinalityRatio>
+    </RDFBinaryRelationshipType>
+    <RDFBinaryRelationshipType namespace="http://purl.org/ontology/mo/">
+      <RDFRelationshipName>published_as</RDFRelationshipName>
+      <FromRDFEntityType>Signal</FromRDFEntityType>
+      <ToRDFEntityType>Track</ToRDFEntityType>
+      <CardinalityRatio>1:1</CardinalityRatio>
+    </RDFBinaryRelationshipType>
+  </RDFEntityType>
+  <!-- Record to MusicalManifestation -->
+  <RDFEntityType rdftype="http://purl.org/ontology/mo/MusicalManifestation">
+    <RDFEntityTypeName>MusicalManifestation</RDFEntityTypeName>
+    <SimpleAttrOfRDFEntityType namespace="http://purl.org/dc/elements/1.1/">title</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://purl.org/ontology/mo/">publishing_location</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://xmlns.com/foaf/0.1/">maker</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://purl.org/ontology/mo/">track</SimpleAttrOfRDFEntityType>
+    <RDFBinaryRelationshipType namespace="http://xmlns.com/foaf/0.1/">
+      <RDFRelationshipName>maker</RDFRelationshipName>
+      <FromRDFEntityType>Record</FromRDFEntityType>
+      <ToRDFEntityType>MusicArtist</ToRDFEntityType>
+      <CardinalityRatio>1:1</CardinalityRatio>
+    </RDFBinaryRelationshipType>
+    <RDFBinaryRelationshipType namespace="http://purl.org/ontology/mo/">
+      <RDFRelationshipName>track</RDFRelationshipName>
+      <FromRDFEntityType>Record</FromRDFEntityType>
+      <ToRDFEntityType>Track</ToRDFEntityType>
+      <CardinalityRatio>N:M</CardinalityRatio>
+    </RDFBinaryRelationshipType>
+  </RDFEntityType>
+  <RDFEntityType rdftype="http://purl.org/ontology/mo/Track">
+    <RDFEntityTypeName>Track</RDFEntityTypeName>
+    <SimpleAttrOfRDFEntityType namespace="http://purl.org/dc/elements/1.1/">title</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://purl.org/dc/elements/1.1/">created</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://purl.org/ontology/mo/">paid_download</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://purl.org/ontology/mo/">track_number</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://purl.org/ontology/mo/">available_as</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://xmlns.com/foaf/0.1/">maker</SimpleAttrOfRDFEntityType>
+    <RDFBinaryRelationshipType namespace="http://xmlns.com/foaf/0.1/">
+      <RDFRelationshipName>maker</RDFRelationshipName>
+      <FromRDFEntityType>Track</FromRDFEntityType>
+      <ToRDFEntityType>MusicArtist</ToRDFEntityType>
+      <CardinalityRatio>1:1</CardinalityRatio>
+    </RDFBinaryRelationshipType>
+  </RDFEntityType>
+  <RDFEntityType rdftype="http://purl.org/ontology/mo/Performance">
+    <RDFEntityTypeName>Performance</RDFEntityTypeName>
+    <SimpleAttrOfRDFEntityType namespace="http://purl.org/NET/c4dm/event.owl#">place</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://purl.org/ontology/mo/">recorded_as</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://purl.org/ontology/mo/">performer</SimpleAttrOfRDFEntityType>
+    <RDFBinaryRelationshipType namespace="http://purl.org/ontology/mo/">
+      <RDFRelationshipName>recorded_as</RDFRelationshipName>
+      <FromRDFEntityType>Performance</FromRDFEntityType>
+      <ToRDFEntityType>Signal</ToRDFEntityType>
+      <CardinalityRatio>1:1</CardinalityRatio>
+    </RDFBinaryRelationshipType>
+    <RDFBinaryRelationshipType namespace="http://purl.org/ontology/mo/">
+      <RDFRelationshipName>performer</RDFRelationshipName>
+      <FromRDFEntityType>Performance</FromRDFEntityType>
+      <ToRDFEntityType>MusicArtist</ToRDFEntityType>
+      <CardinalityRatio>1:1</CardinalityRatio>
+    </RDFBinaryRelationshipType>
+  </RDFEntityType>
+  <RDFEntityType rdftype="http://purl.org/NET/c4dm/timeline.owl#RelativeTimeLine">
+    <RDFEntityTypeName>RelativeTimeLine</RDFEntityTypeName>
+  </RDFEntityType>
+</RDFEntityTypes>

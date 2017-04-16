@@ -1,0 +1,6 @@
+SELECT SGDLite.feature.name, SGDLite.dbxref.accession, SGDLite.db.name, SGDLite.organism.genus, SGDLite.organism.species, SGDLite.organism.common_name
+FROM SGDLite.feature, SGDLite.dbxref, SGDLite.db, SGDLite.organism
+WHERE SGDLite.feature.uniquename = 'YCL076W'
+AND SGDLite.feature.organism_id = SGDLite.organism.organism_id
+AND SGDLite.feature.dbxref_id = SGDLite.dbxref.dbxref_id
+AND SGDLite.dbxref.db_id = SGDLite.db.db_id;

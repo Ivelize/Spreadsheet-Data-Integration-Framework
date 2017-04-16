@@ -1,0 +1,60 @@
+<dataset>
+	
+	<Economy Country="DZ" GDP="108700" Agriculture="12" Service="50" Industry="38" Inflation="28"/>
+	<Economy Country="GH" GDP="25100" Agriculture="47" Service="16" Industry="37" Inflation="69"/>
+	<Economy Country="MA" GDP="87400" Agriculture="14.3" Service="32.2" Industry="53.5" Inflation="5.4"/>
+	<Economy Country="RT" GDP="4100" Agriculture="49.2" Service="17.7" Industry="33.1" Inflation="8.8"/>
+	<Economy Country="WSA" GDP="0" Agriculture="0" Service="0" Industry="0" Inflation="0"/>
+	
+	<Population Country="DZ" Population_Growth="2.21" Infant_Mortality="48.7"/>
+	<Population Country="GH" Population_Growth="2.29" Infant_Mortality="80.3"/>
+	<Population Country="MA" Population_Growth="2.05" Infant_Mortality="43.2"/>
+	<Population Country="RT" Population_Growth="3.56" Infant_Mortality="84.3"/>
+	<Population Country="WSA" Population_Growth="2.46" Infant_Mortality="145.82"/>
+	
+	<Politics Country="DZ" Independence="1962-07-05" Dependent="NA" Government="republic"/>
+	<Politics Country="GH" Independence="1957-03-06" Dependent="NA" Government="constitutional democracy"/>
+	<Politics Country="MA" Independence="1956-03-02" Dependent="NA" Government="constitutional monarchy"/>
+	<Politics Country="RT" Independence="1960-04-27" Dependent="NA" Government="republic under transition to multiparty democratic rule"/>
+	
+	<Religion Country="DZ" Name="Christian" Percentage="0.5"/>
+	<Religion Country="DZ" Name="Jewish" Percentage="0.5"/>
+	<Religion Country="DZ" Name="Muslim" Percentage="99"/>
+	<Religion Country="GH" Name="Christian" Percentage="24"/>
+	<Religion Country="GH" Name="Muslim" Percentage="30"/>
+	<Religion Country="MA" Name="Christian" Percentage="1.1"/>
+	<Religion Country="MA" Name="Jewish" Percentage="0.2"/>
+	<Religion Country="MA" Name="Muslim" Percentage="98.7"/>
+	<Religion Country="RT" Name="Christian" Percentage="20"/>
+	<Religion Country="RT" Name="Muslim" Percentage="10"/>
+	<Religion Country="WSA" Name="Muslim" Percentage="100"/>
+	
+	<EthnicGroup Country="DZ" Name="Arab-Berber" Percentage="99"/>
+	<EthnicGroup Country="DZ" Name="European" Percentage="1"/>
+	<EthnicGroup Country="GH" Name="African" Percentage="99.8"/>
+	<EthnicGroup Country="GH" Name="European" Percentage="0.2"/>
+	<EthnicGroup Country="MA" Name="Arab-Berber" Percentage="99.1"/>
+	<EthnicGroup Country="MA" Name="Jewish" Percentage="0.2"/>
+	<EthnicGroup Country="RT" Name="African" Percentage="99"/>
+	<EthnicGroup Country="RT" Name="European Syrian-Lebanese" Percentage="1"/>
+	
+	<Organization Abbreviation="AMU" Name="Arab Maghreb Union" City="Rabat" Country="MA" Province="Morocco" Established="1989-02-17"/>
+	<Organization Abbreviation="IMO" Name="International Maritime Organization" City="London" Country="GB" Province="Greater London" Established="1958-03-17"/>
+	<Organization Abbreviation="Inmarsat" Name="International Mobile Satellite Organization" City="London" Country="GB" Province="Greater London" Established="1976-09-03"/>
+	<Organization Abbreviation="C" Name="Commonwealth" City="London" Country="GB" Province="Greater London" Established="1931-12-31"/>
+	<Organization Abbreviation="EBRD" Name="European Bank for Reconstruction and Development" City="London" Country="GB" Province="Greater London" Established="1991-04-15"/>
+	<Organization Abbreviation="WADB" Name="West African Development Bank" City="Lome" Country="RT" Province="Togo" Established="1973-11-14"/>
+	
+	<isMember Country="DZ" Organization="AMU" Type="member"/>
+	<isMember Country="DZ" Organization="IMO" Type="member"/>
+	<isMember Country="DZ" Organization="Inmarsat" Type="member"/>
+	<isMember Country="GH" Organization="C" Type="member"/>
+	<isMember Country="GH" Organization="IMO" Type="member"/>
+	<isMember Country="MA" Organization="AMU" Type="member"/>
+	<isMember Country="MA" Organization="EBRD" Type="member"/>
+	<isMember Country="MA" Organization="IMO" Type="member"/>
+	<isMember Country="RT" Organization="IMO" Type="member"/>
+	<isMember Country="RT" Organization="WADB" Type="member"/>
+	
+</dataset>
+

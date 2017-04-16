@@ -1,0 +1,324 @@
+/**
+ * 
+ */
+package uk.ac.manchester.dstoolkit.service.impl.meta;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.concurrent.ExecutionException;
+
+import org.apache.log4j.Logger;
+import org.junit.Before;
+import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+
+import uk.ac.manchester.dstoolkit.AbstractIntegrationTest;
+import uk.ac.manchester.dstoolkit.domain.models.canonical.CanonicalModelConstruct;
+import uk.ac.manchester.dstoolkit.domain.models.canonical.SuperAbstract;
+import uk.ac.manchester.dstoolkit.domain.models.canonical.SuperLexical;
+import uk.ac.manchester.dstoolkit.domain.models.meta.Schema;
+import uk.ac.manchester.dstoolkit.domain.models.morphisms.mapping.Mapping;
+import uk.ac.manchester.dstoolkit.domain.models.morphisms.matching.Matching;
+import uk.ac.manchester.dstoolkit.domain.models.morphisms.matching.OneToOneMatching;
+import uk.ac.manchester.dstoolkit.domain.models.morphisms.schematiccorrespondence.SchematicCorrespondence;
+import uk.ac.manchester.dstoolkit.domain.provenance.ControlParameter;
+import uk.ac.manchester.dstoolkit.domain.provenance.ControlParameterType;
+import uk.ac.manchester.dstoolkit.repository.meta.SchemaRepository;
+import uk.ac.manchester.dstoolkit.service.impl.morphisms.matching.InstanceBasedMatcherServiceImpl;
+import uk.ac.manchester.dstoolkit.service.impl.morphisms.matching.NGramMatcherServiceImpl;
+import uk.ac.manchester.dstoolkit.service.impl.morphisms.matching.NameMatcherServiceImpl;
+import uk.ac.manchester.dstoolkit.service.impl.morphisms.matching.SelectionType;
+import uk.ac.manchester.dstoolkit.service.meta.SchemaService;
+import uk.ac.manchester.dstoolkit.service.morphisms.matching.MatcherService;
+import uk.ac.manchester.dstoolkit.service.morphisms.schematiccorrespondence.InferCorrespondenceService;
+
+/**
+ * @author ive
+ *
+ */
+public class SchemaServiceImplIntegrationTest extends AbstractIntegrationTest {
+
+	private static Logger logger = Logger.getLogger(SchemaServiceImplIntegrationTest.class);
+
+	@Autowired
+	@Qualifier("schemaRepository")
+	private SchemaRepository schemaRepository;
+
+	@Autowired
+	@Qualifier("schemaService")
+	private SchemaService schemaService;
+	
+	@Autowired
+	@Qualifier("inferCorrespondenceService")
+	private InferCorrespondenceService inferCorrespondenceService;
+
+
+	private Schema spreadsheetSourceSchema1;
+	private Schema spreadsheetSourceSchema2;
+	private Schema spreadsheetSourceSchema3;
+
+	private final List<MatcherService> nameMatcherList = new ArrayList<MatcherService>();
+	private final List<MatcherService> nameAndInstanceMatcherList = new ArrayList<MatcherService>();
+
+	private Map<ControlParameterType, ControlParameter> controlParameters;
+
+	/**
+	 */
+	@Override
+	@Before
+	public void setUp() {
+		super.setUp();
+		logger.debug("after setup()");
+		// Set the threshold for all matchers
+		controlParameters = new HashMap<ControlParameterType, ControlParameter>();
+		ControlParameter thresholdForAllMatchers = new ControlParameter(ControlParameterType.MATCH_SCORE_THRESHOLD, "0.7");
+		controlParameters.put(ControlParameterType.MATCH_SCORE_THRESHOLD, thresholdForAllMatchers);
+
+		
+		spreadsheetSourceSchema1 = schemaRepository.getSchemaByName("s1");
+		spreadsheetSourceSchema2 = schemaRepository.getSchemaByName("s2");
+		spreadsheetSourceSchema3 = schemaRepository.getSchemaByName("s3");
+	
+
+		// My test for NGram
+		int lengthOfNGram = 2;
+		MatcherService NGramMatcher = new NGramMatcherServiceImpl(lengthOfNGram);
+
+		// add the SELECTION TYPE here is Threshold
+		ControlParameter thresholdSelectionForNGramMatcher = new ControlParameter(ControlParameterType.MATCH_SELECT_SELECTION_TYPE, SelectionType.THRESHOLD.toString());
+
+		// For the threshold set threshold to a value here 0.7
+		ControlParameter thresholdForNGramMatcher = new ControlParameter(ControlParameterType.MATCH_SELECT_THRESHOLD_VALUE, "0.3");
+
+		// Add them on the NGram
+		NGramMatcher.addControlParameter(thresholdSelectionForNGramMatcher);
+		NGramMatcher.addControlParameter(thresholdForNGramMatcher);
+
+		// add it to the list of matchers to be executed now
+		nameMatcherList.add(NGramMatcher);
+	}
+
+	@Test
+	public void testReverseVP() throws ExecutionException {
+		
+		logger.debug("---------------------------------------------------------------");
+		logger.debug("-                                                             -");
+		logger.debug("---------------------------- MATCHING -------------------------");
+		logger.debug("-                                                             -");
+		logger.debug("---------------------------------------------------------------");
+		
+		//TODO change this so that it doesn't need all the other stuff beforehand ... this is an integration test, not a unit test
+		List<Matching> matchings = schemaService.match(spreadsheetSourceSchema1, spreadsheetSourceSchema2, nameMatcherList, controlParameters);
+		
+		Set<Schema> sourceSchemas = new HashSet<Schema>();
+		sourceSchemas.add(spreadsheetSourceSchema1);
+		Set<Schema> targetSchemas = new HashSet<Schema>();
+		targetSchemas.add(spreadsheetSourceSchema2);
+		int index = 0;
+		for (Matching matching : matchings) {
+			System.out.println("");
+			System.out.println("matching.getMatcherName(): " + matching.getMatcherName());
+			System.out.println("matching_id: " + matching.getId() + ", score: " + matching.getScore());
+			if (matching instanceof OneToOneMatching) {
+				OneToOneMatching oneToOneMatching = (OneToOneMatching) matching;
+				CanonicalModelConstruct construct1 = oneToOneMatching.getConstruct1();
+				CanonicalModelConstruct construct2 = oneToOneMatching.getConstruct2();
+				if (construct1 instanceof SuperLexical) {
+					SuperLexical sl1 = (SuperLexical) construct1;
+					System.out.println("construct1 = SuperLexical: " + sl1.getName() + " SuperAbtract: " + sl1.getParentSuperAbstract().getName());
+				} else if (construct1 instanceof SuperAbstract) {
+					SuperAbstract sa1 = (SuperAbstract) construct1;
+					System.out.println("construct1 = SuperAbtract: " + sa1.getName());
+				}
+				if (construct2 instanceof SuperLexical) {
+					SuperLexical sl2 = (SuperLexical) construct2;
+					System.out.println("construct2 = SuperLexical: " + sl2.getName() + " SuperAbtract: "
+							+ sl2.getParentSuperAbstract().getName());
+				} else if (construct2 instanceof SuperAbstract) {
+					SuperAbstract sa2 = (SuperAbstract) construct2;
+					System.out.println("construct1 = SuperAbtract: " + sa2.getName());
+				}
+			}
+			index++;
+		}
+		System.out.println("");
+		logger.debug("---------------------------------------------------------------");
+		logger.debug("-                                                             -");
+		logger.debug("------------------SCHEMATIC CORRESPONDENCE---------------------");
+		logger.debug("-                                                             -");
+		logger.debug("---------------------------------------------------------------");
+		
+		Set<SchematicCorrespondence> schematicCorrespondencesReturn = schemaService.inferCorrespondences(sourceSchemas, targetSchemas, matchings, new HashMap<ControlParameterType, ControlParameter>());
+			
+		System.out.println("schematicCorrespondencesReturn.size(): " + schematicCorrespondencesReturn.size());
+		for (SchematicCorrespondence schematicCorrespondence : schematicCorrespondencesReturn) {
+			System.out.println(" ");
+			System.out.println(" ");
+			System.out.println("schematicCorrespondence.getCardinalityType(): " + schematicCorrespondence.getCardinalityType());
+			System.out.println("schematicCorrespondence.getDescription(): " + schematicCorrespondence.getDescription());
+			System.out.println("schematicCorrespondence.getDirection(): " + schematicCorrespondence.getDirection());
+			System.out.println("schematicCorrespondence.getName(): " + schematicCorrespondence.getName());
+			System.out.println("schematicCorrespondence.getSchematicCorrespondenceType(): " + schematicCorrespondence.getSchematicCorrespondenceType());
+			System.out.println("schematicCorrespondence.getShortName(): " + schematicCorrespondence.getShortName());
+			System.out.println(" ");
+			System.out.println(" ");
+			for (SchematicCorrespondence schematicCorrespondence2 : schematicCorrespondence.getChildSchematicCorrespondences()) {
+				System.out.println(" ");
+				System.out.println(" ");
+				System.out.println("schematicCorrespondence2.getCardinalityType(): " + schematicCorrespondence2.getCardinalityType());
+				System.out.println("schematicCorrespondence2.getDescription(): " + schematicCorrespondence2.getDescription());
+				System.out.println("schematicCorrespondence2.getDirection(): " + schematicCorrespondence2.getDirection());
+				System.out.println("schematicCorrespondence2.getName(): " + schematicCorrespondence2.getName());
+				System.out.println("schematicCorrespondence2.getSchematicCorrespondenceType(): " + schematicCorrespondence2.getSchematicCorrespondenceType());
+				System.out.println("schematicCorrespondence2.getShortName(): " + schematicCorrespondence2.getShortName());
+			}
+		}	
+		
+		System.out.println(" ");
+		System.out.println(" ");
+		System.out.println(" INVERT ");
+		System.out.println(" ");
+		System.out.println(" ");
+		
+		Set<SchematicCorrespondence> newSchematicCorrespondencesReturn = schemaService.invert(schematicCorrespondencesReturn);
+		
+		System.out.println("schematicCorrespondencesReturn.size(): " + newSchematicCorrespondencesReturn.size());
+		for (SchematicCorrespondence schematicCorrespondence3 : newSchematicCorrespondencesReturn) {
+			System.out.println(" ");
+			System.out.println(" ");
+			System.out.println("schematicCorrespondence3.getCardinalityType(): " + schematicCorrespondence3.getCardinalityType());
+			System.out.println("schematicCorrespondence3.getDescription(): " + schematicCorrespondence3.getDescription());
+			System.out.println("schematicCorrespondence3.getDirection(): " + schematicCorrespondence3.getDirection());
+			System.out.println("schematicCorrespondence3.getName(): " + schematicCorrespondence3.getName());
+			System.out.println("schematicCorrespondence3.getSchematicCorrespondenceType(): " + schematicCorrespondence3.getSchematicCorrespondenceType());
+			System.out.println("schematicCorrespondence3.getShortName(): " + schematicCorrespondence3.getShortName());
+			System.out.println(" ");
+			System.out.println(" ");
+			for (SchematicCorrespondence schematicCorrespondence4 : schematicCorrespondence3.getChildSchematicCorrespondences()) {
+				System.out.println("schematicCorrespondence4.getCardinalityType(): " + schematicCorrespondence4.getCardinalityType());
+				System.out.println("schematicCorrespondence4.getDescription(): " + schematicCorrespondence4.getDescription());
+				System.out.println("schematicCorrespondence4.getDirection(): " + schematicCorrespondence4.getDirection());
+				System.out.println("schematicCorrespondence4.getName(): " + schematicCorrespondence4.getName());
+				System.out.println("schematicCorrespondence4.getSchematicCorrespondenceType(): " + schematicCorrespondence4.getSchematicCorrespondenceType());
+				System.out.println("schematicCorrespondence4.getShortName(): " + schematicCorrespondence4.getShortName());
+			}
+		}	
+		
+		/*logger.debug("---------------------------------------------------------------");
+		logger.debug("-                                                             -");
+		logger.debug("-----------------------------MERGE-----------------------------");
+		logger.debug("-                                                             -");
+		logger.debug("---------------------------------------------------------------");
+		
+
+		Schema sm = schemaService.merge(schematicCorrespondencesReturn);
+		
+		Set<SchematicCorrespondence> schematicCorrespondencesMerge1 = schemaService.getMergedSchemaCorrespondence(spreadsheetSourceSchema1, sm, nameMatcherList, controlParameters);
+		Set<SchematicCorrespondence> schematicCorrespondencesMerge2 = schemaService.getMergedSchemaCorrespondence(spreadsheetSourceSchema2, sm, nameMatcherList, controlParameters);
+		
+		System.out.println("");
+		logger.debug("---------------------------------------------------------------");
+		logger.debug("-                                                             -");
+		logger.debug("----------------------------MAPPING----------------------------");
+		logger.debug("-                                                             -");
+		logger.debug("---------------------------------------------------------------");
+		
+		Set<Mapping> mapping1 = schemaService.viewGen(spreadsheetSourceSchema1, spreadsheetSourceSchema3, schematicCorrespondencesMerge1);
+		System.out.println("");
+		Set<Mapping> mapping2 = schemaService.viewGen(spreadsheetSourceSchema3, spreadsheetSourceSchema3, schematicCorrespondencesMerge2);
+		System.out.println("");*/
+		
+	
+	}
+	
+	
+	/*@Test
+	public void testReverseHP() throws ExecutionException {
+		
+		logger.debug("---------------------------------------------------------------");
+		logger.debug("-                                                             -");
+		logger.debug("---------------------------- MATCHING -------------------------");
+		logger.debug("-                                                             -");
+		logger.debug("---------------------------------------------------------------");
+		
+		//TODO change this so that it doesn't need all the other stuff beforehand ... this is an integration test, not a unit test
+		List<Matching> matchings = schemaService.match(spreadsheetSourceSchemaHP, spreadsheetGlobalSchemaHP, nameMatcherList, controlParameters);
+		
+		Set<Schema> sourceSchemas = new HashSet<Schema>();
+		sourceSchemas.add(spreadsheetSourceSchemaHP);
+		Set<Schema> targetSchemas = new HashSet<Schema>();
+		targetSchemas.add(spreadsheetGlobalSchemaHP);
+		int index = 0;
+		for (Matching matching : matchings) {
+			System.out.println("");
+			System.out.println("matching.getMatcherName(): " + matching.getMatcherName());
+			System.out.println("matching_id: " + matching.getId() + ", score: " + matching.getScore());
+			if (matching instanceof OneToOneMatching) {
+				OneToOneMatching oneToOneMatching = (OneToOneMatching) matching;
+				CanonicalModelConstruct construct1 = oneToOneMatching.getConstruct1();
+				CanonicalModelConstruct construct2 = oneToOneMatching.getConstruct2();
+				if (construct1 instanceof SuperLexical) {
+					SuperLexical sl1 = (SuperLexical) construct1;
+					System.out.println("construct1 = SuperLexical: " + sl1.getName() + " SuperAbtract: " + sl1.getParentSuperAbstract().getName());
+				} else if (construct1 instanceof SuperAbstract) {
+					SuperAbstract sa1 = (SuperAbstract) construct1;
+					System.out.println("construct1 = SuperAbtract: " + sa1.getName());
+				}
+				if (construct2 instanceof SuperLexical) {
+					SuperLexical sl2 = (SuperLexical) construct2;
+					System.out.println("construct2 = SuperLexical: " + sl2.getName() + " SuperAbtract: "
+							+ sl2.getParentSuperAbstract().getName());
+				} else if (construct2 instanceof SuperAbstract) {
+					SuperAbstract sa2 = (SuperAbstract) construct2;
+					System.out.println("construct1 = SuperAbtract: " + sa2.getName());
+				}
+			}
+			index++;
+		}
+		System.out.println("");
+		logger.debug("---------------------------------------------------------------");
+		logger.debug("-                                                             -");
+		logger.debug("------------------SCHEMATIC CORRESPONDENCE---------------------");
+		logger.debug("-                                                             -");
+		logger.debug("---------------------------------------------------------------");
+		
+		Set<SchematicCorrespondence> schematicCorrespondencesReturn = schemaService.inferCorrespondences(sourceSchemas, targetSchemas, matchings, new HashMap<ControlParameterType, ControlParameter>());
+			
+		System.out.println("");		
+		logger.debug("---------------------------------------------------------------");
+		logger.debug("-                                                             -");
+		logger.debug("-----------------------------MERGE-----------------------------");
+		logger.debug("-                                                             -");
+		logger.debug("---------------------------------------------------------------");
+		
+
+		Schema sm = schemaService.merge(schematicCorrespondencesReturn);
+		
+		Set<SchematicCorrespondence> schematicCorrespondencesMerge1 = schemaService.getMergedSchemaCorrespondence(spreadsheetSourceSchemaHP, sm, nameMatcherList, controlParameters);
+		Set<SchematicCorrespondence> schematicCorrespondencesMerge2 = schemaService.getMergedSchemaCorrespondence(spreadsheetGlobalSchemaHP, sm, nameMatcherList, controlParameters);
+		
+		System.out.println("");
+		logger.debug("---------------------------------------------------------------");
+		logger.debug("-                                                             -");
+		logger.debug("----------------------------MAPPING----------------------------");
+		logger.debug("-                                                             -");
+		logger.debug("---------------------------------------------------------------");
+		
+		Set<Mapping> mapping1 = schemaService.viewGen(spreadsheetSourceSchemaHP, sm, schematicCorrespondencesMerge1);
+		System.out.println("");
+		Set<Mapping> mapping2 = schemaService.viewGen(spreadsheetGlobalSchemaHP, sm, schematicCorrespondencesMerge2);
+		System.out.println("");
+	
+	}*/
+
+	
+}

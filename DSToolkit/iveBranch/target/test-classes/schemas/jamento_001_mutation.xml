@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<RDFEntityTypes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="RDFSchema.xsd">
+  <!-- This is the variant Schema of Jamendo -->
+
+  <RDFSchemaMetadata>
+    <NameSpace>tags=http://www.holygoat.co.uk/owl/redwood/0.1/tags/</NameSpace>
+    <NameSpace>dc=http://purl.org/dc/elements/1.1/</NameSpace>
+    <NameSpace>time=http://www.w3.org/2006/time#</NameSpace>
+    <NameSpace>tl=http://purl.org/NET/c4dm/timeline.owl#</NameSpace>
+    <NameSpace>mo=http://purl.org/ontology/mo/</NameSpace>
+    <NameSpace>foaf=http://xmlns.com/foaf/0.1/</NameSpace>
+    <NameSpace>event=http://purl.org/NET/c4dm/event.owl#</NameSpace>
+    <NameSpace>xsd=http://www.w3.org/2001/XMLSchema#</NameSpace>
+    <NameSpace>rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#</NameSpace>
+  </RDFSchemaMetadata>
+  <RDFEntityType rdftype="http://purl.org/ontology/mo/MusicalManifestation">
+    <RDFEntityTypeName>MusicalManifestation</RDFEntityTypeName>
+    <SimpleAttrOfRDFEntityType namespace="http://purl.org/dc/elements/1.1/">title</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://purl.org/dc/elements/1.1/">description</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://purl.org/ontology/mo/">image</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://purl.org/dc/elements/1.1/">date</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://xmlns.com/foaf/0.1/">maker</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://purl.org/ontology/mo/">has_track</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://www.holygoat.co.uk/owl/redwood/0.1/tags/">taggedWithTag</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://purl.org/ontology/mo/">availableAs</SimpleAttrOfRDFEntityType>
+    <RDFBinaryRelationshipType namespace="http://xmlns.com/foaf/0.1/">
+      <RDFRelationshipName>maker</RDFRelationshipName>
+      <FromRDFEntityType>MusicalManifestation</FromRDFEntityType>
+      <ToRDFEntityType>Agent</ToRDFEntityType>
+      <CardinalityRatio>1:1</CardinalityRatio>
+    </RDFBinaryRelationshipType>
+    <RDFBinaryRelationshipType namespace="http://purl.org/ontology/mo/">
+      <RDFRelationshipName>has_track</RDFRelationshipName>
+      <FromRDFEntityType>MusicalManifestation</FromRDFEntityType>
+      <ToRDFEntityType>Track</ToRDFEntityType>
+      <CardinalityRatio>N:M</CardinalityRatio>
+    </RDFBinaryRelationshipType>
+    <RDFBinaryRelationshipType namespace="http://www.holygoat.co.uk/owl/redwood/0.1/tags/">
+      <RDFRelationshipName>taggedWithTag</RDFRelationshipName>
+      <FromRDFEntityType>MusicalManifestation</FromRDFEntityType>
+      <ToRDFEntityType>Tag</ToRDFEntityType>
+      <CardinalityRatio>N:M</CardinalityRatio>
+    </RDFBinaryRelationshipType>
+    <RDFBinaryRelationshipType namespace="http://purl.org/ontology/mo/">
+      <RDFRelationshipName>availableAs</RDFRelationshipName>
+      <FromRDFEntityType>MusicalManifestation</FromRDFEntityType>
+      <ToRDFEntityType>Medium</ToRDFEntityType>
+      <CardinalityRatio>N:M</CardinalityRatio>
+    </RDFBinaryRelationshipType>
+  </RDFEntityType>
+  <RDFEntityType rdftype="http://purl.org/ontology/mo/Lyrics">
+    <RDFEntityTypeName>Lyrics</RDFEntityTypeName>
+    <SimpleAttrOfRDFEntityType namespace="http://purl.org/ontology/mo/">text</SimpleAttrOfRDFEntityType>
+  </RDFEntityType>
+  <RDFEntityType rdftype="http://xmlns.com/foaf/0.1/Agent">
+    <RDFEntityTypeName>Agent</RDFEntityTypeName>
+    <SimpleAttrOfRDFEntityType namespace="http://xmlns.com/foaf/0.1/">name</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://xmlns.com/foaf/0.1/">img</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://purl.org/ontology/mo/">discography</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://xmlns.com/foaf/0.1/">weblog</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://xmlns.com/foaf/0.1/">based_near</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://xmlns.com/foaf/0.1/">made</SimpleAttrOfRDFEntityType>
+    <RDFBinaryRelationshipType namespace="http://xmlns.com/foaf/0.1/">
+      <RDFRelationshipName>made</RDFRelationshipName>
+      <FromRDFEntityType>Agent</FromRDFEntityType>
+      <ToRDFEntityType>MusicalManifestation</ToRDFEntityType>
+      <CardinalityRatio>N:M</CardinalityRatio>
+    </RDFBinaryRelationshipType>
+  </RDFEntityType>
+  <RDFEntityType rdftype="http://purl.org/ontology/mo/AnalogSignal">
+    <RDFEntityTypeName>AnalogSignal</RDFEntityTypeName>
+    <SimpleAttrOfRDFEntityType namespace="http://purl.org/ontology/mo/">signalTime</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://purl.org/ontology/mo/">publishedAs</SimpleAttrOfRDFEntityType>
+    <RDFBinaryRelationshipType namespace="http://purl.org/ontology/mo/">
+      <RDFRelationshipName>signalTime</RDFRelationshipName>
+      <FromRDFEntityType>AnalogSignal</FromRDFEntityType>
+      <ToRDFEntityType>TemporalEntity</ToRDFEntityType>
+      <CardinalityRatio>1:1</CardinalityRatio>
+    </RDFBinaryRelationshipType>
+    <RDFBinaryRelationshipType namespace="http://purl.org/ontology/mo/">
+      <RDFRelationshipName>publishedAs</RDFRelationshipName>
+      <FromRDFEntityType>AnalogSignal</FromRDFEntityType>
+      <ToRDFEntityType>Track</ToRDFEntityType>
+      <CardinalityRatio>1:1</CardinalityRatio>
+    </RDFBinaryRelationshipType>
+  </RDFEntityType>
+  <RDFEntityType rdftype="http://www.w3.org/2006/time#TemporalEntity">
+    <RDFEntityTypeName>TemporalEntity</RDFEntityTypeName>
+    <SimpleAttrOfRDFEntityType namespace="http://purl.org/NET/c4dm/timeline.owl#">onTimeLine</SimpleAttrOfRDFEntityType>
+  </RDFEntityType>
+  <RDFEntityType rdftype="http://purl.org/ontology/mo/Torrent">
+    <RDFEntityTypeName>Torrent</RDFEntityTypeName>
+    <SimpleAttrOfRDFEntityType namespace="http://purl.org/dc/elements/1.1/">format</SimpleAttrOfRDFEntityType>
+  </RDFEntityType>
+  <RDFEntityType rdftype="http://purl.org/ontology/mo/Track">
+    <RDFEntityTypeName>Track</RDFEntityTypeName>
+    <SimpleAttrOfRDFEntityType namespace="http://purl.org/dc/elements/1.1/">title</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://purl.org/ontology/mo/">trackNum</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://purl.org/ontology/mo/">license</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://purl.org/ontology/mo/">availableAs</SimpleAttrOfRDFEntityType>
+    <RDFBinaryRelationshipType namespace="http://purl.org/ontology/mo/">
+      <RDFRelationshipName>license</RDFRelationshipName>
+      <FromRDFEntityType>Track</FromRDFEntityType>
+      <ToRDFEntityType>Document</ToRDFEntityType>
+      <CardinalityRatio>1:1</CardinalityRatio>
+    </RDFBinaryRelationshipType>
+    <RDFBinaryRelationshipType namespace="http://purl.org/ontology/mo/">
+      <RDFRelationshipName>availableAs</RDFRelationshipName>
+      <FromRDFEntityType>Track</FromRDFEntityType>
+      <ToRDFEntityType>Playlist</ToRDFEntityType>
+      <CardinalityRatio>N:M</CardinalityRatio>
+    </RDFBinaryRelationshipType>
+  </RDFEntityType>
+  <RDFEntityType rdftype="http://purl.org/ontology/mo/Medium">
+    <RDFEntityTypeName>Medium</RDFEntityTypeName>
+    <SimpleAttrOfRDFEntityType namespace="http://purl.org/dc/elements/1.1/">format</SimpleAttrOfRDFEntityType>
+  </RDFEntityType>
+  <RDFEntityType rdftype="http://www.holygoat.co.uk/owl/redwood/0.1/tags/Tag">
+    <RDFEntityTypeName>Tag</RDFEntityTypeName>
+    <SimpleAttrOfRDFEntityType namespace="http://www.holygoat.co.uk/owl/redwood/0.1/tags/">tagName</SimpleAttrOfRDFEntityType>
+  </RDFEntityType>
+  <RDFEntityType rdftype="http://purl.org/ontology/mo/Playlist">
+    <RDFEntityTypeName>Playlist</RDFEntityTypeName>
+    <SimpleAttrOfRDFEntityType namespace="http://purl.org/dc/elements/1.1/">format</SimpleAttrOfRDFEntityType>
+  </RDFEntityType>
+  <RDFEntityType rdftype="http://xmlns.com/foaf/0.1/Document">
+    <RDFEntityTypeName>Document</RDFEntityTypeName>
+  </RDFEntityType>
+</RDFEntityTypes>

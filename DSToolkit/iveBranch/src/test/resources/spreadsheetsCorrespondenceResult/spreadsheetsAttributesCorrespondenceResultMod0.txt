@@ -1,0 +1,2 @@
+Sample,pop,1
+Sample,fam,1

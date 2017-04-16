@@ -1,0 +1,3 @@
+SELECT *
+FROM country c, city t 
+WHERE c.code = t.country;

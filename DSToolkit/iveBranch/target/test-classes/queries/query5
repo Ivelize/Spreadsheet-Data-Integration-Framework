@@ -1,0 +1,3 @@
+SELECT Kegg.entry.id, Kegg.entry.name, Kegg.entry.reaction, Kegg.entry.type, Kegg.entry.pathway_number
+FROM Kegg.entry
+WHERE Kegg.entry.type = "gene";

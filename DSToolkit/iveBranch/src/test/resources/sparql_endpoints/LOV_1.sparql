@@ -1,0 +1,12 @@
+SPARQLserviceName = lov
+SPARQLserviceURL = http://lov.okfn.org/endpoint/lov_aggregator
+SPARQLDumpPath = ./src/test/resources/training/lov_aggregator.rdf
+date = 28-05-13 
+training = true
+createSample = false
+dbServer = jdbc:mysql://localhost/
+dbUserName = root
+dbPassword = root
+dbDriverClass = com.mysql.jdbc.Driver
+schemaURL = NULL
+description = LOV aggregator try to import all vocabularies in a single endpoint.

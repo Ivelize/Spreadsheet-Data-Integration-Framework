@@ -1,0 +1,1764 @@
+<rdf:RDF
+    xmlns:db="http://dbtune.org/magnatune/"
+    xmlns:event="http://purl.org/NET/c4dm/event.owl#"
+    xmlns:tl="http://purl.org/NET/c4dm/timeline.owl#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:time="http://www.w3.org/TR/owl-time/"
+    xmlns:bio="http://purl.org/vocab/bio/0.1/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:d2r="http://sites.wiwiss.fu-berlin.de/suhl/bizer/d2r-server/config.rdf#"
+    xmlns:vocab="http://dbtune.org/magnatune/vocab/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:map="file:///home/moustaki/work/workspace/opendata/d2r-server-0.3.1/mapping.n3#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:mo="http://purl.org/ontology/mo/" > 
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/4019">
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/02-The%20Demon&apos;s%20Eye-Mountain%20Mirrors.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Mountain+Mirrors&amp;album=Mountain+Mirrors&amp;genre=Rock"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/3141">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/kperl"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suite No 3 in B minor BWV 814: Allemande</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suite No 3 in B minor BWV 814: Allemande</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-07-31</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">14</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/14-Suite%20No%203%20in%20B%20minor%20BWV%20814_%20Allemande-Katherine%20Roberts%20Perl.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Katherine+Roberts+Perl&amp;album=J%2ES%2E+Bach+French+Sui"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/artist/liquid_zen">
+    <foaf:based_near rdf:resource="http://dbpedia.org/resource/USA"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Liquid Zen</rdfs:label>
+    <foaf:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Liquid Zen</foaf:name>
+    <bio:olb rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+Known for an opulent synthesis of vocals and electronics, Roland St. John Perez takes a "no deadline" approach to making music, and the result is an exotic, atmospheric sound that touches on everything from Pink Floyd and T Rex to Brian Eno and Tangerine Dream. Elements at Loop 10 was composed and recorded at Perez's San Antonio studios and features guest appearances by vocalist Holly Nelson, James Sidlo of Honey Barbera fame, as well as the blissed out guitar craft of Damian Rodriguez.
+
+"The initial concept was to create an album that had recognizable pop, rock, and electronic elements, but was not anchored to the typical cut and paste format that have become redundant on our airwaves," explains Perez.
+
+Perez and Rodriguez' ongoing collaboration led the duo to explore different musical styles, an evolution most noticeable on their Magic Midsummer release, which they released under the name Mosaico.
+
+"We had just finished Elements and we had already had several ideas for the Seventythree project, but like Elements it required a lot of attention," says Perez. "Every sound and lyric had to be planned and manipulated in our studio. That's where the Mosaico project came in. We needed something raw, we needed the serendipity of rock and roll... with electronic instruments of course."
+
+Whether exploring the big electronic soundscapes of Elements and Seventythree or the more spontaneous sound of Magic Midsummer, Perez and Rodriguez consistently turn out darkly beautiful pop and electronic gems?the perfect soundtrack "for whatever the night brings."
+</bio:olb>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lavish, trippy synth rock</dc:description>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/MusicArtist"/>
+    <foaf:homepage rdf:resource="http://magnatune.com/artists/liquid_zen"/>
+    <foaf:img rdf:resource="http://magnatune.com//artists/img/liquid_zen.jpg"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/performance/3837">
+    <mo:recorded_as rdf:resource="http://dbtune.org/magnatune/signal/3837"/>
+    <event:place rdf:resource="http://dbpedia.org/resource/Norway"/>
+    <mo:performer rdf:resource="http://dbtune.org/magnatune/artist/mot"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">performance 3837</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I wonder it it is really useful for now, but it can be an anchor point for further information</rdfs:comment>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Performance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/2158">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/hans_christian"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arabesque</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arabesque</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2003-10-05</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">7</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/07-Arabesque-Hans%20Christian.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Hans+Christian&amp;album=Phantoms&amp;genre=New+Age"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/timeline/2793">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">timeline 2793</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/NET/c4dm/timeline.owl#RelativeTimeLine"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/artist/norine">
+    <foaf:based_near rdf:resource="http://dbpedia.org/resource/Canada"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Norine Braun</rdfs:label>
+    <foaf:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Norine Braun</foaf:name>
+    <bio:olb rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Norine Braun's music has always existed on its own terms, falling into that titillating, refreshingly original space to the left of "trendy," craftily sidestepping the all-too-easily-dismissed stigma often applied to the "female singer/songwriter," and freewheeling unhindered around the rigid shackles of "genre. "
+
+Along with savvy producer and multi-instrumentalist James Bowers, Braun has accumulated an extraordinary discography of unpretentious, personal songs anchored by her sweet, confident voice and genteel composition. Together, the pair crafts tuneful, friendly songs with subtle but effective arrangements, dynamic and graceful and memorable.
+
+Now, Braun is back with her fifth CD, NOW &amp; ZEN, and on these fourteen tracks Braun shows an even greater depth and maturity. NOW &amp; ZEN expands on her penchant for jazzed up, funk-tinged pop, and shows this gifted songstress taking bold steps on her soulful journey into self-exploration. The torch song, "Move the Clouds," is evocative and inspirational, anchored by easy lounge piano and a melody as delicate as flower petals. The groovy "J'en Suis Desolee" showcases Braun's confident rap, surprising and rocking with an edgy explosion of homegirl verve.
+
+Artsy and intellectual, tuneful and savvy, Norine Braun will zing to the heart of any listener. Norine Braun's repertoire ranges from ethereal, reflective moods to sizzling bluesy rock that test the limit of popular music. She is inspired by the struggle to find meaning in the human experience. Her lyrics, although provocative, do not lose touch with her whimsical nature.
+</bio:olb>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">jazzed up, funk-tinged eclectic pop.</dc:description>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/MusicArtist"/>
+    <foaf:homepage rdf:resource="http://magnatune.com/artists/norine"/>
+    <foaf:img rdf:resource="http://magnatune.com//artists/img/norine.jpg"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/3151">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/kperl"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suite No 5 in G major BWV 816: Bourree</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suite No 5 in G major BWV 816: Bourree</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-07-31</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">24</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/24-Suite%20No%205%20in%20G%20major%20BWV%20816_%20Bourree-Katherine%20Roberts%20Perl.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Katherine+Roberts+Perl&amp;album=J%2ES%2E+Bach+French+Sui"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/4024">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/mountain_mirrors"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deploribus Unum</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deploribus Unum</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-04-15</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">7</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/07-Deploribus%20Unum-Mountain%20Mirrors.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Mountain+Mirrors&amp;album=Mountain+Mirrors&amp;genre=Rock"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/3131">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/kperl"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suite No 4 in E flat major BWV 815: Gavotte</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suite No 4 in E flat major BWV 815: Gavotte</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-07-31</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/04-Suite%20No%204%20in%20E%20flat%20major%20BWV%20815_%20Gavotte-Katherine%20Roberts%20Perl.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Katherine+Roberts+Perl&amp;album=J%2ES%2E+Bach+French+Sui"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/4644">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/pbo"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aria: Non sara poco</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aria: Non sara poco</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-05-03</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">19</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/19-Aria_%20Non%20sara%20poco-Philharmonia%20Baroque%20Orchestra.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Philharmonia+Baroque&amp;album=Handel+%2D+Atalanta+CD1&amp;ge"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/4806">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/psychokinetics"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Hypnotist</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Hypnotist</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-04-15</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/02-The%20Hypnotist-Psychokinetics.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Psychokinetics&amp;album=Seven+League+Boots&amp;genre=Rock"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/4812">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/psychokinetics"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Family Affair</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Family Affair</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-04-15</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">8</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/08-Family%20Affair-Psychokinetics.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Psychokinetics&amp;album=Seven+League+Boots&amp;genre=Rock"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/artist/psychokinetics">
+    <foaf:based_near rdf:resource="http://dbpedia.org/resource/USA"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Psychokinetics</rdfs:label>
+    <foaf:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Psychokinetics</foaf:name>
+    <bio:olb rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+Hailing from the astoundingly talented depths of the Bay Area's independent music scene, Psychokinetics have been moving crowds with their bangin' beats, positive vibes, and distinct brand of underground hip-hop since 1995. Delivering hip-hop in its most pure and creative state, this classic recipe of one DJ (Denizen) and two Emcees (Celsius 7 and Spidey) provide consistent heat that has been attracting not only a larger fan base of late, but also an impressive string of musical cameos and collaborators such as Omega of Blackalicious and Raashan Ahmad of Crown City Rockers.
+
+Drawing on a wide range of production talent (DJ Denizen, DJ Ill Media, Dirt Nasty, and Slurface Tone), Psychokinetics are known for delivering a catchy underground sound that appeals to fans of Gorillaz, Ghostface Killah, and De La Soul. With styles ranging from bass heavy party anthems and rhymes flipped over jungle beats to downtempo reflective tracks and scratch laden instrumentals, Psychokinetics constantly demonstrate all the many the benefits of their long histories as musicians together; Celcius 7 and Spidey have amazing back-and-forth flow as Emcees and the group delivers a tight, polished sound that gets heads nodding and butts shaking.
+
+On their latest album, Seven League Boots the four man crew eases off of the experimentation from their debut and focuses more on hip-hop that walks the fine line between underground and accessible. By blending the introspective and lyrical tracks like "Badlands" with bouncy dance tunes like "Feeldismusick" and "Bigtime" (Featuring Zion I), Psychokinetics are poised to garner a larger following throughout the hip hop community and beyond.
+
+Not only do Psychokinetics deliver in the studio, but the band is known for an energetic, engaging, and infectious live show as well. They've built a strong fan base from Japan to Denver to Hawaii, and of course the Bay Area, where they've shared the stage with such hip-hop luminaries including KRS-One, Biz Markee, DJ Premier, Black Sheep, Digital Underground, Kool Keith, and more. In addition to winning a John Lennon Songwriting Award, the Psychokinetics placed as finalists in the Musicians Atlas Independent Music Awards for best hip hop artist.
+
+In the words of Celcius 7, "This is music for the people, the artists, the dancers, the emcees, the DJs, those who love soulful music, and those who embrace the trials and celebrations of being alive." Watch out for these breakthrough artists as they extensively tour in support of Seven League Boots, and keep an eye out for their narrative lounge album due out in 2006.
+</bio:olb>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mind-bendingly great Bay Area hip-hop</dc:description>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/MusicArtist"/>
+    <foaf:homepage rdf:resource="http://magnatune.com/artists/psychokinetics"/>
+    <foaf:img rdf:resource="http://magnatune.com//artists/img/psychokinetics.jpg"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/album/psychokinetics-seven">
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/4812"/>
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/psychokinetics"/>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/4811"/>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/4808"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Seven League Boots</rdfs:label>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/4813"/>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/4814"/>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/4807"/>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Seven League Boots</dc:title>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/4806"/>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/4805"/>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/4809"/>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/4815"/>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Record"/>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/4810"/>
+    <mo:publishing_location rdf:resource="http://dbpedia.org/resource/USA"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/timeinterval/5339">
+    <tl:onTimeLine rdf:resource="http://dbtune.org/magnatune/timeline/5339"/>
+    <tl:duration rdf:datatype="http://www.w3.org/2001/XMLSchema#duration">PT206S</tl:duration>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">time interval 5339</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/TR/owl-time/Interval"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/timeline/5655">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">timeline 5655</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/NET/c4dm/timeline.owl#RelativeTimeLine"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/4634">
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/09-Aria_%20S&apos;e%20tuo%20piacer%20ch&apos;io%20mora-Philharmonia%20Baroque%20Orchestra.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Philharmonia+Baroque&amp;album=Handel+%2D+Atalanta+CD1&amp;ge"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/3152">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/kperl"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suite No 5 in G major BWV 816: Loure</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suite No 5 in G major BWV 816: Loure</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-07-31</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">25</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/25-Suite%20No%205%20in%20G%20major%20BWV%20816_%20Loure-Katherine%20Roberts%20Perl.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Katherine+Roberts+Perl&amp;album=J%2ES%2E+Bach+French+Sui"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/artist/paternoster">
+    <foaf:based_near rdf:resource="http://dbpedia.org/resource/Italy"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vito Paternoster</rdfs:label>
+    <foaf:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vito Paternoster</foaf:name>
+    <bio:olb rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vito Paternoster graduated from the conservatory of S. Cecilia when he was very young, under A. Baldovino's guidance. He won a competition for 1st violoncello at the Rai in Rome, and joined the prestigious ensemble I Musici.
+
+He continues to perform with I Musici today, as well as performing as a soloist in the most important theatres of the world.
+
+Paternoster has been widely recorded, both as a soloist and in emsembles.
+
+His Sonatas and Partitas for violoncello by Bach, from an 18th century manuscript, is the world premiere recording of these pieces. His recording of the six Bach cello suites have been aclaimed by the international press.
+
+He has directed the Symphony Orchestra of Bari, of Abruzzo, and the Symphony Orchestra Betica of Siviglia, the "B. Marcello" of Teramo. With the latter he directed the first modern performance of "Diana amante di Leo" in Brindisi.
+
+Recently he directed "Il pane dal profano al sacro" (a musical route about the meaning of bread in the southern culture through the centuries), a program composed by him, with the Symphony Orchestra of Bari.
+
+He founded the baroque orchestra "La Lyra di Anphione", which he directed in Spoleto, where he opened the Lyrical Season Â99 of the Experimental Lyrical Theatre. Critics consider this production ("Dido and Aeneas" by H. Purcell) as a "delightful performance" and "the director was not on the platform but into music and singing, all the same with them" (Q. Principe).
+
+He plays a violoncello manufactured by L. Carcassi (Florence 1792) and he is a conservatory teacher of violoncello at the conservatory of Bari.
+</bio:olb>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bach on the Cello</dc:description>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/MusicArtist"/>
+    <foaf:homepage rdf:resource="http://magnatune.com/artists/paternoster"/>
+    <foaf:img rdf:resource="http://magnatune.com//artists/img/paternoster.jpg"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/5655">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/spinecar"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">True</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">True</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2003-09-22</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/04-True-Spinecar.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Spinecar&amp;album=Passive+Aggressive&amp;genre=Metal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/timeinterval/3511">
+    <tl:onTimeLine rdf:resource="http://dbtune.org/magnatune/timeline/3511"/>
+    <tl:duration rdf:datatype="http://www.w3.org/2001/XMLSchema#duration">PT244S</tl:duration>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">time interval 3511</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/TR/owl-time/Interval"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/3140">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/kperl"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suite No 2 in C minor BWV 813: Gigue</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suite No 2 in C minor BWV 813: Gigue</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-07-31</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">13</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/13-Suite%20No%202%20in%20C%20minor%20BWV%20813_%20Gigue-Katherine%20Roberts%20Perl.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Katherine+Roberts+Perl&amp;album=J%2ES%2E+Bach+French+Sui"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/4645">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/pbo"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Coro: Oggi rimbombano di feste</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Coro: Oggi rimbombano di feste</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-05-03</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">20</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/20-Coro_%20Oggi%20rimbombano%20di%20feste-Philharmonia%20Baroque%20Orchestra.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Philharmonia+Baroque&amp;album=Handel+%2D+Atalanta+CD1&amp;ge"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/timeline/682">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">timeline 682</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/NET/c4dm/timeline.owl#RelativeTimeLine"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/3142">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/kperl"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suite No 3 in B minor BWV 814: Courante</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suite No 3 in B minor BWV 814: Courante</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-07-31</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">15</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/15-Suite%20No%203%20in%20B%20minor%20BWV%20814_%20Courante-Katherine%20Roberts%20Perl.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Katherine+Roberts+Perl&amp;album=J%2ES%2E+Bach+French+Sui"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/4018">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/mountain_mirrors"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stay Evil</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stay Evil</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-04-15</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/01-Stay%20Evil-Mountain%20Mirrors.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Mountain+Mirrors&amp;album=Mountain+Mirrors&amp;genre=Rock"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/timeline/752">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">timeline 752</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/NET/c4dm/timeline.owl#RelativeTimeLine"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/artist/kperl">
+    <foaf:based_near rdf:resource="http://dbpedia.org/resource/USA"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Katherine Roberts Perl</rdfs:label>
+    <foaf:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Katherine Roberts Perl</foaf:name>
+    <bio:olb rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+Katherine Roberts Perl began her harpsichord studies at the age of 14 and went on to study music at Los Angeles City College, Immaculate Heart College, and the San Francisco Conservatory of Music where she studied intensively with Laurette Goldberg and received her Master's Degree harpsichord performance. Since that time Perl has developed both a unique teaching and playing style for which she has become well known?one that celebrates the dynamic and expressive aspects of the harpsichord and is influenced by the American idioms of blues and jazz.
+
+While conventional ideas of the harpsichord hold that it does not allow for variation in volume, Perl's powerful playing overturns this perception, and mines the expressive capacity of the instrument. Her innovative approach has been termed "sound sculpture."
+
+Ms. Perl's first recording, Pieces de Clavecin, Music of Louis Couperin was nominated for Best Baroque Recording of French music in 1993, in Paris. The second recording, Music of Jacques Duphly, was released in 1998 on the Dorian label and most recently Perl's independent recording of four of Bach's French Suites has been made available on Magnatune. Bach's classic composition for harpsichord, The Well-Tempered Clavier, has now become the center of Perl's artistic attention and future recordings and releases are in the works.
+
+In addition to her performing, teaching, and recording activities, Katherine Roberts Perl is an esteemed harpsichord technician, serving the Bay Area. She and her husband Mark produce a concert series/salon in their home in San Francisco called Chattanooga Chamber Music, which consists of four live music performances every fall and spring.
+
+"I consider myself extremely fortunate that my life thus far has been contemporary with many great masters," says Perl, "who have shown the way for practitioners of early music performance in my own generation and the next: musicians such as Gustav Leonhardt, the Kuijken brothers and Hopkinson Smith, to name a few." She adds, "My mission in life is to play the music of Bach, Couperin and others on the harpsichord with clarity and grace, and to teach others what it takes to do so. Meaningful expression is an elusive thing, and so wondrous when it is achieved."
+
+Additional Praise for Katherine Roberts Perl:
+
+"The key to Roberts' success is her fluent but precise rhythmic sense. She has a way of springing the rhythm, drawing out the line, waiting until the last possible moment before attacking a note without damaging the onward flow in the slightest. Strength and delicacy, nuance and bite seemed available in abundance...a fluent but precise rhythmic sense." ?Charles Shere, Oakland Tribune
+
+"She genuinely captured the essence of accurate, sensitive and stylistic French keyboard playing...the audience was enraptured...passion and fire." ?Ruta Bloomfield, Iowa city
+
+</bio:olb>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vibrant harpsichord with improvisatory spirit</dc:description>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/MusicArtist"/>
+    <foaf:homepage rdf:resource="http://magnatune.com/artists/kperl"/>
+    <foaf:img rdf:resource="http://magnatune.com//artists/img/kperl.jpg"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/3150">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/kperl"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suite No 5 in G major BWV 816: Gavotte</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suite No 5 in G major BWV 816: Gavotte</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-07-31</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">23</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/23-Suite%20No%205%20in%20G%20major%20BWV%20816_%20Gavotte-Katherine%20Roberts%20Perl.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Katherine+Roberts+Perl&amp;album=J%2ES%2E+Bach+French+Sui"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/2157">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/hans_christian"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Desperado</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Desperado</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2003-10-05</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">6</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/06-Desperado-Hans%20Christian.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Hans+Christian&amp;album=Phantoms&amp;genre=New+Age"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/4813">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/psychokinetics"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mr. Leggs</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mr. Leggs</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-04-15</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">9</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/09-Mr.%20Leggs-Psychokinetics.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Psychokinetics&amp;album=Seven+League+Boots&amp;genre=Rock"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/3132">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/kperl"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suite No 4 in E flat major BWV 815: Menuet</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suite No 4 in E flat major BWV 815: Menuet</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-07-31</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/05-Suite%20No%204%20in%20E%20flat%20major%20BWV%20815_%20Menuet-Katherine%20Roberts%20Perl.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Katherine+Roberts+Perl&amp;album=J%2ES%2E+Bach+French+Sui"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/4025">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/mountain_mirrors"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Praying Mantis</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Praying Mantis</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-04-15</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">8</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/08-Praying%20Mantis-Mountain%20Mirrors.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Mountain+Mirrors&amp;album=Mountain+Mirrors&amp;genre=Rock"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/signal/6283">
+    <mo:time rdf:resource="http://dbtune.org/magnatune/timeinterval/6283"/>
+    <mo:published_as rdf:resource="http://dbtune.org/magnatune/track/6283"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">signal 6283</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Signal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/4807">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/psychokinetics"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Media Abduction</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Media Abduction</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-04-15</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/03-Media%20Abduction-Psychokinetics.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Psychokinetics&amp;album=Seven+League+Boots&amp;genre=Rock"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/3139">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/kperl"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suite No 2 in C minor BWV 813: Menuet</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suite No 2 in C minor BWV 813: Menuet</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-07-31</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">12</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/12-Suite%20No%202%20in%20C%20minor%20BWV%20813_%20Menuet-Katherine%20Roberts%20Perl.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Katherine+Roberts+Perl&amp;album=J%2ES%2E+Bach+French+Sui"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/timeinterval/3837">
+    <tl:onTimeLine rdf:resource="http://dbtune.org/magnatune/timeline/3837"/>
+    <tl:duration rdf:datatype="http://www.w3.org/2001/XMLSchema#duration">PT271S</tl:duration>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">time interval 3837</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/TR/owl-time/Interval"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/4635">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/pbo"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recitativo: Perche sospesa, o</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recitativo: Perche sospesa, o</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-05-03</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">10</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/10-Recitativo_%20Perche%20sospesa%20o%20figlia-Philharmonia%20Baroque%20Orchestra.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Philharmonia+Baroque&amp;album=Handel+%2D+Atalanta+CD1&amp;ge"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/3129">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/kperl"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suite No 4 in E flat major BWV 815: Courante</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suite No 4 in E flat major BWV 815: Courante</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-07-31</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/02-Suite%20No%204%20in%20E%20flat%20major%20BWV%20815_%20Courante-Katherine%20Roberts%20Perl.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Katherine+Roberts+Perl&amp;album=J%2ES%2E+Bach+French+Sui"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/3511">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/liquid_zen"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Resist And Resolution</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Resist And Resolution</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-01-31</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">8</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/08-Resist%20And%20Resolution%20-%20Liquid%20Zen.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Liquid+Zen&amp;album=Elements+At+Loop+10&amp;genre=New+Age"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/timeline/6283">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">timeline 6283</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/NET/c4dm/timeline.owl#RelativeTimeLine"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/artist/self_delusion">
+    <foaf:based_near rdf:resource="http://dbpedia.org/resource/Spain"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Self Delusion</rdfs:label>
+    <foaf:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Self Delusion</foaf:name>
+    <bio:olb rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Born in 1996, Self-Delusion is a group of electronic pop from Barcelona. Formed by Carles Penalver (voices and programming), J+ (composition and programming) and Toni Aran (backing vocals, composition and programming).
+
+After their appearance in diverse compilations published in the North American market and the auto-edition of "Pride", E.P. of 1998, Self-Delusion has been taken in hand by the producer Frans Beltran (aka-Iberian Spleen and involved also in the production of Spanish bands as diverse as Magnatiz, Freak XXI, Klockwork i Shuga Whuga) to give form to their first album ("Happiness hurts me").
+
+This recording shows the eclecticism of Self-Delusion creating songs on varied electronic structures, which take them from the classic tecnopop to trip-hop, techno-rock or electro. Their sound betrays them as big followers of the music of 80s; their members are indeed fans of very varied bands that go from Depeche Mode to The Smiths, from The Cure to Portishead, from Aviador Dro to Lamb or from Fangoria to Covenant.
+
+Self-Delusion has been a supporting act for bands such as Wolfsheim and De/Vision, VNV Nation and Apoptygma Berzerk.
+
+With "Happiness hurts", Self-Delusion makes a move to find a place in the electronic national scene as they have obtained it, occasionally, in the international one, where they have managed to edit and to receive prizes as the fourth position in the Clavia MP3 Competition (contest organized by the well known synths manufacturer Clavia -nordlead-) thanks their song "Christine", included in "Happiness hurts me".
+</bio:olb>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">darkly addictive electro-pop songs</dc:description>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/MusicArtist"/>
+    <foaf:homepage rdf:resource="http://magnatune.com/artists/self_delusion"/>
+    <foaf:img rdf:resource="http://magnatune.com//artists/img/selfdelusion1.jpg"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/3837">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/mot"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">After Thought</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">After Thought</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2004-05-20</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/02-After%20Thought-Memories%20of%20Tomorrow.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Memories+of+Tomorrow&amp;album=Waiting+for+Dawn&amp;genre=Ele"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/3149">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/kperl"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suite No 5 in G major BWV 816: Sarabande</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suite No 5 in G major BWV 816: Sarabande</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-07-31</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">22</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/22-Suite%20No%205%20in%20G%20major%20BWV%20816_%20Sarabande-Katherine%20Roberts%20Perl.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Katherine+Roberts+Perl&amp;album=J%2ES%2E+Bach+French+Sui"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/4230">
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/02-I&apos;d%20Guess%20You&apos;d%20Say-Norine%20Braun.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Norine+Braun&amp;album=Modern+Anguish&amp;genre=Pop"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/3110">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/bianco"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Still</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Still</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-05-29</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">13</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/13-Still-Justin%20Bianco.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Justin+Bianco&amp;album=Forge&amp;genre=New+Age"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/3143">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/kperl"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suite No 3 in B minor BWV 814: Sarabande</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suite No 3 in B minor BWV 814: Sarabande</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-07-31</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">16</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/16-Suite%20No%203%20in%20B%20minor%20BWV%20814_%20Sarabande-Katherine%20Roberts%20Perl.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Katherine+Roberts+Perl&amp;album=J%2ES%2E+Bach+French+Sui"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/artist/soulprint">
+    <foaf:based_near rdf:resource="http://dbpedia.org/resource/USA"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SoulPrint</rdfs:label>
+    <foaf:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SoulPrint</foaf:name>
+    <bio:olb rdf:datatype="http://www.w3.org/2001/XMLSchema#string">How heavy can rock get? Heavier than you think. SoulPrint is redefining rock. No catchy pop here, just the best soulful hard rock that will make you rethink your existence. The apocalypse is now. SoulPrint has been shattering eardrums along the central coast for nearly five years, and once LaBarre graduates @ Cal Poly, they plan to tour the United States.
+
+Jason Estes: Jason shows his dedication by driving back and forth from his hometown of Santa Barbara to SLO at least three times a week, just for the band. His passions for singing and expressing himself distinguish him greatly from other vocalists. There's not much else to say about him... and he never really has much to say.
+
+Ryan Estes: AKA Rage. If you know him, you know why this is such a fitting nickname. Attempts with every new song to play more chords, and faster. Has a thing for breaking strings and falling over on stage
+
+John Reisz: John started playing drums just so the band could form. Seven years later... he adds his own unique flow to the edginess of the thrashing guitars. That is, if he isn't pounding away at the double kick.
+
+Ryan LaBarre: The newest member of the band and the only one not born and raised in SLO, Ryan hails from way in up Portland, Oregon. He started out playing guitar, but was drawn to the powerful sounds of the bass two years ago. Less than a week after meeting Rage and Flow at Cal Poly, he found himself playing a show with them at a party in Isla Vista. Luckily, the fans were as drunk as he was, so it didn't matter that he was totally winging it. Now, thank god, he actually knows what he's doing on stage.
+</bio:olb>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">soulful hard rock</dc:description>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/MusicArtist"/>
+    <foaf:homepage rdf:resource="http://magnatune.com/artists/soulprint"/>
+    <foaf:img rdf:resource="http://magnatune.com//artists/img/soulprint.jpg"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/signal/3110">
+    <mo:time rdf:resource="http://dbtune.org/magnatune/timeinterval/3110"/>
+    <mo:published_as rdf:resource="http://dbtune.org/magnatune/track/3110"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">signal 3110</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Signal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/4642">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/pbo"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aria: Riportai glorioso palma</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aria: Riportai glorioso palma</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-05-03</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">17</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/17-Aria_%20Riportai%20glorioso%20palma-Philharmonia%20Baroque%20Orchestra.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Philharmonia+Baroque&amp;album=Handel+%2D+Atalanta+CD1&amp;ge"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/6413">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/paternoster"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ave Regina</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ave Regina</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2003-11-01</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">8</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/08-Ave%20Regina-Vito%20Paternoster.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Vito+Paternoster&amp;album=Inzaffirio&amp;genre=Classical"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/2160">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/hans_christian"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In the Pews</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In the Pews</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2003-10-05</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">9</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/09-In%20the%20Pews-Hans%20Christian.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Hans+Christian&amp;album=Phantoms&amp;genre=New+Age"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/4814">
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/10-Movin&apos;%20On-Psychokinetics.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Psychokinetics&amp;album=Seven+League+Boots&amp;genre=Rock"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/5721">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/strojovna_07"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ja a Vlasto</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ja a Vlasto</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2003-06-07</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">11</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/11-Ja%20a%20Vlasto-Strojovna%2007.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Strojovna+07&amp;album=Dirnix&amp;genre=Electronica"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/4636">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/pbo"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aria: Impara ingrata</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aria: Impara ingrata</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-05-03</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">11</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/11-Aria_%20Impara%20ingrata-Philharmonia%20Baroque%20Orchestra.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Philharmonia+Baroque&amp;album=Handel+%2D+Atalanta+CD1&amp;ge"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/album/mountain-mountain">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mountain Mirrors</rdfs:label>
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/mountain_mirrors"/>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/4019"/>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/4025"/>
+    <mo:publishing_location rdf:resource="http://dbpedia.org/resource/USA"/>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mountain Mirrors</dc:title>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/4023"/>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Record"/>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/4018"/>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/4021"/>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/4024"/>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/4022"/>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/4020"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/timeinterval/157">
+    <tl:onTimeLine rdf:resource="http://dbtune.org/magnatune/timeline/157"/>
+    <tl:duration rdf:datatype="http://www.w3.org/2001/XMLSchema#duration">PT64S</tl:duration>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">time interval 157</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/TR/owl-time/Interval"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/timeline/6124">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">timeline 6124</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/NET/c4dm/timeline.owl#RelativeTimeLine"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/3138">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/kperl"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suite No 2 in C minor BWV 813: Air</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suite No 2 in C minor BWV 813: Air</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-07-31</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">11</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/11-Suite%20No%202%20in%20C%20minor%20BWV%20813_%20Air-Katherine%20Roberts%20Perl.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Katherine+Roberts+Perl&amp;album=J%2ES%2E+Bach+French+Sui"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/4639">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/pbo"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arioso: Al varco, o pastori!</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arioso: Al varco, o pastori!</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-05-03</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">14</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/14-Arioso_%20Al%20varco%20o%20pastori-Philharmonia%20Baroque%20Orchestra.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Philharmonia+Baroque&amp;album=Handel+%2D+Atalanta+CD1&amp;ge"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/timeline/6413">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">timeline 6413</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/NET/c4dm/timeline.owl#RelativeTimeLine"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/signal/6413">
+    <mo:time rdf:resource="http://dbtune.org/magnatune/timeinterval/6413"/>
+    <mo:published_as rdf:resource="http://dbtune.org/magnatune/track/6413"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">signal 6413</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Signal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/timeinterval/3820">
+    <tl:onTimeLine rdf:resource="http://dbtune.org/magnatune/timeline/3820"/>
+    <tl:duration rdf:datatype="http://www.w3.org/2001/XMLSchema#duration">PT106S</tl:duration>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">time interval 3820</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/TR/owl-time/Interval"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/timeline/4230">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">timeline 4230</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/NET/c4dm/timeline.owl#RelativeTimeLine"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/2159">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/hans_christian"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scattered</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scattered</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2003-10-05</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">8</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/08-Scattered-Hans%20Christian.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Hans+Christian&amp;album=Phantoms&amp;genre=New+Age"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/3144">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/kperl"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suite No 3 in B minor BWV 814: Anglaise</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suite No 3 in B minor BWV 814: Anglaise</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-07-31</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">17</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/17-Suite%20No%203%20in%20B%20minor%20BWV%20814_%20Anglaise-Katherine%20Roberts%20Perl.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Katherine+Roberts+Perl&amp;album=J%2ES%2E+Bach+French+Sui"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/timeinterval/5655">
+    <tl:onTimeLine rdf:resource="http://dbtune.org/magnatune/timeline/5655"/>
+    <tl:duration rdf:datatype="http://www.w3.org/2001/XMLSchema#duration">PT293S</tl:duration>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">time interval 5655</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/TR/owl-time/Interval"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/642">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/beth_quist"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mourning Dove</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mourning Dove</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2003-06-13</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">6</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/06-Mourning%20Dove-Beth%20Quist.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Beth+Quist&amp;album=Lucidity&amp;genre=World"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/5044">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/elijah"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hail, O Theotokos the Virgin</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hail, O Theotokos the Virgin</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2003-10-02</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/05-Hail%20O%20Theotokos%20the%20Virgin-St.%20Eliyah%20Childrens%20Choir.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Saint+Elijah+Childrens+Choir&amp;album=We+are+Guarded+by+"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/4805">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/psychokinetics"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Feeldismusik</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Feeldismusik</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-04-15</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/01-Feeldismusik-Psychokinetics.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Psychokinetics&amp;album=Seven+League+Boots&amp;genre=Rock"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/1515">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/edward_martin"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sans Liberte (Morlaye)</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sans Liberte (Morlaye)</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2003-07-24</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">11</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/11-Sans%20Liberte%20(Morlaye)-Edward%20Martin.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Edward+Martin&amp;album=Art+of+the+Lute+in+Renaissance+Fr"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/3130">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/kperl"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suite No 4 in E flat major BWV 815: Sarabande</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suite No 4 in E flat major BWV 815: Sarabande</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-07-31</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/03-Suite%20No%204%20in%20E%20flat%20major%20BWV%20815_%20Sarabande-Katherine%20Roberts%20Perl.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Katherine+Roberts+Perl&amp;album=J%2ES%2E+Bach+French+Sui"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/4227">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/norine"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lonely Avenue</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lonely Avenue</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2004-04-02</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">12</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/12-Lonely%20Avenue-Norine%20Braun.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Norine+Braun&amp;album=Miles+to+Go&amp;genre=Pop"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/artist/edward_martin">
+    <foaf:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Edward Martin</foaf:name>
+    <foaf:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Edward Martin and Paul Berget</foaf:name>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vihuela, renaissance and baroque lute</dc:description>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Edward Martin and William Bast</rdfs:label>
+    <foaf:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ed Martin</foaf:name>
+    <foaf:based_near rdf:resource="http://dbpedia.org/resource/USA"/>
+    <bio:olb rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Edward Martin (lutes, archlute, vihuela, and baroque lute) has studied with celebrated lutenists Paul O'Dette, Toyohiko Satoh, and Hopkinson Smith. He holds the position of Adjunct Professor of Lute at the College of Saint Scholastica.
+
+He has an extensively performed throughout the United States, and has made numerous recordings for Minnesota Public Radio, and these performances have also been broadcast on the American Public Radio network. He is a member of many ensembles, including the Lake Superior Chamber Orchestra, Minnesota Lute Quartet (MiLQ), a duo with tenor William Bastian, a baroque lute duo with Paul Berget, and Duo Chambure, with renaissance lutenist and vihuelist Philip Rukavina". In Summer 1997 and 2001 he was invited to be the Renaissance lute instructor at the SFEMS Renaissance week at the Dominican College, San Rafael, California.
+</bio:olb>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Edward Martin</rdfs:label>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Edward Martin and Paul Berget</rdfs:label>
+    <foaf:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Edward Martin and William Bast</foaf:name>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/MusicArtist"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ed Martin</rdfs:label>
+    <foaf:homepage rdf:resource="http://magnatune.com/artists/edward_martin"/>
+    <foaf:img rdf:resource="http://magnatune.com//artists/img/edward_martin.gif"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/4643">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/pbo"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recitativo: Ah! che tu sei la</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recitativo: Ah! che tu sei la</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-05-03</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">18</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/18-Recitativo_%20Ah%20che%20tu%20sei%20la%20fera-Philharmonia%20Baroque%20Orchestra.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Philharmonia+Baroque&amp;album=Handel+%2D+Atalanta+CD1&amp;ge"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/timeinterval/4230">
+    <tl:onTimeLine rdf:resource="http://dbtune.org/magnatune/timeline/4230"/>
+    <tl:duration rdf:datatype="http://www.w3.org/2001/XMLSchema#duration">PT202S</tl:duration>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">time interval 4230</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/TR/owl-time/Interval"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/artist/spinecar">
+    <foaf:based_near rdf:resource="http://dbpedia.org/resource/USA"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spinecar</rdfs:label>
+    <foaf:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spinecar</foaf:name>
+    <bio:olb rdf:datatype="http://www.w3.org/2001/XMLSchema#string">spineCar, from Albany, New York, provide a cutting edge hard rock experience. Their music combines a brutal sound with a timeless, unique vision of pure musical depth fueled by raw energy.
+
+spineCar's self-titled debut was released independently in 1997 and commanded instant attention from everyone who heard their aggressive new sound.
+
+1999 brought the much-awaited follow-up recording - Up From the Mud. The single "Waste Away" was chosen by WQBK FM of Albany, N.Y in The Next Big Thing local event and the classic "Freeze" was recently featured as the opening theme song in the 2003 DMG Films release "The Situationist".
+
+As word of this powerful new band with a heart-stopping live show spread throughout the northeast U.S., spineCar was busy crafting songs for the 2002 Spaceboy release - Autophile, a blasting reminder of what it feels like to be truly rocked.
+</bio:olb>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">heavy modern rock.</dc:description>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/MusicArtist"/>
+    <foaf:homepage rdf:resource="http://magnatune.com/artists/spinecar"/>
+    <foaf:img rdf:resource="http://magnatune.com//artists/img/spinecar.gif"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/4815">
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/11-How&apos;d%20I%20Get%20Here-Psychokinetics.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Psychokinetics&amp;album=Seven+League+Boots&amp;genre=Rock"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/2161">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/hans_christian"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Sacrifice</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Sacrifice</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2003-10-05</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">10</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/10-The%20Sacrifice-Hans%20Christian.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Hans+Christian&amp;album=Phantoms&amp;genre=New+Age"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/timeinterval/3395">
+    <tl:onTimeLine rdf:resource="http://dbtune.org/magnatune/timeline/3395"/>
+    <tl:duration rdf:datatype="http://www.w3.org/2001/XMLSchema#duration">PT157S</tl:duration>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">time interval 3395</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/TR/owl-time/Interval"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/2162">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/hans_christian"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aftermath</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aftermath</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2003-10-05</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">11</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/11-Aftermath-Hans%20Christian.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Hans+Christian&amp;album=Phantoms&amp;genre=New+Age"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/artist/tilopa">
+    <foaf:based_near rdf:resource="http://dbpedia.org/resource/Germany"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tilopa</rdfs:label>
+    <foaf:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tilopa</foaf:name>
+    <bio:olb rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tilopa, a one time social scientist who did research on Latin America, has studied quite a wide range of different musical instruments since early childhood (flute, violin, classical guitar, piano, tampoora, dillruba, svarmandal, santoor), but found his real love about 20 years ago when he met with the kyotaku and his flute-master Koku Nishimura in Kumamoto/Japan.
+
+Since that time he has studied the traditional 'honkyoku' zen-music with his master and says that this is a never ending process even though he is playing the same songs over and over again.
+
+At the same time he has been experimenting with combining the kyotaku with other western and eastern instruments.
+
+He lives with his wife and a multitude of her paintings in an old farmhouse in the countryside of Bavaria/Germany where he is working as a kyotaku-teacher and maker and also as a t'ai chi teacher.
+
+About the Japanese zen-flute:
+
+Tilopa is playing the so called kyotaku, also known as Japanese zen-flute or long shakuhachi. This instrument has a pentatonic tuning and has 5 holes like the shakuhachi, but has a much deeper and more mellow sound than the shakuhachi.
+
+It used to be played more often in the old days of Japan, but was more and more replaced by the shakuhachi during the twentieth century.
+
+In the same process it changed from an instrument of meditation that was mainly used by a certain buddhist sect of wandering monks (komuso), who played traditional religious pieces (honkyoku) only, to an instrument of more 'worldly' use played with other instruments and in different kinds of music.
+
+Tilopa's master, Koku Nishimura, was one of the first to revive the old tradition of kyotaku.
+
+For a few years now, Tilopa has been giving occasional concerts with Sangeet P. Sieben. Sieben is a gifted guitarist who started out with jazz and rock music years ago, picked up other instruments on his musical life journey and now feels very much at home with ethno-, world- and meditation-music. One of the results of this extraordinary meeting is the CD 'Pictures of Silence', which is a live recording of several improvisational sessions at an art exhibition in Cologne/Germany.
+</bio:olb>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">healing magic of the japanese zenflute</dc:description>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/MusicArtist"/>
+    <foaf:homepage rdf:resource="http://magnatune.com/artists/tilopa"/>
+    <foaf:img rdf:resource="http://magnatune.com//artists/img/tilopa1.jpg"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/4637">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/pbo"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recitativo: Ah che pur troppo adoro</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recitativo: Ah che pur troppo adoro</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-05-03</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">12</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/12-Recitativo_%20Ah%20che%20pur%20troppo%20adoro-Philharmonia%20Baroque%20Orchestra.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Philharmonia+Baroque&amp;album=Handel+%2D+Atalanta+CD1&amp;ge"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/682">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/brad_sucks"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fixing My Brain</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fixing My Brain</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2003-12-19</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/03-Fixing%20My%20Brain-Brad%20Sucks.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Brad+Sucks&amp;album=I+Dont+Know+What+Im+Doing&amp;genre=Rock"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/4638">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/pbo"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aria: Come alla tortorella langue</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aria: Come alla tortorella langue</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-05-03</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">13</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/13-Aria_%20Come%20alla%20tortorella%20langue-Philharmonia%20Baroque%20Orchestra.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Philharmonia+Baroque&amp;album=Handel+%2D+Atalanta+CD1&amp;ge"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/3137">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/kperl"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suite No 2 in C minor BWV 813: Sarabande</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suite No 2 in C minor BWV 813: Sarabande</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-07-31</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">10</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/10-Suite%20No%202%20in%20C%20minor%20BWV%20813_%20Sarabande-Katherine%20Roberts%20Perl.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Katherine+Roberts+Perl&amp;album=J%2ES%2E+Bach+French+Sui"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/performance/3511">
+    <mo:recorded_as rdf:resource="http://dbtune.org/magnatune/signal/3511"/>
+    <event:place rdf:resource="http://dbpedia.org/resource/USA"/>
+    <mo:performer rdf:resource="http://dbtune.org/magnatune/artist/liquid_zen"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">performance 3511</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I wonder it it is really useful for now, but it can be an anchor point for further information</rdfs:comment>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Performance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/signal/6271">
+    <mo:time rdf:resource="http://dbtune.org/magnatune/timeinterval/6271"/>
+    <mo:published_as rdf:resource="http://dbtune.org/magnatune/track/6271"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">signal 6271</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Signal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/signal/682">
+    <mo:time rdf:resource="http://dbtune.org/magnatune/timeinterval/682"/>
+    <mo:published_as rdf:resource="http://dbtune.org/magnatune/track/682"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">signal 682</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Signal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/album/kperl-french">
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/3141"/>
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/kperl"/>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/3133"/>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/3131"/>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/3146"/>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/3144"/>
+    <mo:publishing_location rdf:resource="http://dbpedia.org/resource/USA"/>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Record"/>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/3140"/>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/3150"/>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/3129"/>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/3136"/>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/3142"/>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J.S. Bach French Suites</dc:title>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/3152"/>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/3134"/>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/3138"/>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/3132"/>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/3147"/>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/3151"/>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/3128"/>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/3137"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J.S. Bach French Suites</rdfs:label>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/3153"/>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/3130"/>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/3145"/>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/3143"/>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/3149"/>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/3135"/>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/3139"/>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/3148"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/artist/mot">
+    <foaf:based_near rdf:resource="http://dbpedia.org/resource/Norway"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Memories of Tomorrow</rdfs:label>
+    <foaf:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Memories of Tomorrow</foaf:name>
+    <bio:olb rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Memories of Tomorrow (MoT) is a pseudonym under which Leif Erik Gullanger produces melodic trance. His music is a perfect equilibrium between high energy beats and unforgettable, harmonic melodies. Memories of the past and visions of tomorrow seamlessly mix in his music. The most intimate and precious thoughts of mankind live in his words.
+
+Leif Erik has been making music since around 1996 under different names. Some years ago Leif Erik recieved a message from Michael Lerman. Togheter they decided to make a song. Michael wrote the lyrics and Leif Erik produced the song. The song wasn't released under the name MoT. Leif Erik and Michael agreed that they should make more songs together, and in a short time the name MoT was choosen for the project, at the same time Margunn Blytt was asked to sing for MoT. She said yes. Today MoT consists of these three, Leif Erik, Michael and Margunn. They try to make melodical trance with meanigful lyrics.
+
+Remember your past, follow your dreams, and join MoT in the quest for memories of tomorrow.
+</bio:olb>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">melodic trance songs for a good mood.</dc:description>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/MusicArtist"/>
+    <foaf:homepage rdf:resource="http://magnatune.com/artists/mot"/>
+    <foaf:img rdf:resource="http://magnatune.com//artists/img/mot.jpg"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/2152">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/hans_christian"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Backwards (with my eyes closed)</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Backwards (with my eyes closed)</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2003-10-05</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/01-Backwards%20(with%20my%20eyes%20closed)-Hans%20Christian.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Hans+Christian&amp;album=Phantoms&amp;genre=New+Age"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/timeline/157">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">timeline 157</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/NET/c4dm/timeline.owl#RelativeTimeLine"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/artist/elijah">
+    <foaf:based_near rdf:resource="http://dbpedia.org/resource/Ukraine"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">St. Eliyah Childrens Choir</rdfs:label>
+    <foaf:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">St. Eliyah Childrens Choir</foaf:name>
+    <bio:olb rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Saint Elijah Church, situated in Podol district of Kyiv, is the first Russian Orthodox church ever built. According to legend, it was built by the Prince Askold and Dir long before the baptizing of Kyiv Rus. The Saint chronicler Nestor writes about this event in his Fable of Ancient Times.
+
+In 988 The Great equel to Apostle Prince Vladimir began baptizing the people of Kyiv Rus near this church on the banks of the Dnieper River.
+
+And now this church, though small in size is under jurisdiction of the Metropolitan of Kyiv and the whole Ukraine Vladimir is a favourite place for praying for the Kyivites. Archiepriest Vitaly Kosovskiy is the dean of the church since 1991.
+
+On the 19th of December 1996 the childrens choir began to sing for the glory of God.
+
+The children regularly take part in Sunday and festive liturgies and has become an integral part of ther life. The choir also has consert activities. During the short time of its existence, the choir won the All-Ukranian (1997, the town of Rivne) and International (1998, the town of Eupatoria) festivals.
+
+In this album you can hear both little-known old spiritual songs of the 16-17th centuries and traditional and authors spirituel hymns of liturgies of the 18th beginning of the 20th centuries.
+
+Special attention should be paid to old Ukranian cantical part of the album where warm feelings of Ukranian people to God are particularly expressed. The choir has become the first Orthodox childrens choir of Kyiv after almost a one hundred years interval.
+</bio:olb>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ukrainian children's choir</dc:description>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/MusicArtist"/>
+    <foaf:homepage rdf:resource="http://magnatune.com/artists/elijah"/>
+    <foaf:img rdf:resource="http://magnatune.com//artists/img/eliyah.jpg"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/timeline/6554">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">timeline 6554</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/NET/c4dm/timeline.owl#RelativeTimeLine"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/timeline/3511">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">timeline 3511</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/NET/c4dm/timeline.owl#RelativeTimeLine"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/performance/4230">
+    <mo:recorded_as rdf:resource="http://dbtune.org/magnatune/signal/4230"/>
+    <event:place rdf:resource="http://dbpedia.org/resource/Canada"/>
+    <mo:performer rdf:resource="http://dbtune.org/magnatune/artist/norine"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">performance 4230</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I wonder it it is really useful for now, but it can be an anchor point for further information</rdfs:comment>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Performance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/timeline/5339">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">timeline 5339</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/NET/c4dm/timeline.owl#RelativeTimeLine"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/2154">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/hans_christian"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lindenflowers and Carnations</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lindenflowers and Carnations</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2003-10-05</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/03-Lindenflowers%20and%20Carnations-Hans%20Christian.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Hans+Christian&amp;album=Phantoms&amp;genre=New+Age"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/4648">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/pbo"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recitativo: Amarilli? Oh Dei!</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recitativo: Amarilli? Oh Dei!</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-05-03</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">23</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/23-Recitativo_%20Amarilli%20Oh%20Dei%20qui%20Tirsi-Philharmonia%20Baroque%20Orchestra.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Philharmonia+Baroque&amp;album=Handel+%2D+Atalanta+CD1&amp;ge"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/timeline/3820">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">timeline 3820</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/NET/c4dm/timeline.owl#RelativeTimeLine"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/4627">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/pbo"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Allegro</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Allegro</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-05-03</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/02-Allegro-Philharmonia%20Baroque%20Orchestra.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Philharmonia+Baroque&amp;album=Handel+%2D+Atalanta+CD1&amp;ge"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/artist/antiguru">
+    <foaf:based_near rdf:resource="http://dbpedia.org/resource/Canada"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AntiGuru</rdfs:label>
+    <foaf:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AntiGuru</foaf:name>
+    <bio:olb rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AntiGuru has been writing music for over ten years now in various styles and under several aliases.
+
+Lured into electronics and computer music in 1996, AntiGuru's main influences would be Juno Reactor, Panasonic, Slowdive, Biosphere, and The Boards of Canada.
+
+Convinced that true art lies within the process of creation, most of AntiGuru's time is devoted to writing music in his studio at the heart of the beautiful city of Victoria, in Western Canada.
+</bio:olb>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IDM in the style of early Warp</dc:description>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/MusicArtist"/>
+    <foaf:homepage rdf:resource="http://magnatune.com/artists/antiguru"/>
+    <foaf:img rdf:resource="http://magnatune.com//artists/img/antiguru2.jpg"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/timeline/3110">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">timeline 3110</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/NET/c4dm/timeline.owl#RelativeTimeLine"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/artist/kourosh_zolani">
+    <foaf:based_near rdf:resource="http://dbpedia.org/resource/USA"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kourosh Zolani</rdfs:label>
+    <foaf:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kourosh Zolani</foaf:name>
+    <bio:olb rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kourosh Zolfagharkhani (Zolani) was born in 1970 in a very small town in Iran. He began his musical training at the age of 14 and was composing at 18. He studied classical music and received a degree in musical composition in 1998.
+
+Kourosh's music has received many awards, including two awards at the 2003 Call to Arts Festival.
+
+Kourosh has pioneered a method of tuning the Santour in a chromatic manner, which allows western-style scales and music-styles to be performed on the instrument, thus widening the instrument's musical reach.
+</bio:olb>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">persian santour (hammer dulcimer)</dc:description>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/MusicArtist"/>
+    <foaf:homepage rdf:resource="http://magnatune.com/artists/kourosh_zolani"/>
+    <foaf:img rdf:resource="http://magnatune.com//artists/img/kourosh_zolani.gif"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/timeinterval/682">
+    <tl:onTimeLine rdf:resource="http://dbtune.org/magnatune/timeline/682"/>
+    <tl:duration rdf:datatype="http://www.w3.org/2001/XMLSchema#duration">PT238S</tl:duration>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">time interval 682</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/TR/owl-time/Interval"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/timeinterval/3110">
+    <tl:onTimeLine rdf:resource="http://dbtune.org/magnatune/timeline/3110"/>
+    <tl:duration rdf:datatype="http://www.w3.org/2001/XMLSchema#duration">PT133S</tl:duration>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">time interval 3110</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/TR/owl-time/Interval"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/4640">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/pbo"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recitativo: Oh Tirsi e tu che per fama</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recitativo: Oh Tirsi e tu che per fama</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-05-03</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">15</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/15-Recitativo_%20Oh%20Tirsi%20e%20tu%20che%20per%20fama-Philharmonia%20Baroque%20Orchestra.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Philharmonia+Baroque&amp;album=Handel+%2D+Atalanta+CD1&amp;ge"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/4630">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/pbo"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recitativo Sempre ti lagni oh Tirsi</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recitativo Sempre ti lagni oh Tirsi</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-05-03</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/05-Recitativo%20Sempre%20ti%20lagni%20oh%20Tirsi-Philharmonia%20Baroque%20Orchestra.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Philharmonia+Baroque&amp;album=Handel+%2D+Atalanta+CD1&amp;ge"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/artist/bianco">
+    <foaf:based_near rdf:resource="http://dbpedia.org/resource/USA"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Justin Bianco</rdfs:label>
+    <foaf:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Justin Bianco</foaf:name>
+    <bio:olb rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+Born in Port Elizabeth, South Africa and raised in the San Francisco Bay Area, Justin Bianco has been writing and playing music since he was tall enough to reach the keys of the keyboard. Now composing in addition to playing, Justin is known for his ability to blend modern and classical elements for a clean, contemplative sound. Although he has spent time in Iowa, Oregon, and even Costa Rica, he still finds his home in San Francisco, California, where he records his latest electronic and modern piano compositions.
+
+Finality and Phoenix are graceful, almost meditative combinations of classical and electronica, while Forge is a beautfully hushed series of original compositions for piano.
+
+</bio:olb>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sublime classical and electronica hybrids</dc:description>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/MusicArtist"/>
+    <foaf:homepage rdf:resource="http://magnatune.com/artists/bianco"/>
+    <foaf:img rdf:resource="http://magnatune.com//artists/img/bianco.jpg"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/6271">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/pinnock"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sonata in G minor, BWV 1030b:</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sonata in G minor, BWV 1030b:</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-07-31</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">12</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/12-Sonata%20in%20G%20minor%20BWV%201030b_%20(Andante)-Trevor%20Pinnock%20and%20Jonathan%20Manson.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Trevor+Pinnock&amp;album=J+S+Bach+Sonatas+for+Viola+de+Ga"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/3136">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/kperl"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suite No 2 in C minor BWV 813: Courante</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suite No 2 in C minor BWV 813: Courante</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-07-31</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">9</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/09-Suite%20No%202%20in%20C%20minor%20BWV%20813_%20Courante-Katherine%20Roberts%20Perl.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Katherine+Roberts+Perl&amp;album=J%2ES%2E+Bach+French+Sui"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/6124">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/tilopa"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Meifrui II</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Meifrui II</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2004-05-10</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">7</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/07-Meifrui%20II-Tilopa.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Tilopa&amp;album=Turkishauch&amp;genre=Ambient"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/3146">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/kperl"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suite No 3 in B minor BWV 814: Gigue</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suite No 3 in B minor BWV 814: Gigue</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-07-31</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">19</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/19-Suite%20No%203%20in%20B%20minor%20BWV%20814_%20Gigue-Katherine%20Roberts%20Perl.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Katherine+Roberts+Perl&amp;album=J%2ES%2E+Bach+French+Sui"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/timeline/3837">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">timeline 3837</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/NET/c4dm/timeline.owl#RelativeTimeLine"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/signal/3837">
+    <mo:time rdf:resource="http://dbtune.org/magnatune/timeinterval/3837"/>
+    <mo:published_as rdf:resource="http://dbtune.org/magnatune/track/3837"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">signal 3837</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Signal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/signal/4230">
+    <mo:time rdf:resource="http://dbtune.org/magnatune/timeinterval/4230"/>
+    <mo:published_as rdf:resource="http://dbtune.org/magnatune/track/4230"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">signal 4230</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Signal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/4650">
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/25-Recitativo_%20Ah%20ch&apos;io%20ancora%20l&apos;intendo-Philharmonia%20Baroque%20Orchestra.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Philharmonia+Baroque&amp;album=Handel+%2D+Atalanta+CD1&amp;ge"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/artist/mountain_mirrors">
+    <foaf:based_near rdf:resource="http://dbpedia.org/resource/USA"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mountain Mirrors</rdfs:label>
+    <foaf:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mountain Mirrors</foaf:name>
+    <bio:olb rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+Imagine Nick Drake, Pink Floyd, and Opeth jamming under a deep woods full moon, and you'll start to get a glimpse into Mountain Mirrors, the psych folk/rock project of multi-instrumentalist Jeff Sanders.
+
+Sanders honed his guitar chops in the 80's jamming in metal/punk jam bands Shared Psychosis and Your Dirge, and blending original instrumental music with Black Sabbath, Metallica, and Slayer. As his tastes broadened, however, he began bringing in folk influences such as Nick Drake and Damien Rice, and creating the hypnotic folk-rock for which he is known today. It's this melodic yet mesmerizing sound that Sanders uses to explore issues of spirituality. Although his music expresses a deep yearning for enlightenment, it's Sanders' willingness to examine the eerie, lonely side of this quest that makes his music so powerful.
+
+Though these dark, even spooky influences are definitely felt throughout his work, Sanders' music also contains a deep vein of introspection that keep it from being menacing. One reviewer described the first Mountain Mirrors album, Lunar Ecstasy, as a work "fit for poets, travelers and seekers," while another called it "the perfect chill-out album with brief touches of Delerium, Alice in Chains, Led Zeppelin, Pink Floyd, Portishead and The Tea Party." In February 2004, Lunar Ecstasy was named album of the month by both IndieSoundz and StonedGods, and "Afterlife" was chosen by Indie Music Beat Magazine for their annual 101 Great New Music Tracks CD.
+
+The eponymous Mountain Mirrors album is Sanders' second full length album, and shows a deepening mastery of his intense, supernatural sound. Guest musicians include Elad Fish on drums and piano, Claire Fitch on cello, Oren Selas on keyboards, and Guy Bar-Tor on bass. "They're phenomenal, absolutely sent from heaven," says Sanders.
+
+Says The Sound Monitor of Mountain Mirrors, "From atmospheric sounds to Massive Attack style trip-hop with your more standard acoustic guitar &amp; soft singing tracks. The music takes you on numerous twists and turns throughout dark and beautiful landscapes from your dreams and nightmares."
+</bio:olb>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">heavy acoustic from the woods of Mass.</dc:description>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/MusicArtist"/>
+    <foaf:homepage rdf:resource="http://magnatune.com/artists/mountain_mirrors"/>
+    <foaf:img rdf:resource="http://magnatune.com//artists/img/mirrors.jpg"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/timeinterval/6124">
+    <tl:onTimeLine rdf:resource="http://dbtune.org/magnatune/timeline/6124"/>
+    <tl:duration rdf:datatype="http://www.w3.org/2001/XMLSchema#duration">PT611S</tl:duration>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">time interval 6124</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/TR/owl-time/Interval"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/4021">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/mountain_mirrors"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Your Time Has Come</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Your Time Has Come</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-04-15</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/04-Your%20Time%20Has%20Come-Mountain%20Mirrors.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Mountain+Mirrors&amp;album=Mountain+Mirrors&amp;genre=Rock"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/artist/pinnock">
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/MusicArtist"/>
+    <foaf:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Trevor Pinnock and Jonathan Ma</foaf:name>
+    <foaf:img rdf:resource="http://magnatune.com//artists/img/pinnock1.jpg"/>
+    <foaf:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Trevor Pinnock</foaf:name>
+    <bio:olb rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Trevor Pinnock is recognised as a leading personality in the direction of period-instrument performance and a harpsichord soloist of international reputation.
+
+Having trained as a chorister at Canterbury Cathedral and as a scholar at the Royal College of Music, Trevor Pinnock formed The English Concert in 1973; since then, his lively and stylish interpretations with this ensemble have set new standards in the field of period performance.
+
+Trevor Pinnock has appeared frequently as a guest conductor with many of the world's leading orchestras, including the Boston, San Francisco and Detroit Symphony orchestras, the St Paul and Los Angeles Chamber orchestras and at the Tanglewood and Mostly Mozart festivals, he became Principal conductor and artistic director of the National Arts Centre Orchestra, Ottawa. He made his Metropolitan Opera debut in 1988 with Handel's Giulio Cesare.
+
+The 1999/2000 season included engagements with the Austro-Hungarian Haydn Orchestra, Mito Chamber Orchestra, Vienna Philharmonic Orchestra, tours of the USA and South America with The English Concert, chamber music recitals with Rachel Podger and Jonathan Manson in Japan and duo recitals with Maxim Vengerov in Europe. The 2000/2001 season includes concerts with The English Concert in Japan (Bach St Matthew Passion), Spain (Monteverdi Combattimento), Halle, Paris and London (Handel Tamerlano) and the Vienna Philharmonic Orchestra, among others.
+
+Firmly established as one of the world's foremost harpsichord virtuosi, Trevor Pinnock's solo recordings include Scarlatti Sonatas, Handel's Harpsichord Suites and Bach's Goldberg Variations and complete Partitas. As a soloist he has recorded the Bach Harpsichord Concerti and Haydn's Piano Concerto (Hob. XV111:11) playing/directing The English Concert and the Poulenc Harpsichord Concerto with Seiji Ozawa and the Boston Symphony Orchestra.
+
+Trevor Pinnock received a CBE in the Queen's Birthday Honours in 1992.
+</bio:olb>
+    <foaf:homepage rdf:resource="http://magnatune.com/artists/pinnock"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Trevor Pinnock and Jonathan Ma</rdfs:label>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">baroque harpsichord virtuoso</dc:description>
+    <foaf:based_near rdf:resource="http://dbpedia.org/resource/England"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Trevor Pinnock</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/2153">
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/02-Coyote&apos;s%20Dance-Hans%20Christian.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Hans+Christian&amp;album=Phantoms&amp;genre=New+Age"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/timeline/3395">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">timeline 3395</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/NET/c4dm/timeline.owl#RelativeTimeLine"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/4626">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/pbo"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ouverture: Allegro</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ouverture: Allegro</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-05-03</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/01-Ouverture_%20Allegro-Philharmonia%20Baroque%20Orchestra.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Philharmonia+Baroque&amp;album=Handel+%2D+Atalanta+CD1&amp;ge"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/performance/6271">
+    <mo:recorded_as rdf:resource="http://dbtune.org/magnatune/signal/6271"/>
+    <event:place rdf:resource="http://dbpedia.org/resource/England"/>
+    <mo:performer rdf:resource="http://dbtune.org/magnatune/artist/pinnock"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">performance 6271</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I wonder it it is really useful for now, but it can be an anchor point for further information</rdfs:comment>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Performance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/4649">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/pbo"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Duetto: Amarilli? Oh Dei! che</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Duetto: Amarilli? Oh Dei! che</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-05-03</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">24</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/24-Duetto_%20Amarilli%20Oh%20Dei%20che%20vuoi-Philharmonia%20Baroque%20Orchestra.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Philharmonia+Baroque&amp;album=Handel+%2D+Atalanta+CD1&amp;ge"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/timeline/557">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">timeline 557</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/NET/c4dm/timeline.owl#RelativeTimeLine"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/4631">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/pbo"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recitativo: Ecco Aminta!</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recitativo: Ecco Aminta!</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-05-03</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">6</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/06-Recitativo_%20Ecco%20Aminta-Philharmonia%20Baroque%20Orchestra.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Philharmonia+Baroque&amp;album=Handel+%2D+Atalanta+CD1&amp;ge"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/artist/pbo">
+    <foaf:homepage rdf:resource="http://magnatune.com/artists/pbo"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Philharmonia Baroque Orchestra</rdfs:label>
+    <bio:olb rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+Named Musical America's "Ensemble of the Year" for 2004, San Francisco's Philharmonia Baroque Orchestra has dedicated itself to the historically-informed performance of Baroque, Classical, and early Romantic music on original instruments since its inception in 1981. Under the leadership of Nicholas McGegan, Music Director since 1985, Philharmonia has become "an ensemble for early music as fine as any in the world today," according to Los Angeles Times critic Alan Rich. The Orchestra performs a subscription season in four cities in the San Francisco Bay Area, and is regularly heard on tour in United States and internationally. In addition to Mr. McGegan, the Orchestra has welcomed eminent guest conductors to its podium including William Christie, Andrew Parrott, Jordi Savall, Gustav Leonhart, Monica Huggett and Stanley Ritchie.
+
+Under the direction of Mr. McGegan, Philharmonia has made several United States tours, each of which included an appearance on the Great Performers Series at Lincoln Center. Other appearances include debuts at Carnegie Hall (NY) and Walt Disney Concert Hall (Los Angeles) in February 2005. In August of 2005 the Orchestra made its debut at the BBC Proms, Snape Maltings (UK) and The Concertgebouw in Amsterdam.
+
+In August 2002, the Orchestra made its Mostly Mozart Festival debut with five performances including a concert featuring Handel's newly-discovered Gloria in excelsis Deo and four performances of Handel's L'Allegro, il Penseroso ed il Moderato with Mark Morris Dance Group. A return engagement in August 2003 featured the Orchestra in the Festival's first fully-staged opera, Mozart's Il re pastore. In March of 1998 Philharmonia performed Handel's Saul and Hercules at the Brooklyn Academy of Music, and in 1999 the Orchestra made its European debut at the International Handel Festival in Gottingen, Germany, with return appearances in 2001 and 2002.
+
+In 1990, Philharmonia began an extremely successful collaboration with the Mark Morris Dance Group. In May of that year, the Orchestra appeared at the Brooklyn Academy of Music with the Dance Group in Morris' production of Purcell's Dido and Aeneas. Subsequent performances have included a program of mixed works featuring Vivaldi's Gloria; Handel's L'Allegro, il Penseroso ed il Moderato, presented again in March of 2000 and September of 2003 by UC Berkeley's Cal Performances; and the American premiere of Morris' production of Rameau's ballet-opera Platee, which was the tour de force of the 1998 Berkeley Festival. Platee was again performed in September 2001 in Los Angeles and Berkeley.
+</bio:olb>
+    <foaf:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Philharmonia Baroque Orchestra</foaf:name>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/MusicArtist"/>
+    <foaf:img rdf:resource="http://magnatune.com//artists/img/pbo1.jpg"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Philharmonia Baroque</rdfs:label>
+    <foaf:based_near rdf:resource="http://dbpedia.org/resource/USA"/>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">historically-informed Classical Orchestra</dc:description>
+    <foaf:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Philharmonia Baroque</foaf:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/4641">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/pbo"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recitativo: Cerchi invano la morte</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recitativo: Cerchi invano la morte</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-05-03</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">16</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/16-Recitativo_%20Cerchi%20invano%20la%20morte-Philharmonia%20Baroque%20Orchestra.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Philharmonia+Baroque&amp;album=Handel+%2D+Atalanta+CD1&amp;ge"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/3135">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/kperl"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suite No 2 in C minor BWV 813: Allemande</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suite No 2 in C minor BWV 813: Allemande</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-07-31</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">8</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/08-Suite%20No%202%20in%20C%20minor%20BWV%20813_%20Allemande-Katherine%20Roberts%20Perl.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Katherine+Roberts+Perl&amp;album=J%2ES%2E+Bach+French+Sui"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/3145">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/kperl"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suite No 3 in B minor BWV 814: Menuet and Trio</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suite No 3 in B minor BWV 814: Menuet and Trio</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-07-31</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">18</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/18-Suite%20No%203%20in%20B%20minor%20BWV%20814_%20Menuet%20and%20Trio-Katherine%20Roberts%20Perl.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Katherine+Roberts+Perl&amp;album=J%2ES%2E+Bach+French+Sui"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/artist/brad_sucks">
+    <foaf:based_near rdf:resource="http://dbpedia.org/resource/Canada"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brad Sucks</rdfs:label>
+    <foaf:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brad Sucks</foaf:name>
+    <bio:olb rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brad Sucks is a one-man band who writes, records, mixes and distributes his music from his home in Ottawa, Canada. Dripping with grooves, a vivid lyrical style, and an incredibly catchy pop sensibility, Brad's music has been likened to that of Beck, Moby, Folk Implosion and John Vanderslice.
+
+In February 2002, Brad began offering downloads of his music on his Web site. According to Brad, "If the worst-case scenario is becoming a well-heard musician who never gets paid, I can live with that." His debut album, "I Don't Know What I'm Doing", was released in August 2003 and has been downloaded by thousands of people from around the world.
+
+Brad was also the driving force behind "Outside the Inbox: Songs Inspired by Spam", a compilation album of songs titled after spam subject lines. Contributing his own song to those of 13 other independent artists who decided to meet his challenge, Brad produced the album in October 2003 to great success. The novel concept and professional execution of the album has ignited a small storm of press attention for Brad Sucks and "Outside the Inbox", from as far away as Germany, the Caribbean, South Africa and Australia.
+</bio:olb>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">brilliantly sardonic indie rock</dc:description>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/MusicArtist"/>
+    <foaf:homepage rdf:resource="http://magnatune.com/artists/brad_sucks"/>
+    <foaf:img rdf:resource="http://magnatune.com//artists/img/brad_sucks.jpg"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/artist/beth_quist">
+    <foaf:based_near rdf:resource="http://dbpedia.org/resource/USA"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beth Quist</rdfs:label>
+    <foaf:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beth Quist</foaf:name>
+    <bio:olb rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+"Tori Amos ain't got nothing on Beth Quist." ?Michael Hedges
+
+"Her abilities as a multi-instrumentalist combined with her passion is truly inspirational." ?Dave Beegle, guitarist, Fourth Estate
+
+Beth Quist is a multi-instrumentalist performer, composer, and singer, as well as the lead vocalist in the Las Vegas production of Cirque du Soleil's KA. Her hypnotically beautiful style of singing combines the strong melodies and lyricism of traditional Western vocals with influences from the Balkans, Middle East, and India.
+
+Quist?who began playing piano at age 2?has a 4-octave soprano voice, and in addition to piano plays santour (hammered dulcimer), dumbek, guitar, flute, and any other "toy" she can get her hands on.
+
+In addition to being an celebrated solo artist, she's an accomplished composer of original scores and has over fifty film, video, dance, and theater credits to her name. She's also a seasoned session musician and instructor of piano, vocals, and doumbek at the Naropa Institute. In late fall of 2006, Quist will once again tour and record with Bobby McFerrin's Voicestra, as well record some of her new original work. There are rumors that a few choice solo performances around that time are in the works as well.
+</bio:olb>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">electro-Balkan/Indian meets New Age.</dc:description>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/MusicArtist"/>
+    <foaf:homepage rdf:resource="http://magnatune.com/artists/beth_quist"/>
+    <foaf:img rdf:resource="http://magnatune.com//artists/img/beth_quist.gif"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/album/hanschristian-phantoms">
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/2159"/>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/2153"/>
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/hans_christian"/>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/2162"/>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phantoms</dc:title>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/2158"/>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/2157"/>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/2156"/>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/2155"/>
+    <mo:publishing_location rdf:resource="http://dbpedia.org/resource/USA"/>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/2161"/>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Record"/>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/2160"/>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/2152"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phantoms</rdfs:label>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/2154"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/4651">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/pbo"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aria: Si: mel raccordero</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aria: Si: mel raccordero</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-05-03</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">26</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/26-Aria_%20Si_%20mel%20raccordero-Philharmonia%20Baroque%20Orchestra.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Philharmonia+Baroque&amp;album=Handel+%2D+Atalanta+CD1&amp;ge"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/4020">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/mountain_mirrors"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Karmic Dogs</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Karmic Dogs</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-04-15</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/03-Karmic%20Dogs-Mountain%20Mirrors.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Mountain+Mirrors&amp;album=Mountain+Mirrors&amp;genre=Rock"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/timeinterval/6271">
+    <tl:onTimeLine rdf:resource="http://dbtune.org/magnatune/timeline/6271"/>
+    <tl:duration rdf:datatype="http://www.w3.org/2001/XMLSchema#duration">PT508S</tl:duration>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">time interval 6271</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/TR/owl-time/Interval"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/4810">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/psychokinetics"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M.T.H.</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M.T.H.</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-04-15</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">6</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/06-M.T.H.-Psychokinetics.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Psychokinetics&amp;album=Seven+League+Boots&amp;genre=Rock"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/4022">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/mountain_mirrors"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Calm Before the Storm</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Calm Before the Storm</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-04-15</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/05-Calm%20Before%20the%20Storm%20-Mountain%20Mirrors.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Mountain+Mirrors&amp;album=Mountain+Mirrors&amp;genre=Rock"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/2156">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/hans_christian"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Atlantis</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Atlantis</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2003-10-05</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/05-Atlantis-Hans%20Christian.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Hans+Christian&amp;album=Phantoms&amp;genre=New+Age"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/3128">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/kperl"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suite No 4 in E flat major BWV 815: Allemande</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suite No 4 in E flat major BWV 815: Allemande</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-07-31</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/01-Suite%20No%204%20in%20E%20flat%20major%20BWV%20815_%20Allemande-Katherine%20Roberts%20Perl.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Katherine+Roberts+Perl&amp;album=J%2ES%2E+Bach+French+Sui"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/4629">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/pbo"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arioso: Care selve</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arioso: Care selve</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-05-03</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/04-Arioso_%20Care%20selve-Philharmonia%20Baroque%20Orchestra.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Philharmonia+Baroque&amp;album=Handel+%2D+Atalanta+CD1&amp;ge"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/signal/6124">
+    <mo:time rdf:resource="http://dbtune.org/magnatune/timeinterval/6124"/>
+    <mo:published_as rdf:resource="http://dbtune.org/magnatune/track/6124"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">signal 6124</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Signal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/timeinterval/2793">
+    <tl:onTimeLine rdf:resource="http://dbtune.org/magnatune/timeline/2793"/>
+    <tl:duration rdf:datatype="http://www.w3.org/2001/XMLSchema#duration">PT116S</tl:duration>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">time interval 2793</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/TR/owl-time/Interval"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/4646">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/pbo"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recitativo: Sei pur solo una volta</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recitativo: Sei pur solo una volta</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-05-03</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">21</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/21-Recitativo_%20Sei%20pur%20solo%20una%20volta-Philharmonia%20Baroque%20Orchestra.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Philharmonia+Baroque&amp;album=Handel+%2D+Atalanta+CD1&amp;ge"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/3134">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/kperl"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suite No 4 in E flat major BWV 815: Gigue</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suite No 4 in E flat major BWV 815: Gigue</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-07-31</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">7</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/07-Suite%20No%204%20in%20E%20flat%20major%20BWV%20815_%20Gigue-Katherine%20Roberts%20Perl.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Katherine+Roberts+Perl&amp;album=J%2ES%2E+Bach+French+Sui"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/signal/3511">
+    <mo:time rdf:resource="http://dbtune.org/magnatune/timeinterval/3511"/>
+    <mo:published_as rdf:resource="http://dbtune.org/magnatune/track/3511"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">signal 3511</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Signal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/4632">
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/07-Aria_%20Lascia%20chi&apos;io%20parta%20solo-Philharmonia%20Baroque%20Orchestra.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Philharmonia+Baroque&amp;album=Handel+%2D+Atalanta+CD1&amp;ge"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/6283">
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/10-Nouvelles%20Suites%20de%20Pieces%20de%20Clavecin%20(1728)%20-%20suite%20in%20A%20minor%20-%20Gavotte%20avec%20les%20Doubles%20de%20la%20Gavotte-Trevor%20Pinnock.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Trevor+Pinnock&amp;album=Rameau+%2D+Les+Cyclopes&amp;genre=Cl"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/4808">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/psychokinetics"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Badlands</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Badlands</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-04-15</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/04-Badlands-Psychokinetics.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Psychokinetics&amp;album=Seven+League+Boots&amp;genre=Rock"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/3148">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/kperl"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suite No 5 in G major BWV 816: Courante</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suite No 5 in G major BWV 816: Courante</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-07-31</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">21</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/21-Suite%20No%205%20in%20G%20major%20BWV%20816_%20Courante-Katherine%20Roberts%20Perl.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Katherine+Roberts+Perl&amp;album=J%2ES%2E+Bach+French+Sui"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/4811">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/psychokinetics"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Chosen</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Chosen</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-04-15</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">7</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/07-The%20Chosen-Psychokinetics.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Psychokinetics&amp;album=Seven+League+Boots&amp;genre=Rock"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/2155">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/hans_christian"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phantoms</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phantoms</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2003-10-05</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/04-Phantoms-Hans%20Christian.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Hans+Christian&amp;album=Phantoms&amp;genre=New+Age"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/4023">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/mountain_mirrors"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alone in a Crowd</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alone in a Crowd</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-04-15</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">6</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/06-Alone%20in%20a%20Crowd-Mountain%20Mirrors.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Mountain+Mirrors&amp;album=Mountain+Mirrors&amp;genre=Rock"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/signal/5655">
+    <mo:time rdf:resource="http://dbtune.org/magnatune/timeinterval/5655"/>
+    <mo:published_as rdf:resource="http://dbtune.org/magnatune/track/5655"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">signal 5655</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Signal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/timeline/6271">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">timeline 6271</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/NET/c4dm/timeline.owl#RelativeTimeLine"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/performance/682">
+    <mo:recorded_as rdf:resource="http://dbtune.org/magnatune/signal/682"/>
+    <event:place rdf:resource="http://dbpedia.org/resource/Canada"/>
+    <mo:performer rdf:resource="http://dbtune.org/magnatune/artist/brad_sucks"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">performance 682</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I wonder it it is really useful for now, but it can be an anchor point for further information</rdfs:comment>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Performance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/artist/hans_christian">
+    <foaf:based_near rdf:resource="http://dbpedia.org/resource/USA"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hans Christian</rdfs:label>
+    <foaf:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hans Christian</foaf:name>
+    <bio:olb rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hans Christian's musical journey began many years ago in Germany by studying the cello. "I started to play when I was nine years old and had a private teacher for 10 years. Although my teacher imposed a strict and disciplined approach to learning the instrument I remember him fondly; he was preparing me to go to the music conservatory to become a professional cellist. Deep in my heart, though, I knew all along that this was not going to happen." His life was to unfold along different lines.
+
+Since his father was a minister at a Lutheran church in Hanover, Hans played in that church many times and confesses some early musical adventures: "I would steal the key to the church from my father's desk sometimes and sneak into the church to play there at night. It was dark and cold, but the acoustics were amazing. I am talking about a building in the Neo-Gothic style, big enough for almost a thousand people. So, I would sit in front of the altar, that sacred space, and I didn't know if I was violating God's space or was welcome. I loved those anxious moments and expressed my emotions in wild improvisations."
+
+The unyielding urge to express himself led him to pick up the bass guitar as a teenager and get absorbed in rock music. "I would play along with Hendrix records, and Santana, Pink Floyd and the Doors. I started to play in local bands in Hanover, dressing outrageously and wearing makeup. I lived out my wild fantasies one night while playing classical music the next day. I liked the discipline of the cello studies and the wildness of the rock bands."
+
+Perhaps this duality is a key ingredient to understanding Hans Christian's music and his approach to his own compostions and to his work with RASA, his well-known collaboration with singer Kim Waters. Often starting with a simple melody, Hans weaves an unconventional orchestral treatment that adds a very dense and multi-layered quality to his music, not shying away from any combination of instruments- but always guided by a strong sense of melody and musical development.
+
+Hans acknowledges, "Whether it is with RASA or on my solo projects, I try to keep it very listenable but very interesting, too. I want the listener to travel with the music and have their own experiences."
+
+When he was 21 years old he decided to move to Los Angeles to study bass at Musician's Institute in Hollywood. It was a big adventure, not knowing anybody in LA and without a place to stay. But within six weeks of his arrival he played at the Whiskey on Sunset Blvd, and within a year he was very connected to the local music scene. "I played every hole-in-the-wall club you can imagine, constantly playing with many different kinds of groups, from dark and hard-etched bands to folk and performance artists. It was a fulfillment of my dreams because I could do whatever I wanted, and I tried many different things."
+
+Eventually he worked with established artists like Robbie Robertson, Toni Childs, Victoria Williams, and the Sparks, appearing live and on television. But a persistent urge to express his own ideas kept him on the run. "I felt a strong pull towards doing my own music, to go deeper, and so I stretched out on the cello, practicing constantly, composing difficult pieces and pushing myself very hard."
+
+This creative drive led him to start his own production company, Allemande Music, expanding into all aspects of music production. Besides recording his own music and the music of RASA, Hans has produced and engineered a rich variety of recording projects with other artists. After almost ten years in the San Francisco area, Hans and his partner, Kim Waters, have recently relocated to Door County, Wisconsin, where they have built yet another recording studio. Hans says about this move that "I wanted to fulfill this dream of living in a four season environment where it is beautiful, clean, and quiet, so that I can focus on my work more easily. California is a great place to network but it became too exhausting to live there."
+
+While RASA is the main focus of Hans' musical activities with four CDs in the last four years and an active touring schedule, he has just re-mastered his two most recent solo projects (Phantoms and Surrender) which are re-released through Magnatune.com and a few other companies. Additional solo recordings can be expected in the near future.
+</bio:olb>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">new age meets Indian cello</dc:description>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/MusicArtist"/>
+    <foaf:homepage rdf:resource="http://magnatune.com/artists/hans_christian"/>
+    <foaf:img rdf:resource="http://magnatune.com//artists/img/hans_christian.jpg"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/4628">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/pbo"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andante</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andante</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-05-03</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/03-Andante-Philharmonia%20Baroque%20Orchestra.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Philharmonia+Baroque&amp;album=Handel+%2D+Atalanta+CD1&amp;ge"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/album/pbo-atalanta1">
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/4630"/>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Record"/>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/4628"/>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/4631"/>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/4634"/>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Handel - Atalanta CD1</dc:title>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/4626"/>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/4642"/>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/4629"/>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/4650"/>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/4635"/>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/4643"/>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/4646"/>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/4649"/>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/4640"/>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/4651"/>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/4647"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Handel - Atalanta CD1</rdfs:label>
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/pbo"/>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/4627"/>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/4638"/>
+    <mo:publishing_location rdf:resource="http://dbpedia.org/resource/USA"/>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/4645"/>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/4632"/>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/4639"/>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/4641"/>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/4633"/>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/4636"/>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/4644"/>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/4637"/>
+    <mo:track rdf:resource="http://dbtune.org/magnatune/track/4648"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/timeline/2673">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">timeline 2673</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/NET/c4dm/timeline.owl#RelativeTimeLine"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/4647">
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/22-Aria_%20Lassa%20ch&apos;io%20t&apos;ho%20perduta-Philharmonia%20Baroque%20Orchestra.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Philharmonia+Baroque&amp;album=Handel+%2D+Atalanta+CD1&amp;ge"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/artist/strojovna_07">
+    <foaf:based_near rdf:resource="http://dbpedia.org/resource/Slovakia"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Strojovna 07</rdfs:label>
+    <foaf:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Strojovna 07</foaf:name>
+    <bio:olb rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Strojovna 07 is a project of two people who go by the name RA100 and ?ISH. Rastislav Stolarik (?ISH) focusses on House, Tech-house and Techno, while occasionally exploring other genres as well.
+</bio:olb>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">techno.</dc:description>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/MusicArtist"/>
+    <foaf:homepage rdf:resource="http://magnatune.com/artists/strojovna_07"/>
+    <foaf:img rdf:resource="http://magnatune.com//artists/img/strojovna_07.gif"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/3133">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/kperl"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suite No 4 in E flat major BWV 815: Air</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suite No 4 in E flat major BWV 815: Air</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-07-31</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">6</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/06-Suite%20No%204%20in%20E%20flat%20major%20BWV%20815_%20Air-Katherine%20Roberts%20Perl.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Katherine+Roberts+Perl&amp;album=J%2ES%2E+Bach+French+Sui"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/4633">
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/08-Recitativo_%20Ch&apos;io%20rimanga%20con%20te-Philharmonia%20Baroque%20Orchestra.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Philharmonia+Baroque&amp;album=Handel+%2D+Atalanta+CD1&amp;ge"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/timeinterval/6283">
+    <tl:onTimeLine rdf:resource="http://dbtune.org/magnatune/timeline/6283"/>
+    <tl:duration rdf:datatype="http://www.w3.org/2001/XMLSchema#duration">PT574S</tl:duration>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">time interval 6283</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/TR/owl-time/Interval"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/3153">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/kperl"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suite No 5 in G major BWV 816: Gigue</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suite No 5 in G major BWV 816: Gigue</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-07-31</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">26</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/26-Suite%20No%205%20in%20G%20major%20BWV%20816_%20Gigue-Katherine%20Roberts%20Perl.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Katherine+Roberts+Perl&amp;album=J%2ES%2E+Bach+French+Sui"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/artist/pantagruel">
+    <foaf:based_near rdf:resource="http://dbpedia.org/resource/Germany"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pantagruel</rdfs:label>
+    <foaf:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pantagruel</foaf:name>
+    <bio:olb rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+Pantagruel has forged a reputation as one of the most exciting and innovative early music ensembles performing today. By delving into the very depths of Renaissance culture their semi-staged performances unearth the archetypal and timeless quality of this music. Hannah Morrison's pure and sweet voice combined with the lilting citterns, gitterns, lutes, and flutes of Dominik Schneider and Mark Wheeler bring to life the passionate music of a distant age.
+
+Pantagruel, the hero of a 1532 novel by Francois Rabelais, maintained the motto "do, what thou wilt," and is a fitting name for an ensemble dedicated to exploring innovative methods of performance and presentation. Combining painstaking musicological research with their experience in classical music, rock, jazz, theater, and dance, Pantagruel's performances push the envelop of classical concert conventions by using Renaissance practices of medley, improvisation, and gesture.
+
+Recent Pantagruel performances have included concerts at the National Portrait Gallery in London, the Utrecht Early Music Festival, Munster Baroque festival, and collaboration with Andrew Lawrence-King (Harp Consort, Hesperion XX).
+
+Their debut CD Elizium breaks boundaries to produce an album of painstaking authenticity, with a structure and intensity that bears comparison with the concept albums of 70's rock bands such as Pink Floyd. Elizium is set in Elizabethan England at the court of the Faerie Queene Elizabeth I, whose influence in modern pop culture can be seen in Tolkiens' Elven Queen Galadriel.
+
+Artist Bios
+
+Hannah Morrison (Voyce) The daughter of Scottish and Icelandic musicians, it was in the Netherlands at the Musikhochschule Maastricht that she gained her BA, studying with the soprano Barbara Schlick. She has received further inspiration during master classes with Anthony Rooley, Evelyn Tubb and Andrew Lawrence- King.
+
+Dominik Schneider (Flutes, Gittern &amp; Voyce) From an early age he began to play every instrument he could get his hands on, but finally ended up studying the recorder at the Folkwang Musikhochschule in Essen and later renaissance and baroque traverse flutes at the Cologne Musikhochschule.
+
+Mark Wheeler (Lutes, Cittern &amp; Gittern) Born in Wordsley/England, he discovered his passion for plucked string instruments while listening to Led Zeppelin. His lute studies with Nigel North at the Guildhall School of Music &amp; Drama in London have been complemented by master classes, with amongst others Jakob Lindberg &amp; Julian Bream.
+</bio:olb>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dazzlingly innovative early music</dc:description>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/MusicArtist"/>
+    <foaf:homepage rdf:resource="http://magnatune.com/artists/pantagruel"/>
+    <foaf:img rdf:resource="http://magnatune.com//artists/img/pantagruel.jpg"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/timeinterval/6413">
+    <tl:onTimeLine rdf:resource="http://dbtune.org/magnatune/timeline/6413"/>
+    <tl:duration rdf:datatype="http://www.w3.org/2001/XMLSchema#duration">PT288S</tl:duration>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">time interval 6413</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/TR/owl-time/Interval"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/3147">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/kperl"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suite No 5 in G major BWV 816: Allemande</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suite No 5 in G major BWV 816: Allemande</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-07-31</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">20</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/20-Suite%20No%205%20in%20G%20major%20BWV%20816_%20Allemande-Katherine%20Roberts%20Perl.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Katherine+Roberts+Perl&amp;album=J%2ES%2E+Bach+French+Sui"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/timeline/5685">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">timeline 5685</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/NET/c4dm/timeline.owl#RelativeTimeLine"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbtune.org/magnatune/track/4809">
+    <foaf:maker rdf:resource="http://dbtune.org/magnatune/artist/psychokinetics"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bigtime</rdfs:label>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bigtime</dc:title>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-04-15</dc:created>
+    <mo:track_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</mo:track_number>
+    <rdf:type rdf:resource="http://purl.org/ontology/mo/Track"/>
+    <mo:available_as rdf:resource="http://he3.magnatune.com/all/05-Bigtime-Psychokinetics.mp3"/>
+    <mo:paid_download rdf:resource="https://magnatune.com/artists/buy_album?artist=Psychokinetics&amp;album=Seven+League+Boots&amp;genre=Rock"/>
+  </rdf:Description>
+</rdf:RDF>

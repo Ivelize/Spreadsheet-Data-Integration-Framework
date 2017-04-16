@@ -1,0 +1,6 @@
+SELECT DISTINCT Mondial1.country.name, Mondial1.city.name
+FROM country c, city t
+WHERE c.population > 1000000
+AND c.code = t.country
+AND c.code = "GB"
+ORDER BY c.name, t.name;

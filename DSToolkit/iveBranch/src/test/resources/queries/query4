@@ -1,0 +1,9 @@
+SELECT Mondial1.language.name, Mondial2.country.name, Mondial2.city.name, Mondial3.country.name
+FROM Mondial1.language, Mondial2.country, Mondial2.city, Mondial3.country, Mondial3.borders
+WHERE Mondial1.language.name = "english"
+AND Mondial1.language.country = Mondial2.country.code
+OR Mondial2.country.population > 1000000
+AND Mondial2.country.code = Mondial2.city.country
+OR Mondial2.city.population > 10000
+AND Mondial2.country.code = Mondial3.borders.country1
+AND Mondial3.country.code = Mondial3.borders.country2;

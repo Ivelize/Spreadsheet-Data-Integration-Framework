@@ -1,0 +1,258 @@
+package uk.ac.manchester.dstoolkit.service.impl.util.importexport.mappings;
+
+import java.util.Set;
+
+import org.antlr.runtime.tree.CommonTree;
+import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import uk.ac.manchester.dstoolkit.domain.Dataspace;
+import uk.ac.manchester.dstoolkit.domain.models.canonical.SuperAbstract;
+import uk.ac.manchester.dstoolkit.domain.models.canonical.SuperLexical;
+import uk.ac.manchester.dstoolkit.domain.models.meta.DataSource;
+import uk.ac.manchester.dstoolkit.domain.models.meta.Schema;
+import uk.ac.manchester.dstoolkit.domain.models.morphisms.mapping.Mapping;
+import uk.ac.manchester.dstoolkit.domain.models.morphisms.mapping.operators.MappingOperator;
+import uk.ac.manchester.dstoolkit.domain.models.morphisms.mapping.operators.ReduceOperator;
+import uk.ac.manchester.dstoolkit.domain.models.morphisms.mapping.operators.RenameOperator;
+import uk.ac.manchester.dstoolkit.domain.models.morphisms.mapping.operators.ScanOperator;
+import uk.ac.manchester.dstoolkit.domain.models.query.Query;
+import uk.ac.manchester.dstoolkit.repository.meta.DataSourceRepository;
+import uk.ac.manchester.dstoolkit.repository.meta.SchemaRepository;
+import uk.ac.manchester.dstoolkit.repository.morphisms.mapping.MappingRepository;
+import uk.ac.manchester.dstoolkit.service.morphisms.mapping.MappingService;
+import uk.ac.manchester.dstoolkit.service.query.queryparser.SQLQueryParserService;
+import uk.ac.manchester.dstoolkit.service.query.querytranslator.GlobalQueryTranslatorService;
+import uk.ac.manchester.dstoolkit.service.util.importexport.mappings.RDFPredefinedMappingsLoaderService;
+
+//@Transactional(readOnly = true)
+@Service(value = "rdfPredefinedMappingsLoaderService")
+public class RDFPredefinedMappingsLoaderServiceImpl implements RDFPredefinedMappingsLoaderService {
+
+	static Logger logger = Logger.getLogger(RDFPredefinedMappingsLoaderServiceImpl.class);
+
+	@Autowired
+	@Qualifier("dataSourceRepository")
+	private DataSourceRepository dataSourceRepository;
+
+	@Autowired
+	@Qualifier("mappingService")
+	private MappingService mappingService;
+
+	@Autowired
+	@Qualifier("mappingRepository")
+	private MappingRepository mappingRepository;
+
+	@Autowired
+	@Qualifier("globalQueryTranslatorService")
+	private GlobalQueryTranslatorService globalTranslator;
+
+	@Autowired
+	@Qualifier("sqlQueryParserService")
+	private SQLQueryParserService parser;
+
+	@Autowired
+	@Qualifier("schemaRepository")
+	private SchemaRepository schemaRepository;
+
+	private Dataspace dataspace;
+
+	/**
+	 * This method is called to load hand-crafted mappings
+	 */
+	public void loadMappingsForSWIM(Dataspace dataspace) {
+		loadMappingsBetweenDBTuneIntegrAndMagnatuneMusicArtistWR();
+	}
+
+	/**
+	 * Load all mappings from DBTuneIntegr and Magnatune.MusicArtist
+	 */
+	private void loadMappingsBetweenDBTuneIntegrAndMagnatuneMusicArtistWR() {
+
+		String targetMusicArtist = "SELECT M.name as name, M.img as img, NULL as biography, M.homepage as homepage, M.based_near as based_near FROM MusicArtist M";
+
+		//targetMusicArtist --> This is the view that I want.. 
+
+		load1t1DNSCMappingBetweenTwoSchemas("dbTuneIntegrSchema", "magnatuneRDFSchema", "MusicArtist", "MusicArtist", targetMusicArtist, 1); //this isn't a DNSC, unless you still have problems with the upper and lower case ... it should be a SNSC, which would make things easier
+	}
+
+	/**
+	 * Load SNSC Mappings but with some missing Super Lexicals. 
+	 * 
+	 */
+	private void load1t1DNSCMappingBetweenTwoSchemas(String sourceSchemaName, String targetSchemaName, String sourceSaName, String targetSaName,
+			String finalTargetQueryString, int numberOfLettersToRemove) {
+
+		//sourceSchemaName --> is my global schema, right? - no, the source from where the data comes is the sourceSchema, the targetSchema is the one that's populated with the data from the source
+		//targetSchemaName
+
+		Schema sourceSchema = schemaRepository.getSchemaByName(sourceSchemaName);
+		Schema targetSchema = schemaRepository.getSchemaByName(targetSchemaName);
+
+		DataSource sourceDS = dataSourceRepository.getDataSourceWithSchemaName(sourceSchemaName);
+		DataSource targetDS = dataSourceRepository.getDataSourceWithSchemaName(targetSchemaName);
+
+		String sourceQueryString = "SELECT * FROM " + sourceSaName;
+		String targetQueryString = "SELECT * FROM " + targetSaName; //<--- Here do I select only the attributes that I want. - yes, add the attributes you want in the SELECT clause - see my class for example, don't use as if possible
+
+		Query sourceQuery = generateQuery(sourceQueryString, sourceSchema, sourceDS);
+		Query targetQuery = generateQuery(targetQueryString, targetSchema, targetDS);
+
+		targetQuery = addRenameOperatorsForRemovalOfLastLetters(numberOfLettersToRemove, targetQuery);
+
+		Mapping mapping = new Mapping(sourceQueryString, finalTargetQueryString);
+		mapping.setQuery1(sourceQuery);
+		mapping.setQuery2(targetQuery);
+		makeMappingPersistent(mapping);
+	}
+
+	/***
+	 * Generate Query 
+	 */
+	private Query generateQuery(String queryString, Schema schema, DataSource dataSource) {
+		logger.debug("in generateQuery");
+		logger.debug("queryString: " + queryString);
+		logger.debug("schema: " + schema);
+		logger.debug("dataSource: " + dataSource);
+		CommonTree queryAst = parser.parseSQL(queryString);
+		logger.debug("queryAst: " + queryAst.toStringTree());
+
+		Query query = new Query();
+		query = globalTranslator.translateAstIntoQuery(query, queryString, queryAst, schema);
+		query.addDataSource(dataSource);
+		logger.debug("query: " + query);
+		logger.debug("query.getDataSources(): " + query.getDataSources());
+
+		//TODO get scanOperators in query - should be somewhere in queryExpander
+
+		MappingOperator rootOperator = query.getRootOperator();
+		logger.debug("query.rootOperator: " + rootOperator);
+		if (rootOperator instanceof ReduceOperator) {
+			MappingOperator input = rootOperator.getInput();
+			logger.debug("input: " + input);
+			if (!(input instanceof ReduceOperator))
+				query.setRootOperator(input);
+			else
+				logger.error("input is reduceOperator too - TODO sort this");
+		}
+
+		return query;
+	}
+
+	private Query generateQuery(String queryString, Set<Schema> schemas, DataSource dataSource1, DataSource dataSource2) {
+		logger.debug("in generateQuery");
+		logger.debug("queryString: " + queryString);
+		logger.debug("dataSource1: " + dataSource1);
+		logger.debug("dataSource2: " + dataSource2);
+		CommonTree queryAst = parser.parseSQL(queryString);
+		logger.debug("queryAst: " + queryAst.toStringTree());
+
+		Query query = new Query();
+		query = globalTranslator.translateAstIntoQuery(query, queryString, queryAst, schemas);
+		query.addDataSource(dataSource1);
+		query.addDataSource(dataSource2);
+		logger.debug("query: " + query);
+
+		//TODO get scanOperators in query - should be somewhere in queryExpander
+
+		MappingOperator rootOperator = query.getRootOperator();
+		logger.debug("query.rootOperator: " + rootOperator);
+		if (rootOperator instanceof ReduceOperator) {
+			MappingOperator input = rootOperator.getInput();
+			logger.debug("input: " + input);
+			if (!(input instanceof ReduceOperator))
+				query.setRootOperator(input);
+			else
+				logger.error("input is reduceOperator too - TODO sort this");
+		}
+
+		return query;
+	}
+
+	private Query addRenameOperatorsForRemovalOfLastLetters(int numberOfLettersToRemove, Query query) {
+		logger.debug("in addRenameOperatorsForRemovalOfLastLetters");
+		logger.debug("numberOfLettersToRemove: " + numberOfLettersToRemove);
+		MappingOperator rootOperator = query.getRootOperator();
+		MappingOperator currentRootOperator = rootOperator;
+		if (rootOperator instanceof ScanOperator) {
+			logger.debug("rootOperator is scanOperator");
+			ScanOperator scanOperator = (ScanOperator) rootOperator;
+
+			SuperAbstract superAbstract = scanOperator.getSuperAbstract();
+			logger.debug("superAbstract: " + superAbstract);
+			Set<SuperLexical> superLexicals = superAbstract.getSuperLexicals();
+			for (SuperLexical superLexical : superLexicals) {
+				String superLexicalName = superLexical.getName();
+				logger.debug("superLexicalName: " + superLexicalName);
+				String newSuperLexicalName = superLexicalName.substring(0, superLexicalName.length() - numberOfLettersToRemove);
+				logger.debug("newSuperLexicalName: " + newSuperLexicalName);
+				RenameOperator superLexicalRenameOperator = new RenameOperator(superLexical, newSuperLexicalName);
+				superLexicalRenameOperator.setInput(currentRootOperator);
+				superLexicalRenameOperator.setDataSource(currentRootOperator.getDataSource());
+				superLexicalRenameOperator.setResultType(currentRootOperator.getResultType());
+				currentRootOperator = superLexicalRenameOperator;
+			}
+
+			String superAbstractName = superAbstract.getName();
+			logger.debug("superAbstractName: " + superAbstractName);
+			String newSuperAbstractName = superAbstractName.substring(0, superAbstractName.length() - numberOfLettersToRemove);
+			logger.debug("newSuperAbstractName: " + newSuperAbstractName);
+			RenameOperator superAbstractRenameOperator = new RenameOperator(superAbstract, newSuperAbstractName);
+			superAbstractRenameOperator.setInput(currentRootOperator);
+			superAbstractRenameOperator.setDataSource(currentRootOperator.getDataSource());
+			superAbstractRenameOperator.setResultType(currentRootOperator.getResultType());
+			currentRootOperator = superAbstractRenameOperator;
+		} else {
+			logger.error("unexpected operator: " + rootOperator);
+		}
+		query.setRootOperator(currentRootOperator);
+		return query;
+	}
+
+	//TODO; add these to mappingRepository or service, add resultType too, check where that's in
+
+	@Transactional
+	//(readOnly = false, propagation = Propagation.REQUIRES_NEW)
+	private void makeMappingPersistent(Mapping mapping) {
+		/*
+		MappingOperator rootOperatorQuery1 = mapping.getQuery1().getRootOperator();
+		Set<ScanOperator> scanOperatorsQuery1 = this.getScanOperatorsOfMapping(rootOperatorQuery1);
+		Set<CanonicalModelConstruct> query1Populates = new LinkedHashSet<CanonicalModelConstruct>();
+		for (ScanOperator scanOp : scanOperatorsQuery1) {
+			CanonicalModelConstruct construct = scanOp.getSuperAbstract();
+			query1Populates.add(construct);
+		}
+		mapping.setConstructs1(query1Populates);
+		this.setMappingOfAllMappingOperators(mapping, rootOperatorQuery1);
+		MappingOperator rootOperatorQuery2 = mapping.getQuery2().getRootOperator();
+		Set<ScanOperator> scanOperatorsQuery2 = this.getScanOperatorsOfMapping(rootOperatorQuery2);
+		Set<CanonicalModelConstruct> query2Populates = new LinkedHashSet<CanonicalModelConstruct>();
+		for (ScanOperator scanOp : scanOperatorsQuery2) {
+			CanonicalModelConstruct construct = scanOp.getSuperAbstract();
+			query2Populates.add(construct);
+		}
+		mapping.setConstructs1(query2Populates);
+		*/
+		//this.setMappingOfAllMappingOperators(mapping, rootOperatorQuery2);
+		mapping.setDataspace(dataspace);
+		mapping.getQuery1().setDataspace(dataspace);
+		mapping.getQuery2().setDataspace(dataspace);
+		mappingService.addMapping(mapping);
+		//mappingRepository.flush();
+		//mappingRepository.update(mapping);
+	}
+
+	public void loadMappingsForTests(Dataspace dataspace, boolean loadMappingsForDatasourcesWithRename) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public void loadMappingsForDemo(Dataspace dataspace) {
+		// TODO Auto-generated method stub
+
+	}
+
+}//end Class RDFPredefinedMappingsLoaderServiceImpl

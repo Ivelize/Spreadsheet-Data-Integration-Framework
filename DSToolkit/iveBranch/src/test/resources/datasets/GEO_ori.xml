@@ -1,0 +1,785 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE MINiML []>
+<geo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="geoschema.xsd">
+  <Database iid="GEO">
+    <Name>Gene Expression Omnibus (GEO)</Name>
+    <Public-ID>GEO</Public-ID>
+    <Organization>NCBI NLM NIH</Organization>
+    <Web-Link>http://www.ncbi.nlm.nih.gov/geo</Web-Link>
+    <Email>geo@ncbi.nlm.nih.gov</Email>
+  </Database>
+  <Sample iid="GSM29912">
+    <Status database="GEO">
+      <Submission-Date>2004-09-02</Submission-Date>
+      <Release-Date>2007-11-15</Release-Date>
+      <Last-Update-Date>2009-09-23</Last-Update-Date>
+    </Status>
+    <Title>Aerobic glucose limited 1</Title>
+    <Accession database="GEO">GSM29912</Accession>
+    <Type>RNA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>chemostat culture</Source>
+      <Organism taxid="4932">Saccharomyces cerevisiae</Organism>
+      <Characteristics> Strain and Maintenance— </Characteristics>
+      <Characteristics> This study was performed with the prototrophic laboratory strain S. cerevisiae CEN.PK113-7D (MATa) [van Dijken, J. P., Bauer, J., Brambilla, L., Duboc, P., Francois, J. M., Gancedo, C., Giuseppin, M. L. F., Heinen, J. J., Hoare, M., Lange, H. C., Madden, E. A., Niederberger, P., Nielsen, J., Parrou, J. L., Petit, T., Porro, D., Reuss, M., van Riel, N., Rizzi, M., Steensma, H. Y., Verrips, C. T., Vindelov, J., and </Characteristics>
+      <Characteristics> Pronk, J. T. (2000) Enz. Microb. Technol. 26, 706–714] </Characteristics>
+      <Biomaterial-Provider>Pascale Daran-Lapujade </Biomaterial-Provider>
+      <Treatment-Protocol> liquid N2 Quenching </Treatment-Protocol>
+      <Growth-Protocol> Chemostat Cultivation— Steady-state chemostat cultures were grown in Applikon laboratory fermentors of 1-liter working volume as described in detail elsewhere [van den Berg, M. A., de Jong-Gubbels, P., Kortland, C. J., van Dijken, J. P., Pronk, J. T., and Steensma, H. Y. (1996) J. Biol. Chem. 271, 28953–28959]. In brief, the cultures were fed with a defined mineral medium containing glucose as the growth-limiting nutrient [. Verduyn, C., Postma, E., Scheffers, W. A., and van Dijken, J. P. (1990) Microbiol.Rev. 58, 616–630]. The dilution rate (which equals the specific growth rate) in the steady-state cultures was 0.10 h_1, the temperature was 30 °C, and the culture pH was 5.0. Aerobic conditions were maintained by sparging the cultures with air (0.5 liter_min_1). The dissolved oxygen concentration, which was continuously monitored with an Ingold model 34-100-3002 probe, remained above 80% of air saturation. </Growth-Protocol>
+      <Molecule>polyA RNA</Molecule>
+      <Extract-Protocol> Sampling and RNA Isolation— Samples from the chemostat cultures were taken as rapidly as possible to limit any potential changes in transcript profiles during the procedure. 40–60 ml of culture broth was sampled directly from the chemostat into a beaker containing 200 ml of liquid nitrogen. With vigorous stirring, the sample froze instantly. The frozen sample was then broken into small fragments and transferred to a 50-ml centrifuge tube. The sample was then thawed at room temperature, ensuring that it remained as close to zero as possible. Cells were pelleted (5000 rpm at 0 °C for 4 min), resuspended in 2 ml of ice-cold AE buffer (50 mM sodium acetate, 10 mM EDTA, pH 5.0) and aliquoted into 5 Eppendorf tubes. This corresponded to _20 mg of dry weight per tube. For each array, total RNA was extracted from a single tube using the hot-phenol method (32) or the FastRNA kit, Red (BIO 101, Inc., Vista, CA). </Extract-Protocol>
+      <Label>biotin</Label>
+      <Label-Protocol> Probe Preparation and Hybridization to Arrays—mRNA extraction, cDNA synthesis, cRNA synthesis and labeling, as well as array hybridization were performed as described in the Affymetrix users’ manual (1). Briefly, poly(A)_ RNA was enriched from total RNA in a single round using the Qiagen Oligotex kit. Double-stranded cDNA synthesis was carried out incorporating the T7 RNA-polymerase promoter in the first round. This cDNA was then used as template for in vitro transcription (ENZO BioArray High Yield IVT kit), which amplifies the RNA pool and incorporates biotinylated ribonucleotides required for the staining procedures after hybridization. 15 mg of fragmented, biotinylated cRNA was hybridized to Affymetrix yeast S98 arrays at 45 °C for 16 h as described in the Affymetrix users’ manual (1). Washing and staining of arrays were performed using the GeneChip Fluidics Station 400 and scanning with the Affymetrix GeneArray Scanner. (1) Affymetrix (2000) Affymetrix GeneChip Expression Analysis Technical Manual, Santa Clara, CA </Label-Protocol>
+    </Channel>
+    <Hybridization-Protocol> Probe Preparation and Hybridization to Arrays—mRNA extraction, cDNA synthesis, cRNA synthesis and labeling, as well as array hybridization were performed as described in the Affymetrix users’ manual (1). Briefly, poly(A)_ RNA was enriched from total RNA in a single round using the Qiagen Oligotex kit. Double-stranded cDNA synthesis was carried out incorporating the T7 RNA-polymerase promoter in the first round. This cDNA was then used as template for in vitro transcription (ENZO BioArray High Yield IVT kit), which amplifies the RNA pool and incorporates biotinylated ribonucleotides required for the staining procedures after hybridization. 15 mg of fragmented, biotinylated cRNA was hybridized to Affymetrix yeast S98 arrays at 45 °C for 16 h as described in the Affymetrix users’ manual (1). Washing and staining of arrays were performed using the GeneChip Fluidics Station 400 and scanning with the Affymetrix GeneArray Scanner. (1) Affymetrix (2000) Affymetrix GeneChip Expression Analysis Technical Manual, Santa Clara, CA </Hybridization-Protocol>
+    <Scan-Protocol> scanning with the Affymetrix GeneArray Scanner. </Scan-Protocol>
+    <Description> P14 Keywords = S.cerevisiae Keywords = chemostat Keywords = nutrient limitation </Description>
+    <Data-Processing> Data Acquisition and Primary Analysis— Acquisition and quantification of array images as well as primary data analysis were performed using the Affymetrix software packages: Microarray Suite version 4.0.1, MicroDB version 2.0, and Data Mining Tool version 2.0. Microsoft Excel was used for further statistical analyses. All arrays were globally scaled to a target value of 150 using the average signal from all gene features using Microarray Suite version 4.0.1. When pairwise comparisons were performed (using Microarray Suite version 4.0.1), a transcript was considered “changed” when a call of Increase or Decrease was made, the -fold change was at least 2, and the higher of the two average difference values was called present. </Data-Processing>
+    <Platform-Ref ref="GPL90"/>
+    <Contact-Ref ref="contrib1"/>
+    <Data-Table>
+      <Column position="1">
+        <Name>ID_REF</Name>
+      </Column>
+      <Column position="2">
+        <Name>VALUE</Name>
+        <Description>MAS5 signal</Description>
+      </Column>
+      <Column position="3">
+        <Name>ABS_CALL</Name>
+        <Description>absolute detection call</Description>
+      </Column>
+      <Column position="4">
+        <Name>DETECTION P-VALUE</Name>
+        <Description>detection p-value</Description>
+      </Column>
+      <External-Data rows="9335"> GSM29912-tbl-1.txt </External-Data>
+      <Internal-Data rows="20"> AFFX-MurIL2_at 1.1 A 0.916408 AFFX-MurIL10_at 0.4 A 0.99238 AFFX-MurIL4_at 2.2 A 0.699394 AFFX-MurFAS_at 0.4 A 0.987453 AFFX-BioB-5_at 272.4 P 0.000225 AFFX-BioB-M_at 384.8 P 0.000044 AFFX-BioB-3_at 382.3 P 0.000044 AFFX-BioC-5_at 310.7 P 0.000147 AFFX-BioC-3_at 200.6 P 0.00007 AFFX-BioDn-5_at 275.5 P 0.000044 AFFX-BioDn-3_at 1067.3 P 0.000044 AFFX-CreX-5_at 2320.7 P 0.000044 AFFX-CreX-3_at 2500.9 P 0.000066 AFFX-BioB-5_st 4.4 A 0.440646 AFFX-BioB-M_st 14.8 P 0.033677 AFFX-BioB-3_st 17.5 A 0.165861 AFFX-BioC-5_st 2.8 A 0.544587 AFFX-BioC-3_st 0.9 A 0.804734 AFFX-BioDn-5_st 17.2 A 0.275146 AFFX-BioDn-3_st 20.9 P 0.005565 </Internal-Data>
+    </Data-Table>
+  </Sample>
+  <Sample iid="GSM29920">
+    <Status database="GEO">
+      <Submission-Date>2004-09-02</Submission-Date>
+      <Release-Date>2004-09-03</Release-Date>
+      <Last-Update-Date>2008-10-09</Last-Update-Date>
+    </Status>
+    <Title>Aerobic nitrogen limited 1</Title>
+    <Accession database="GEO">GSM29920</Accession>
+    <Type>RNA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>chemostat culture</Source>
+      <Organism taxid="4932">Saccharomyces cerevisiae</Organism>
+      <Characteristics> Strain and Maintenance </Characteristics>
+      <Characteristics> This study was performed with the prototrophic laboratory strain S. cerevisiae CEN.PK113-7D (MATa) [van Dijken, J. P., Bauer, J., Brambilla, L., Duboc, P., Francois, J. M., Gancedo, C., Giuseppin, M. L. F., Heinen, J. J., Hoare, M., Lange, H. C., Madden, E. A., Niederberger, P., Nielsen, J., Parrou, J. L., Petit, T., Porro, D., Reuss, M., van Riel, N., Rizzi, M., Steensma, H. Y., Verrips, C. T., Vindelov, J., and </Characteristics>
+      <Characteristics> Pronk, J. T. (2000) Enz. Microb. Technol. 26, 706–714] </Characteristics>
+      <Treatment-Protocol> Liquid nitrogen quenching </Treatment-Protocol>
+      <Growth-Protocol> Chemostat Cultivation— Steady-state chemostat cultures were grown in Applikon laboratory fermentors of 1-liter working volume as described in detail elsewhere [van den Berg, M. A., de Jong-Gubbels, P., Kortland, C. J., van Dijken, J. P., Pronk, J. T., and Steensma, H. Y. (1996) J. Biol. Chem. 271, 28953–28959]. In brief, the cultures were fed with a defined mineral medium containing glucose as the growth-limiting nutrient [. Verduyn, C., Postma, E., Scheffers, W. A., and van Dijken, J. P. (1990) Microbiol.Rev. 58, 616–630]. The dilution rate (which equals the specific growth rate) in the steady-state cultures was 0.10 h_1, the temperature was 30 °C, and the culture pH was 5.0. Aerobic conditions were maintained by sparging the cultures with air (0.5 liter_min_1). The dissolved oxygen concentration, which was continuously monitored with an Ingold model 34-100-3002 probe, remained above 80% of air saturation. Media— The defined mineral medium composition was based on that described by Verduyn et al [. Verduyn, C., Postma, E., Scheffers, W. A., and van Dijken, J. P. (1990) Microbiol.Rev. 58, 616–630]. The residual glucose concentration was targeted to 17 g_liter_1 to sustain glucose repression at the same level.. For nitrogen-limited, the composition was 1.0 g of (NH4)2SO4, 5.3 g of K2SO4, 3.0 g of KH2PO4, 0.5 g of MgSO4_7H2O, and 59 g of glucose. </Growth-Protocol>
+      <Molecule>polyA RNA</Molecule>
+      <Extract-Protocol> Sampling and RNA Isolation— Samples from the chemostat cultures were taken as rapidly as possible to limit any potential changes in transcript profiles during the procedure. 40–60 ml of culture broth was sampled directly from the chemostat into a beaker containing 200 ml of liquid nitrogen. With vigorous stirring, the sample froze instantly. The frozen sample was then broken into small fragments and transferred to a 50-ml centrifuge tube. The sample was then thawed at room temperature, ensuring that it remained as close to zero as possible. Cells were pelleted (5000 rpm at 0 °C for 4 min), resuspended in 2 ml of ice-cold AE buffer (50 mM sodium acetate, 10 mM EDTA, pH 5.0) and aliquoted into 5 Eppendorf tubes. This corresponded to _20 mg of dry weight per tube. For each array, total RNA was extracted from a single tube using the hot-phenol method (32) or the FastRNA kit, Red (BIO 101, Inc., Vista, CA). </Extract-Protocol>
+      <Label>SAPE phycoerythrin</Label>
+      <Label-Protocol> Probe Preparation and Hybridization to Arrays—mRNA extraction, cDNA synthesis, cRNA synthesis and labeling, as well as array hybridization were performed as described in the Affymetrix users’ manual (1). Briefly, poly(A)_ RNA was enriched from total RNA in a single round using the Qiagen Oligotex kit. Double-stranded cDNA synthesis was carried out incorporating the T7 RNA-polymerase promoter in the first round. This cDNA was then used as template for in vitro transcription (ENZO BioArray High Yield IVT kit), which amplifies the RNA pool and incorporates biotinylated ribonucleotides required for the staining procedures after hybridization. 15 mg of fragmented, biotinylated cRNA was hybridized to Affymetrix yeast S98 arrays at 45 °C for 16 h as described in the Affymetrix users’ manual (1). Washing and staining of arrays were performed using the GeneChip Fluidics Station 400 and scanning with the Affymetrix GeneArray Scanner </Label-Protocol>
+    </Channel>
+    <Hybridization-Protocol> Probe Preparation and Hybridization to Arrays—mRNA extraction, cDNA synthesis, cRNA synthesis and labeling, as well as array hybridization were performed as described in the Affymetrix users’ manual (1). Briefly, poly(A)_ RNA was enriched from total RNA in a single round using the Qiagen Oligotex kit. Double-stranded cDNA synthesis was carried out incorporating the T7 RNA-polymerase promoter in the first round. This cDNA was then used as template for in vitro transcription (ENZO BioArray High Yield IVT kit), which amplifies the RNA pool and incorporates biotinylated ribonucleotides required for the staining procedures after hybridization. 15 mg of fragmented, biotinylated cRNA was hybridized to Affymetrix yeast S98 arrays at 45 °C for 16 h as described in the Affymetrix users’ manual (1). Washing and staining of arrays were performed using the GeneChip Fluidics Station 400 and scanning with the Affymetrix GeneArray Scanner </Hybridization-Protocol>
+    <Scan-Protocol> scanning with the Affymetrix GeneArray Scanner </Scan-Protocol>
+    <Description> M40.1 Keywords = S.cerevisiae Keywords = chemostat Keywords = nutrient limitation </Description>
+    <Data-Processing> Data Acquisition and Primary Analysis—Acquisition and quantification of array images as well as primary data analysis were performed using the Affymetrix software packages: Microarray Suite version 4.0.1, MicroDB version 2.0, and Data Mining Tool version 2.0. Microsoft Excel was used for further statistical analyses. All arrays were globally scaled to a target value of 150 using the average signal from all gene features using Microarray Suite version 4.0.1. When pairwise comparisons were performed (using Microarray Suite version 4.0.1), a transcript was considered “changed” when a call of Increase or Decrease was made, the -fold change was at least 2, and the higher of the two average difference values was called present </Data-Processing>
+    <Platform-Ref ref="GPL90"/>
+    <Contact-Ref ref="contrib1"/>
+    <Data-Table>
+      <Column position="1">
+        <Name>ID_REF</Name>
+      </Column>
+      <Column position="2">
+        <Name>VALUE</Name>
+        <Description>signal</Description>
+      </Column>
+      <Column position="3">
+        <Name>ABS_CALL</Name>
+        <Description>absolute detection call</Description>
+      </Column>
+      <Column position="4">
+        <Name>DETECTION P-VALUE</Name>
+        <Description>detection p-value</Description>
+      </Column>
+      <External-Data rows="9335"> GSM29920-tbl-1.txt </External-Data>
+      <Internal-Data rows="20"> AFFX-MurIL2_at 0.7 A 0.976071 AFFX-MurIL10_at 0.4 A 0.897835 AFFX-MurIL4_at 0.3 A 0.993813 AFFX-MurFAS_at 0.8 A 0.883887 AFFX-BioB-5_at 220.5 P 0.000195 AFFX-BioB-M_at 349.2 P 0.000044 AFFX-BioB-3_at 321.4 P 0.000044 AFFX-BioC-5_at 186.3 P 0.00007 AFFX-BioC-3_at 152.9 P 0.000052 AFFX-BioDn-5_at 192.8 P 0.000044 AFFX-BioDn-3_at 970.5 P 0.000044 AFFX-CreX-5_at 2181.2 P 0.000044 AFFX-CreX-3_at 2895.7 P 0.000044 AFFX-BioB-5_st 7.3 A 0.175328 AFFX-BioB-M_st 10.9 A 0.0727 AFFX-BioB-3_st 9.8 A 0.354453 AFFX-BioC-5_st 5 A 0.58862 AFFX-BioC-3_st 0.8 A 0.712257 AFFX-BioDn-5_st 3.7 A 0.354453 AFFX-BioDn-3_st 11.2 P 0.013811 </Internal-Data>
+    </Data-Table>
+  </Sample>
+  <Sample iid="GSM29924">
+    <Status database="GEO">
+      <Submission-Date>2004-09-02</Submission-Date>
+      <Release-Date>2004-09-03</Release-Date>
+      <Last-Update-Date>2008-10-09</Last-Update-Date>
+    </Status>
+    <Title>Aerobic phosphorus limited 1</Title>
+    <Accession database="GEO">GSM29924</Accession>
+    <Type>RNA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>chemostat culture</Source>
+      <Organism taxid="4932">Saccharomyces cerevisiae</Organism>
+      <Characteristics> Strain and Maintenance— </Characteristics>
+      <Characteristics> This study was performed with the prototrophic laboratory strain S. cerevisiae CEN.PK113-7D (MATa) [van Dijken, J. P., Bauer, J., Brambilla, L., Duboc, P., Francois, J. M., Gancedo, C., Giuseppin, M. L. F., Heinen, J. J., Hoare, M., Lange, H. C., Madden, E. A., Niederberger, P., Nielsen, J., Parrou, J. L., Petit, T., Porro, D., Reuss, M., van Riel, N., Rizzi, M., Steensma, H. Y., Verrips, C. T., Vindelov, J., and Pronk, J. T. (2000) Enz. Microb. Technol. 26, 706–714] </Characteristics>
+      <Biomaterial-Provider>V Boer </Biomaterial-Provider>
+      <Treatment-Protocol> Liquid N2 quenching </Treatment-Protocol>
+      <Growth-Protocol> Chemostat Cultivation— Steady-state chemostat cultures were grown in Applikon laboratory fermentors of 1-liter working volume as described in detail elsewhere [van den Berg, M. A., de Jong-Gubbels, P., Kortland, C. J., van Dijken, J. P., Pronk, J. T., and Steensma, H. Y. (1996) J. Biol. Chem. 271, 28953–28959]. In brief, the cultures were fed with a defined mineral medium containing glucose as the growth-limiting nutrient [. Verduyn, C., Postma, E., Scheffers, W. A., and van Dijken, J. P. (1990) Microbiol.Rev. 58, 616–630]. The dilution rate (which equals the specific growth rate) in the steady-state cultures was 0.10 h_1, the temperature was 30 °C, and the culture pH was 5.0. Aerobic conditions were maintained by sparging the cultures with air (0.5 liter_min_1). The dissolved oxygen concentration, which was continuously monitored with an Ingold model 34-100-3002 probe, remained above 80% of air saturation. Media— The defined mineral medium composition was based on that described by Verduyn et al [. Verduyn, C., Postma, E., Scheffers, W. A., and van Dijken, J. P. (1990) Microbiol.Rev. 58, 616–630]. The residual glucose concentration was targeted to 17 g_liter_1 to sustain glucose repression at the same level . For phosphorus-limited, the composition was 5.0 g of (NH4)2SO4, 1.9 g of K2SO4, 0.12 g of KH2PO4, 0.5 g of MgSO4_7H2O, and 59 g of glucose . </Growth-Protocol>
+      <Molecule>polyA RNA</Molecule>
+      <Extract-Protocol> Sampling and RNA Isolation— Samples from the chemostat cultures were taken as rapidly as possible to limit any potential changes in transcript profiles during the procedure. 40–60 ml of culture broth was sampled directly from the chemostat into a beaker containing 200 ml of liquid nitrogen. With vigorous stirring, the sample froze instantly. The frozen sample was then broken into small fragments and transferred to a 50-ml centrifuge tube. The sample was then thawed at room temperature, ensuring that it remained as close to zero as possible. Cells were pelleted (5000 rpm at 0 °C for 4 min), resuspended in 2 ml of ice-cold AE buffer (50 mM sodium acetate, 10 mM EDTA, pH 5.0) and aliquoted into 5 Eppendorf tubes. This corresponded to _20 mg of dry weight per tube. For each array, total RNA was extracted from a single tube using the hot-phenol method (32) or the FastRNA kit, Red (BIO 101, Inc., Vista, CA). </Extract-Protocol>
+      <Label>Biotinylated dUTP - streptavidine Phycoerythrin (SAPE)</Label>
+      <Label-Protocol> Probe Preparation and Hybridization to Arrays—mRNA extraction, cDNA synthesis, cRNA synthesis and labeling, as well as array hybridization were performed as described in the Affymetrix users’ manual (1). Briefly, poly(A)_ RNA was enriched from total RNA in a single round using the Qiagen Oligotex kit. Double-stranded cDNA synthesis was carried out incorporating the T7 RNA-polymerase promoter in the first round. This cDNA was then used as template for in vitro transcription (ENZO BioArray High Yield IVT kit), which amplifies the RNA pool and incorporates biotinylated ribonucleotides required for the staining procedures after hybridization. 15 mg of fragmented, biotinylated cRNA was hybridized to Affymetrix yeast S98 arrays at 45 °C for 16 h as described in the Affymetrix users’ manual (1). Washing and staining of arrays were performed using the GeneChip Fluidics Station 400 and scanning with the Affymetrix GeneArray Scanner. </Label-Protocol>
+    </Channel>
+    <Hybridization-Protocol> Probe Preparation and Hybridization to Arrays—mRNA extraction, cDNA synthesis, cRNA synthesis and labeling, as well as array hybridization were performed as described in the Affymetrix users’ manual (1). Briefly, poly(A)_ RNA was enriched from total RNA in a single round using the Qiagen Oligotex kit. Double-stranded cDNA synthesis was carried out incorporating the T7 RNA-polymerase promoter in the first round. This cDNA was then used as template for in vitro transcription (ENZO BioArray High Yield IVT kit), which amplifies the RNA pool and incorporates biotinylated ribonucleotides required for the staining procedures after hybridization. 15 mg of fragmented, biotinylated cRNA was hybridized to Affymetrix yeast S98 arrays at 45 °C for 16 h as described in the Affymetrix users’ manual (1). Washing and staining of arrays were performed using the GeneChip Fluidics Station 400 and scanning with the Affymetrix GeneArray Scanner. </Hybridization-Protocol>
+    <Scan-Protocol> scanning with the Affymetrix GeneArray Scanner. </Scan-Protocol>
+    <Description> M46 Keywords = S.cerevisiae Keywords = chemostat Keywords = nutrient limitation </Description>
+    <Data-Processing> Data Acquisition and Primary Analysis—Acquisition and quantification of array images as well as primary data analysis were performed using the Affymetrix software packages: Microarray Suite version 4.0.1, MicroDB version 2.0, and Data Mining Tool version 2.0. Microsoft Excel was used for further statistical analyses. All arrays were globally scaled to a target value of 150 using the average signal from all gene features using Microarray Suite version 4.0.1. When pairwise comparisons were performed (using Microarray Suite version 4.0.1), a transcript was considered “changed” when a call of Increase or Decrease was made, the -fold change was at least 2, and the higher of the two average difference values was called present. </Data-Processing>
+    <Platform-Ref ref="GPL90"/>
+    <Contact-Ref ref="contrib1"/>
+    <Data-Table>
+      <Column position="1">
+        <Name>ID_REF</Name>
+      </Column>
+      <Column position="2">
+        <Name>VALUE</Name>
+        <Description>signal</Description>
+      </Column>
+      <Column position="3">
+        <Name>ABS_CALL</Name>
+        <Description>absolute detection call</Description>
+      </Column>
+      <Column position="4">
+        <Name>DETECTION P-VALUE</Name>
+        <Description>detection p-value</Description>
+      </Column>
+      <External-Data rows="9335"> GSM29924-tbl-1.txt </External-Data>
+      <Internal-Data rows="20"> AFFX-MurIL2_at 2.1 A 0.945787 AFFX-MurIL10_at 2.3 A 0.834139 AFFX-MurIL4_at 10.8 A 0.175328 AFFX-MurFAS_at 2.7 A 0.891021 AFFX-BioB-5_at 53.7 M 0.042962 AFFX-BioB-M_at 64.6 P 0.001796 AFFX-BioB-3_at 61.2 P 0.005565 AFFX-BioC-5_at 116.3 P 0.000972 AFFX-BioC-3_at 81 P 0.000509 AFFX-BioDn-5_at 72.6 P 0.000581 AFFX-BioDn-3_at 598.1 P 0.000044 AFFX-CreX-5_at 916.9 P 0.000052 AFFX-CreX-3_at 1623.4 P 0.000044 AFFX-BioB-5_st 6 A 0.440646 AFFX-BioB-M_st 4.1 A 0.814869 AFFX-BioB-3_st 4.6 A 0.852061 AFFX-BioC-5_st 4.9 A 0.783476 AFFX-BioC-3_st 1.3 A 0.910522 AFFX-BioDn-5_st 9.7 A 0.52976 AFFX-BioDn-3_st 12.3 A 0.250796 </Internal-Data>
+    </Data-Table>
+  </Sample>
+  <Sample iid="GSM29929">
+    <Status database="GEO">
+      <Submission-Date>2004-09-02</Submission-Date>
+      <Release-Date>2004-09-03</Release-Date>
+      <Last-Update-Date>2008-10-09</Last-Update-Date>
+    </Status>
+    <Title>Aerobic sulfur limited 1</Title>
+    <Accession database="GEO">GSM29929</Accession>
+    <Type>RNA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>chemostat culture</Source>
+      <Organism taxid="4932">Saccharomyces cerevisiae</Organism>
+      <Characteristics> Strain and Maintenance— </Characteristics>
+      <Characteristics> This study was performed with the prototrophic laboratory strain S. cerevisiae CEN.PK113-7D (MATa) [van Dijken, J. P., Bauer, J., Brambilla, L., Duboc, P., Francois, J. M., Gancedo, C., Giuseppin, M. L. F., Heinen, J. J., Hoare, M., Lange, H. C., Madden, E. A., Niederberger, P., Nielsen, J., Parrou, J. L., Petit, T., Porro, D., Reuss, M., van Riel, N., Rizzi, M., Steensma, H. Y., Verrips, C. T., Vindelov, J., and Pronk, J. T. (2000) Enz. Microb. Technol. 26, 706–714] </Characteristics>
+      <Biomaterial-Provider>V Boer </Biomaterial-Provider>
+      <Treatment-Protocol> Liquid nitrogen quenching </Treatment-Protocol>
+      <Growth-Protocol> Chemostat Cultivation— Steady-state chemostat cultures were grown in Applikon laboratory fermentors of 1-liter working volume as described in detail elsewhere [van den Berg, M. A., de Jong-Gubbels, P., Kortland, C. J., van Dijken, J. P., Pronk, J. T., and Steensma, H. Y. (1996) J. Biol. Chem. 271, 28953–28959]. In brief, the cultures were fed with a defined mineral medium containing glucose as the growth-limiting nutrient [. Verduyn, C., Postma, E., Scheffers, W. A., and van Dijken, J. P. (1990) Microbiol.Rev. 58, 616–630]. The dilution rate (which equals the specific growth rate) in the steady-state cultures was 0.10 h_1, the temperature was 30 °C, and the culture pH was 5.0. Aerobic conditions were maintained by sparging the cultures with air (0.5 liter_min_1). The dissolved oxygen concentration, which was continuously monitored with an Ingold model 34-100-3002 probe, remained above 80% of air saturation. Media— The defined mineral medium composition was based on that described by Verduyn et al [. Verduyn, C., Postma, E., Scheffers, W. A., and van Dijken, J. P. (1990) Microbiol.Rev. 58, 616–630]. The residual glucose concentration was targeted to 17 g_liter_1 to sustain glucose repression at the same level . For sulfur-limited, the composition was 4.0 g of NH4Cl, 0.05 g of MgSO4_7H2O, 3.0 g of KH2PO4, 0.4g of MgCl2, and 42 g of glucose. </Growth-Protocol>
+      <Molecule>polyA RNA</Molecule>
+      <Extract-Protocol> Sampling and RNA Isolation— Samples from the chemostat cultures were taken as rapidly as possible to limit any potential changes in transcript profiles during the procedure. 40–60 ml of culture broth was sampled directly from the chemostat into a beaker containing 200 ml of liquid nitrogen. With vigorous stirring, the sample froze instantly. The frozen sample was then broken into small fragments and transferred to a 50-ml centrifuge tube. The sample was then thawed at room temperature, ensuring that it remained as close to zero as possible. Cells were pelleted (5000 rpm at 0 °C for 4 min), resuspended in 2 ml of ice-cold AE buffer (50 mM sodium acetate, 10 mM EDTA, pH 5.0) and aliquoted into 5 Eppendorf tubes. This corresponded to _20 mg of dry weight per tube. For each array, total RNA was extracted from a single tube using the hot-phenol method (32) or the FastRNA kit, Red (BIO 101, Inc., Vista, CA). </Extract-Protocol>
+      <Label>Biotinylated dUTP - streptavidine Phycoerythrin (SAPE)</Label>
+      <Label-Protocol> Probe Preparation and Hybridization to Arrays—mRNA extraction, cDNA synthesis, cRNA synthesis and labeling, as well as array hybridization were performed as described in the Affymetrix users’ manual (1). Briefly, poly(A)_ RNA was enriched from total RNA in a single round using the Qiagen Oligotex kit. Double-stranded cDNA synthesis was carried out incorporating the T7 RNA-polymerase promoter in the first round. This cDNA was then used as template for in vitro transcription (ENZO BioArray High Yield IVT kit), which amplifies the RNA pool and incorporates biotinylated ribonucleotides required for the staining procedures after hybridization. 15 mg of fragmented, biotinylated cRNA was hybridized to Affymetrix yeast S98 arrays at 45 °C for 16 h as described in the Affymetrix users’ manual (1). Washing and staining of arrays were performed using the GeneChip Fluidics Station 400 and scanning with the Affymetrix GeneArray Scanner. </Label-Protocol>
+    </Channel>
+    <Hybridization-Protocol> Probe Preparation and Hybridization to Arrays—mRNA extraction, cDNA synthesis, cRNA synthesis and labeling, as well as array hybridization were performed as described in the Affymetrix users’ manual (1). Briefly, poly(A)_ RNA was enriched from total RNA in a single round using the Qiagen Oligotex kit. Double-stranded cDNA synthesis was carried out incorporating the T7 RNA-polymerase promoter in the first round. This cDNA was then used as template for in vitro transcription (ENZO BioArray High Yield IVT kit), which amplifies the RNA pool and incorporates biotinylated ribonucleotides required for the staining procedures after hybridization. 15 mg of fragmented, biotinylated cRNA was hybridized to Affymetrix yeast S98 arrays at 45 °C for 16 h as described in the Affymetrix users’ manual (1). Washing and staining of arrays were performed using the GeneChip Fluidics Station 400 and scanning with the Affymetrix GeneArray Scanner. </Hybridization-Protocol>
+    <Scan-Protocol> scanning with the Affymetrix GeneArray Scanner. </Scan-Protocol>
+    <Description> M53 Keywords = S.cerevisiae Keywords = chemostat Keywords = nutrient limitation </Description>
+    <Data-Processing> Data Acquisition and Primary Analysis—Acquisition and quantification of array images as well as primary data analysis were performed using the Affymetrix software packages: Microarray Suite version 4.0.1, MicroDB version 2.0, and Data Mining Tool version 2.0. Microsoft Excel was used for further statistical analyses. All arrays were globally scaled to a target value of 150 using the average signal from all gene features using Microarray Suite version 4.0.1. When pairwise comparisons were performed (using Microarray Suite version 4.0.1), a transcript was considered “changed” when a call of Increase or Decrease was made, the -fold change was at least 2, and the higher of the two average difference values was called present. </Data-Processing>
+    <Platform-Ref ref="GPL90"/>
+    <Contact-Ref ref="contrib1"/>
+    <Data-Table>
+      <Column position="1">
+        <Name>ID_REF</Name>
+      </Column>
+      <Column position="2">
+        <Name>VALUE</Name>
+        <Description>signal</Description>
+      </Column>
+      <Column position="3">
+        <Name>ABS_CALL</Name>
+        <Description>absolute detection call</Description>
+      </Column>
+      <Column position="4">
+        <Name>DETECTION P-VALUE</Name>
+        <Description>detection p-value</Description>
+      </Column>
+      <External-Data rows="9335"> GSM29929-tbl-1.txt </External-Data>
+      <Internal-Data rows="20"> AFFX-MurIL2_at 2.1 A 0.945787 AFFX-MurIL10_at 2.3 A 0.834139 AFFX-MurIL4_at 10.8 A 0.175328 AFFX-MurFAS_at 2.7 A 0.891021 AFFX-BioB-5_at 53.7 M 0.042962 AFFX-BioB-M_at 64.6 P 0.001796 AFFX-BioB-3_at 61.2 P 0.005565 AFFX-BioC-5_at 116.3 P 0.000972 AFFX-BioC-3_at 81 P 0.000509 AFFX-BioDn-5_at 72.6 P 0.000581 AFFX-BioDn-3_at 598.1 P 0.000044 AFFX-CreX-5_at 916.9 P 0.000052 AFFX-CreX-3_at 1623.4 P 0.000044 AFFX-BioB-5_st 6 A 0.440646 AFFX-BioB-M_st 4.1 A 0.814869 AFFX-BioB-3_st 4.6 A 0.852061 AFFX-BioC-5_st 4.9 A 0.783476 AFFX-BioC-3_st 1.3 A 0.910522 AFFX-BioDn-5_st 9.7 A 0.52976 AFFX-BioDn-3_st 12.3 A 0.250796 </Internal-Data>
+    </Data-Table>
+  </Sample>
+  <Sample iid="GSM29934">
+    <Status database="GEO">
+      <Submission-Date>2004-09-02</Submission-Date>
+      <Release-Date>2004-09-03</Release-Date>
+      <Last-Update-Date>2009-09-23</Last-Update-Date>
+    </Status>
+    <Title>Anaerobic carbon limited 1</Title>
+    <Accession database="GEO">GSM29934</Accession>
+    <Type>RNA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>chemostat culture</Source>
+      <Organism taxid="4932">Saccharomyces cerevisiae</Organism>
+      <Characteristics> Strain and Maintenance— </Characteristics>
+      <Characteristics> This study was performed with the prototrophic laboratory strain S. cerevisiae CEN.PK113-7D (MATa) [van Dijken, J. P., Bauer, J., Brambilla, L., Duboc, P., Francois, J. M., Gancedo, C., Giuseppin, M. L. F., Heinen, J. J., Hoare, M., Lange, H. C., Madden, E. A., Niederberger, P., Nielsen, J., Parrou, J. L., Petit, T., Porro, D., Reuss, M., van Riel, N., Rizzi, M., Steensma, H. Y., Verrips, C. T., Vindelov, J., and Pronk, J. T. (2000) Enz. Microb. Technol. 26, 706–714] </Characteristics>
+      <Biomaterial-Provider>SL Tai </Biomaterial-Provider>
+      <Treatment-Protocol> Liquid nitrogen quenching </Treatment-Protocol>
+      <Growth-Protocol> Chemostat Cultivation— Steady-state chemostat cultures were grown in Applikon laboratory fermentors of 1-liter working volume as described in detail elsewhere [van den Berg, M. A., de Jong-Gubbels, P., Kortland, C. J., van Dijken, J. P., Pronk, J. T., and Steensma, H. Y. (1996) J. Biol. Chem. 271, 28953–28959]. In brief, the cultures were fed with a defined mineral medium containing glucose as the growth-limiting nutrient [. Verduyn, C., Postma, E., Scheffers, W. A., and van Dijken, J. P. (1990) Microbiol.Rev. 58, 616–630]. The dilution rate (which equals the specific growth rate) in the steady-state cultures was 0.10 h_1, the temperature was 30 °C, and the culture pH was 5.0. For anaerobic cultivation, the reservoir medium was supplemented with Tween 80 and ergosterol as described previously. Anaerobic conditions were maintained by sparging the medium reservoir and the fermentor with pure nitrogen gas (0.5 liter_min_1). Furthermore, Norprene tubing and butyl rubber septa were used to minimize oxygen of Increase or Decrease was made, the -fold change was at least 2, and the higher of the two average difference values was called present. Media— The defined mineral medium composition was based on that described by Verduyn et al [. Verduyn, C., Postma, E., Scheffers, W. A., and van Dijken, J. P. (1990) Microbiol.Rev. 58, 616–630]. The residual glucose concentration was targeted to 17 g_liter_1 to sustain glucose repression at the same level . For carbon limited cultivation: 5.0 g of (NH4)2SO4, 3.0 g of KH2PO4, 0.5 g of MgSO4.7H2O, and 25 g of glucose. </Growth-Protocol>
+      <Molecule>polyA RNA</Molecule>
+      <Extract-Protocol> Sampling and RNA Isolation— Samples from the chemostat cultures were taken as rapidly as possible to limit any potential changes in transcript profiles during the procedure. 40–60 ml of culture broth was sampled directly from the chemostat into a beaker containing 200 ml of liquid nitrogen. With vigorous stirring, the sample froze instantly. The frozen sample was then broken into small fragments and transferred to a 50-ml centrifuge tube. The sample was then thawed at room temperature, ensuring that it remained as close to zero as possible. Cells were pelleted (5000 rpm at 0 °C for 4 min), resuspended in 2 ml of ice-cold AE buffer (50 mM sodium acetate, 10 mM EDTA, pH 5.0) and aliquoted into 5 Eppendorf tubes. This corresponded to _20 mg of dry weight per tube. For each array, total RNA was extracted from a single tube using the hot-phenol method (32) or the FastRNA kit, Red (BIO 101, Inc., Vista, CA). </Extract-Protocol>
+      <Label>biotin</Label>
+      <Label-Protocol> Probe Preparation and Hybridization to Arrays—mRNA extraction, cDNA synthesis, cRNA synthesis and labeling, as well as array hybridization were performed as described in the Affymetrix users’ manual (1). Briefly, poly(A)_ RNA was enriched from total RNA in a single round using the Qiagen Oligotex kit. Double-stranded cDNA synthesis was carried out incorporating the T7 RNA-polymerase promoter in the first round. This cDNA was then used as template for in vitro transcription (ENZO BioArray High Yield IVT kit), which amplifies the RNA pool and incorporates biotinylated ribonucleotides required for the staining procedures after hybridization. 15 mg of fragmented, biotinylated cRNA was hybridized to Affymetrix yeast S98 arrays at 45 °C for 16 h as described in the Affymetrix users’ manual (1). Washing and staining of arrays were performed using the GeneChip Fluidics Station 400 and scanning with the Affymetrix GeneArray Scanner. </Label-Protocol>
+    </Channel>
+    <Hybridization-Protocol> Probe Preparation and Hybridization to Arrays—mRNA extraction, cDNA synthesis, cRNA synthesis and labeling, as well as array hybridization were performed as described in the Affymetrix users’ manual (1). Briefly, poly(A)_ RNA was enriched from total RNA in a single round using the Qiagen Oligotex kit. Double-stranded cDNA synthesis was carried out incorporating the T7 RNA-polymerase promoter in the first round. This cDNA was then used as template for in vitro transcription (ENZO BioArray High Yield IVT kit), which amplifies the RNA pool and incorporates biotinylated ribonucleotides required for the staining procedures after hybridization. 15 mg of fragmented, biotinylated cRNA was hybridized to Affymetrix yeast S98 arrays at 45 °C for 16 h as described in the Affymetrix users’ manual (1). Washing and staining of arrays were performed using the GeneChip Fluidics Station 400 and scanning with the Affymetrix GeneArray Scanner. </Hybridization-Protocol>
+    <Scan-Protocol> scanning with the Affymetrix GeneArray Scanner. </Scan-Protocol>
+    <Description> P16 Keywords = S.cerevisiae Keywords = chemostat Keywords = nutrient limitation </Description>
+    <Data-Processing> Data Acquisition and Primary Analysis—Acquisition and quantification of array images as well as primary data analysis were performed using the Affymetrix software packages: Microarray Suite version 4.0.1, MicroDB version 2.0, and Data Mining Tool version 2.0. Microsoft Excel was used for further statistical analyses. All arrays were globally scaled to a target value of 150 using the average signal from all gene features using Microarray Suite version 4.0.1. When pairwise comparisons were performed (using Microarray Suite version 4.0.1), a transcript was considered “changed” when a call of Increase or Decrease was made, the -fold change was at least 2, and the higher of the two average difference values was called present. </Data-Processing>
+    <Platform-Ref ref="GPL90"/>
+    <Contact-Ref ref="contrib1"/>
+    <Data-Table>
+      <Column position="1">
+        <Name>ID_REF</Name>
+      </Column>
+      <Column position="2">
+        <Name>VALUE</Name>
+        <Description>MAS5 signal</Description>
+      </Column>
+      <Column position="3">
+        <Name>ABS_CALL</Name>
+        <Description>absolute detection call</Description>
+      </Column>
+      <Column position="4">
+        <Name>DETECTION P-VALUE</Name>
+        <Description>detection p-value</Description>
+      </Column>
+      <External-Data rows="9335"> GSM29934-tbl-1.txt </External-Data>
+      <Internal-Data rows="20"> AFFX-MurIL2_at 3.4 A 0.749204 AFFX-MurIL10_at 0.4 A 0.910522 AFFX-MurIL4_at 2.4 A 0.52976 AFFX-MurFAS_at 1 A 0.876428 AFFX-BioB-5_at 336.4 P 0.000195 AFFX-BioB-M_at 426.8 P 0.000044 AFFX-BioB-3_at 476 P 0.000044 AFFX-BioC-5_at 342.3 P 0.000052 AFFX-BioC-3_at 257.2 P 0.000052 AFFX-BioDn-5_at 391.3 P 0.000044 AFFX-BioDn-3_at 1387.1 P 0.000044 AFFX-CreX-5_at 3098.7 P 0.000044 AFFX-CreX-3_at 2587.8 P 0.000078 AFFX-BioB-5_st 8.1 M 0.058444 AFFX-BioB-M_st 13.3 M 0.050229 AFFX-BioB-3_st 13.3 M 0.054213 AFFX-BioC-5_st 2.5 A 0.760937 AFFX-BioC-3_st 0.6 A 0.814869 AFFX-BioDn-5_st 18.2 A 0.313723 AFFX-BioDn-3_st 22.6 M 0.058444 </Internal-Data>
+    </Data-Table>
+  </Sample>
+  <Sample iid="GSM29939">
+    <Status database="GEO">
+      <Submission-Date>2004-09-02</Submission-Date>
+      <Release-Date>2004-09-03</Release-Date>
+      <Last-Update-Date>2008-10-09</Last-Update-Date>
+    </Status>
+    <Title>Anaerobic nitrogen limited 1</Title>
+    <Accession database="GEO">GSM29939</Accession>
+    <Type>RNA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>chemostat culture</Source>
+      <Organism taxid="4932">Saccharomyces cerevisiae</Organism>
+      <Characteristics> Strain and Maintenance— </Characteristics>
+      <Characteristics> This study was performed with the prototrophic laboratory strain S. cerevisiae CEN.PK113-7D (MATa) [van Dijken, J. P., Bauer, J., Brambilla, L., Duboc, P., Francois, J. M., Gancedo, C., Giuseppin, M. L. F., Heinen, J. J., Hoare, M., Lange, H. C., Madden, E. A., Niederberger, P., Nielsen, J., Parrou, J. L., Petit, T., Porro, D., Reuss, M., van Riel, N., Rizzi, M., Steensma, H. Y., Verrips, C. T., Vindelov, J., and </Characteristics>
+      <Characteristics> Pronk, J. T. (2000) Enz. Microb. Technol. 26, 706–714] </Characteristics>
+      <Biomaterial-Provider>SL Tai </Biomaterial-Provider>
+      <Treatment-Protocol> Liquid nitrogen quenching </Treatment-Protocol>
+      <Growth-Protocol> Chemostat Cultivation— Steady-state chemostat cultures were grown in Applikon laboratory fermentors of 1-liter working volume as described in detail elsewhere [van den Berg, M. A., de Jong-Gubbels, P., Kortland, C. J., van Dijken, J. P., Pronk, J. T., and Steensma, H. Y. (1996) J. Biol. Chem. 271, 28953–28959]. In brief, the cultures were fed with a defined mineral medium containing glucose as the growth-limiting nutrient [. Verduyn, C., Postma, E., Scheffers, W. A., and van Dijken, J. P. (1990) Microbiol.Rev. 58, 616–630]. The dilution rate (which equals the specific growth rate) in the steady-state cultures was 0.10 h_1, the temperature was 30 °C, and the culture pH was 5.0. For anaerobic cultivation, the reservoir medium was supplemented with Tween 80 and ergosterol as described previously. Anaerobic conditions were maintained by sparging the medium reservoir and the fermentor with pure nitrogen gas (0.5 liter_min_1). Furthermore, Norprene tubing and butyl rubber septa were used to minimize oxygen of Increase or Decrease was made, the -fold change was at least 2, and the higher of the two average difference values was called present. Media— The defined mineral medium composition was based on that described by Verduyn et al [. Verduyn, C., Postma, E., Scheffers, W. A., and van Dijken, J. P. (1990) Microbiol.Rev. 58, 616–630]. The residual glucose concentration was targeted to 17 g_liter_1 to sustain glucose repression at the same level . For nitrogen-limited cultivation: 0.65 g of (NH4)2SO4, 5.75 g of K2SO4, 3.0 g of KH2PO4, 0.5 g of MgSO4.7H2O and 46 g of glucose. </Growth-Protocol>
+      <Molecule>polyA RNA</Molecule>
+      <Extract-Protocol> Sampling and RNA Isolation— Samples from the chemostat cultures were taken as rapidly as possible to limit any potential changes in transcript profiles during the procedure. 40–60 ml of culture broth was sampled directly from the chemostat into a beaker containing 200 ml of liquid nitrogen. With vigorous stirring, the sample froze instantly. The frozen sample was then broken into small fragments and transferred to a 50-ml centrifuge tube. The sample was then thawed at room temperature, ensuring that it remained as close to zero as possible. Cells were pelleted (5000 rpm at 0 °C for 4 min), resuspended in 2 ml of ice-cold AE buffer (50 mM sodium acetate, 10 mM EDTA, pH 5.0) and aliquoted into 5 Eppendorf tubes. This corresponded to _20 mg of dry weight per tube. For each array, total RNA was extracted from a single tube using the hot-phenol method (32) or the FastRNA kit, Red (BIO 101, Inc., Vista, CA). </Extract-Protocol>
+      <Label>Biotinylated dUTP - streptavidine Phycoerythrin (SAPE)</Label>
+      <Label-Protocol> Probe Preparation and Hybridization to Arrays—mRNA extraction, cDNA synthesis, cRNA synthesis and labeling, as well as array hybridization were performed as described in the Affymetrix users’ manual (1). Briefly, poly(A)_ RNA was enriched from total RNA in a single round using the Qiagen Oligotex kit. Double-stranded cDNA synthesis was carried out incorporating the T7 RNA-polymerase promoter in the first round. This cDNA was then used as template for in vitro transcription (ENZO BioArray High Yield IVT kit), which amplifies the RNA pool and incorporates biotinylated ribonucleotides required for the staining procedures after hybridization. 15 mg of fragmented, biotinylated cRNA was hybridized to Affymetrix yeast S98 arrays at 45 °C for 16 h as described in the Affymetrix users’ manual (1). Washing and staining of arrays were performed using the GeneChip Fluidics Station 400 and scanning with the Affymetrix GeneArray Scanner.. </Label-Protocol>
+    </Channel>
+    <Hybridization-Protocol> Probe Preparation and Hybridization to Arrays—mRNA extraction, cDNA synthesis, cRNA synthesis and labeling, as well as array hybridization were performed as described in the Affymetrix users’ manual (1). Briefly, poly(A)_ RNA was enriched from total RNA in a single round using the Qiagen Oligotex kit. Double-stranded cDNA synthesis was carried out incorporating the T7 RNA-polymerase promoter in the first round. This cDNA was then used as template for in vitro transcription (ENZO BioArray High Yield IVT kit), which amplifies the RNA pool and incorporates biotinylated ribonucleotides required for the staining procedures after hybridization. 15 mg of fragmented, biotinylated cRNA was hybridized to Affymetrix yeast S98 arrays at 45 °C for 16 h as described in the Affymetrix users’ manual (1). Washing and staining of arrays were performed using the GeneChip Fluidics Station 400 and scanning with the Affymetrix GeneArray Scanner.. </Hybridization-Protocol>
+    <Scan-Protocol> scanning with the Affymetrix GeneArray Scanner </Scan-Protocol>
+    <Description> JM1 Keywords = S.cerevisiae Keywords = chemostat Keywords = nutrient limitationon </Description>
+    <Data-Processing> Data Acquisition and Primary Analysis—Acquisition and quantification of array images as well as primary data analysis were performed using the Affymetrix software packages: Microarray Suite version 4.0.1, MicroDB version 2.0, and Data Mining Tool version 2.0. Microsoft Excel was used for further statistical analyses. All arrays were globally scaled to a target value of 150 using the average signal from all gene features using Microarray Suite version 4.0.1. When pairwise comparisons were performed (using Microarray Suite version 4.0.1), a transcript was considered “changed” when a call of Increase or Decrease was made, the -fold change was at least 2, and the higher of the two average difference values was called present. </Data-Processing>
+    <Platform-Ref ref="GPL90"/>
+    <Contact-Ref ref="contrib1"/>
+    <Data-Table>
+      <Column position="1">
+        <Name>ID_REF</Name>
+      </Column>
+      <Column position="2">
+        <Name>VALUE</Name>
+        <Description>signal</Description>
+      </Column>
+      <Column position="3">
+        <Name>ABS_CALL</Name>
+        <Description>absolute detection call</Description>
+      </Column>
+      <Column position="4">
+        <Name>DETECTION P-VALUE</Name>
+        <Description>detection p-value</Description>
+      </Column>
+      <External-Data rows="9335"> GSM29939-tbl-1.txt </External-Data>
+      <Internal-Data rows="20"> AFFX-MurIL2_at 0.6 A 0.976071 AFFX-MurIL10_at 0.3 A 0.960339 AFFX-MurIL4_at 0.1 A 0.916426 AFFX-MurFAS_at 0.7 A 0.876428 AFFX-BioB-5_at 62.9 P 0.003212 AFFX-BioB-M_at 72.3 P 0.00007 AFFX-BioB-3_at 64 P 0.000509 AFFX-BioC-5_at 87.9 P 0.000169 AFFX-BioC-3_at 68 P 0.00011 AFFX-BioDn-5_at 101.6 P 0.000044 AFFX-BioDn-3_at 600.5 P 0.000044 AFFX-CreX-5_at 1190.3 P 0.000044 AFFX-CreX-3_at 1666.2 P 0.000044 AFFX-BioB-5_st 4.2 A 0.327079 AFFX-BioB-M_st 7.1 A 0.455413 AFFX-BioB-3_st 2.6 A 0.574038 AFFX-BioC-5_st 1.5 A 0.724854 AFFX-BioC-3_st 0.4 A 0.843268 AFFX-BioDn-5_st 14.1 A 0.275146 AFFX-BioDn-3_st 15.8 P 0.004998 </Internal-Data>
+    </Data-Table>
+  </Sample>
+  <Sample iid="GSM29943">
+    <Status database="GEO">
+      <Submission-Date>2004-09-02</Submission-Date>
+      <Release-Date>2004-09-03</Release-Date>
+      <Last-Update-Date>2008-10-09</Last-Update-Date>
+    </Status>
+    <Title>Anaerobic phosphorus limited 1</Title>
+    <Accession database="GEO">GSM29943</Accession>
+    <Type>RNA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>chemostat culture</Source>
+      <Organism taxid="4932">Saccharomyces cerevisiae</Organism>
+      <Characteristics> Strain and Maintenance— </Characteristics>
+      <Characteristics> This study was performed with the prototrophic laboratory strain S. cerevisiae CEN.PK113-7D (MATa) [van Dijken, J. P., Bauer, J., Brambilla, L., Duboc, P., Francois, J. M., Gancedo, C., Giuseppin, M. L. F., Heinen, J. J., Hoare, M., Lange, H. C., Madden, E. A., Niederberger, P., Nielsen, J., Parrou, J. L., Petit, T., Porro, D., Reuss, M., van Riel, N., Rizzi, M., Steensma, H. Y., Verrips, C. T., Vindelov, J., and Pronk, J. T. (2000) Enz. Microb. Technol. 26, 706–714] </Characteristics>
+      <Biomaterial-Provider>SL Tai </Biomaterial-Provider>
+      <Treatment-Protocol> Liquid nitrogen quenching </Treatment-Protocol>
+      <Growth-Protocol> Chemostat Cultivation— Steady-state chemostat cultures were grown in Applikon laboratory fermentors of 1-liter working volume as described in detail elsewhere [van den Berg, M. A., de Jong-Gubbels, P., Kortland, C. J., van Dijken, J. P., Pronk, J. T., and Steensma, H. Y. (1996) J. Biol. Chem. 271, 28953–28959]. In brief, the cultures were fed with a defined mineral medium containing glucose as the growth-limiting nutrient [. Verduyn, C., Postma, E., Scheffers, W. A., and van Dijken, J. P. (1990) Microbiol.Rev. 58, 616–630]. The dilution rate (which equals the specific growth rate) in the steady-state cultures was 0.10 h_1, the temperature was 30 °C, and the culture pH was 5.0. For anaerobic cultivation, the reservoir medium was supplemented with Tween 80 and ergosterol as described previously. Anaerobic conditions were maintained by sparging the medium reservoir and the fermentor with pure nitrogen gas (0.5 liter_min_1). Furthermore, Norprene tubing and butyl rubber septa were used to minimize oxygen of Increase or Decrease was made, the -fold change was at least 2, and the higher of the two average difference values was called present. Media— The defined mineral medium composition was based on that described by Verduyn et al [. Verduyn, C., Postma, E., Scheffers, W. A., and van Dijken, J. P. (1990) Microbiol.Rev. 58, 616–630]. The residual glucose concentration was targeted to 17 g_liter_1 to sustain glucose repression at the same level . For phosphorus-limited cultivation: 5.0 g of (NH4)2SO4, 1.9 g of K2SO4, 0.12 g KH2PO4, 0.5 g of MgSO4.7H2O, and 66 g of glucose. </Growth-Protocol>
+      <Molecule>polyA RNA</Molecule>
+      <Extract-Protocol> Sampling and RNA Isolation— Samples from the chemostat cultures were taken as rapidly as possible to limit any potential changes in transcript profiles during the procedure. 40–60 ml of culture broth was sampled directly from the chemostat into a beaker containing 200 ml of liquid nitrogen. With vigorous stirring, the sample froze instantly. The frozen sample was then broken into small fragments and transferred to a 50-ml centrifuge tube. The sample was then thawed at room temperature, ensuring that it remained as close to zero as possible. Cells were pelleted (5000 rpm at 0 °C for 4 min), resuspended in 2 ml of ice-cold AE buffer (50 mM sodium acetate, 10 mM EDTA, pH 5.0) and aliquoted into 5 Eppendorf tubes. This corresponded to _20 mg of dry weight per tube. For each array, total RNA was extracted from a single tube using the hot-phenol method (32) or the FastRNA kit, Red (BIO 101, Inc., Vista, CA). </Extract-Protocol>
+      <Label>Biotinylated-UTP SAPE-Phycoerythrin</Label>
+      <Label-Protocol> Probe Preparation and Hybridization to Arrays—mRNA extraction, cDNA synthesis, cRNA synthesis and labeling, as well as array hybridization were performed as described in the Affymetrix users’ manual (1). Briefly, poly(A)_ RNA was enriched from total RNA in a single round using the Qiagen Oligotex kit. Double-stranded cDNA synthesis was carried out incorporating the T7 RNA-polymerase promoter in the first round. This cDNA was then used as template for in vitro transcription (ENZO BioArray High Yield IVT kit), which amplifies the RNA pool and incorporates biotinylated ribonucleotides required for the staining procedures after hybridization. 15 mg of fragmented, biotinylated cRNA was hybridized to Affymetrix yeast S98 arrays at 45 °C for 16 h as described in the Affymetrix users’ manual (1). Washing and staining of arrays were performed using the GeneChip Fluidics Station 400 and scanning with the Affymetrix GeneArray Scanner.. </Label-Protocol>
+    </Channel>
+    <Hybridization-Protocol> Probe Preparation and Hybridization to Arrays—mRNA extraction, cDNA synthesis, cRNA synthesis and labeling, as well as array hybridization were performed as described in the Affymetrix users’ manual (1). Briefly, poly(A)_ RNA was enriched from total RNA in a single round using the Qiagen Oligotex kit. Double-stranded cDNA synthesis was carried out incorporating the T7 RNA-polymerase promoter in the first round. This cDNA was then used as template for in vitro transcription (ENZO BioArray High Yield IVT kit), which amplifies the RNA pool and incorporates biotinylated ribonucleotides required for the staining procedures after hybridization. 15 mg of fragmented, biotinylated cRNA was hybridized to Affymetrix yeast S98 arrays at 45 °C for 16 h as described in the Affymetrix users’ manual (1). Washing and staining of arrays were performed using the GeneChip Fluidics Station 400 and scanning with the Affymetrix GeneArray Scanner.. </Hybridization-Protocol>
+    <Scan-Protocol> scanning with the Affymetrix GeneArray Scanner. </Scan-Protocol>
+    <Description> S5 Keywords = S.cerevisiae Keywords = chemostat Keywords = nutrient limitation </Description>
+    <Data-Processing> Data Acquisition and Primary Analysis—Acquisition and quantification of array images as well as primary data analysis were performed using the Affymetrix software packages: Microarray Suite version 4.0.1, MicroDB version 2.0, and Data Mining Tool version 2.0. Microsoft Excel was used for further statistical analyses. All arrays were globally scaled to a target value of 150 using the average signal from all gene features using Microarray Suite version 4.0.1. When pairwise comparisons were performed (using Microarray Suite version 4.0.1), a transcript was considered “changed” when a call of Increase or Decrease was made, the -fold change was at least 2, and the higher of the two average difference values was called present. </Data-Processing>
+    <Platform-Ref ref="GPL90"/>
+    <Contact-Ref ref="contrib1"/>
+    <Data-Table>
+      <Column position="1">
+        <Name>ID_REF</Name>
+      </Column>
+      <Column position="2">
+        <Name>VALUE</Name>
+        <Description>signal</Description>
+      </Column>
+      <Column position="3">
+        <Name>ABS_CALL</Name>
+        <Description>absolute detection call</Description>
+      </Column>
+      <Column position="4">
+        <Name>DETECTION P-VALUE</Name>
+        <Description>detection p-value</Description>
+      </Column>
+      <External-Data rows="9335"> GSM29943-tbl-1.txt </External-Data>
+      <Internal-Data rows="20"> AFFX-MurIL2_at 0.9 A 0.988616 AFFX-MurIL10_at 0.4 A 0.868639 AFFX-MurIL4_at 0.8 A 0.834139 AFFX-MurFAS_at 0.7 A 0.978098 AFFX-BioB-5_at 111 P 0.001248 AFFX-BioB-M_at 176 P 0.00011 AFFX-BioB-3_at 129.2 P 0.000095 AFFX-BioC-5_at 195.3 P 0.00007 AFFX-BioC-3_at 164.7 P 0.000052 AFFX-BioDn-5_at 250.2 P 0.000044 AFFX-BioDn-3_at 1384 P 0.000044 AFFX-CreX-5_at 2122.3 P 0.000044 AFFX-CreX-3_at 2655.8 P 0.000044 AFFX-BioB-5_st 4.2 A 0.368438 AFFX-BioB-M_st 7.2 A 0.39692 AFFX-BioB-3_st 8 A 0.41138 AFFX-BioC-5_st 5.6 A 0.631562 AFFX-BioC-3_st 3.8 A 0.51489 AFFX-BioDn-5_st 25.8 A 0.116113 AFFX-BioDn-3_st 35.6 P 0.01667 </Internal-Data>
+    </Data-Table>
+  </Sample>
+  <Sample iid="GSM29948">
+    <Status database="GEO">
+      <Submission-Date>2004-09-02</Submission-Date>
+      <Release-Date>2004-09-03</Release-Date>
+      <Last-Update-Date>2008-10-09</Last-Update-Date>
+    </Status>
+    <Title>Anaerobic sulfur limited 1</Title>
+    <Accession database="GEO">GSM29948</Accession>
+    <Type>RNA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>chemostat culture</Source>
+      <Organism taxid="4932">Saccharomyces cerevisiae</Organism>
+      <Characteristics> Strain and Maintenance— </Characteristics>
+      <Characteristics> This study was performed with the prototrophic laboratory strain S. cerevisiae CEN.PK113-7D (MATa) [van Dijken, J. P., Bauer, J., Brambilla, L., Duboc, P., Francois, J. M., Gancedo, C., Giuseppin, M. L. F., Heinen, J. J., Hoare, M., Lange, H. C., Madden, E. A., Niederberger, P., Nielsen, J., Parrou, J. L., Petit, T., Porro, D., Reuss, M., van Riel, N., Rizzi, M., Steensma, H. Y., Verrips, C. T., Vindelov, J., and </Characteristics>
+      <Characteristics> Pronk, J. T. (2000) Enz. Microb. Technol. 26, 706–714] </Characteristics>
+      <Biomaterial-Provider>SL Tai </Biomaterial-Provider>
+      <Treatment-Protocol> Liquid nitrogen quenching </Treatment-Protocol>
+      <Growth-Protocol> Chemostat Cultivation— Steady-state chemostat cultures were grown in Applikon laboratory fermentors of 1-liter working volume as described in detail elsewhere [van den Berg, M. A., de Jong-Gubbels, P., Kortland, C. J., van Dijken, J. P., Pronk, J. T., and Steensma, H. Y. (1996) J. Biol. Chem. 271, 28953–28959]. In brief, the cultures were fed with a defined mineral medium containing glucose as the growth-limiting nutrient [. Verduyn, C., Postma, E., Scheffers, W. A., and van Dijken, J. P. (1990) Microbiol.Rev. 58, 616–630]. The dilution rate (which equals the specific growth rate) in the steady-state cultures was 0.10 h_1, the temperature was 30 °C, and the culture pH was 5.0. For anaerobic cultivation, the reservoir medium was supplemented with Tween 80 and ergosterol as described previously. Anaerobic conditions were maintained by sparging the medium reservoir and the fermentor with pure nitrogen gas (0.5 liter_min_1). Furthermore, Norprene tubing and butyl rubber septa were used to minimize oxygen of Increase or Decrease was made, the -fold change was at least 2, and the higher of the two average difference values was called present. Media— The defined mineral medium composition was based on that described by Verduyn et al [. Verduyn, C., Postma, E., Scheffers, W. A., and van Dijken, J. P. (1990) Microbiol.Rev. 58, 616–630]. The residual glucose concentration was targeted to 17 g_liter_1 to sustain glucose repression at the same level . For sulfur-limited cultivation: 4.0 g of NH4Cl, 0.05 g of MgSO4.7H2O, 3.0 g of KH2PO4, 0.4 g of MgCl2 and 59 g of glucose. </Growth-Protocol>
+      <Molecule>polyA RNA</Molecule>
+      <Extract-Protocol> Sampling and RNA Isolation— Samples from the chemostat cultures were taken as rapidly as possible to limit any potential changes in transcript profiles during the procedure. 40–60 ml of culture broth was sampled directly from the chemostat into a beaker containing 200 ml of liquid nitrogen. With vigorous stirring, the sample froze instantly. The frozen sample was then broken into small fragments and transferred to a 50-ml centrifuge tube. The sample was then thawed at room temperature, ensuring that it remained as close to zero as possible. Cells were pelleted (5000 rpm at 0 °C for 4 min), resuspended in 2 ml of ice-cold AE buffer (50 mM sodium acetate, 10 mM EDTA, pH 5.0) and aliquoted into 5 Eppendorf tubes. This corresponded to _20 mg of dry weight per tube. For each array, total RNA was extracted from a single tube using the hot-phenol method (32) or the FastRNA kit, Red (BIO 101, Inc., Vista, CA). </Extract-Protocol>
+      <Label>Biotinylated-UTP SAPE-Phycoerythrin</Label>
+      <Label-Protocol> Probe Preparation and Hybridization to Arrays—mRNA extraction, cDNA synthesis, cRNA synthesis and labeling, as well as array hybridization were performed as described in the Affymetrix users’ manual (1). Briefly, poly(A)_ RNA was enriched from total RNA in a single round using the Qiagen Oligotex kit. Double-stranded cDNA synthesis was carried out incorporating the T7 RNA-polymerase promoter in the first round. This cDNA was then used as template for in vitro transcription (ENZO BioArray High Yield IVT kit), which amplifies the RNA pool and incorporates biotinylated ribonucleotides required for the staining procedures after hybridization. 15 mg of fragmented, biotinylated cRNA was hybridized to Affymetrix yeast S98 arrays at 45 °C for 16 h as described in the Affymetrix users’ manual (1). Washing and staining of arrays were performed using the GeneChip Fluidics Station 400 and scanning with the Affymetrix GeneArray Scanner.. </Label-Protocol>
+    </Channel>
+    <Hybridization-Protocol> Probe Preparation and Hybridization to Arrays—mRNA extraction, cDNA synthesis, cRNA synthesis and labeling, as well as array hybridization were performed as described in the Affymetrix users’ manual (1). Briefly, poly(A)_ RNA was enriched from total RNA in a single round using the Qiagen Oligotex kit. Double-stranded cDNA synthesis was carried out incorporating the T7 RNA-polymerase promoter in the first round. This cDNA was then used as template for in vitro transcription (ENZO BioArray High Yield IVT kit), which amplifies the RNA pool and incorporates biotinylated ribonucleotides required for the staining procedures after hybridization. 15 mg of fragmented, biotinylated cRNA was hybridized to Affymetrix yeast S98 arrays at 45 °C for 16 h as described in the Affymetrix users’ manual (1). Washing and staining of arrays were performed using the GeneChip Fluidics Station 400 and scanning with the Affymetrix GeneArray Scanner.. </Hybridization-Protocol>
+    <Scan-Protocol> scanning with the Affymetrix GeneArray Scanner.. </Scan-Protocol>
+    <Description> S2 Keywords = S.cerevisiae Keywords = chemostat Keywords = nutrient limitation </Description>
+    <Data-Processing> Data Acquisition and Primary Analysis—Acquisition and quantification of array images as well as primary data analysis were performed using the Affymetrix software packages: Microarray Suite version 4.0.1, MicroDB version 2.0, and Data Mining Tool version 2.0. Microsoft Excel was used for further statistical analyses. All arrays were globally scaled to a target value of 150 using the average signal from all gene features using Microarray Suite version 4.0.1. When pairwise comparisons were performed (using Microarray Suite version 4.0.1), a transcript was considered “changed” when a call of Increase or Decrease was made, the -fold change was at least 2, and the higher of the two average difference values was called present. </Data-Processing>
+    <Platform-Ref ref="GPL90"/>
+    <Contact-Ref ref="contrib1"/>
+    <Data-Table>
+      <Column position="1">
+        <Name>ID_REF</Name>
+      </Column>
+      <Column position="2">
+        <Name>VALUE</Name>
+        <Description>signal</Description>
+      </Column>
+      <Column position="3">
+        <Name>ABS_CALL</Name>
+        <Description>absolute detection call</Description>
+      </Column>
+      <Column position="4">
+        <Name>DETECTION P-VALUE</Name>
+        <Description>detection p-value</Description>
+      </Column>
+      <External-Data rows="9335"> GSM29948-tbl-1.txt </External-Data>
+      <Internal-Data rows="20"> AFFX-MurIL2_at 0.9 A 0.897835 AFFX-MurIL10_at 0.4 A 0.937071 AFFX-MurIL4_at 0.9 A 0.631562 AFFX-MurFAS_at 0.2 A 0.99156 AFFX-BioB-5_at 69.6 P 0.000972 AFFX-BioB-M_at 111.8 P 0.00007 AFFX-BioB-3_at 94.1 P 0.000147 AFFX-BioC-5_at 118.2 P 0.00007 AFFX-BioC-3_at 104.3 P 0.000052 AFFX-BioDn-5_at 115.3 P 0.000044 AFFX-BioDn-3_at 706.6 P 0.000044 AFFX-CreX-5_at 1544.8 P 0.000044 AFFX-CreX-3_at 1855.2 P 0.000044 AFFX-BioB-5_st 4.8 A 0.275146 AFFX-BioB-M_st 6.2 A 0.239063 AFFX-BioB-3_st 9.6 A 0.250796 AFFX-BioC-5_st 1.8 A 0.760937 AFFX-BioC-3_st 0.9 A 0.686277 AFFX-BioDn-5_st 10.6 A 0.185131 AFFX-BioDn-3_st 21.9 P 0.001102 </Internal-Data>
+    </Data-Table>
+  </Sample>
+  <Sample iid="GSM21660">
+    <Status database="GEO">
+      <Submission-Date>2004-04-14</Submission-Date>
+      <Release-Date>2005-08-01</Release-Date>
+      <Last-Update-Date>2005-10-28</Last-Update-Date>
+    </Status>
+    <Title>E1_T7_R3, 360 min. post rehydration</Title>
+    <Accession database="GEO">GSM21660</Accession>
+    <Type>RNA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>BY4743(S288C)</Source>
+      <Organism taxid="4932">Saccharomyces cerevisiae</Organism>
+      <Characteristics> none </Characteristics>
+      <Molecule>total RNA</Molecule>
+    </Channel>
+    <Description> Stock and seed cultures of strain BY4743 were grown in yeast extract-peptone-dextrose (YPD) medium (10 mg/ml yeast extract, 20 mg/ml bactopeptone, 20 mg/ml glucose, pH 6.5 ± 0.2), at 30°C until the A600 reached 0.8. Cells were centrifuged and the cell pellet was resuspended and dispersed in 1:20 diluted YPD medium at between 22 to 25 °C. An aliquot, which represent the control sample (T1), was removed for RNA extraction, and the remaining suspension was aliquoted into 9-cm diameter glass Petri dishes (15 ml/dish) for desiccation. Desiccation was carried out in a custom-fabricated controlled atmosphere desiccation system, at 22 to 25 °C. For more information on the unit and software, contact the corresponding author. A series of aliquots were withdrawn from the cell suspensions 18h (T2) after the start of the drying process. Samples were collected on a volume basis and were in the same ratio as collected at T1. Once dry (42 h), the water potential was adjusted to 20% relative humidity for a period of 72 hr. A sample was collected at this timepoint, representing the dry sample (Tdry). Dry cells were hydrated (22 to 25 °C ) using 1:20 diluted YPD medium, 15 ml per plate. Resuspended cells from the four plates were pooled in a sterile 250 ml flask. Samples were collected for various analyses at time points of 15 min (T4), 45 min (T5), 90 min (T6) and 360 min (T7) after the start of rehydration. Total RNA was isolated essentially as described (Schmitt, M. E., Brown, T. A., and Trumpower, B. L. (1990) Nucl. Acids Res. 18, 3091-3092). RNA was quantified using a spectrophotometer, and its quality was assessed using the A260/A280 ratio. Target cRNA was hybridized to Affymetrix Y98 chips (GPL90) and raw image data was analyzed using the GeneChip Expression Analysis Software (Affymetrix). Probe set signals were processed by a Wilcoxon’s signed rank test and consolidated using a two-step linear mixed model. This sample is known as E1_T7_R3, 360 min. post rehydration. </Description>
+    <Data-Processing/>
+    <Platform-Ref ref="GPL90"/>
+    <Contact-Ref ref="contrib1"/>
+    <Supplementary-Data type="CEL"> ftp://ftp.ncbi.nih.gov/pub/geo/DATA/supplementary/samples/GSM21nnn/GSM21660/GSM21660.CEL.gz </Supplementary-Data>
+    <Supplementary-Data type="DAT"> ftp://ftp.ncbi.nih.gov/pub/geo/DATA/supplementary/samples/GSM21nnn/GSM21660/GSM21660.DAT.gz </Supplementary-Data>
+    <Supplementary-Data type="EXP"> ftp://ftp.ncbi.nih.gov/pub/geo/DATA/supplementary/samples/GSM21nnn/GSM21660/GSM21660.EXP.gz </Supplementary-Data>
+    <Data-Table>
+      <Column position="1">
+        <Name>ID_REF</Name>
+      </Column>
+      <Column position="2">
+        <Name>VALUE</Name>
+        <Description>'signal' a measure of the abundance of a transcript</Description>
+      </Column>
+      <Column position="3">
+        <Name>ABS_CALL</Name>
+        <Description>the call in an absolute analysis that indicates if the transcript was present (P), absent (A), marginal (M), or no call (NC)</Description>
+      </Column>
+      <Column position="4">
+        <Name>DETECTION P-VALUE</Name>
+        <Description>'detection p-value', p-value that indicates the significance level of the detection call</Description>
+      </Column>
+      <External-Data rows="9335"> GSM21660-tbl-1.txt </External-Data>
+      <Internal-Data rows="20"> AFFX-MurIL2_at 3.5 A 0.989683 AFFX-MurIL10_at 2.5 A 0.999775 AFFX-MurIL4_at 1.9 A 0.997977 AFFX-MurFAS_at 7.7 A 0.897835 AFFX-BioB-5_at 184 P 0.039661 AFFX-BioB-M_at 266 P 0.000225 AFFX-BioB-3_at 281.4 P 0.000446 AFFX-BioC-5_at 2200.3 P 4.4e-05 AFFX-BioC-3_at 2376.7 P 4.4e-05 AFFX-BioDn-5_at 1601.1 P 4.4e-05 AFFX-BioDn-3_at 8160.5 P 4.4e-05 AFFX-CreX-5_at 8471.2 P 4.4e-05 AFFX-CreX-3_at 10913.4 P 4.4e-05 AFFX-BioB-5_st 36.7 A 0.300606 AFFX-BioB-M_st 33.7 A 0.617401 AFFX-BioB-3_st 13.5 A 0.897835 AFFX-BioC-5_st 15.2 A 0.737173 AFFX-BioC-3_st 22.6 A 0.51489 AFFX-BioDn-5_st 48.9 A 0.227636 AFFX-BioDn-3_st 102.7 P 0.012547 </Internal-Data>
+    </Data-Table>
+  </Sample>
+  <Sample iid="GSM21646">
+    <Status database="GEO">
+      <Submission-Date>2004-04-14</Submission-Date>
+      <Release-Date>2005-08-01</Release-Date>
+      <Last-Update-Date>2005-10-28</Last-Update-Date>
+    </Status>
+    <Title>E1_T3_R1, Dry</Title>
+    <Accession database="GEO">GSM21646</Accession>
+    <Type>RNA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>BY4743(S288C)</Source>
+      <Organism taxid="4932">Saccharomyces cerevisiae</Organism>
+      <Characteristics> none </Characteristics>
+      <Molecule>total RNA</Molecule>
+    </Channel>
+    <Description> Stock and seed cultures of strain BY4743 were grown in yeast extract-peptone-dextrose (YPD) medium (10 mg/ml yeast extract, 20 mg/ml bactopeptone, 20 mg/ml glucose, pH 6.5 ± 0.2), at 30°C until the A600 reached 0.8. Cells were centrifuged and the cell pellet was resuspended and dispersed in 1:20 diluted YPD medium at between 22 to 25 °C. An aliquot, which represent the control sample (T1), was removed for RNA extraction, and the remaining suspension was aliquoted into 9-cm diameter glass Petri dishes (15 ml/dish) for desiccation. Desiccation was carried out in a custom-fabricated controlled atmosphere desiccation system, at 22 to 25 °C. For more information on the unit and software, contact the corresponding author. A series of aliquots were withdrawn from the cell suspensions 18h (T2) after the start of the drying process. Samples were collected on a volume basis and were in the same ratio as collected at T1. Once dry (42 h), the water potential was adjusted to 20% relative humidity for a period of 72 hr. A sample was collected at this timepoint, representing the dry sample (Tdry). Dry cells were hydrated (22 to 25 °C ) using 1:20 diluted YPD medium, 15 ml per plate. Resuspended cells from the four plates were pooled in a sterile 250 ml flask. Samples were collected for various analyses at time points of 15 min (T4), 45 min (T5), 90 min (T6) and 360 min (T7) after the start of rehydration. Total RNA was isolated essentially as described (Schmitt, M. E., Brown, T. A., and Trumpower, B. L. (1990) Nucl. Acids Res. 18, 3091-3092). RNA was quantified using a spectrophotometer, and its quality was assessed using the A260/A280 ratio. Target cRNA was hybridized to Affymetrix Y98 chips (GPL90) and raw image data was analyzed using the GeneChip Expression Analysis Software (Affymetrix). Probe set signals were processed by a Wilcoxon’s signed rank test and consolidated using a two-step linear mixed model. This sample is known as E1_T3_R1, Dry. </Description>
+    <Data-Processing/>
+    <Platform-Ref ref="GPL90"/>
+    <Contact-Ref ref="contrib1"/>
+    <Supplementary-Data type="CEL"> ftp://ftp.ncbi.nih.gov/pub/geo/DATA/supplementary/samples/GSM21nnn/GSM21646/GSM21646.CEL.gz </Supplementary-Data>
+    <Supplementary-Data type="DAT"> ftp://ftp.ncbi.nih.gov/pub/geo/DATA/supplementary/samples/GSM21nnn/GSM21646/GSM21646.DAT.gz </Supplementary-Data>
+    <Supplementary-Data type="EXP"> ftp://ftp.ncbi.nih.gov/pub/geo/DATA/supplementary/samples/GSM21nnn/GSM21646/GSM21646.EXP.gz </Supplementary-Data>
+    <Data-Table>
+      <Column position="1">
+        <Name>ID_REF</Name>
+      </Column>
+      <Column position="2">
+        <Name>VALUE</Name>
+        <Description>'signal' a measure of the abundance of a transcript</Description>
+      </Column>
+      <Column position="3">
+        <Name>ABS_CALL</Name>
+        <Description>the call in an absolute analysis that indicates if the transcript was present (P), absent (A), marginal (M), or no call (NC)</Description>
+      </Column>
+      <Column position="4">
+        <Name>DETECTION P-VALUE</Name>
+        <Description>'detection p-value', p-value that indicates the significance level of the detection call</Description>
+      </Column>
+      <External-Data rows="9335"> GSM21646-tbl-1.txt </External-Data>
+      <Internal-Data rows="20"> AFFX-MurIL2_at 2.2 A 0.988616 AFFX-MurIL10_at 1.3 A 0.996788 AFFX-MurIL4_at 4.8 A 0.724854 AFFX-MurFAS_at 2.2 A 0.949771 AFFX-BioB-5_at 67.7 A 0.139482 AFFX-BioB-M_at 56.5 P 0.000509 AFFX-BioB-3_at 76.9 P 0.00762 AFFX-BioC-5_at 882 P 0.000509 AFFX-BioC-3_at 514 P 8.1e-05 AFFX-BioDn-5_at 489.4 P 4.4e-05 AFFX-BioDn-3_at 2147.9 P 5.2e-05 AFFX-CreX-5_at 2205.3 P 4.4e-05 AFFX-CreX-3_at 2769.2 P 4.4e-05 AFFX-BioB-5_st 20.7 A 0.39692 AFFX-BioB-M_st 4.4 A 0.824672 AFFX-BioB-3_st 6.1 A 0.9273 AFFX-BioC-5_st 3.4 A 0.897835 AFFX-BioC-3_st 1.8 A 0.897835 AFFX-BioDn-5_st 6.1 A 0.783476 AFFX-BioDn-3_st 46.5 P 0.028457 </Internal-Data>
+    </Data-Table>
+  </Sample>
+  <Sample iid="GSM21643">
+    <Status database="GEO">
+      <Submission-Date>2004-04-14</Submission-Date>
+      <Release-Date>2005-08-01</Release-Date>
+      <Last-Update-Date>2005-10-28</Last-Update-Date>
+    </Status>
+    <Title>E1_T2_R1, 50% dry</Title>
+    <Accession database="GEO">GSM21643</Accession>
+    <Type>RNA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>BY4743(S288C)</Source>
+      <Organism taxid="4932">Saccharomyces cerevisiae</Organism>
+      <Characteristics> none </Characteristics>
+      <Molecule>total RNA</Molecule>
+    </Channel>
+    <Description> Stock and seed cultures of strain BY4743 were grown in yeast extract-peptone-dextrose (YPD) medium (10 mg/ml yeast extract, 20 mg/ml bactopeptone, 20 mg/ml glucose, pH 6.5 ± 0.2), at 30°C until the A600 reached 0.8. Cells were centrifuged and the cell pellet was resuspended and dispersed in 1:20 diluted YPD medium at between 22 to 25 °C. An aliquot, which represent the control sample (T1), was removed for RNA extraction, and the remaining suspension was aliquoted into 9-cm diameter glass Petri dishes (15 ml/dish) for desiccation. Desiccation was carried out in a custom-fabricated controlled atmosphere desiccation system, at 22 to 25 °C. For more information on the unit and software, contact the corresponding author. A series of aliquots were withdrawn from the cell suspensions 18h (T2) after the start of the drying process. Samples were collected on a volume basis and were in the same ratio as collected at T1. Once dry (42 h), the water potential was adjusted to 20% relative humidity for a period of 72 hr. A sample was collected at this timepoint, representing the dry sample (Tdry). Dry cells were hydrated (22 to 25 °C ) using 1:20 diluted YPD medium, 15 ml per plate. Resuspended cells from the four plates were pooled in a sterile 250 ml flask. Samples were collected for various analyses at time points of 15 min (T4), 45 min (T5), 90 min (T6) and 360 min (T7) after the start of rehydration. Total RNA was isolated essentially as described (Schmitt, M. E., Brown, T. A., and Trumpower, B. L. (1990) Nucl. Acids Res. 18, 3091-3092). RNA was quantified using a spectrophotometer, and its quality was assessed using the A260/A280 ratio. Target cRNA was hybridized to Affymetrix Y98 chips (GPL90) and raw image data was analyzed using the GeneChip Expression Analysis Software (Affymetrix). Probe set signals were processed by a Wilcoxon’s signed rank test and consolidated using a two-step linear mixed model. This sample is known as E1_T2_R1, 50% dry. </Description>
+    <Data-Processing/>
+    <Platform-Ref ref="GPL90"/>
+    <Contact-Ref ref="contrib1"/>
+    <Supplementary-Data type="CEL"> ftp://ftp.ncbi.nih.gov/pub/geo/DATA/supplementary/samples/GSM21nnn/GSM21643/GSM21643.CEL.gz </Supplementary-Data>
+    <Supplementary-Data type="DAT"> ftp://ftp.ncbi.nih.gov/pub/geo/DATA/supplementary/samples/GSM21nnn/GSM21643/GSM21643.DAT.gz </Supplementary-Data>
+    <Supplementary-Data type="EXP"> ftp://ftp.ncbi.nih.gov/pub/geo/DATA/supplementary/samples/GSM21nnn/GSM21643/GSM21643.EXP.gz </Supplementary-Data>
+    <Data-Table>
+      <Column position="1">
+        <Name>ID_REF</Name>
+      </Column>
+      <Column position="2">
+        <Name>VALUE</Name>
+        <Description>'signal' a measure of the abundance of a transcript</Description>
+      </Column>
+      <Column position="3">
+        <Name>ABS_CALL</Name>
+        <Description>the call in an absolute analysis that indicates if the transcript was present (P), absent (A), marginal (M), or no call (NC)</Description>
+      </Column>
+      <Column position="4">
+        <Name>DETECTION P-VALUE</Name>
+        <Description>'detection p-value', p-value that indicates the significance level of the detection call</Description>
+      </Column>
+      <External-Data rows="9335"> GSM21643-tbl-1.txt </External-Data>
+      <Internal-Data rows="20"> AFFX-MurIL2_at 2.9 A 0.994435 AFFX-MurIL10_at 1.9 A 0.999554 AFFX-MurIL4_at 7.9 A 0.368438 AFFX-MurFAS_at 3.2 A 0.883887 AFFX-BioB-5_at 86.4 A 0.0727 AFFX-BioB-M_at 42.6 P 0.000972 AFFX-BioB-3_at 58.1 P 0.036569 AFFX-BioC-5_at 767.7 P 0.000754 AFFX-BioC-3_at 477 P 8.1e-05 AFFX-BioDn-5_at 400.6 P 4.4e-05 AFFX-BioDn-3_at 1985.8 P 4.4e-05 AFFX-CreX-5_at 1784.6 P 4.4e-05 AFFX-CreX-3_at 2571.9 P 5.2e-05 AFFX-BioB-5_st 2 A 0.876428 AFFX-BioB-M_st 4.1 A 0.834139 AFFX-BioB-3_st 4.3 A 0.969024 AFFX-BioC-5_st 4 A 0.852061 AFFX-BioC-3_st 4.9 A 0.724854 AFFX-BioDn-5_st 7.2 A 0.834139 AFFX-BioDn-3_st 30.9 M 0.050229 </Internal-Data>
+    </Data-Table>
+  </Sample>
+  <Sample iid="GSM21640">
+    <Status database="GEO">
+      <Submission-Date>2004-04-14</Submission-Date>
+      <Release-Date>2005-08-01</Release-Date>
+      <Last-Update-Date>2005-10-28</Last-Update-Date>
+    </Status>
+    <Title>E1_T1_R1, Control</Title>
+    <Accession database="GEO">GSM21640</Accession>
+    <Type>RNA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>BY4743(S288C)</Source>
+      <Organism taxid="4932">Saccharomyces cerevisiae</Organism>
+      <Characteristics> none </Characteristics>
+      <Molecule>total RNA</Molecule>
+    </Channel>
+    <Description> Stock and seed cultures of strain BY4743 were grown in yeast extract-peptone-dextrose (YPD) medium (10 mg/ml yeast extract, 20 mg/ml bactopeptone, 20 mg/ml glucose, pH 6.5 ± 0.2), at 30°C until the A600 reached 0.8. Cells were centrifuged and the cell pellet was resuspended and dispersed in 1:20 diluted YPD medium at between 22 to 25 °C. An aliquot, which represent the control sample (T1), was removed for RNA extraction, and the remaining suspension was aliquoted into 9-cm diameter glass Petri dishes (15 ml/dish) for desiccation. Desiccation was carried out in a custom-fabricated controlled atmosphere desiccation system, at 22 to 25 °C. For more information on the unit and software, contact the corresponding author. A series of aliquots were withdrawn from the cell suspensions 18h (T2) after the start of the drying process. Samples were collected on a volume basis and were in the same ratio as collected at T1. Once dry (42 h), the water potential was adjusted to 20% relative humidity for a period of 72 hr. A sample was collected at this timepoint, representing the dry sample (Tdry). Dry cells were hydrated (22 to 25 °C ) using 1:20 diluted YPD medium, 15 ml per plate. Resuspended cells from the four plates were pooled in a sterile 250 ml flask. Samples were collected for various analyses at time points of 15 min (T4), 45 min (T5), 90 min (T6) and 360 min (T7) after the start of rehydration. Total RNA was isolated essentially as described (Schmitt, M. E., Brown, T. A., and Trumpower, B. L. (1990) Nucl. Acids Res. 18, 3091-3092). RNA was quantified using a spectrophotometer, and its quality was assessed using the A260/A280 ratio. Target cRNA was hybridized to Affymetrix Y98 chips (GPL90) and raw image data was analyzed using the GeneChip Expression Analysis Software (Affymetrix). Probe set signals were processed by a Wilcoxon’s signed rank test and consolidated using a two-step linear mixed model. This sample is known as E1_T1_R1, Control. </Description>
+    <Data-Processing/>
+    <Platform-Ref ref="GPL90"/>
+    <Contact-Ref ref="contrib1"/>
+    <Data-Table>
+      <Column position="1">
+        <Name>ID_REF</Name>
+      </Column>
+      <Column position="2">
+        <Name>VALUE</Name>
+        <Description>'signal' a measure of the abundance of a transcript</Description>
+      </Column>
+      <Column position="3">
+        <Name>ABS_CALL</Name>
+        <Description>the call in an absolute analysis that indicates if the transcript was present (P), absent (A), marginal (M), or no call (NC)</Description>
+      </Column>
+      <Column position="4">
+        <Name>DETECTION P-VALUE</Name>
+        <Description>'detection p-value', p-value that indicates the significance level of the detection call</Description>
+      </Column>
+      <External-Data rows="9335"> GSM21640-tbl-1.txt </External-Data>
+      <Internal-Data rows="20"> AFFX-MurIL2_at 4.1 A 0.995983 AFFX-MurIL10_at 2.2 A 0.971543 AFFX-MurIL4_at 2 A 0.897835 AFFX-MurFAS_at 2.9 A 0.843268 AFFX-BioB-5_at 115.8 A 0.067678 AFFX-BioB-M_at 56.4 A 0.078002 AFFX-BioB-3_at 80.7 A 0.123572 AFFX-BioC-5_at 479 P 0.000195 AFFX-BioC-3_at 366.3 P 0.00011 AFFX-BioDn-5_at 232.6 P 5.2e-05 AFFX-BioDn-3_at 1651.1 P 9.1e-05 AFFX-CreX-5_at 1566.7 P 4.4e-05 AFFX-CreX-3_at 1725.1 P 4.4e-05 AFFX-BioB-5_st 7.4 A 0.544587 AFFX-BioB-M_st 6.9 A 0.794268 AFFX-BioB-3_st 8 A 0.883887 AFFX-BioC-5_st 14.3 A 0.724854 AFFX-BioC-3_st 7.6 A 0.699394 AFFX-BioDn-5_st 21.6 A 0.794268 AFFX-BioDn-3_st 33.7 A 0.195266 </Internal-Data>
+    </Data-Table>
+  </Sample>
+  <Sample iid="GSM21703">
+    <Status database="GEO">
+      <Submission-Date>2004-04-14</Submission-Date>
+      <Release-Date>2005-08-01</Release-Date>
+      <Last-Update-Date>2005-10-28</Last-Update-Date>
+    </Status>
+    <Title>ECY_TCY_R1, Commercial dry active yeast</Title>
+    <Accession database="GEO">GSM21703</Accession>
+    <Type>RNA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>Commercial dry active yeast</Source>
+      <Organism taxid="4932">Saccharomyces cerevisiae</Organism>
+      <Characteristics> none </Characteristics>
+      <Molecule>total RNA</Molecule>
+    </Channel>
+    <Description> Stock and seed cultures of strain BY4743 were grown in yeast extract-peptone-dextrose (YPD) medium (10 mg/ml yeast extract, 20 mg/ml bactopeptone, 20 mg/ml glucose, pH 6.5 ± 0.2), at 30°C until the A600 reached 0.8. Cells were centrifuged and the cell pellet was resuspended and dispersed in 1:20 diluted YPD medium at between 22 to 25 °C. An aliquot, which represent the control sample (T1), was removed for RNA extraction, and the remaining suspension was aliquoted into 9-cm diameter glass Petri dishes (15 ml/dish) for desiccation. Desiccation was carried out in a custom-fabricated controlled atmosphere desiccation system, at 22 to 25 °C. For more information on the unit and software, contact the corresponding author. A series of aliquots were withdrawn from the cell suspensions 18h (T2) after the start of the drying process. Samples were collected on a volume basis and were in the same ratio as collected at T1. Once dry (42 h), the water potential was adjusted to 20% relative humidity for a period of 72 hr. A sample was collected at this timepoint, representing the dry sample (Tdry). Dry cells were hydrated (22 to 25 °C ) using 1:20 diluted YPD medium, 15 ml per plate. Resuspended cells from the four plates were pooled in a sterile 250 ml flask. Samples were collected for various analyses at time points of 15 min (T4), 45 min (T5), 90 min (T6) and 360 min (T7) after the start of rehydration. Total RNA was isolated essentially as described (Schmitt, M. E., Brown, T. A., and Trumpower, B. L. (1990) Nucl. Acids Res. 18, 3091-3092). RNA was quantified using a spectrophotometer, and its quality was assessed using the A260/A280 ratio. Target cRNA was hybridized to Affymetrix Y98 chips (GPL90) and raw image data was analyzed using the GeneChip Expression Analysis Software (Affymetrix). Probe set signals were processed by a Wilcoxon’s signed rank test and consolidated using a two-step linear mixed model. This sample is known as ECY_TCY_R1, Commercial dry active yeast. </Description>
+    <Data-Processing/>
+    <Platform-Ref ref="GPL90"/>
+    <Contact-Ref ref="contrib1"/>
+    <Supplementary-Data type="CEL"> ftp://ftp.ncbi.nih.gov/pub/geo/DATA/supplementary/samples/GSM21nnn/GSM21703/GSM21703.CEL.gz </Supplementary-Data>
+    <Supplementary-Data type="DAT"> ftp://ftp.ncbi.nih.gov/pub/geo/DATA/supplementary/samples/GSM21nnn/GSM21703/GSM21703.DAT.gz </Supplementary-Data>
+    <Supplementary-Data type="EXP"> ftp://ftp.ncbi.nih.gov/pub/geo/DATA/supplementary/samples/GSM21nnn/GSM21703/GSM21703.EXP.gz </Supplementary-Data>
+    <Data-Table>
+      <Column position="1">
+        <Name>ID_REF</Name>
+      </Column>
+      <Column position="2">
+        <Name>VALUE</Name>
+        <Description>'signal' a measure of the abundance of a transcript</Description>
+      </Column>
+      <Column position="3">
+        <Name>ABS_CALL</Name>
+        <Description>the call in an absolute analysis that indicates if the transcript was present (P), absent (A), marginal (M), or no call (NC)</Description>
+      </Column>
+      <Column position="4">
+        <Name>DETECTION P-VALUE</Name>
+        <Description>'detection p-value', p-value that indicates the significance level of the detection call</Description>
+      </Column>
+      <External-Data rows="9335"> GSM21703-tbl-1.txt </External-Data>
+      <Internal-Data rows="20"> AFFX-MurIL2_at 1.9 A 0.99156 AFFX-MurIL10_at 1.2 A 0.99989 AFFX-MurIL4_at 4.3 A 0.659339 AFFX-MurFAS_at 1.9 A 0.772364 AFFX-BioB-5_at 210.9 P 0.00762 AFFX-BioB-M_at 285.1 P 7e-05 AFFX-BioB-3_at 258.9 P 0.000297 AFFX-BioC-5_at 747.7 P 0.000662 AFFX-BioC-3_at 574.3 P 0.00011 AFFX-BioDn-5_at 1171.2 P 4.4e-05 AFFX-BioDn-3_at 4213.8 P 5.2e-05 AFFX-CreX-5_at 6043.7 P 6.6e-05 AFFX-CreX-3_at 6164.9 P 5.2e-05 AFFX-BioB-5_st 9.1 A 0.354453 AFFX-BioB-M_st 4.9 A 0.804734 AFFX-BioB-3_st 4 A 0.794268 AFFX-BioC-5_st 6.1 A 0.659339 AFFX-BioC-3_st 20 A 0.368438 AFFX-BioDn-5_st 15.9 A 0.368438 AFFX-BioDn-3_st 44.7 P 0.026111 </Internal-Data>
+    </Data-Table>
+  </Sample>
+  <Sample iid="GSM207569">
+    <Status database="GEO">
+      <Submission-Date>2007-07-05</Submission-Date>
+      <Release-Date>2007-07-06</Release-Date>
+      <Last-Update-Date>2007-07-05</Last-Update-Date>
+    </Status>
+    <Title>BY4742 3 days in YPD A</Title>
+    <Accession database="GEO">GSM207569</Accession>
+    <Type>RNA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>BY4742 post-log A</Source>
+      <Organism taxid="4932">Saccharomyces cerevisiae</Organism>
+      <Characteristics> Strains used are BY4742 as wild type and a stb3-null in the BY4742 background </Characteristics>
+      <Growth-Protocol> Saccharomyces cerevisiae cells grown for 3 days in rich media and, when noted, supplied with 2% glucose and collected after 10 minutes of glucose addition </Growth-Protocol>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol> standard Affymetrix protocol </Extract-Protocol>
+      <Label>biotinylated dUTP, stained with streptavidin linked phycoerythrin</Label>
+      <Label-Protocol> standard Affymetrix protocol </Label-Protocol>
+    </Channel>
+    <Hybridization-Protocol> standard Affymetrix protocol </Hybridization-Protocol>
+    <Scan-Protocol> standard Affymetrix protocol </Scan-Protocol>
+    <Description> Saccharomyces cerevisiae cells grown for 3 days in rich media and, when noted, supplied with 2% glucose and collected after 10 minutes of glucose addition </Description>
+    <Data-Processing> MAS 5 </Data-Processing>
+    <Platform-Ref ref="GPL90"/>
+    <Contact-Ref ref="contrib1"/>
+    <Supplementary-Data type="CEL"> ftp://ftp.ncbi.nih.gov/pub/geo/DATA/supplementary/samples/GSM207nnn/GSM207569/GSM207569.CEL.gz </Supplementary-Data>
+    <Data-Table>
+      <Column position="1">
+        <Name>ID_REF</Name>
+      </Column>
+      <Column position="2">
+        <Name>VALUE</Name>
+        <Description>Normalized signal intensity (log2 values)</Description>
+      </Column>
+      <Column position="3">
+        <Name>ABS_CALL</Name>
+      </Column>
+      <External-Data rows="9275"> GSM207569-tbl-1.txt </External-Data>
+      <Internal-Data rows="20"> 11378_at 5.76 A 11379_at 6.88 P 11380_at 4.35 P 11381_at 5.74 P 11382_at 6.29 P 11383_at 4.25 A 11384_at 6.81 P 11385_s_at 9.5 P 11386_at 11.42 P 11387_at 12.22 P 11388_at 11.3 P 11389_at 7.19 P 11390_at 7.4 P 11391_at 5.16 A 11392_at 7.59 P 11393_at 8.89 P 11356_at 10.96 P 11357_at 8.19 P 11358_at 8.75 P 11359_at 9.88 P </Internal-Data>
+    </Data-Table>
+  </Sample>
+  <Sample iid="GSM207571">
+    <Status database="GEO">
+      <Submission-Date>2007-07-05</Submission-Date>
+      <Release-Date>2007-07-06</Release-Date>
+      <Last-Update-Date>2007-07-05</Last-Update-Date>
+    </Status>
+    <Title>BY4742 3 days in YPD + 2% glucose for 10 minutes A</Title>
+    <Accession database="GEO">GSM207571</Accession>
+    <Type>RNA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>BY4742 10 minutes+glucose A</Source>
+      <Organism taxid="4932">Saccharomyces cerevisiae</Organism>
+      <Characteristics> Strains used are BY4742 as wild type and a stb3-null in the BY4742 background </Characteristics>
+      <Growth-Protocol> Saccharomyces cerevisiae cells grown for 3 days in rich media and, when noted, supplied with 2% glucose and collected after 10 minutes of glucose addition </Growth-Protocol>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol> standard Affymetrix protocol </Extract-Protocol>
+      <Label>biotinylated dUTP, stained with streptavidin linked phycoerythrin</Label>
+      <Label-Protocol> standard Affymetrix protocol </Label-Protocol>
+    </Channel>
+    <Hybridization-Protocol> standard Affymetrix protocol </Hybridization-Protocol>
+    <Scan-Protocol> standard Affymetrix protocol </Scan-Protocol>
+    <Description> Saccharomyces cerevisiae cells grown for 3 days in rich media and, when noted, supplied with 2% glucose and collected after 10 minutes of glucose addition </Description>
+    <Data-Processing> MAS 5 </Data-Processing>
+    <Platform-Ref ref="GPL90"/>
+    <Contact-Ref ref="contrib1"/>
+    <Supplementary-Data type="CEL"> ftp://ftp.ncbi.nih.gov/pub/geo/DATA/supplementary/samples/GSM207nnn/GSM207571/GSM207571.CEL.gz </Supplementary-Data>
+    <Data-Table>
+      <Column position="1">
+        <Name>ID_REF</Name>
+      </Column>
+      <Column position="2">
+        <Name>VALUE</Name>
+        <Description>Normalized signal intensity (log2 values)</Description>
+      </Column>
+      <Column position="3">
+        <Name>ABS_CALL</Name>
+      </Column>
+      <External-Data rows="9275"> GSM207571-tbl-1.txt </External-Data>
+      <Internal-Data rows="20"> 11378_at 5.76 A 11379_at 7.03 P 11380_at 4.73 P 11381_at 5.27 A 11382_at 6.08 P 11383_at 4.18 A 11384_at 6.54 P 11385_s_at 9.3 P 11386_at 11.85 P 11387_at 12.14 P 11388_at 10.27 P 11389_at 10.12 P 11390_at 8.42 P 11391_at 5.2 A 11392_at 6.57 P 11393_at 8.02 P 11356_at 9.92 P 11357_at 8.66 P 11358_at 8.21 P 11359_at 10.39 P </Internal-Data>
+    </Data-Table>
+  </Sample>
+  <Sample iid="GSM207573">
+    <Status database="GEO">
+      <Submission-Date>2007-07-05</Submission-Date>
+      <Release-Date>2007-07-06</Release-Date>
+      <Last-Update-Date>2007-07-05</Last-Update-Date>
+    </Status>
+    <Title>stb3-null 3 days in YPD A</Title>
+    <Accession database="GEO">GSM207573</Accession>
+    <Type>RNA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>stb3-null post-log A</Source>
+      <Organism taxid="4932">Saccharomyces cerevisiae</Organism>
+      <Characteristics> Strains used are BY4742 as wild type and a stb3-null in the BY4742 background </Characteristics>
+      <Growth-Protocol> Saccharomyces cerevisiae cells grown for 3 days in rich media and, when noted, supplied with 2% glucose and collected after 10 minutes of glucose addition </Growth-Protocol>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol> standard Affymetrix protocol </Extract-Protocol>
+      <Label>biotinylated dUTP, stained with streptavidin linked phycoerythrin</Label>
+      <Label-Protocol> standard Affymetrix protocol </Label-Protocol>
+    </Channel>
+    <Hybridization-Protocol> standard Affymetrix protocol </Hybridization-Protocol>
+    <Scan-Protocol> standard Affymetrix protocol </Scan-Protocol>
+    <Description> Saccharomyces cerevisiae cells grown for 3 days in rich media and, when noted, supplied with 2% glucose and collected after 10 minutes of glucose addition </Description>
+    <Data-Processing> MAS 5 </Data-Processing>
+    <Platform-Ref ref="GPL90"/>
+    <Contact-Ref ref="contrib1"/>
+    <Supplementary-Data type="CEL"> ftp://ftp.ncbi.nih.gov/pub/geo/DATA/supplementary/samples/GSM207nnn/GSM207573/GSM207573.CEL.gz </Supplementary-Data>
+    <Data-Table>
+      <Column position="1">
+        <Name>ID_REF</Name>
+      </Column>
+      <Column position="2">
+        <Name>VALUE</Name>
+        <Description>Normalized signal intensity (log2 values)</Description>
+      </Column>
+      <Column position="3">
+        <Name>ABS_CALL</Name>
+      </Column>
+      <External-Data rows="9275"> GSM207573-tbl-1.txt </External-Data>
+      <Internal-Data rows="20"> 11378_at 5.54 A 11379_at 6.95 P 11380_at 4.63 P 11381_at 5.18 P 11382_at 6.3 P 11383_at 4.11 A 11384_at 6.8 P 11385_s_at 9.81 P 11386_at 11.8 P 11387_at 12.1 P 11388_at 11.52 P 11389_at 7.24 P 11390_at 7.32 P 11391_at 5.01 P 11392_at 7.77 P 11393_at 8.86 P 11356_at 11.51 P 11357_at 8.1 P 11358_at 8.72 P 11359_at 10.36 P </Internal-Data>
+    </Data-Table>
+  </Sample>
+  <Sample iid="GSM207575">
+    <Status database="GEO">
+      <Submission-Date>2007-07-05</Submission-Date>
+      <Release-Date>2007-07-06</Release-Date>
+      <Last-Update-Date>2007-07-05</Last-Update-Date>
+    </Status>
+    <Title>stb3-null 3 days in YPD + 2% glucose for 10 minutes A</Title>
+    <Accession database="GEO">GSM207575</Accession>
+    <Type>RNA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>stb3-null 10minutes+glucose A</Source>
+      <Organism taxid="4932">Saccharomyces cerevisiae</Organism>
+      <Characteristics> Strains used are BY4742 as wild type and a stb3-null in the BY4742 background </Characteristics>
+      <Growth-Protocol> Saccharomyces cerevisiae cells grown for 3 days in rich media and, when noted, supplied with 2% glucose and collected after 10 minutes of glucose addition </Growth-Protocol>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol> standard Affymetrix protocol </Extract-Protocol>
+      <Label>biotinylated dUTP, stained with streptavidin linked phycoerythrin</Label>
+      <Label-Protocol> standard Affymetrix protocol </Label-Protocol>
+    </Channel>
+    <Hybridization-Protocol> standard Affymetrix protocol </Hybridization-Protocol>
+    <Scan-Protocol> standard Affymetrix protocol </Scan-Protocol>
+    <Description> Saccharomyces cerevisiae cells grown for 3 days in rich media and, when noted, supplied with 2% glucose and collected after 10 minutes of glucose addition </Description>
+    <Data-Processing> MAS 5 </Data-Processing>
+    <Platform-Ref ref="GPL90"/>
+    <Contact-Ref ref="contrib1"/>
+    <Supplementary-Data type="CEL"> ftp://ftp.ncbi.nih.gov/pub/geo/DATA/supplementary/samples/GSM207nnn/GSM207575/GSM207575.CEL.gz </Supplementary-Data>
+    <Data-Table>
+      <Column position="1">
+        <Name>ID_REF</Name>
+      </Column>
+      <Column position="2">
+        <Name>VALUE</Name>
+        <Description>Normalized signal intensity (log2 values)</Description>
+      </Column>
+      <Column position="3">
+        <Name>ABS_CALL</Name>
+      </Column>
+      <External-Data rows="9275"> GSM207575-tbl-1.txt </External-Data>
+      <Internal-Data rows="20"> 11378_at 5.16 A 11379_at 6.56 P 11380_at 4.59 P 11381_at 4.83 P 11382_at 5.47 A 11383_at 3.62 A 11384_at 5.99 P 11385_s_at 9.48 P 11386_at 11.61 P 11387_at 11.98 P 11388_at 10.25 P 11389_at 9.43 P 11390_at 8.03 P 11391_at 4.81 P 11392_at 7.25 P 11393_at 8.16 P 11356_at 10.07 P 11357_at 9.14 P 11358_at 8.75 P 11359_at 10.53 P </Internal-Data>
+    </Data-Table>
+  </Sample>
+</geo>

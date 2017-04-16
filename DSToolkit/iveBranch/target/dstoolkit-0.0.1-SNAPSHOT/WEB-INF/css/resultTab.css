@@ -1,0 +1,163 @@
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * General tab setup
+ */
+h1 {
+	margin-top: 0.5em;
+	font-size: 1.8em;
+	font-weight: normal;
+	line-height: 1.6em;
+	color: #4E6CA3;
+	border-bottom: 1px solid #B0BED9;
+	clear: both;
+}
+
+#result_tab {
+	width: 100%;
+	height: 77%;
+	font: 100%/1.55em "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+	color: #333;
+	background-color: #fff;
+}
+
+#result_tab #tab_container {
+	width: 99%;
+	height:auto;
+	margin: 0px auto;
+	padding: 0;
+	float:left;
+	border:1px;
+}
+
+#result_tab #tab_container #resultsTable_container {
+	width: 99%;
+	height: auto;
+	margin: 1px auto;
+	padding: 0;
+	float:left;
+	border:1px;
+}
+
+#result_tab #tab_container #mappingsTable_container {
+	width: 99%;
+	height: auto;
+	margin: 0px auto;
+	padding: 0;
+	float:left;
+	border:1px;
+}
+
+#result_tab #tab_container #feedbackButtons{
+	width: 95%;
+	height: auto;
+	margin: 0px auto;
+	padding: 10px;
+	float:right;
+	border:1px;
+}
+
+#result_tab #tab_container #feedbackButtons #addMissingResultButton{
+	width: 60%;
+	height: auto;
+	margin: 0px auto;
+	padding: 0px;
+	float:left;
+	border:1px;
+}
+
+#loadFeedback{
+	width: 120px;
+	height: 30px;
+	float:left;
+	font-size: 1.1em;
+}
+
+#applyFeedback{
+	width: 120px;
+	height: 30px;
+	float:right;
+	font-size: 1.1em;
+}
+
+#addMissingResult{
+	width: 200px;
+	height: 30px;
+	float:left;
+	font-size: 1.1em;
+}
+
+#result_tab #footer {
+	margin: 0px auto 0 auto;
+	padding: 0;
+}
+
+#result_tab #demo {
+	margin: 0px auto 0 auto;
+}
+
+#result_tab .demo_jui {
+	margin: 10px auto 0 auto;
+}
+
+#result_tab .big {
+	font-size: 1.1em;
+	font-weight: bold;
+	line-height: 1.6em;
+	color: #4E6CA3;
+}
+
+#result_tab .spacer {
+	height: 10px;
+	clear: both;
+}
+
+#result_tab .clear {
+	clear: both;
+}
+
+#result_tab pre {
+	padding: 5px;
+	background-color: #F5F5F5;
+	border: 1px solid #CCCCCC;
+}
+
+#result_tab h1 {
+	margin-top: 0.5em;
+	font-size: 1.4em;
+	font-weight: normal;
+	line-height: 1.6em;
+	color: #4E6CA3;
+	border-bottom: 1px solid #B0BED9;
+	clear: both;
+}
+
+#result_tab h2 {
+	font-size: 1.3em;
+	font-weight: normal;
+	line-height: 1.6em;
+	color: #4E6CA3;
+	clear: both;
+}
+
+#result_tab a {
+	color: #0063DC;
+	text-decoration: none;
+}
+
+#result_tab a:hover {
+	text-decoration: underline;
+}
+
+#result_tab ul {
+	color: #B0BED9;
+}
+
+.css_right {
+	float: right;
+}
+
+.css_left {
+	float: left;
+}

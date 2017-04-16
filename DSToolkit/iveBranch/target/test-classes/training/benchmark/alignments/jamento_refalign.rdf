@@ -1,0 +1,313 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<!-- This is a representation of the ground thruth of the two schemas -->
+
+<rdf:RDF xmlns='http://knowledgeweb.semanticweb.org/heterogeneity/alignment'
+         xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#'
+         xmlns:xsd='http://www.w3.org/2001/XMLSchema#'>
+<Alignment>
+  <xml>yes</xml>
+  <level>0</level>
+  <type>??</type>
+  <onto1>-</onto1>
+  <onto2>-</onto2>
+  <uri1>./src/test/resources/schemas/jamendoRDFSchema.xml</uri1>
+  <uri2>./src/test/resources/schemas/jamento_001_mutation.xml</uri2>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://JamendoRDFSmpl#Record'/>
+      <entity2 rdf:resource='http://JamendoRDFSmplPrime#MusicalManifestation'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://JamendoRDFSmpl#Record.title'/>
+      <entity2 rdf:resource='http://JamendoRDFSmplPrime#MusicalManifestation.title'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://JamendoRDFSmpl#Record.description'/>
+      <entity2 rdf:resource='http://JamendoRDFSmplPrime#MusicalManifestation.description'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://JamendoRDFSmpl#Record.image'/>
+      <entity2 rdf:resource='http://JamendoRDFSmplPrime#MusicalManifestation.image'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://JamendoRDFSmpl#Record.date'/>
+      <entity2 rdf:resource='http://JamendoRDFSmplPrime#MusicalManifestation.date'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://JamendoRDFSmpl#Record.maker'/>
+      <entity2 rdf:resource='http://JamendoRDFSmplPrime#MusicalManifestation.maker'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://JamendoRDFSmpl#Record.track'/>
+      <entity2 rdf:resource='http://JamendoRDFSmplPrime#MusicalManifestation.has_track'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://JamendoRDFSmpl#Record.taggedWithTag'/>
+      <entity2 rdf:resource='http://JamendoRDFSmplPrime#MusicalManifestation.taggedWithTag'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://JamendoRDFSmpl#Record.available_as'/>
+      <entity2 rdf:resource='http://JamendoRDFSmplPrime#MusicalManifestation.availableAs'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://JamendoRDFSmpl#Lyrics'/>
+      <entity2 rdf:resource='http://JamendoRDFSmplPrime#Lyrics'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://JamendoRDFSmpl#Lyrics.text'/>
+      <entity2 rdf:resource='http://JamendoRDFSmplPrime#Lyrics.text'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://JamendoRDFSmpl#MusicArtist'/>
+      <entity2 rdf:resource='http://JamendoRDFSmplPrime#Agent'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://JamendoRDFSmpl#MusicArtist.name'/>
+      <entity2 rdf:resource='http://JamendoRDFSmplPrime#Agent.name'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+   <map>
+    <Cell>
+      <entity1 rdf:resource='http://JamendoRDFSmpl#MusicArtist.img'/>
+      <entity2 rdf:resource='http://JamendoRDFSmplPrime#Agent.img'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+    <map>
+    <Cell>
+      <entity1 rdf:resource='http://JamendoRDFSmpl#MusicArtist.biography'/>
+      <entity2 rdf:resource='http://JamendoRDFSmplPrime#Agent.discography'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+     <map>
+    <Cell>
+      <entity1 rdf:resource='http://JamendoRDFSmpl#MusicArtist.homepage'/>
+      <entity2 rdf:resource='http://JamendoRDFSmplPrime#Agent.weblog'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+     <map>
+    <Cell>
+      <entity1 rdf:resource='http://JamendoRDFSmpl#MusicArtist.based_near'/>
+      <entity2 rdf:resource='http://JamendoRDFSmplPrime#Agent.based_near'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://JamendoRDFSmpl#MusicArtist.made'/>
+      <entity2 rdf:resource='http://JamendoRDFSmplPrime#Agent.made'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://JamendoRDFSmpl#Signal'/>
+      <entity2 rdf:resource='http://JamendoRDFSmplPrime#AnalogSignal'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://JamendoRDFSmpl#Signal.time'/>
+      <entity2 rdf:resource='http://JamendoRDFSmplPrime#AnalogSignal.signalTime'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://JamendoRDFSmpl#Signal.published_as'/>
+      <entity2 rdf:resource='http://JamendoRDFSmplPrime#AnalogSignal.publishedAs'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://JamendoRDFSmpl#Interval'/>
+      <entity2 rdf:resource='http://JamendoRDFSmplPrime#TemporalEntity'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://JamendoRDFSmpl#Interval.onTimeLine'/>
+      <entity2 rdf:resource='http://JamendoRDFSmplPrime#TemporalEntity.onTimeLine'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://JamendoRDFSmpl#Torrent'/>
+      <entity2 rdf:resource='http://JamendoRDFSmplPrime#Torrent'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://JamendoRDFSmpl#Torrent.format'/>
+      <entity2 rdf:resource='http://JamendoRDFSmplPrime#Torrent.format'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://JamendoRDFSmpl#Track'/>
+      <entity2 rdf:resource='http://JamendoRDFSmplPrime#Track'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://JamendoRDFSmpl#Track.title'/>
+      <entity2 rdf:resource='http://JamendoRDFSmplPrime#Track.title'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://JamendoRDFSmpl#Track.track_number'/>
+      <entity2 rdf:resource='http://JamendoRDFSmplPrime#Track.trackNum'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://JamendoRDFSmpl#Track.license'/>
+      <entity2 rdf:resource='http://JamendoRDFSmplPrime#Track.license'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://JamendoRDFSmpl#Track.available_as'/>
+      <entity2 rdf:resource='http://JamendoRDFSmplPrime#Track.availableAs'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://JamendoRDFSmpl#ED2K'/>
+      <entity2 rdf:resource='http://JamendoRDFSmplPrime#Medium'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://JamendoRDFSmpl#ED2K.format'/>
+      <entity2 rdf:resource='http://JamendoRDFSmplPrime#Medium.format'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://JamendoRDFSmpl#Tag'/>
+      <entity2 rdf:resource='http://JamendoRDFSmplPrime#Tag'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://JamendoRDFSmpl#Tag.tagName'/>
+      <entity2 rdf:resource='http://JamendoRDFSmplPrime#Tag.tagName'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://JamendoRDFSmpl#Playlist'/>
+      <entity2 rdf:resource='http://JamendoRDFSmplPrime#Playlist'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://JamendoRDFSmpl#Playlist.format'/>
+      <entity2 rdf:resource='http://JamendoRDFSmplPrime#Playlist.format'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://JamendoRDFSmpl#Document'/>
+      <entity2 rdf:resource='http://JamendoRDFSmplPrime#Document'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+</Alignment>
+</rdf:RDF>

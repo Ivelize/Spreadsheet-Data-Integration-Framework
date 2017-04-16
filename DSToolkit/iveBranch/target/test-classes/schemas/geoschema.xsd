@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<!-- definition of attributes -->
+  <xs:attribute name="position" type="xs:integer"/>
+  <xs:attribute name="database" type="xs:string"/>
+  <xs:attribute name="taxid" type="xs:integer"/>
+
+
+<!-- definition of simple elements -->
+  <xs:element name="Biomaterial-Provider" type="xs:string"/>
+  <xs:element name="Characteristics" type="xs:string"/>
+  <xs:element name="Description" type="xs:string"/>
+  <xs:element name="Extract-Protocol" type="xs:string"/>
+  <xs:element name="Growth-Protocol" type="xs:string"/>
+  <xs:element name="Label" type="xs:string"/>
+  <xs:element name="Label-Protocol" type="xs:string"/>
+  <xs:element name="Molecule" type="xs:string"/>
+  <xs:element name="Name" type="xs:string"/>
+  <xs:element name="Source" type="xs:string"/>
+  <xs:element name="Title" type="xs:string" />
+  <xs:element name="Treatment-Protocol" type="xs:string"/>
+  <xs:element name="Type" type="xs:string" />
+
+
+<!-- definition of complex elements -->
+ <xs:element name="geo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Sample" maxOccurs="unbounded" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Accession">
+    <xs:complexType>
+     <xs:simpleContent>
+      <xs:extension base="xs:string">
+       <xs:attribute ref="database" use="required" />
+      </xs:extension>
+     </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Channel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Source" />
+        <xs:element ref="Organism" />
+        <xs:element ref="Characteristics" maxOccurs="unbounded"/>
+        <xs:element ref="Biomaterial-Provider" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element ref="Treatment-Protocol" />
+        <xs:element ref="Growth-Protocol" />
+        <xs:element ref="Molecule" />
+        <xs:element ref="Extract-Protocol" />
+        <xs:element ref="Label" />
+        <xs:element ref="Label-Protocol" />
+      </xs:sequence>
+      <xs:attribute ref="position" use="required" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Column">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Name" />
+        <xs:element ref="Description" minOccurs="0" />
+      </xs:sequence>
+
+      <xs:attribute name="position" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:integer">
+            <xs:enumeration value="1" />
+            <xs:enumeration value="2" />
+            <xs:enumeration value="3" />
+            <xs:enumeration value="4" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="DataTable">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Column" maxOccurs="unbounded" />
+        <xs:element ref="External-Data" />
+        <xs:element ref="Internal-Data" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="External-Data">
+    <xs:complexType>
+     <xs:simpleContent>
+      <xs:extension base="xs:string">
+       <xs:attribute name="rows" type="xs:integer" use="required" />
+      </xs:extension>
+     </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Internal-Data">
+    <xs:complexType>
+     <xs:simpleContent>
+      <xs:extension base="xs:string">
+       <xs:attribute name="rows" type="xs:integer" use="required" />
+      </xs:extension>
+     </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Organism">
+    <xs:complexType>
+     <xs:simpleContent>
+      <xs:extension base="xs:string">
+       <xs:attribute ref="taxid" use="required"/>
+      </xs:extension>
+     </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Sample">
+    <xs:complexType mixed="true">
+      <xs:all>
+        <xs:element ref="Title" />
+        <xs:element ref="Accession" />
+	    <xs:element ref="Channel" />
+        <xs:element ref="Type" />
+        <xs:element ref="Description" />
+        <xs:element ref="DataTable" />
+      </xs:all>
+      <xs:attribute name="iid" type="xs:string" use="required" />
+    </xs:complexType>
+  </xs:element>
+
+
+</xs:schema>

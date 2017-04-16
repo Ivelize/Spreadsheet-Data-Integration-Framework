@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>DSToolkit</title>
+<link type="text/css" href="assets/css/master.css" rel="stylesheet" media="screen" />
+<!-- <script type="text/javascript" src="assets/js/src/library/jquery-1.5.js"></script> -->
+<script type="text/javascript" src="assets/js/library/jquery_1.4.4.min.js"></script>
+<script type="text/javascript" src="assets/js/library/jqueryui_1.8.2.min.js"></script>
+<script type="text/javascript" src="assets/js/library/js-hotkey.js"></script>
+<script type="text/javascript" src="assets/js/library/jsplumb-1.2.5-all-min.js"></script>
+
+
+<!-- controllers -->
+<script type="text/javascript" src="assets/js/src/controller/main.js"></script>
+<script type="text/javascript" src="assets/js/src/controller/Controller_UserInterface.js"></script>
+<script type="text/javascript" src="assets/js/src/controller/Controller_DataspaceManager.js"></script>
+<script type="text/javascript" src="assets/js/src/controller/Controller_Dataspace.js"></script>
+<script type="text/javascript" src="assets/js/src/controller/Controller_DataspaceOperation.js"></script>
+<!-- <script type="text/javascript" src="assets/js/src/controller/Controller_morphism.js"></script> -->
+
+<!--models -->
+<script type="text/javascript" src="assets/js/src/model/Model_DataspaceManager.js"></script>
+<script type="text/javascript" src="assets/js/src/model/Model_Dataspace.js"></script>
+<script type="text/javascript" src="assets/js/src/model/Model_Datasource.js"></script>
+<script type="text/javascript" src="assets/js/src/model/Model_Schema.js"></script>
+<script type="text/javascript" src="assets/js/src/model/Model_MergedSchema.js"></script>
+<script type="text/javascript" src="assets/js/src/model/Model_Entity.js"></script>
+<script type="text/javascript" src="assets/js/src/model/Model_Morphism.js"></script>
+<script type="text/javascript" src="assets/js/src/model/Model_Correspondence.js"></script>
+<script type="text/javascript" src="assets/js/src/model/Model_Association.js"></script>
+<script type="text/javascript" src="assets/js/src/model/Model_Query.js"></script>
+<script type="text/javascript" src="assets/js/src/model/Model_EvaluateQueryParameters.js"></script>
+<script type="text/javascript" src="assets/js/src/model/Model_QueryResult.js"></script>
+<script type="text/javascript" src="assets/js/src/model/Model_ResultTuple.js"></script>
+<script type="text/javascript" src="assets/js/src/model/Model_ResultValue.js"></script>
+
+<!--views -->
+<script type="text/javascript" src="assets/js/src/view/View_UserInterface.js"></script>
+<script type="text/javascript" src="assets/js/src/view/View_DataspaceManager.js"></script>
+<script type="text/javascript" src="assets/js/src/view/View_Dataspace.js"></script>
+<script type="text/javascript" src="assets/js/src/view/View_DataspaceOperation.js"></script>
+
+<!-- Datasources 
+<script type="text/javascript" src="assets/js/src/datasources/travel_datasource1.js"></script>
+<script type="text/javascript" src="assets/js/src/datasources/travel_datasource2.js"></script>
+<script type="text/javascript" src="assets/js/src/datasources/travel_datasource3.js"></script> -->
+
+<!-- Morphisms 
+<script type="text/javascript" src="assets/js/src/morphisms/correspondencesMondial_1Mondial_2json.js"></script>
+<script type="text/javascript" src="assets/js/src/morphisms/matchesMondial_1Mondial_2json.js"></script>
+<script type="text/javascript" src="assets/js/src/morphisms/matchesMondial_1Mondial_3json.js"></script>
+<script type="text/javascript" src="assets/js/src/morphisms/matchesMondial_2Mondial_3json.js"></script>
+<script type="text/javascript" src="assets/js/src/morphisms/mappingsMondial_1Mondial_2json.js"></script>
+<script type="text/javascript" src="assets/js/src/morphisms/mappingsMondial_2Mondial_1json.js"></script> -->
+
+<!-- ResultSets 
+<script type="text/javascript" src="assets/js/src/queryResults/result.js"></script> -->
+
+</head>
+<body  onunload="jsPlumb.unload();">
+	<div id="overlay"></div>
+	<ul id="right-click-menu"></ul>
+	<div id="header">
+		<h1>DSToolkit UI</h1>
+		<div id="back-button" onclick="return Controller_UserInterface.Editor.hideEditorPane()"></div>
+		<div id="header-operations">
+			<span id="main-options" style="margin: 8px; display: inline;">
+				<div id="headerBarAddDatasource">Add Datasource</div>
+				<div id="headerBarClearSelected">Clear selected</div>
+			</span>
+			<span id="correspondence-options" style="margin: 8px; display: none;">
+				<div onclick="Controller_Dataspace.saveNewMorphism();">Save</div>
+				<div onclick="Controller_UserInterface.Editor.showAllConnections();">Show all</div>
+				<div onclick="Controller_UserInterface.Editor.hideAllConnections();">Hide all</div>
+				<div onclick="Controller_UserInterface.Editor.callAttributes();">Refresh</div>
+			</span>
+			<span id="annotate-query-results-options" style="margin: 8px; display: none;">
+				<div id="headerBarShowMappings">Show mappings</div>
+				<div onclick="alert('Feedback sent')">Apply Feedback</div>
+				<div id="headerBarAddMissingResultTuple">Provide missing result</div>
+				<div id="headerBarReRunQuery">Re-run Query</div>
+			</span>
+		</div>
+		
+	</div>
+	
+	<div class="container">
+		<div id="sidebar">
+			<ul id="dataspace-list">
+			</ul>
+		</div>
+		<div id="sidebar-footer" >
+			<ul>
+				<li id="add-dataspace"><span>+</span></li>
+				<li id="remove-dataspace"><span>&ndash;</span></li>
+			</ul>
+		</div>
+		
+		<div id="main-container">
+			<div id="main">
+			</div>
+		</div>
+	</div>
+	
+	<div id="editor-container" >
+		<div id="editor-content">
+				<div id="editor-main" class="clearfix">
+					<div id="manually-define-correspondences" class="clearfix">
+						<h1>Manually define Correspondences</h1>
+						<ul id="manual-correspondence-schema1" schema1="Construct Set 1"></ul>
+						<ul id="manual-correspondence-schema2" schema2="Construct Set 2"></ul>
+						<ul id="correspondences"></ul>
+					</div>
+					<div id="annotate-query-results" class="clearfix">
+						<h1>Query results</h1>
+							<table id="query-results"></table>
+					</div>
+					<div id="list"></div>
+				</div>
+		</div>
+	</div>
+	<div id="lightbox_bg"></div>
+	<div id="lightbox">
+		<div class="header">
+			<h1 id="lightbox-title"></h1>
+			<div id="exitLightbox">X</div>
+		</div>
+		<div id="lightboxContent">
+			<div id="operationParamLayer">
+				<table id="operationParameters">
+					<tbody></tbody>			
+				</table>
+				<div id="manageParameters">
+			<ul>
+				<li id="add-parameter"><span>+</span></li>
+				<li id="remove-parameter"><span>&ndash;</span></li>
+			</ul>
+		</div>
+			</div>
+			<div id="schemaDefinition">
+				
+			</div>
+			<div id="runOperationContainer">
+				<div id="run-operation" operation="" class="next-step-button button">Run</div>
+			</div>
+			<div id="generalContent">
+			</div>
+		</div>
+	</div>
+</body>
+</html>

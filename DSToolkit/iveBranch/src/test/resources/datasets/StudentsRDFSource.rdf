@@ -1,0 +1,202 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:db="http://localhost:2020/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:map="file:///stdout#"
+    xmlns:vocab="http://localhost:2020/vocab/resource/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xml:base="http://localhost:2020/" > 
+  <rdf:Description rdf:about="modules/2">
+    <vocab:modules_Credits rdf:datatype="http://www.w3.org/2001/XMLSchema#int">30</vocab:modules_Credits>
+    <vocab:modules_ModuleID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</vocab:modules_ModuleID>
+    <rdfs:label>modules #2</rdfs:label>
+    <vocab:modules_Description>RDF</vocab:modules_Description>
+    <vocab:modules_ModuleName>Semantic Web</vocab:modules_ModuleName>
+    <rdf:type rdf:resource="vocab/resource/modules"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="vocab/resource/enrol">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="vocab/resource/phonenumber_phonetype">
+    <rdfs:label>phonenumber phonetype</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="vocab/resource/modules_ModuleID">
+    <rdfs:label>modules ModuleID</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="vocab/resource/students_Homepage">
+    <rdfs:label>students Homepage</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#label">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="vocab/resource/students_Address">
+    <rdfs:label>students Address</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="vocab/resource/modules_Description">
+    <rdfs:label>modules Description</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="vocab/resource/universities_Type">
+    <rdfs:label>universities Type</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="vocab/resource/universities">
+    <rdfs:label>universities</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="students/2">
+    <vocab:enrol rdf:resource="modules/3"/>
+    <vocab:students_RegisterTo rdf:resource="universities/2"/>
+    <rdfs:label>students #2</rdfs:label>
+    <vocab:students_Email>mailto:varunr@isi.edu</vocab:students_Email>
+    <vocab:students_StdnID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</vocab:students_StdnID>
+    <vocab:students_FirstName>Varun</vocab:students_FirstName>
+    <vocab:students_LastName>Ratnakar</vocab:students_LastName>
+    <vocab:students_Homepage>http://www.isi.edu/~varunr</vocab:students_Homepage>
+    <vocab:students_Type>Undergraduate</vocab:students_Type>
+    <rdf:type rdf:resource="vocab/resource/students"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="phonenumber/1/0161-382-311/home">
+    <vocab:phonenumber_StdnID rdf:resource="students/1"/>
+    <vocab:phonenumber_phonetype>home</vocab:phonenumber_phonetype>
+    <vocab:phonenumber_number>0161-382-311</vocab:phonenumber_number>
+    <rdfs:label>phonenumber #1/0161-382-311/home</rdfs:label>
+    <rdf:type rdf:resource="vocab/resource/phonenumber"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="vocab/resource/students">
+    <rdfs:label>students</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="vocab/resource/students_RegisterTo">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="universities/2">
+    <vocab:universities_URI>http://annotation.semanticweb.org/iswc/iswc.daml#University_of_Karlsruhe</vocab:universities_URI>
+    <vocab:universities_Type>University</vocab:universities_Type>
+    <vocab:universities_Name>University of Karlsruhe</vocab:universities_Name>
+    <vocab:universities_UniID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</vocab:universities_UniID>
+    <rdfs:label>universities #2</rdfs:label>
+    <rdf:type rdf:resource="vocab/resource/universities"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="vocab/resource/students_LastName">
+    <rdfs:label>students LastName</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="vocab/resource/phonenumber_number">
+    <rdfs:label>phonenumber number</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="vocab/resource/phonenumber">
+    <rdfs:label>phonenumber</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="vocab/resource/universities_Location">
+    <rdfs:label>universities Location</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="vocab/resource/universities_UniID">
+    <rdfs:label>universities UniID</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="modules/1">
+    <vocab:modules_Credits rdf:datatype="http://www.w3.org/2001/XMLSchema#int">15</vocab:modules_Credits>
+    <vocab:modules_ModuleID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</vocab:modules_ModuleID>
+    <rdfs:label>modules #1</rdfs:label>
+    <vocab:modules_Description>Module on databases</vocab:modules_Description>
+    <vocab:modules_ModuleName>Databases</vocab:modules_ModuleName>
+    <rdf:type rdf:resource="vocab/resource/modules"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="vocab/resource/phonenumber_StdnID">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="vocab/resource/students_FirstName">
+    <rdfs:label>students FirstName</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="vocab/resource/students_StdnID">
+    <rdfs:label>students StdnID</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="vocab/resource/students_Type">
+    <rdfs:label>students Type</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="phonenumber/1/310-448-8794/mobile">
+    <vocab:phonenumber_StdnID rdf:resource="students/1"/>
+    <vocab:phonenumber_phonetype>mobile</vocab:phonenumber_phonetype>
+    <vocab:phonenumber_number>310-448-8794</vocab:phonenumber_number>
+    <rdfs:label>phonenumber #1/310-448-8794/mobile</rdfs:label>
+    <rdf:type rdf:resource="vocab/resource/phonenumber"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="vocab/resource/modules">
+    <rdfs:label>modules</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="vocab/resource/universities_Country">
+    <rdfs:label>universities Country</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="vocab/resource/students_Email">
+    <rdfs:label>students Email</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="vocab/resource/universities_Name">
+    <rdfs:label>universities Name</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="vocab/resource/modules_ModuleName">
+    <rdfs:label>modules ModuleName</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="universities/1">
+    <vocab:universities_URI>http://trellis.semanticweb.org/expect/web/semanticweb/iswc02_trellis.pdf#ISI</vocab:universities_URI>
+    <vocab:universities_Type>Organization</vocab:universities_Type>
+    <vocab:universities_Country>United States</vocab:universities_Country>
+    <vocab:universities_Location>California</vocab:universities_Location>
+    <vocab:universities_Address>4676 Admirality Way, Marina Del Rey</vocab:universities_Address>
+    <vocab:universities_Name>USC Information Sciences Institute</vocab:universities_Name>
+    <vocab:universities_UniID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</vocab:universities_UniID>
+    <rdfs:label>universities #1</rdfs:label>
+    <rdf:type rdf:resource="vocab/resource/universities"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="vocab/resource/universities_URI">
+    <rdfs:label>universities URI</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="modules/3">
+    <vocab:modules_Credits rdf:datatype="http://www.w3.org/2001/XMLSchema#int">15</vocab:modules_Credits>
+    <vocab:modules_ModuleID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</vocab:modules_ModuleID>
+    <rdfs:label>modules #3</rdfs:label>
+    <vocab:modules_Description>OS</vocab:modules_Description>
+    <vocab:modules_ModuleName>Operating Sys</vocab:modules_ModuleName>
+    <rdf:type rdf:resource="vocab/resource/modules"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="students/1">
+    <vocab:enrol rdf:resource="modules/1"/>
+    <vocab:enrol rdf:resource="modules/2"/>
+    <vocab:enrol rdf:resource="modules/3"/>
+    <vocab:students_RegisterTo rdf:resource="universities/1"/>
+    <rdfs:label>students #1</rdfs:label>
+    <vocab:students_Email>mailto:gil@isi.edu</vocab:students_Email>
+    <vocab:students_StdnID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</vocab:students_StdnID>
+    <vocab:students_FirstName>Yolanda</vocab:students_FirstName>
+    <vocab:students_LastName>Gil</vocab:students_LastName>
+    <vocab:students_Homepage>http://www.isi.edu/~gil</vocab:students_Homepage>
+    <vocab:students_Type>Postgraduate</vocab:students_Type>
+    <rdf:type rdf:resource="vocab/resource/students"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="vocab/resource/universities_Address">
+    <rdfs:label>universities Address</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="vocab/resource/modules_Credits">
+    <rdfs:label>modules Credits</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+</rdf:RDF>

@@ -1,0 +1,9 @@
+SELECT Saccharomyces_cerevisiae_core_57_1j.gene_stable_id.stable_id, Saccharomyces_cerevisiae_core_57_1j.gene.seq_region_id, Saccharomyces_cerevisiae_core_57_1j.gene.seq_region_start, Saccharomyces_cerevisiae_core_57_1j.gene.seq_region_end, Saccharomyces_cerevisiae_core_57_1j.gene.seq_region_strand, Saccharomyces_cerevisiae_core_57_1j.gene.description, SGDLite.feature.name, SGDLite.dbxref.accession, SGDLite.db.name, SGDLite.organism.genus, SGDLite.organism.species, SGDLite.organism.common_name 
+FROM Saccharomyces_cerevisiae_core_57_1j.gene, Saccharomyces_cerevisiae_core_57_1j.gene_stable_id, SGDLite.feature, SGDLite.dbxref, SGDLite.db, SGDLite.organism
+WHERE Saccharomyces_cerevisiae_core_57_1j.gene.gene_id = Saccharomyces_cerevisiae_core_57_1j.gene_stable_id.gene_id
+AND Saccharomyces_cerevisiae_core_57_1j.gene.seq_region_id = 3
+AND Saccharomyces_cerevisiae_core_57_1j.gene_stable_id.gene_id = SGDLite.feature.uniquename
+AND SGDLite.feature.uniquename = 'YCL076W'
+AND SGDLite.feature.organism_id = SGDLite.organism.organism_id
+AND SGDLite.feature.dbxref_id = SGDLite.dbxref.dbxref_id
+AND SGDLite.dbxref.db_id = SGDLite.db.db_id;

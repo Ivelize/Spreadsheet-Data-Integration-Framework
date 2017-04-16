@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- XML Schema representing the Schema of an RDF Source in ER-->
+<!-- Author: Klitos Christodoulou -->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+	<!-- Complex Element: RDFEntityTypes -->	
+	<xs:element name="RDFEntityTypes">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element maxOccurs="1" minOccurs="1" ref="RDFSchemaMetadata"/>
+				<xs:element maxOccurs="unbounded" minOccurs="1"	ref="RDFEntityType" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>	
+	
+	<!-- Store Information about NameSpaces -->
+	<xs:element name="RDFSchemaMetadata">
+		<xs:complexType>
+			<xs:sequence>
+	          <xs:element maxOccurs="unbounded" minOccurs="0" name="NameSpace" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<!-- Complex Element: RDFEntityType -->
+	<xs:element name="RDFEntityType">
+		<xs:complexType>
+			<xs:sequence>
+	          <xs:element maxOccurs="1" minOccurs="1" name="RDFEntityTypeName" type="xs:string" />
+	          <xs:element maxOccurs="unbounded" minOccurs="0" ref="SimpleAttrOfRDFEntityType" />
+	          <xs:element maxOccurs="unbounded" minOccurs="0" ref="MultiAttrOfRDFEntityType" />	          
+	          <xs:element maxOccurs="unbounded" minOccurs="0" ref="CompositeAttrOfRDFEntityType" />
+	          <xs:element maxOccurs="unbounded" minOccurs="0" ref="RDFBinaryRelationshipType" />
+	          <xs:element maxOccurs="unbounded" minOccurs="0" ref="RDFWeakEntityType" />
+			</xs:sequence>
+			<xs:attribute name="rdftype" type="xs:anyURI"/>
+		</xs:complexType>
+	</xs:element>
+
+	<!-- Complex Element (Attribute) : SimpleAttrOfRDFEntityType -->
+	<xs:element name="SimpleAttrOfRDFEntityType">
+ 		<xs:complexType>
+  			<xs:simpleContent>
+   				<xs:extension base="xs:string">
+    				<xs:attribute name="namespace" type="xs:string" use="optional"/>
+   				</xs:extension>
+ 			 </xs:simpleContent>
+ 		</xs:complexType>
+	</xs:element>
+	
+	<!-- Complex Element (Attribute) : MultiAttrOfRDFEntityType -->
+	<xs:element name="MultiAttrOfRDFEntityType">
+ 		<xs:complexType>
+  			<xs:simpleContent>
+   				<xs:extension base="xs:string">
+    				<xs:attribute name="namespace" type="xs:string" use="optional"/>
+   				</xs:extension>
+ 			 </xs:simpleContent>
+ 		</xs:complexType>
+	</xs:element>
+
+	<!-- Complex Element: CompositeAttrOfRDFEntityType -->
+	<xs:element name="CompositeAttrOfRDFEntityType">
+		<xs:complexType>
+			<xs:sequence>
+		      <xs:element maxOccurs="1" minOccurs="1" name="CompositeAttrName" type="xs:string" />
+	          <xs:element maxOccurs="unbounded" minOccurs="0" ref="SimpleAttrOfRDFEntityType" />
+			</xs:sequence>
+			<xs:attribute name="namespace" type="xs:string"/>
+		</xs:complexType>
+	</xs:element>
+	
+    <!-- Complex Element: RDFBinaryRelationshipType -->
+	<xs:element name="RDFBinaryRelationshipType">
+		<xs:complexType>
+			<xs:sequence>
+		      <xs:element maxOccurs="1" minOccurs="1" name="RDFRelationshipName" type="xs:string" />
+	          <xs:element maxOccurs="1" minOccurs="0" name="FromRDFEntityType" type="xs:string" />
+	          <xs:element maxOccurs="1" minOccurs="0" name="ToRDFEntityType" type="xs:string" />
+	          <xs:element maxOccurs="1" minOccurs="0" name="CardinalityRatio" type="xs:string" />	          
+			</xs:sequence>
+			<xs:attribute name="namespace" type="xs:string"/>
+		</xs:complexType>
+	</xs:element>
+	
+	<!-- Complex Element: RDFWeakEntityType -->
+	<xs:element name="RDFWeakEntityType">
+		<xs:complexType>
+			<xs:sequence>
+	          <xs:element maxOccurs="1" minOccurs="1" name="RDFWeakEntityTypeName" type="xs:string" />
+	          <xs:element maxOccurs="unbounded" minOccurs="0" ref="SimpleAttrOfRDFWeakEntityType" />
+              <xs:element maxOccurs="unbounded" minOccurs="0" name="MultiAttrOfRDFWeakEntityType" type="xs:string" />
+              <xs:element maxOccurs="unbounded" minOccurs="0" ref="RDFIdentifiedRelationshipType" />	   
+			</xs:sequence>
+			<xs:attribute name="rdftype" type="xs:anyURI" use="optional"/>
+		</xs:complexType>
+	</xs:element>	
+	
+	<!-- Complex Element (Attribute) : SimpleAttrOfRDFWeakEntityType -->
+	<xs:element name="SimpleAttrOfRDFWeakEntityType">
+ 		<xs:complexType>
+  			<xs:simpleContent>
+   				<xs:extension base="xs:string">
+    				<xs:attribute name="namespace" type="xs:string" use="optional"/>
+   				</xs:extension>
+ 			 </xs:simpleContent>
+ 		</xs:complexType>
+	</xs:element>
+	
+    <!-- Complex Element: RDFIdentifiedRelationshipType for WeakEntities -->
+	<xs:element name="RDFIdentifiedRelationshipType">
+		<xs:complexType>
+			<xs:sequence>
+		      <xs:element maxOccurs="1" minOccurs="1" name="RDFRelationshipName" type="xs:string" />
+	          <xs:element maxOccurs="1" minOccurs="0" name="FromRDFEntityType" type="xs:string" />
+	          <xs:element maxOccurs="1" minOccurs="0" name="ToRDFEntityType" type="xs:string" />
+	          <xs:element maxOccurs="1" minOccurs="0" name="CardinalityRatio" type="xs:string" />	          
+			</xs:sequence>
+			<xs:attribute name="namespace" type="xs:string"/>
+		</xs:complexType>
+	</xs:element>	
+	
+</xs:schema>

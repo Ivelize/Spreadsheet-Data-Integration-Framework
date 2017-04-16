@@ -1,0 +1,9 @@
+SELECT Mondial1.country.name, Mondial1.country.code, Mondial1.country.capital
+FROM Mondial1.country, Mondial2.language
+WHERE Mondial2.language.name = "english"
+AND Mondial1.country.code = Mondial2.language.country
+UNION
+SELECT Mondial3.country.name, Mondial3.country.code, Mondial3.country.capital
+FROM Mondial3.country, Mondial4.language
+WHERE Mondial4.language.name = "english"
+AND Mondial3.country.code = Mondial4.language.country;

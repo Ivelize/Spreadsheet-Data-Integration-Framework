@@ -1,0 +1,296 @@
+package uk.ac.manchester.dstoolkit.service.impl.meta.RDF;
+
+import java.io.File;
+import java.io.StringReader;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.concurrent.ExecutionException;
+
+import net.sf.jsqlparser.JSQLParserException;
+import net.sf.jsqlparser.expression.operators.relational.EqualsTo;
+import net.sf.jsqlparser.parser.CCJSqlParserManager;
+import net.sf.jsqlparser.statement.select.Select;
+import net.sf.jsqlparser.statement.select.SelectExpressionItem;
+
+import org.apache.log4j.Logger;
+import org.junit.Before;
+import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+
+import uk.ac.manchester.dstoolkit.SpreadsheetAbstractIntegrationTest;
+import uk.ac.manchester.dstoolkit.domain.models.canonical.CanonicalModelConstruct;
+import uk.ac.manchester.dstoolkit.domain.models.canonical.SuperAbstract;
+import uk.ac.manchester.dstoolkit.domain.models.canonical.SuperLexical;
+import uk.ac.manchester.dstoolkit.domain.models.meta.Schema;
+import uk.ac.manchester.dstoolkit.domain.models.morphisms.mapping.Mapping;
+import uk.ac.manchester.dstoolkit.domain.models.morphisms.matching.Matching;
+import uk.ac.manchester.dstoolkit.domain.models.morphisms.matching.OneToOneMatching;
+import uk.ac.manchester.dstoolkit.domain.models.morphisms.schematiccorrespondence.SchematicCorrespondence;
+import uk.ac.manchester.dstoolkit.domain.provenance.ControlParameter;
+import uk.ac.manchester.dstoolkit.domain.provenance.ControlParameterType;
+import uk.ac.manchester.dstoolkit.repository.meta.SchemaRepository;
+import uk.ac.manchester.dstoolkit.service.impl.morphisms.matching.LevenshteinMatcherServiceImpl;
+import uk.ac.manchester.dstoolkit.service.impl.morphisms.matching.NGramMatcherServiceImpl;
+import uk.ac.manchester.dstoolkit.service.impl.morphisms.matching.NameMatcherServiceImpl;
+import uk.ac.manchester.dstoolkit.service.impl.morphisms.matching.SelectionType;
+import uk.ac.manchester.dstoolkit.service.meta.SchemaService;
+import uk.ac.manchester.dstoolkit.service.morphisms.matching.MatcherService;
+import uk.ac.manchester.dstoolkit.service.morphisms.schematiccorrespondence.InferCorrespondenceService;
+import uk.ac.manchester.dstoolkit.service.query.queryparser.SQLSimpleParserService;
+import uk.ac.manchester.dstoolkit.service.query.querytranslator.LocalQueryTranslator2SPARQLService;
+import uk.ac.manchester.dstoolkit.service.util.importexport.GraphvizDotGeneratorService;
+
+
+
+public class SpreadSchemaServiceImplIntegration extends
+SpreadsheetAbstractIntegrationTest {
+
+	private static Logger logger = Logger
+			.getLogger(SpreadSchemaServiceImplIntegration.class);
+
+	@Autowired
+	@Qualifier("schemaRepository")
+	private SchemaRepository schemaRepository;
+
+	@Autowired
+	@Qualifier("schemaService")
+	private SchemaService schemaService;
+
+	@Autowired
+	@Qualifier("inferCorrespondenceService")
+	private InferCorrespondenceService inferCorrespondenceService;
+
+	@Autowired
+	@Qualifier("graphvizDotGeneratorService")
+	private GraphvizDotGeneratorService graphvizDotGeneratorService;
+
+	@Autowired
+	@Qualifier("sQLSimpleParserService")
+	private SQLSimpleParserService sQLSimpleParserService;
+
+	
+	
+	@Autowired
+	@Qualifier("localQueryTranslator2SPARQLService")
+	private LocalQueryTranslator2SPARQLService localQueryTranslator2SPARQLService;
+	
+	
+
+	
+	// Declare list of matchers schema and instance base matchers available
+	private final List<MatcherService> nameMatcherList = new ArrayList<MatcherService>();
+	private final List<MatcherService> nameAndInstanceMatcherList = new ArrayList<MatcherService>();
+
+	private Map<ControlParameterType, ControlParameter> controlParameters;
+
+	// source schemas
+	private Schema ss1scenarioaddcolumn;
+	private Schema ss2scenarioaddcolumn;
+	
+	private Schema ss1scenarioaddrow;
+	private Schema ss2scenarioaddrow;
+	
+	private Schema ss1scenarioassignvalue;
+	private Schema ss2scenarioassignvalue;
+
+	@Override
+	@Before
+	public void setUp() {
+		
+logger.debug("initializing...");
+		
+		super.setUp();
+		logger.debug("after setup()");
+		// Set the threshold for all matchers
+		controlParameters = new HashMap<ControlParameterType, ControlParameter>();
+		ControlParameter thresholdForAllMatchers = new ControlParameter(ControlParameterType.MATCH_SCORE_THRESHOLD, "0.7");
+		controlParameters.put(ControlParameterType.MATCH_SCORE_THRESHOLD, thresholdForAllMatchers);
+
+		ss1scenarioaddcolumn = schemaRepository.getSchemaByName("ss1scenarioaddcolumn");
+		ss2scenarioaddcolumn = schemaRepository.getSchemaByName("ss2scenarioaddcolumn");
+		
+		ss1scenarioaddrow = schemaRepository.getSchemaByName("ss1scenarioaddrow");
+		ss2scenarioaddrow = schemaRepository.getSchemaByName("ss2scenarioaddrow");
+		
+		ss1scenarioassignvalue = schemaRepository.getSchemaByName("ss1scenarioassignvalue");
+		ss2scenarioassignvalue = schemaRepository.getSchemaByName("ss2scenarioassignvalue");
+
+		/******************/
+
+		// My test for NGram
+		int lengthOfNGram = 4;
+		MatcherService NGramMatcher = new NGramMatcherServiceImpl(lengthOfNGram);
+
+		// add the SELECTION TYPE here is Threshold
+		ControlParameter thresholdSelectionForNGramMatcher = new ControlParameter(ControlParameterType.MATCH_SELECT_SELECTION_TYPE, SelectionType.THRESHOLD.toString());
+
+		// For the threshold set threshold to a value here 0.7
+		ControlParameter thresholdForNGramMatcher = new ControlParameter(ControlParameterType.MATCH_SELECT_THRESHOLD_VALUE, "0.7");
+
+		// Add them on the NGram
+		NGramMatcher.addControlParameter(thresholdSelectionForNGramMatcher);
+		NGramMatcher.addControlParameter(thresholdForNGramMatcher);
+
+		// add it to the list of matchers to be executed now
+		nameMatcherList.add(NGramMatcher);
+		}// end setUp()
+
+	
+	/**
+	 * schemas integration - Infer correspondences
+	 * 
+	 * This is not a Junit test but an Integration test
+	 * 
+	 * @throws ExecutionException
+	 */
+	@Test
+	public void testSpreadsheetDataIntegration() throws ExecutionException {
+		
+		spreadsheetDataIntegration(ss1scenarioaddcolumn, ss2scenarioaddcolumn);
+		
+		//spreadsheetDataIntegration(ss1scenarioaddrow, ss2scenarioaddrow);
+		
+		//spreadsheetDataIntegration(ss1scenarioassignvalue, ss2scenarioassignvalue);
+	}
+	
+	
+	public void spreadsheetDataIntegration(Schema spreadSchema1, Schema spreadSchema2) throws ExecutionException {
+
+		/***
+		 * STEP 1: Matching -  spreadtest1 (Target) - spreadtest2 (Source)
+		 */
+		
+		SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
+		
+		logger.debug("in testInferCorrespondence init... "+sdf.format(new Date()));
+		
+		logger.debug("                                                                 ");
+		logger.debug("                                                                 ");
+		logger.debug("MATCH");
+		logger.debug("                                                                 ");
+		logger.debug("                                                                 ");
+
+		/* Match(schema1, schema2) */
+		List<Matching> matchings1 = schemaService.match(spreadSchema1,
+				spreadSchema2, nameMatcherList, controlParameters);
+
+		/* Graphiz (schema1, schema2) */
+		if (matchings1 != null) {
+			Set<SuperAbstract> spreadtest1SAset = spreadSchema1.getSuperAbstracts();
+			List<SuperAbstract> spreadtest1SAlist = new ArrayList<SuperAbstract>(spreadtest1SAset);
+
+			Set<SuperAbstract> spreadtest2SAset = spreadSchema2.getSuperAbstracts();
+			List<SuperAbstract> spreadtest2SAlist = new ArrayList<SuperAbstract>(spreadtest2SAset);
+
+			logger.debug("generate Graphiz dot for matchings :");
+			String grahizMatchings = graphvizDotGeneratorService.generateDot(spreadtest1SAlist, spreadtest2SAlist, matchings1, true, null);
+			logger.debug(grahizMatchings);
+		}
+
+		logger.debug("                                                                 ");
+		logger.debug("                                                                 ");
+		logger.debug("INFER CORREPONDENCE");
+		logger.debug("                                                                 ");
+		logger.debug("                                                                 ");
+		
+		/***
+		 * STEP 2: Infer-correspondences
+		 */
+		Set<Schema> sourceSchemas = new HashSet<Schema>();
+		sourceSchemas.add(spreadSchema1);
+
+		Set<Schema> targetSchemas = new HashSet<Schema>();
+		targetSchemas.add(spreadSchema2);
+		
+		// Print results of the matchings
+		int index = 0;
+		for (Matching matching : matchings1) {
+			
+			logger.debug("matching_" + index + ", id: " + matching.getId() + ", score: " + matching.getScore());
+			logger.debug("matching.getMatcherName(): " + matching.getMatcherName());
+			logger.debug("matching.getConstructs1().size(): " + matching.getConstructs1().size());
+			logger.debug("matching.getConstructs2().size(): " + matching.getConstructs2().size());
+			
+			if (matching instanceof OneToOneMatching) {
+				
+				OneToOneMatching oneToOneMatching = (OneToOneMatching) matching;
+				CanonicalModelConstruct construct1 = oneToOneMatching.getConstruct1();
+				CanonicalModelConstruct construct2 = oneToOneMatching.getConstruct2();
+				
+				if (construct1 instanceof SuperLexical) {
+					
+					SuperLexical sl1 = (SuperLexical) construct1;
+					logger.debug("construct1 = SL: " + sl1.getName() + ", id: "	+ sl1.getId() + " parentSA: " + sl1.getParentSuperAbstract().getName());
+					
+				} else if (construct1 instanceof SuperAbstract) {
+					
+					SuperAbstract sa1 = (SuperAbstract) construct1;
+					logger.debug("construct1 = SA: " + sa1.getName() + ", id: " + sa1.getId());
+				}
+				
+				
+				if (construct2 instanceof SuperLexical) {
+					
+					SuperLexical sl2 = (SuperLexical) construct2;
+					logger.debug("construct2 = SL: " + sl2.getName() + ", id: "	+ sl2.getId() + " parentSA: " + sl2.getParentSuperAbstract().getName());
+					
+				} else if (construct2 instanceof SuperAbstract) {
+					
+					SuperAbstract sa2 = (SuperAbstract) construct2;
+					logger.debug("construct1 = SA: " + sa2.getName() + ", id: " + sa2.getId());
+				}
+			}
+			
+			index++;
+
+		}// end for
+
+		// Run infer correspondences
+		logger.debug("run infer correspondences start>>>"+sdf.format(new Date()));
+
+		Set<SchematicCorrespondence> correspondencesToReturn = schemaService.inferCorrespondences(sourceSchemas, targetSchemas, matchings1,	new HashMap<ControlParameterType, ControlParameter>());
+		
+		logger.debug("run infer correspondences stop>>>"+sdf.format(new Date()));
+		
+		for (SchematicCorrespondence correspondence : correspondencesToReturn) {
+			logger.debug("el schematic:>>>" + correspondence.toString());
+		}
+		
+		logger.debug("                                                                 ");
+		logger.debug("                                                                 ");
+		logger.debug("MERGE");
+		logger.debug("                                                                 ");
+		logger.debug("                                                                 ");
+		logger.debug("Merge Method 1..............");
+		logger.debug("                                                                 ");
+		logger.debug("                                                                 ");
+		Schema mergedSchema = schemaService.merge(spreadSchema1, spreadSchema2, correspondencesToReturn);
+	    logger.debug("mergedSchema: " + mergedSchema);
+		
+	   	/*logger.debug("                                                                 ");
+		logger.debug("                                                                 ");
+		logger.debug("MAPPING");
+		logger.debug("                                                                 ");
+		logger.debug("                                                                 ");
+		
+		
+		//Mapping
+		Set<Mapping> mapping =  new HashSet<Mapping>();
+		mapping.addAll(schemaService.viewGen(correspondencesToReturn));*/
+		
+	}// end testInferCorrespondence()
+
+	
+	
+		
+
+
+}// end class

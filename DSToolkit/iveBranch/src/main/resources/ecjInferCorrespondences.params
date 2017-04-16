@@ -1,0 +1,88 @@
+# Debugging
+print-params = true
+print-all-params = false
+print-accessed-params = false
+print-used-params = false
+print-unused-params = false
+print-unaccessed-params = true
+
+store = true
+flush = true
+
+# Threads and Seeds 
+breedthreads = 1
+# might be good to have more than one
+evalthreads	= 1
+# might be good to have more than one
+seed.0 = time
+
+# Checkpointing
+checkpoint = false
+checkpoint-modulo = 1
+prefix = dstoolkit.ec.inferCorrespondence.
+
+# gc = false
+# gc-modulo = 1
+# aggressive = true
+
+@ The basic setup
+state = ec.simple.SimpleEvolutionState
+init = uk.ac.manchester.dstoolkit.service.impl.morphisms.schematiccorrespondence.ec.FeasibleInitializerServiceImpl
+finish = ec.simple.SimpleFinisher
+exch = ec.simple.SimpleExchanger
+breed = ec.es.MuPlusLambdaBreeder
+eval = ec.simple.SimpleEvaluator
+stat = ec.simple.SimpleStatistics
+pop = ec.Population
+
+# Basic parameters
+es.mu.0 = 30
+es.lambda.0 =  30
+generations	= 2
+# this should be set programmatically from DSToolkit using parameter set in ControlParameters
+base.likelihood = 0.9 
+# this should be set programmatically from DSToolkit using parameter set in ControlParameters
+quit-on-run-complete = false
+pop.subpops = 1
+pop.subpop.0 = ec.Subpopulation
+pop.subpop.0.size = 30 
+# this should be set programmatically from DSToolkit using parameter set in ControlParameters
+pop.subpop.0.duplicate-retries = 10 
+# whether duplicates are ok in the subpopulation ... I think Chenjuan has some, not sure, check this
+breed.elite.0 = 0
+stat.file = dstoolkit.ec.inferCorrespondence.out.stat
+
+# Representation
+pop.subpop.0.species = ec.vector.VectorSpecies
+pop.subpop.0.species.ind = uk.ac.manchester.dstoolkit.service.impl.morphisms.schematiccorrespondence.representation.entitylevelrelationship.ELRGenotypeBitVectorIndividual 
+# subclass of VectorGene may be better with the entity pairs plus the boolean
+
+# Fitness
+pop.subpop.0.species.fitness = ec.simple.SimpleFitness
+
+# Pipeline
+# pop.subpop.0.species.pipe = ec.es.ESSelection 
+# not sure whether it's going to select only 30 from parents and children without this here, breeder might already do this though
+# pop.subpop.0.species.pipe.source.0 = uk.ac.manchester.dstoolkit.service.impl.morphisms.schematiccorrespondence.ec.FeasibleVectorMutationPipelineServiceImpl
+# pop.subpop.0.species.pipe.source.0.likelihood = 0.9 
+# not sure about this, check in Chenjuan's code, I can check for this in the code, so even if it applies to both mutation and crossover, I don't have to take it into account
+#pop.subpop.0.species.pipe.source.0.source.0 = uk.ac.manchester.dstoolkit.service.impl.morphisms.schematiccorrespondence.ec.FeasibleVectorCrossoverPipelineServiceImpl
+# pop.subpop.0.species.pipe.source.0.source.0.likelihood = 0.9 
+# not sure whether this is correct here, it's supposed to be what's called crossover-rate in Chenjuan's thesis
+# pop.subpop.0.species.pipe.source.0.source.0.source.0 = ec.select.FitProportionateSelection
+# pop.subpop.0.species.pipe.source.0.source.0.source.1 = ec.select.FitProportionateSelection
+
+pop.subpop.0.species.pipe = uk.ac.manchester.dstoolkit.service.impl.morphisms.schematiccorrespondence.ec.FeasibleVectorMutationPipelineServiceImpl
+pop.subpop.0.species.pipe.likelihood = 0.9
+pop.subpop.0.species.pipe.source.0 = uk.ac.manchester.dstoolkit.service.impl.morphisms.schematiccorrespondence.ec.FeasibleVectorCrossoverPipelineServiceImpl
+pop.subpop.0.species.pipe.source.0.likelihood = 0.9
+pop.subpop.0.species.pipe.source.0.source.0 = ec.es.ESSelection
+pop.subpop.0.species.pipe.source.0.source.1 = ec.select.FitProportionateSelection
+
+pop.subpop.0.species.crossover-type = one
+# pop.subpop.0.species.crossover-prob = 0.9 
+# this should be set programmatically from DSToolkit using parameter set in ControlParameters and it should be base.likelihood, but that will be applied to both mutation and crossover ...
+# pop.subpop.0.species.mutation-prob = 0.01 
+# this should be set programmatically as I won't know this beforehand ... depends on length of chromosome, i.e., genome-size
+
+eval.problem = uk.ac.manchester.dstoolkit.service.impl.morphisms.schematiccorrespondence.ec.MaxFitnessProblem

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<Schemas xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="SchemaElementsToInclude.xsd">
+		<Schema>
+			<name>MondialCityCountryContinentEuropeIncl</name>
+			<ElementsToInclude>
+				<Table>
+					<name>City</name>
+					<include>true</include>
+				</Table>
+				<Table> 
+					<name>Encompasses</name>
+					<include>true</include>
+					<Column>
+						<name>Continent</name>
+						<include>false</include>
+					</Column>
+					<Column>
+						<name>Country</name>
+						<include>false</include>
+					</Column>
+					<Column>
+						<name>Percentage</name>
+						<include>false</include>
+					</Column>
+				</Table>
+				<Table>
+					<name>Country</name>
+					<include>true</include>
+					<Column>
+						<name>Name</name>
+						<include>false</include>
+					</Column>
+					<Column>
+						<name>Capital</name>
+						<include>true</include>
+					</Column>
+				</Table>
+			</ElementsToInclude>
+		</Schema>
+	</Schemas>
+	

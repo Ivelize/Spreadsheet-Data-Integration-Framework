@@ -1,0 +1,17 @@
+#
+# This is used for the SETUP of Experiment 1/2 - aggregate using COMA then Bayes and calc performance (top-k)
+#
+
+# Named Graph that just holds the Ground Truth
+ground_truth = x-ns://benchmark.data/gt
+
+# Name graph for the classification of matches where only syntactic evidence has been assimilated
+train_classify_tp_syn = x-ns://benchmark.data/classify/syn/tp
+train_classify_fp_syn = x-ns://benchmark.data/classify/syn/fp
+
+# Name graph for the classification of matches where syntactic & semantic evidence has been assimilated
+train_classify_tp_syn_sem = x-ns://benchmark.data/classify/syn_sem/tp
+train_classify_fp_syn_sem = x-ns://benchmark.data/classify/syn_sem/fp
+
+# This is the Ground Truth for my schemata
+alignFile = ./src/test/resources/training/benchmark/alignments/jamento_refalign.rdf

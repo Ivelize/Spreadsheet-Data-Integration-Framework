@@ -1,0 +1,3 @@
+SELECT name, code
+FROM country 
+WHERE population > 1000000;

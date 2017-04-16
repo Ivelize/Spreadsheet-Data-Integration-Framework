@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<RDFEntityTypes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="RDFSchema.xsd">
+  <!-- This is the inferred Schema of Jamendo -->
+  
+  <RDFSchemaMetadata>
+    <NameSpace>tags=http://www.holygoat.co.uk/owl/redwood/0.1/tags/</NameSpace>
+    <NameSpace>dc=http://purl.org/dc/elements/1.1/</NameSpace>
+    <NameSpace>time=http://www.w3.org/2006/time#</NameSpace>
+    <NameSpace>tl=http://purl.org/NET/c4dm/timeline.owl#</NameSpace>
+    <NameSpace>mo=http://purl.org/ontology/mo/</NameSpace>
+    <NameSpace>foaf=http://xmlns.com/foaf/0.1/</NameSpace>
+    <NameSpace>event=http://purl.org/NET/c4dm/event.owl#</NameSpace>
+    <NameSpace>xsd=http://www.w3.org/2001/XMLSchema#</NameSpace>
+    <NameSpace>rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#</NameSpace>
+  </RDFSchemaMetadata>
+  <RDFEntityType rdftype="http://purl.org/ontology/mo/Record">
+    <RDFEntityTypeName>Record</RDFEntityTypeName>
+    <SimpleAttrOfRDFEntityType namespace="http://purl.org/dc/elements/1.1/">title</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://purl.org/dc/elements/1.1/">description</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://purl.org/ontology/mo/">image</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://purl.org/dc/elements/1.1/">date</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://xmlns.com/foaf/0.1/">maker</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://purl.org/ontology/mo/">track</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://www.holygoat.co.uk/owl/redwood/0.1/tags/">taggedWithTag</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://purl.org/ontology/mo/">available_as</SimpleAttrOfRDFEntityType>
+    <RDFBinaryRelationshipType namespace="http://xmlns.com/foaf/0.1/">
+      <RDFRelationshipName>maker</RDFRelationshipName>
+      <FromRDFEntityType>Record</FromRDFEntityType>
+      <ToRDFEntityType>MusicArtist</ToRDFEntityType>
+      <CardinalityRatio>1:1</CardinalityRatio>
+    </RDFBinaryRelationshipType>
+    <RDFBinaryRelationshipType namespace="http://purl.org/ontology/mo/">
+      <RDFRelationshipName>track</RDFRelationshipName>
+      <FromRDFEntityType>Record</FromRDFEntityType>
+      <ToRDFEntityType>Track</ToRDFEntityType>
+      <CardinalityRatio>N:M</CardinalityRatio>
+    </RDFBinaryRelationshipType>
+    <RDFBinaryRelationshipType namespace="http://www.holygoat.co.uk/owl/redwood/0.1/tags/">
+      <RDFRelationshipName>taggedWithTag</RDFRelationshipName>
+      <FromRDFEntityType>Record</FromRDFEntityType>
+      <ToRDFEntityType>Tag</ToRDFEntityType>
+      <CardinalityRatio>N:M</CardinalityRatio>
+    </RDFBinaryRelationshipType>
+    <RDFBinaryRelationshipType namespace="http://purl.org/ontology/mo/">
+      <RDFRelationshipName>available_as</RDFRelationshipName>
+      <FromRDFEntityType>Record</FromRDFEntityType>
+      <ToRDFEntityType>ED2K</ToRDFEntityType>
+      <CardinalityRatio>N:M</CardinalityRatio>
+    </RDFBinaryRelationshipType>
+  </RDFEntityType>
+  <RDFEntityType rdftype="http://purl.org/ontology/mo/Lyrics">
+    <RDFEntityTypeName>Lyrics</RDFEntityTypeName>
+    <SimpleAttrOfRDFEntityType namespace="http://purl.org/ontology/mo/">text</SimpleAttrOfRDFEntityType>
+  </RDFEntityType>
+  <RDFEntityType rdftype="http://purl.org/ontology/mo/MusicArtist">
+    <RDFEntityTypeName>MusicArtist</RDFEntityTypeName>
+    <SimpleAttrOfRDFEntityType namespace="http://xmlns.com/foaf/0.1/">name</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://xmlns.com/foaf/0.1/">img</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://purl.org/ontology/mo/">biography</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://xmlns.com/foaf/0.1/">homepage</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://xmlns.com/foaf/0.1/">based_near</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://xmlns.com/foaf/0.1/">made</SimpleAttrOfRDFEntityType>
+    <RDFBinaryRelationshipType namespace="http://xmlns.com/foaf/0.1/">
+      <RDFRelationshipName>made</RDFRelationshipName>
+      <FromRDFEntityType>MusicArtist</FromRDFEntityType>
+      <ToRDFEntityType>Record</ToRDFEntityType>
+      <CardinalityRatio>N:M</CardinalityRatio>
+    </RDFBinaryRelationshipType>
+  </RDFEntityType>
+  <RDFEntityType rdftype="http://purl.org/ontology/mo/Signal">
+    <RDFEntityTypeName>Signal</RDFEntityTypeName>
+    <SimpleAttrOfRDFEntityType namespace="http://purl.org/ontology/mo/">time</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://purl.org/ontology/mo/">published_as</SimpleAttrOfRDFEntityType>
+    <RDFBinaryRelationshipType namespace="http://purl.org/ontology/mo/">
+      <RDFRelationshipName>time</RDFRelationshipName>
+      <FromRDFEntityType>Signal</FromRDFEntityType>
+      <ToRDFEntityType>Interval</ToRDFEntityType>
+      <CardinalityRatio>1:1</CardinalityRatio>
+    </RDFBinaryRelationshipType>
+    <RDFBinaryRelationshipType namespace="http://purl.org/ontology/mo/">
+      <RDFRelationshipName>published_as</RDFRelationshipName>
+      <FromRDFEntityType>Signal</FromRDFEntityType>
+      <ToRDFEntityType>Track</ToRDFEntityType>
+      <CardinalityRatio>1:1</CardinalityRatio>
+    </RDFBinaryRelationshipType>
+  </RDFEntityType>
+  <RDFEntityType rdftype="http://www.w3.org/2006/time#Interval">
+    <RDFEntityTypeName>Interval</RDFEntityTypeName>
+    <SimpleAttrOfRDFEntityType namespace="http://purl.org/NET/c4dm/timeline.owl#">onTimeLine</SimpleAttrOfRDFEntityType>
+  </RDFEntityType>
+  <RDFEntityType rdftype="http://purl.org/ontology/mo/Torrent">
+    <RDFEntityTypeName>Torrent</RDFEntityTypeName>
+    <SimpleAttrOfRDFEntityType namespace="http://purl.org/dc/elements/1.1/">format</SimpleAttrOfRDFEntityType>
+  </RDFEntityType>
+  <RDFEntityType rdftype="http://purl.org/ontology/mo/Track">
+    <RDFEntityTypeName>Track</RDFEntityTypeName>
+    <SimpleAttrOfRDFEntityType namespace="http://purl.org/dc/elements/1.1/">title</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://purl.org/ontology/mo/">track_number</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://purl.org/ontology/mo/">license</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://purl.org/ontology/mo/">available_as</SimpleAttrOfRDFEntityType>
+    <RDFBinaryRelationshipType namespace="http://purl.org/ontology/mo/">
+      <RDFRelationshipName>license</RDFRelationshipName>
+      <FromRDFEntityType>Track</FromRDFEntityType>
+      <ToRDFEntityType>Document</ToRDFEntityType>
+      <CardinalityRatio>1:1</CardinalityRatio>
+    </RDFBinaryRelationshipType>
+    <RDFBinaryRelationshipType namespace="http://purl.org/ontology/mo/">
+      <RDFRelationshipName>available_as</RDFRelationshipName>
+      <FromRDFEntityType>Track</FromRDFEntityType>
+      <ToRDFEntityType>Playlist</ToRDFEntityType>
+      <CardinalityRatio>N:M</CardinalityRatio>
+    </RDFBinaryRelationshipType>
+  </RDFEntityType>
+  <RDFEntityType rdftype="http://purl.org/ontology/mo/ED2K">
+    <RDFEntityTypeName>ED2K</RDFEntityTypeName>
+    <SimpleAttrOfRDFEntityType namespace="http://purl.org/dc/elements/1.1/">format</SimpleAttrOfRDFEntityType>
+  </RDFEntityType>
+  <RDFEntityType rdftype="http://www.holygoat.co.uk/owl/redwood/0.1/tags/Tag">
+    <RDFEntityTypeName>Tag</RDFEntityTypeName>
+    <SimpleAttrOfRDFEntityType namespace="http://www.holygoat.co.uk/owl/redwood/0.1/tags/">tagName</SimpleAttrOfRDFEntityType>
+  </RDFEntityType>
+  <RDFEntityType rdftype="http://purl.org/ontology/mo/Playlist">
+    <RDFEntityTypeName>Playlist</RDFEntityTypeName>
+    <SimpleAttrOfRDFEntityType namespace="http://purl.org/dc/elements/1.1/">format</SimpleAttrOfRDFEntityType>
+  </RDFEntityType>
+  <RDFEntityType rdftype="http://xmlns.com/foaf/0.1/Document">
+    <RDFEntityTypeName>Document</RDFEntityTypeName>
+  </RDFEntityType>
+</RDFEntityTypes>

@@ -1,0 +1,127 @@
+"Timestamp","Journal","P=phylo, C=comparison, 0=none","EndNote code","Article identifier","User","Data reuse","Data archiving","Other"
+5/24/2011 13:26:26,"Evolution","P","[[Humphreys, 2011 #139]]","DOI: 10.1111/j.1558-5646.2010.01184.x","Arlin",,"Dryad, Journal supplement","This is a phylogenetic analysis of character evolution focusing on seed bristles (awns) in grasses.  
+
+This study is a positive example of archiving.  
+
+This study re-uses a combined cp and nuclear DNA matrix from a previous study by an overlapping set of authors.  
+
+This study generates an extensive set of character reconstructions. 
+
+This study re-uses sequence data from a previous study by an overlapping set of authors.  These data are used to add additional columns to the DNA matrix using manual alignment.  Morphological data apparently were drawn from an in-house database described as ""DELTA databse (H.P. Linder, in prep.)"", supplemented by additional character data described in the literature.  
+
+The character data are available as a PDF on the journal's supplementary data site, and as an Excel spreadsheet from Dryad (http://datadryad.org/handle/10255/dryad.8013). 
+
+The state reconstructions are available on the journal web site as a PDF table.  The rows denote each interior node by number as well as by descendant OTUs, so that they can be uniquely identified.  
+"
+5/24/2011 3:40:01,"American Journal of Botany","P",,"Inferring the higher-order phylogeny of mosses (Bryophyta) and relatives using a large, multigene plastid data set","Brian","Data from genbank","GenBank","Tree generated but no deposition"
+5/24/2011 3:48:04,"American Journal of Botany","P",,"Phylogeny, adaptive radiation, and historical biogeography in Bromeliaceae: Insights from an eight-locus plastid phylogeny","Brian","Data from genbank","GenBank","Trees not stored"
+5/24/2011 3:45:12,"American Journal of Botany","P",,"A sequential approach using genetic and morphological analyses to test species status: The case of United States federally endangered Agalinis acuta (Orobanchaceae) ","Brian",,"GenBank","Summaries of morphological data are available but not raw data. Tree not deposited"
+5/24/2011 13:58:39,"American Journal of Botany","P",,"Molecular systematics of the parasitic genus Conopholis (Orobanchaceae) inferred from plastid and nuclear sequences ","Brian",,"GenBank","Trees not deposited"
+5/24/2011 14:23:30,"American Journal of Botany","P",,"April 2011: Angiosperm phylogeny: 17 genes, 640 taxa ","Brian","Data from genbank","GenBank","Includes many authors of the MIAPA paper. No tree deposition, other than pdf images"
+5/24/2011 14:02:15,"American Journal of Botany","P",,"April 2011: A molecular phylogenetic approach to western North America endemic Artemisia and allies (Asteraceae): Untangling the sagebrushes ","Brian",,"GenBank, Journal supplement",
+5/24/2011 14:25:45,"American Journal of Botany","P",,"April 2011: Phylogenetic perspectives on diversification, biogeography, and floral evolution of Collinsia and Tonella (Plantaginaceae) ","Brian",,"GenBank, TreeBase",
+5/24/2011 14:19:16,"American Journal of Botany","P",,"April 2011: Relationships within the Araceae: Comparison of morphological patterns with molecular phylogenies ","Brian","Data from genbank, Data from treebase, Data documented in older literature","GenBank, TreeBase, Journal supplement, scratchpad","Cites the data well"
+5/24/2011 12:07:59,"Evolution","P",,"DOI: 10.1111/j.1558-5646.2010.01211.x","Arlin","Data from genbank","Journal supplement","This study re-used DNA sequences from GenBank. 
+
+This study generated new mtDNA sequences.  The supplementary materials include GenBank accessions in a doc file.   
+
+This study generated new morphological data that are not archived. 
+
+This study generated phylogenetic trees which were included in supplementary data  as figures (i.e., graphic image, not symbolic encoding). 
+
+This study archived extensive details regarding phylogenetic methods.  
+"
+5/24/2011 13:44:48,"Evolution","P","[[Poe, 2011 #140]]","DOI: 10.1111/j.1558-5646.2011.01238.x","Arlin",,"Journal supplement","This is a phylogenetic study of characters pertaining to geographic naturalization in anolis species.  
+
+This study generated new morphological data (continuous characters) from specimens. 
+
+This study generates a new phylogeny.  
+
+This study generates inferred ancestral states.  
+
+This study re-uses molecular data from a previous study (non-overlapping authors).  It is not clear how the authors obtained the data.  
+
+This study re-uses morphological data from a previous study (overlapping authors).  New data are added as new rows in the matrix.    
+
+The matrix of discrete biogeographic characters (solitary or naturalized) and continuous-valued morphological characters (anatomical) is available as a PDF in supplementary data.  
+
+The phylogeny is not archived. 
+
+The reconstructed ancestral states are not archived.  "
+5/24/2011 13:01:46,"Evolution","P","[[South, 2011 #146]]","DOI: 10.1111/j.1558-5646.2010.01199.x","Arlin","see note",,"This is a phylogenetic study of neoteny and reproductive strategies in fireflies.  
+
+This study re-uses a phylogeny from a study by an overlapping set of authors.  The phylogeny is pruned so that it includes only the 32 species in this study.  
+
+This study re-uses morphological data on 18 species (non-overlapping authors). 
+
+This study generates new morphological data for 14 species.  
+
+This study generates reconstructions for ancestral characters.  
+
+The coded character data are available in Table 1 but are not archived.  
+
+Note that in studies like this, the phenotyping methods are often very taxon-specific.  The authors cite previous work for detailed methods of phenotyping.  The authors also cite previous work for the method for assigning a 5-valued ranking of the level of neoteny.  
+"
+5/24/2011 12:14:57,"Evolution","C",,"DOI: 10.1111/j.1558-5646.2011.01222.x","Arlin","RFLP data, not clear how they got it","Journal supplement","This is a population study.  
+
+This study did not generate any trees.  
+
+This study generated RFLP data.  The individual genotypes and the allele frequencies are archived at the journal web site.  
+
+This study re-used RFLP data (for a different population of the same species) from a previous study by Payseur, et al. (Nachman lab), a non-overlapping set of authors.  It is not clear how the authors obtained the data  (querying author about that)."
+5/24/2011 11:49:19,"Evolution","C",,"DOI: 10.1111/j.1558-5646.2010.01190.x","Arlin","morphotypes, SNPs and AFLPs re-used from previous work of author #1",,"This is a population study. 
+
+This study expanded an AFLP-SNP data set published earlier by one of the authors. 
+
+This study generated haplotype networks, but the networks were not archived as data or figures. 
+
+This study generated new AFLP, SNP and morphotype data, but the new data are not archived.  "
+5/24/2011 12:26:12,"Evolution","C",,"DOI: 10.1111/j.1558-5646.2010.01200.x","Arlin",,,"This study is a population analysis of the brook char salvelinus that includes age-based sampling and selection analysis.  
+
+This study generated new microsatellite data for 19 loci for hundreds of fish from each of several sampling locations.  
+
+No data are archived"
+5/24/2011 13:33:40,"Evolution","C",,"DOI: 10.1111/j.1558-5646.2010.01191.x","Arlin",,,"This is a cross-atlantic population study of peat moss.  
+
+This study does not generate any trees of inter-species comparative data. 
+
+This study generates microsatelite (AFLP) genotypes, several dozen for several hundred individuals, for a total of 11,868 individual genotypes with 2.6% missing data.   
+
+Frequencies for (undefined, anonymous) haplotypes are archived as supplementary data, but not the raw genotyping data.  "
+5/24/2011 12:51:15,"Evolution",0,,"DOI: 10.1111/j.1558-5646.2010.01197.x","Arlin","Data from genbank",,"This study uses inter-species crosses to examine patterns of  variation in expression of defense-related genes. 
+
+This study generated expression data for inbred lines from 2 species, as well as from crosses.
+
+The expression data are not given in the paper and are not archived.  "
+5/24/2011 3:31:31,"American Journal of Botany",0,"[[Terrazas, 2011 #141]]","doi:10.3732/ajb.1000182","Brian",,,"Morphology and physiology were measured. No mention of where the data are available."
+5/24/2011 3:34:23,"American Journal of Botany",0,"[[Demason, 2011 #143]]","10.3732/ajb.1000358 ","Brian",,,"Data generated (qPCR and others) but not released"
+5/24/2011 3:37:02,"American Journal of Botany",0,"[[Huang, 2011 #144]]","doi:10.3732/ajb.1000074 ","Brian",,,"Weather station data were generated but not deposited"
+5/24/2011 11:42:06,"Evolution",0,,"DOI: 10.1111/j.1558-5646.2010.01171.x","Arlin",,,"this is a breeding study"
+5/24/2011 11:50:33,"Evolution",0,,"DOI: 10.1111/j.1558-5646.2010.01201.x","Arlin",,,"This study generated data from genetic crosses to test for isolation.  The primary data are not archived. "
+5/24/2011 12:19:34,"Evolution",0,,"DOI: 10.1111/j.1558-5646.2010.01183.x","Arlin",,,"Field and plot experiments, no trees, no comparative data, no data archived. "
+5/24/2011 12:22:44,"Evolution",0,,"DOI: 10.1111/j.1558-5646.2010.01188.x","Arlin",,,"Field and garden experiments on guppy-rivulus interactions.  
+
+This study did not generate trees.  
+
+This study calculates a rate of morphological evolution.  
+
+No results are archived.  "
+5/24/2011 12:37:41,"Evolution",0,,"DOI: 10.1111/j.1558-5646.2010.01196.x","Arlin",,,"This is a breeding experiment using inter-specific crosses to investigate the genetic basis of clinal variation in temperature-related traits in 2 species of Drosophila. 
+
+This study did not generate trees.  
+
+This study generated comparative data (between 2 species) that is not archived.  
+
+Location information for specimens is archived.  
+
+This study generated data on static morphology as well as responses to heat and cold. 
+"
+5/24/2011 12:52:46,"Evolution",0,,"DOI: 10.1111/j.1558-5646.2010.01187.x","Arlin",,,"This is a theoretical modeling paper.  The supplementary data includes a number of figures.  "
+5/24/2011 12:53:27,"Evolution",0,,"DOI: 10.1111/j.1558-5646.2010.01173.x","Arlin",,,"This is a review.  No data are re-used, generated, or archived. "
+5/24/2011 13:04:18,"Evolution",0,,"DOI: 10.1111/j.1558-5646.2010.01189.x","Arlin",,,"This study is a QTL analysis in a single species of plant.  
+
+This study does not generate trees or homologized character data. "
+5/24/2011 13:06:09,"Evolution",0,,"DOI: 10.1111/j.1558-5646.2010.01194.x","Arlin",,,"This is a theoretical modeling study.  Modeling results are generated.  No data are re-used or archived. "
+5/24/2011 13:06:24,"Evolution",0,,"DOI: 10.1111/j.1558-5646.2010.01185.x","Arlin",,,"This is a theoretical modeling study.  Modeling results are generated.  No data are re-used or archived. "
+5/24/2011 13:07:53,"Evolution",0,,"DOI: 10.1111/j.1558-5646.2010.01186.x","Arlin",,,"This is a theoretical modeling study.  Modeling results are presented.  No data are re-used or archived. "
+5/24/2011 13:46:36,"Evolution",0,,"DOI: 10.1111/j.1558-5646.2010.01195.x","Arlin",,,"This is a breeding-evolution experiment in a single species.  It does not generate or re-use a phylogeny or homologized character data. "

@@ -1,0 +1,32 @@
+<dataset>
+    <ContinentA NameA="Africa" AreaA="3.02547e+07"/>
+		
+	<CountryA NameA="Algeria" CodeA="DZ" CapitalA="Algier" ProvinceA="NA" AreaA="2.38174e+06" PopulationA="29183032"/>
+	<CountryA NameA="Ghana" CodeA="GH" CapitalA="Accra" ProvinceA="NA" AreaA="238540" PopulationA="17698271"/>
+	<CountryA NameA="Morocco" CodeA="MA" CapitalA="Rabat" ProvinceA="NA" AreaA="446550" PopulationA="29779156"/>
+	<CountryA NameA="Togo" CodeA="RT" CapitalA="Lome" ProvinceA="NA" AreaA="56790" PopulationA="4570530"/>
+	<CountryA NameA="Western Sahara" CodeA="WSA" CapitalA="El Aaiun" ProvinceA="NA" AreaA="266000" PopulationA="222631"/>
+	
+	<EncompassesA CountryA="DZ" ContinentA="Africa" PercentageA="100"/>
+	<EncompassesA CountryA="GH" ContinentA="Africa" PercentageA="100"/>
+	<EncompassesA CountryA="MA" ContinentA="Africa" PercentageA="100"/>
+	<EncompassesA CountryA="RT" ContinentA="Africa" PercentageA="100"/>
+	<EncompassesA CountryA="WSA" ContinentA="Africa" PercentageA="100"/>	
+	
+	<BordersA Country1A="DZ" Country2A="MA" LengthA="1559"/>
+	<BordersA Country1A="DZ" Country2A="WSA" LengthA="42"/>
+	<BordersA Country1A="GH" Country2A="RT" LengthA="877"/>
+	<BordersA Country1A="MA" Country2A="WSA" LengthA="443"/>
+		
+	<CityA NameA="Algier" CountryA="DZ" ProvinceA="NA" PopulationA="1507241" LongitudeA="3.05" LatitudeA="36.7667"/>
+	<CityA NameA="Oran" CountryA="DZ" ProvinceA="NA" PopulationA="609823" LongitudeA="0.4" LatitudeA="35.4"/>
+	<CityA NameA="Accra" CountryA="GH" ProvinceA="NA" PopulationA="867459" LongitudeA="-0.2" LatitudeA="5.55"/>
+	<CityA NameA="Cape Coast" CountryA="GH" ProvinceA="NA" PopulationA="57224" LongitudeA="0" LatitudeA="0"/>
+	<CityA NameA="Casablanca" CountryA="MA" ProvinceA="NA" PopulationA="2940623" LongitudeA="-7.65" LatitudeA="33.5833"/>
+	<CityA NameA="Marrakech" CountryA="MA" ProvinceA="NA" PopulationA="745541" LongitudeA="0" LatitudeA="0"/>
+	<CityA NameA="Rabat" CountryA="MA" ProvinceA="NA" PopulationA="1385872" LongitudeA="-6.5" LatitudeA="33.6"/>
+	<CityA NameA="Lome" CountryA="RT" ProvinceA="NA" PopulationA="0" LongitudeA="1.1" LatitudeA="6.1"/>
+	<CityA NameA="El Aaiun" CountryA="WSA" ProvinceA="NA" PopulationA="0" LongitudeA="-13.2" LatitudeA="27.05"/>
+	
+</dataset>
+

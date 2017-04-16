@@ -1,0 +1,9 @@
+SELECT c.name, country, c.population
+FROM country c, city t 
+WHERE c.code = t.country
+AND c.population > 80000000
+UNION
+SELECT c.name, country, c.population
+FROM country c, city t 
+WHERE c.code = t.country
+AND c.population < 5000000;

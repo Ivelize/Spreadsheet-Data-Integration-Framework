@@ -1,0 +1,29 @@
+<dataset>
+    <Continent Name="Europe" Area="9.56249e+06"/>
+	
+	<Country Name="United Kingdom" Code="GB" Capital="London" Area="244820" Population="58489975"/>
+	<Country Name="Germany" Code="D" Capital="Berlin" Area="356910" Population="83536115"/>
+	<Country Name="Ireland" Code="IRL" Capital="Dublin" Area="70280" Population="3566833"/>
+	<Country Name="Denmark" Code="DK" Capital="Copenhagen" Area="43070" Population="5249632"/>
+	
+	<Encompasses Country="GB" Continent="Europe" Percentage="100"/>
+	<Encompasses Country="D" Continent="Europe" Percentage="100"/>
+	<Encompasses Country="IRL" Continent="Europe" Percentage="100"/>
+	<Encompasses Country="DK" Continent="Europe" Percentage="100"/>
+	
+	<Borders Country1="D" Country2="DK" Length="68"/>
+	<Borders Country1="GB" Country2="IRL" Length="360"/>	
+			
+	<City Name="Berlin" Country="D" Population="3472009" Longitude="13.3" Latitude="52.45"/>
+	<City Name="Hamburg" Country="D" Population="1705872" Longitude="9.96667" Latitude="53.55"/>
+	<City Name="Munich" Country="D" Population="1290079" Longitude="11.5667" Latitude="48.15"/>
+	<City Name="Dublin" Country="IRL" Population="502337" Longitude="-6.35" Latitude="53.3667"/>
+	<City Name="Copenhagen" Country="DK" Population="1358540" Longitude="12.55" Latitude="55.6833"/>
+	<City Name="Aarhus" Country="DK" Population="194345" Longitude="10.1" Latitude="56.1"/>
+	<City Name="Manchester" Country="GB" Population="431100" Longitude="0" Latitude="0"/>	
+	<City Name="London" Country="GB" Population="6967500" Longitude="0" Latitude="51.4833"/>
+	<City Name="Birmingham" Country="GB" Population="1008400" Longitude="-1.93333" Latitude="52.4833"/>
+	<City Name="Leeds" Country="GB" Population="724400" Longitude="0" Latitude="0"/>
+	
+</dataset>
+

@@ -1,0 +1,60 @@
+<dataset>
+	
+	<EconomyA CountryA="DZ" GDPA="108700" AgricultureA="12" ServiceA="50" IndustryA="38" InflationA="28"/>
+	<EconomyA CountryA="GH" GDPA="25100" AgricultureA="47" ServiceA="16" IndustryA="37" InflationA="69"/>
+	<EconomyA CountryA="MA" GDPA="87400" AgricultureA="14.3" ServiceA="32.2" IndustryA="53.5" InflationA="5.4"/>
+	<EconomyA CountryA="RT" GDPA="4100" AgricultureA="49.2" ServiceA="17.7" IndustryA="33.1" InflationA="8.8"/>
+	<EconomyA CountryA="WSA" GDPA="0" AgricultureA="0" ServiceA="0" IndustryA="0" InflationA="0"/>
+	
+	<PopulationA CountryA="DZ" Population_GrowthA="2.21" Infant_MortalityA="48.7"/>
+	<PopulationA CountryA="GH" Population_GrowthA="2.29" Infant_MortalityA="80.3"/>
+	<PopulationA CountryA="MA" Population_GrowthA="2.05" Infant_MortalityA="43.2"/>
+	<PopulationA CountryA="RT" Population_GrowthA="3.56" Infant_MortalityA="84.3"/>
+	<PopulationA CountryA="WSA" Population_GrowthA="2.46" Infant_MortalityA="145.82"/>
+	
+	<PoliticsA CountryA="DZ" IndependenceA="1962-07-05" DependentA="NA" GovernmentA="republic"/>
+	<PoliticsA CountryA="GH" IndependenceA="1957-03-06" DependentA="NA" GovernmentA="constitutional democracy"/>
+	<PoliticsA CountryA="MA" IndependenceA="1956-03-02" DependentA="NA" GovernmentA="constitutional monarchy"/>
+	<PoliticsA CountryA="RT" IndependenceA="1960-04-27" DependentA="NA" GovernmentA="republic under transition to multiparty democratic rule"/>
+	
+	<ReligionA CountryA="DZ" NameA="Christian" PercentageA="0.5"/>
+	<ReligionA CountryA="DZ" NameA="Jewish" PercentageA="0.5"/>
+	<ReligionA CountryA="DZ" NameA="Muslim" PercentageA="99"/>
+	<ReligionA CountryA="GH" NameA="Christian" PercentageA="24"/>
+	<ReligionA CountryA="GH" NameA="Muslim" PercentageA="30"/>
+	<ReligionA CountryA="MA" NameA="Christian" PercentageA="1.1"/>
+	<ReligionA CountryA="MA" NameA="Jewish" PercentageA="0.2"/>
+	<ReligionA CountryA="MA" NameA="Muslim" PercentageA="98.7"/>
+	<ReligionA CountryA="RT" NameA="Christian" PercentageA="20"/>
+	<ReligionA CountryA="RT" NameA="Muslim" PercentageA="10"/>
+	<ReligionA CountryA="WSA" NameA="Muslim" PercentageA="100"/>
+	
+	<EthnicGroupA CountryA="DZ" NameA="Arab-Berber" PercentageA="99"/>
+	<EthnicGroupA CountryA="DZ" NameA="European" PercentageA="1"/>
+	<EthnicGroupA CountryA="GH" NameA="African" PercentageA="99.8"/>
+	<EthnicGroupA CountryA="GH" NameA="European" PercentageA="0.2"/>
+	<EthnicGroupA CountryA="MA" NameA="Arab-Berber" PercentageA="99.1"/>
+	<EthnicGroupA CountryA="MA" NameA="Jewish" PercentageA="0.2"/>
+	<EthnicGroupA CountryA="RT" NameA="African" PercentageA="99"/>
+	<EthnicGroupA CountryA="RT" NameA="European Syrian-Lebanese" PercentageA="1"/>
+	
+	<OrganizationA AbbreviationA="AMU" NameA="Arab Maghreb Union" CityA="Rabat" CountryA="MA" ProvinceA="Morocco" EstablishedA="1989-02-17"/>
+	<OrganizationA AbbreviationA="IMO" NameA="International Maritime Organization" CityA="London" CountryA="GB" ProvinceA="Greater London" EstablishedA="1958-03-17"/>
+	<OrganizationA AbbreviationA="Inmarsat" NameA="International Mobile Satellite Organization" CityA="London" CountryA="GB" ProvinceA="Greater London" EstablishedA="1976-09-03"/>
+	<OrganizationA AbbreviationA="C" NameA="Commonwealth" CityA="London" CountryA="GB" ProvinceA="Greater London" EstablishedA="1931-12-31"/>
+	<OrganizationA AbbreviationA="EBRD" NameA="European Bank for Reconstruction and Development" CityA="London" CountryA="GB" ProvinceA="Greater London" EstablishedA="1991-04-15"/>
+	<OrganizationA AbbreviationA="WADB" NameA="West African Development Bank" CityA="Lome" CountryA="RT" ProvinceA="Togo" EstablishedA="1973-11-14"/>
+	
+	<isMemberA CountryA="DZ" OrganizationA="AMU" TypeA="member"/>
+	<isMemberA CountryA="DZ" OrganizationA="IMO" TypeA="member"/>
+	<isMemberA CountryA="DZ" OrganizationA="Inmarsat" TypeA="member"/>
+	<isMemberA CountryA="GH" OrganizationA="C" TypeA="member"/>
+	<isMemberA CountryA="GH" OrganizationA="IMO" TypeA="member"/>
+	<isMemberA CountryA="MA" OrganizationA="AMU" TypeA="member"/>
+	<isMemberA CountryA="MA" OrganizationA="EBRD" TypeA="member"/>
+	<isMemberA CountryA="MA" OrganizationA="IMO" TypeA="member"/>
+	<isMemberA CountryA="RT" OrganizationA="IMO" TypeA="member"/>
+	<isMemberA CountryA="RT" OrganizationA="WADB" TypeA="member"/>
+	
+</dataset>
+

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This schema is used create the data structure needed for importing the alignments -->
+<!-- needed to build the Expectation Matrix -->
+<!-- Author: Klitos Christodoulou -->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+	<!-- Complex Element: ExpMatrix -->	
+	<xs:element name="ExpMatrix">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element maxOccurs="1" minOccurs="1" ref="NamespacePrefixes"/>
+				<xs:element maxOccurs="unbounded" minOccurs="0"	ref="ClassesAlign" />
+			 	<xs:element maxOccurs="unbounded" minOccurs="0"	ref="PredicatesAlign" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>	
+	
+	<!-- Store Namespace prefixes-->
+	<xs:element name="NamespacePrefixes">
+		<xs:complexType>
+			<xs:sequence>
+	          <xs:element maxOccurs="unbounded" minOccurs="0" name="NameSpace" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>	
+
+	<!-- Complex Element: ClassesMap -->
+	<xs:element name="ClassesAlign">
+		<xs:complexType>
+			<xs:sequence>
+	          <xs:element maxOccurs="1" minOccurs="0" name="class1URI" type="xs:string" />
+	          <xs:element maxOccurs="1" minOccurs="0" name="class2URI" type="xs:string" />
+	          <xs:element maxOccurs="1" minOccurs="0" name="evidence" type="varList" />
+	          <xs:element maxOccurs="1" minOccurs="0" name="score" type="scoreType" />
+	          <xs:element maxOccurs="1" minOccurs="0" name="rangeName" type="xs:string" />
+	          <xs:element maxOccurs="1" minOccurs="0" name="rangeMIN" type="scoreType" />
+	          <xs:element maxOccurs="1" minOccurs="0" name="rangeMAX" type="scoreType" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<!-- Boolean Formula: as a list of boolean variables -->
+	<xs:simpleType name="varList">
+  		<xs:list itemType="booleanVariables"/>
+	</xs:simpleType>
+
+	<!-- Complex Element Type: boolean formula constructs -->
+	<!-- Do not list the NOT cases -->
+	<xs:simpleType name="booleanVariables">
+  		<xs:restriction base="xs:string">
+    		<xs:enumeration value="CSURI"/>
+    		<xs:enumeration value="CSN"/>
+    		<xs:enumeration value="CSE"/>
+    		<xs:enumeration value="CCS"/>    		
+    		<xs:enumeration value="CSP"/>
+    		<xs:enumeration value="CSR"/>
+    		<xs:enumeration value="CBSR"/>
+    		<xs:enumeration value="CHL"/>    		
+    		<xs:enumeration value="CEC"/>
+    		<xs:enumeration value="CSA"/>   
+    		<xs:enumeration value="CEM"/>   
+    		<xs:enumeration value="PSA"/>    		
+    		<xs:enumeration value="PSURI"/>
+    		<xs:enumeration value="PSN"/>
+    		<xs:enumeration value="PSE"/>
+    		<xs:enumeration value="PCS"/>    		
+    		<xs:enumeration value="PSP"/>
+    		<xs:enumeration value="PSR"/>    		
+    		<xs:enumeration value="DCSR"/>
+    		<xs:enumeration value="DCCPR"/>    		
+    		<xs:enumeration value="PHL"/>
+    		<xs:enumeration value="PSD"/>   
+    		<xs:enumeration value="PSRA"/>
+    		<xs:enumeration value="PEP"/>    		
+    		<xs:enumeration value="idk"/>    		
+  		</xs:restriction>
+	</xs:simpleType>
+	
+	<!-- Complex Element Type: measureType -->
+	<xs:simpleType name="scoreType">
+  		<xs:restriction base="xs:float">
+    	 	<xs:minInclusive value="0.0"/>
+      		<xs:maxInclusive value="1.0"/>
+  		</xs:restriction>
+	</xs:simpleType>
+	
+	<!-- Classes END -->	
+	
+	<!-- Complex Element: ClassesMap -->
+	<xs:element name="PredicatesAlign">
+		<xs:complexType>
+			<xs:sequence>
+	          <xs:element maxOccurs="1" minOccurs="0" name="prop1URI" type="xs:string" />
+	          <xs:element maxOccurs="1" minOccurs="0" name="class1URI" type="xs:string" />
+	          <xs:element maxOccurs="1" minOccurs="0" name="prop2URI" type="xs:string" />
+	          <xs:element maxOccurs="1" minOccurs="0" name="class2URI" type="xs:string" />
+	          <xs:element maxOccurs="1" minOccurs="0" name="evidence" type="varList" />
+	          <xs:element maxOccurs="1" minOccurs="0" name="score" type="scoreType" />
+	          <xs:element maxOccurs="1" minOccurs="0" name="rangeName" type="xs:string" />
+	          <xs:element maxOccurs="1" minOccurs="0" name="rangeMIN" type="scoreType" />
+	          <xs:element maxOccurs="1" minOccurs="0" name="rangeMAX" type="scoreType" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

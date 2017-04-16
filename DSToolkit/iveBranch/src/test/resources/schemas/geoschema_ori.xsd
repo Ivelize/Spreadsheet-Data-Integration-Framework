@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="MINiML">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Database"/>
+        <xs:element maxOccurs="unbounded" ref="Sample"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Database">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Name"/>
+        <xs:element ref="Public-ID"/>
+        <xs:element ref="Organization"/>
+        <xs:element ref="Web-Link"/>
+        <xs:element ref="Email"/>
+      </xs:sequence>
+      <xs:attribute name="iid" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Public-ID" type="xs:NCName"/>
+  <xs:element name="Organization" type="xs:string"/>
+  <xs:element name="Web-Link" type="xs:anyURI"/>
+  <xs:element name="Email" type="xs:string"/>
+  <xs:element name="Sample">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Status"/>
+        <xs:element ref="Title"/>
+        <xs:element ref="Accession"/>
+        <xs:element ref="Type"/>
+        <xs:element ref="Channel-Count"/>
+        <xs:element ref="Channel"/>
+        <xs:sequence minOccurs="0">
+          <xs:element ref="Hybridization-Protocol"/>
+          <xs:element ref="Scan-Protocol"/>
+        </xs:sequence>
+        <xs:element ref="Description"/>
+        <xs:element ref="Data-Processing"/>
+        <xs:element ref="Platform-Ref"/>
+        <xs:element ref="Contact-Ref"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="Supplementary-Data"/>
+        <xs:element ref="Data-Table"/>
+      </xs:sequence>
+      <xs:attribute name="iid" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Status">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Submission-Date"/>
+        <xs:element ref="Release-Date"/>
+        <xs:element ref="Last-Update-Date"/>
+      </xs:sequence>
+      <xs:attribute name="database" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Submission-Date" type="xs:NMTOKEN"/>
+  <xs:element name="Release-Date" type="xs:NMTOKEN"/>
+  <xs:element name="Last-Update-Date" type="xs:NMTOKEN"/>
+  <xs:element name="Title" type="xs:string"/>
+  <xs:element name="Accession">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:NCName">
+          <xs:attribute name="database" use="required" type="xs:NCName"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Type" type="xs:NCName"/>
+  <xs:element name="Channel-Count" type="xs:integer"/>
+  <xs:element name="Channel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Source"/>
+        <xs:element ref="Organism"/>
+        <xs:element maxOccurs="unbounded" ref="Characteristics"/>
+        <xs:element minOccurs="0" ref="Biomaterial-Provider"/>
+        <xs:element minOccurs="0" ref="Treatment-Protocol"/>
+        <xs:element minOccurs="0" ref="Growth-Protocol"/>
+        <xs:element ref="Molecule"/>
+        <xs:sequence minOccurs="0">
+          <xs:element ref="Extract-Protocol"/>
+          <xs:element ref="Label"/>
+          <xs:element ref="Label-Protocol"/>
+        </xs:sequence>
+      </xs:sequence>
+      <xs:attribute name="position" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Source" type="xs:string"/>
+  <xs:element name="Organism">
+    <xs:complexType mixed="true">
+      <xs:attribute name="taxid" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Characteristics" type="xs:string"/>
+  <xs:element name="Biomaterial-Provider" type="xs:string"/>
+  <xs:element name="Treatment-Protocol" type="xs:string"/>
+  <xs:element name="Growth-Protocol" type="xs:string"/>
+  <xs:element name="Molecule" type="xs:string"/>
+  <xs:element name="Extract-Protocol" type="xs:string"/>
+  <xs:element name="Label" type="xs:string"/>
+  <xs:element name="Label-Protocol" type="xs:string"/>
+  <xs:element name="Hybridization-Protocol" type="xs:string"/>
+  <xs:element name="Scan-Protocol" type="xs:string"/>
+  <xs:element name="Data-Processing" type="xs:string"/>
+  <xs:element name="Platform-Ref">
+    <xs:complexType>
+      <xs:attribute name="ref" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Contact-Ref">
+    <xs:complexType>
+      <xs:attribute name="ref" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Supplementary-Data">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:anyURI">
+          <xs:attribute name="type" use="required" type="xs:NCName"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Data-Table">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="Column"/>
+        <xs:element ref="External-Data"/>
+        <xs:element ref="Internal-Data"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Column">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Name"/>
+        <xs:element minOccurs="0" ref="Description"/>
+      </xs:sequence>
+      <xs:attribute name="position" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="External-Data">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:NCName">
+          <xs:attribute name="rows" use="required" type="xs:integer"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Internal-Data">
+    <xs:complexType mixed="true">
+      <xs:attribute name="rows" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Name" type="xs:string"/>
+  <xs:element name="Description" type="xs:string"/>
+</xs:schema>

@@ -1,0 +1,75 @@
+body {
+	font: 100%/1.55em "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
+	color: #333;
+	background-color: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  	font-family: verdana, arial, helvetica, sans-serif;
+  	font-weight: normal;
+  	margin-top: .5em;
+  	margin-bottom: 1em;
+  	color: #4E6CA3;
+  	clear: both;
+}
+
+h1 { font-size: 1.6em;
+	 line-height: 1.6em;
+ 	 border-bottom: 1px solid #B0BED9;
+}
+
+h2 { font-size: 1.4em; }
+
+h3 { font-size: 1.2em; }
+
+
+p, li, dd, dt, table{
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 120%;
+  text-align: left;
+  margin-top: .5em;
+  margin-bottom: 1em;
+  margin-left: .5em
+}
+
+/* ----- Uncomment the global selector below to over-ride the default margin and padding added to all tags  ----- */
+
+
+*{padding: 0; margin: 0;}
+
+/* ----- global default/initial styles ----- */
+body {background-color:#fff; margin: 20px; padding: 0;height:100%}
+
+/* ----- base default font size, type, and line height ----- */
+html body{font: 70.5%/1.4em Arial, Helvetica, sans-serif;color:#333333;}
+html>body{font: 70.5%/1.4em Arial, Helvetica, sans-serif;color:#333333;}
+html {height:100%}
+
+/* ----- add selectors here for font sizing ----- */
+.alert{font-size: 1.1em}
+p, table, ul, dl {font-size: 1.2em}
+form{margin-bottom:10px;}
+ul {color: #B0BED9;}
+code {font-size: 1.4em}
+
+/* ----- base links ----- */
+a:link {color: #CC6633;}
+a:visited {color: #0063DC;}
+a:hover {color: #999966;}
+a:active {color: #CC6633;}
+a:focus{color: #CC6633;}
+
+hr{margin:10px 0;}
+
+pre {
+	padding: 5px;
+	background-color: #F5F5F5;
+	border: 1px solid #CCCCCC;
+}
+
+.spacer {
+	height: 50px;
+	clear: both;
+}
+
+#DSToolkit-navigation ul li {display:inline;float:right;}

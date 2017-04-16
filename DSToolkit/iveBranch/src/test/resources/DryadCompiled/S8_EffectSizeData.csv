@@ -1,0 +1,13 @@
+Effect,Ref,Source,Year,Mean,CI,RefNum,Notes
+BC,ClewleyEtAl2012,l,n=13,0.93561332,0.432979786,[22],Data from Clewley (reproductive effects only)
+H,Schat&Blossey2005,k,1996,0.720766007,0.444446686,[19],fitness at 60% insect herbivore defoliation vs control
+H,Hunt-JoshiEtAl2004,j,2000,2.390609898,1.498717762,[18],CC vs RHxLH
+CG,ColauttiEtAl2009,i,n=28,0.118637275,0.179291917,[21],effect size not corrected for latitude
+C,Willis&Blossey1999Ithaca,h,1994,0.292939313,0.686609306,[20],Variance calculated among population means (as random effect)
+C,Willis&Blossey1999Silwood,g,1995,0.556173444,0.379611435,[20],Variance calculated among population means (as random effect)
+L,Timmins08,f,2008,NA,NA,,NA
+L,Timmins09,e,2009,NA,NA,,NA
+L,Timmins10,d,2010,NA,NA,,NA
+G,BEF08,c,2008,NA,NA,,NA
+G,BEF09,b,2009,NA,NA,,NA
+G,BEF10,a,2010,NA,NA,,NA

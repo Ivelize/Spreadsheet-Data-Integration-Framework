@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- RDF Schema: Students RDF -->
+
+<RDFEntityTypes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="RDFSchema.xsd">
+
+  <RDFSchemaMetadata>
+    <NameSpace>db=http://localhost:2020/</NameSpace>
+    <NameSpace>rdfs=http://www.w3.org/2000/01/rdf-schema#</NameSpace>
+    <NameSpace>owl=http://www.w3.org/2002/07/owl#</NameSpace>
+    <NameSpace>map=file:///stdout#</NameSpace>
+    <NameSpace>xsd=http://www.w3.org/2001/XMLSchema#</NameSpace>
+    <NameSpace>rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#</NameSpace>
+    <NameSpace>vocab=http://localhost:2020/vocab/resource/</NameSpace>
+  </RDFSchemaMetadata>
+  <RDFEntityType rdftype="http://localhost:2020/vocab/resource/phonenumber">
+    <RDFEntityTypeName>phonenumber</RDFEntityTypeName>
+    <SimpleAttrOfRDFEntityType namespace="http://localhost:2020/vocab/resource/">phonenumber_number</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://localhost:2020/vocab/resource/">phonenumber_phonetype</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://localhost:2020/vocab/resource/">phonenumber_StdnID</SimpleAttrOfRDFEntityType>
+    <RDFBinaryRelationshipType namespace="http://localhost:2020/vocab/resource/">
+      <RDFRelationshipName>phonenumber_StdnID</RDFRelationshipName>
+      <FromRDFEntityType>phonenumber</FromRDFEntityType>
+      <ToRDFEntityType>students</ToRDFEntityType>
+      <CardinalityRatio>1:N</CardinalityRatio>
+    </RDFBinaryRelationshipType>
+  </RDFEntityType>
+  <RDFEntityType rdftype="http://localhost:2020/vocab/resource/students">
+    <RDFEntityTypeName>students</RDFEntityTypeName>
+    <SimpleAttrOfRDFEntityType namespace="http://localhost:2020/vocab/resource/">students_Homepage</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://localhost:2020/vocab/resource/">students_Type</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://localhost:2020/vocab/resource/">students_LastName</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://localhost:2020/vocab/resource/">students_StdnID</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://localhost:2020/vocab/resource/">students_FirstName</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://localhost:2020/vocab/resource/">students_Email</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://localhost:2020/vocab/resource/">students_RegisterTo</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://localhost:2020/vocab/resource/">enrol</SimpleAttrOfRDFEntityType>
+    <RDFBinaryRelationshipType namespace="http://localhost:2020/vocab/resource/">
+      <RDFRelationshipName>students_RegisterTo</RDFRelationshipName>
+      <FromRDFEntityType>students</FromRDFEntityType>
+      <ToRDFEntityType>universities</ToRDFEntityType>
+      <CardinalityRatio>1:1</CardinalityRatio>
+    </RDFBinaryRelationshipType>
+    <RDFBinaryRelationshipType namespace="http://localhost:2020/vocab/resource/">
+      <RDFRelationshipName>enrol</RDFRelationshipName>
+      <FromRDFEntityType>students</FromRDFEntityType>
+      <ToRDFEntityType>modules</ToRDFEntityType>
+      <CardinalityRatio>N:M</CardinalityRatio>
+    </RDFBinaryRelationshipType>
+  </RDFEntityType>
+  <RDFEntityType rdftype="http://localhost:2020/vocab/resource/modules">
+    <RDFEntityTypeName>modules</RDFEntityTypeName>
+    <SimpleAttrOfRDFEntityType namespace="http://localhost:2020/vocab/resource/">modules_Description</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://localhost:2020/vocab/resource/">modules_ModuleID</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://localhost:2020/vocab/resource/">modules_ModuleName</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://localhost:2020/vocab/resource/">modules_Credits</SimpleAttrOfRDFEntityType>
+  </RDFEntityType>
+  <RDFEntityType rdftype="http://localhost:2020/vocab/resource/universities">
+    <RDFEntityTypeName>universities</RDFEntityTypeName>
+    <SimpleAttrOfRDFEntityType namespace="http://localhost:2020/vocab/resource/">universities_Name</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://localhost:2020/vocab/resource/">universities_Type</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://localhost:2020/vocab/resource/">universities_UniID</SimpleAttrOfRDFEntityType>
+    <SimpleAttrOfRDFEntityType namespace="http://localhost:2020/vocab/resource/">universities_URI</SimpleAttrOfRDFEntityType>
+  </RDFEntityType>
+</RDFEntityTypes>

@@ -1,0 +1,32 @@
+<dataset>
+    <Continent Name="Africa" Area="3.02547e+07"/>
+		
+	<Country Name="Algeria" Code="DZ" Capital="Algier" Province="NA" Area="2.38174e+06" Population="29183032"/>
+	<Country Name="Ghana" Code="GH" Capital="Accra" Province="NA" Area="238540" Population="17698271"/>
+	<Country Name="Morocco" Code="MA" Capital="Rabat" Province="NA" Area="446550" Population="29779156"/>
+	<Country Name="Togo" Code="RT" Capital="Lome" Province="NA" Area="56790" Population="4570530"/>
+	<Country Name="Western Sahara" Code="WSA" Capital="El Aaiun" Province="NA" Area="266000" Population="222631"/>
+	
+	<Encompasses Country="DZ" Continent="Africa" Percentage="100"/>
+	<Encompasses Country="GH" Continent="Africa" Percentage="100"/>
+	<Encompasses Country="MA" Continent="Africa" Percentage="100"/>
+	<Encompasses Country="RT" Continent="Africa" Percentage="100"/>
+	<Encompasses Country="WSA" Continent="Africa" Percentage="100"/>	
+	
+	<Borders Country1="DZ" Country2="MA" Length="1559"/>
+	<Borders Country1="DZ" Country2="WSA" Length="42"/>
+	<Borders Country1="GH" Country2="RT" Length="877"/>
+	<Borders Country1="MA" Country2="WSA" Length="443"/>
+		
+	<City Name="Algier" Country="DZ" Province="NA" Population="1507241" Longitude="3.05" Latitude="36.7667"/>
+	<City Name="Oran" Country="DZ" Province="NA" Population="609823" Longitude="0.4" Latitude="35.4"/>
+	<City Name="Accra" Country="GH" Province="NA" Population="867459" Longitude="-0.2" Latitude="5.55"/>
+	<City Name="Cape Coast" Country="GH" Province="NA" Population="57224" Longitude="0" Latitude="0"/>
+	<City Name="Casablanca" Country="MA" Province="NA" Population="2940623" Longitude="-7.65" Latitude="33.5833"/>
+	<City Name="Marrakech" Country="MA" Province="NA" Population="745541" Longitude="0" Latitude="0"/>
+	<City Name="Rabat" Country="MA" Province="NA" Population="1385872" Longitude="-6.5" Latitude="33.6"/>
+	<City Name="Lome" Country="RT" Province="NA" Population="0" Longitude="1.1" Latitude="6.1"/>
+	<City Name="El Aaiun" Country="WSA" Province="NA" Population="0" Longitude="-13.2" Latitude="27.05"/>
+	
+</dataset>
+

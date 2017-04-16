@@ -1,0 +1,1 @@
+SELECT * FROM citye WHERE citye.namee IN (SELECT citye.namee FROM citye WHERE citye.countrye = 'GB');

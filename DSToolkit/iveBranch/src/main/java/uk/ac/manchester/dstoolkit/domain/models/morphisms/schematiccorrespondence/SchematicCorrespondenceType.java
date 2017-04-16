@@ -1,0 +1,24 @@
+package uk.ac.manchester.dstoolkit.domain.models.morphisms.schematiccorrespondence;
+
+/**
+ * @author chedeler
+ *
+ */
+
+public enum SchematicCorrespondenceType {
+
+	SAME_NAME_SAME_CONSTRUCT("SNSC"), DIFFERENT_NAME_SAME_CONSTRUCT("DNSC"), DIFFERENT_NAME_DIFFERENT_CONSTRUCT("DNDC"), SAME_NAME_DIFFERENT_CONSTRUCT(
+			"SNSC"), LOGICALLY_INCLUDED_CONSTRUCT("INCLC"), MISSING_SUPER_LEXICAL("MLEX"), DIFFERENT_TYPE("DIFFT"), HORIZONTAL_PARTITIONING("HOPA"), VERTICAL_PARTITIONING(
+			"VEPA"), HORIZONTAL_VS_HORIZONTAL_PARTITIONING("HOHOPA"), VERTICAL_VS_VERTICAL_PARTITIONING("VEVEPA"), HORIZONTAL_VS_VERTICAL_PARTITIONING(
+			"HOVEPA"), VERTICAL_VS_HORIZONTAL_PARTITIONING("VEHOPA"), COMPOSITE_PARTITIONING("COPA"), LEXICAL_PARTITIONING("LEXPA");
+
+	private final String shortName;
+
+	SchematicCorrespondenceType(String shortName) {
+		this.shortName = shortName;
+	}
+
+	private String getShortName() {
+		return shortName;
+	}
+}

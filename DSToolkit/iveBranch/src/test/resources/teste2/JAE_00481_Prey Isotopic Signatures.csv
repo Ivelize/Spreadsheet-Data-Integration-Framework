@@ -1,0 +1,142 @@
+Sample ID,_13C,_15N,Species,Latin Name
+1,-23.3401065,6.10883125,Domestic Alpaca,Vicugna pacos
+2,-23.6476862,6.493666694,Domestic Alpaca,Vicugna pacos
+3,-23.4569725,5.1885794,Domestic Alpaca,Vicugna pacos
+4,-24.8580998,7.819119159,Domestic Alpaca,Vicugna pacos
+5,-23.08846325,6.610026988,Domestic Alpaca,Vicugna pacos
+6,-23.1987256,6.043667865,Domestic Alpaca,Vicugna pacos
+7,-22.3631051,6.231450584,Domestic Goat,Capra aegagrus hircus
+8,-20.3358601,7.61475489,Domestic Goat,Capra aegagrus hircus
+9,-23.4152947,8.083556269,Domestic Goat,Capra aegagrus hircus
+10,-20.7927319,5.855832522,Domestic Goat,Capra aegagrus hircus
+11,-23.03901825,8.164887678,Domestic Goat,Capra aegagrus hircus
+12,-24.5550265,5.84635315,Domestic Goat,Capra aegagrus hircus
+13,-22.7496345,8.6773792,Domestic Goat,Capra aegagrus hircus
+14,-23.226769,4.7531309,Domestic Goat,Capra aegagrus hircus
+15,-22.8151404,8.6727208,Domestic Goat,Capra aegagrus hircus
+16,-22.068998,6.6600709,Domestic Goat,Capra aegagrus hircus
+17,-21.57643515,5.945074972,Domestic Goat,Capra aegagrus hircus
+18,-19.84146585,8.6908368,Domestic Goat,Capra aegagrus hircus
+19,-22.924065,8.7227282,Domestic Llama,Llama glama
+20,-22.3941565,5.4167425,Domestic Llama,Llama glama
+21,-22.4545705,4.9198579,Domestic Llama,Llama glama
+22,-23.966112,8.4546516,Domestic Llama,Llama glama
+23,-23.4499062,7.152804882,Domestic Llama,Llama glama
+24,-22.3267795,11.029674,Domestic Sheep,Ovis aries
+25,-19.422344,4.14924645,Domestic Sheep,Ovis aries
+26,-20.810291,5.87374535,Domestic Sheep,Ovis aries
+27,-23.48144295,5.3331656,Bighorn Sheep,Ovis canadensis
+28,-23.8035951,6.160808,Bighorn Sheep,Ovis canadensis
+29,-23.826192,6.372253,Elk,Cervus elaphus
+30,-23.9604104,3.9694,Elk,Cervus elaphus
+31,-24.3664452,4.29626625,Elk,Cervus elaphus
+32,-23.9946892,6.2970995,Elk,Cervus elaphus
+33,-24.282438,5.05088975,Elk,Cervus elaphus
+34,-24.3785152,5.799851,Elk,Cervus elaphus
+35,-24.5388048,3.273458,Elk,Cervus elaphus
+36,-24.451418,2.34948175,Elk,Cervus elaphus
+37,-24.2626432,4.06565825,Elk,Cervus elaphus
+38,-24.4929388,5.00662125,Elk,Cervus elaphus
+39,-24.1657705,3.337516,Elk,Cervus elaphus
+40,-23.19288,3.8734032,Elk,Cervus elaphus
+41,-23.663908,5.1788668,Elk,Cervus elaphus
+42,-23.7871935,3.96802565,Elk,Cervus elaphus
+43,-23.5123265,4.13852825,Elk,Cervus elaphus
+44,-23.7905845,5.4240208,Elk,Cervus elaphus
+45,-23.8225645,5.36596665,Elk,Cervus elaphus
+46,-25.3082754,3.7337816,Mule Deer,Odocoileus hemionus
+47,-24.093972,4.6478632,Mule Deer,Odocoileus hemionus
+48,-23.8055505,3.6768456,Mule Deer,Odocoileus hemionus
+49,-24.2318277,4.0940312,Mule Deer,Odocoileus hemionus
+50,-24.7548972,3.5101784,Mule Deer,Odocoileus hemionus
+51,-25.2712124,5.363343,Mule Deer,Odocoileus hemionus
+52,-24.6720576,3.096384,Mule Deer,Odocoileus hemionus
+53,-24.5388048,7.77700575,Mule Deer,Odocoileus hemionus
+54,-23.9435925,4.3375039,Mule Deer,Odocoileus hemionus
+55,-23.2646055,2.8537381,Mule Deer,Odocoileus hemionus
+56,-23.408743,2.9320008,Mule Deer,Odocoileus hemionus
+57,-24.2071135,1.39246625,Mule Deer,Odocoileus hemionus
+58,-24.730108,3.49532505,Mule Deer,Odocoileus hemionus
+59,-24.3679195,3.35470115,Mule Deer,Odocoileus hemionus
+60,-21.5646615,3.91418735,Mule Deer,Odocoileus hemionus
+61,-24.9030545,7.6559921,Mule Deer,Odocoileus hemionus
+62,-25.5025285,0.84420676,Mule Deer,Odocoileus hemionus
+63,-23.910528,3.99838435,Mule Deer,Odocoileus hemionus
+64,-25.9818245,0.57024078,Rabbit,Sylvilagus nuttallii
+65,-25.8955647,-0.1782436,Rabbit,Sylvilagus nuttallii
+66,-25.8863592,1.098116,Rabbit,Sylvilagus nuttallii
+67,-23.22311055,5.965365,Rabbit,Sylvilagus nuttallii
+68,-25.61109012,1.109611557,Rabbit,Sylvilagus nuttallii
+69,-27.1582812,1.115702375,Rabbit,Sylvilagus nuttallii
+70,-25.74207657,0.641254655,Rabbit,Sylvilagus nuttallii
+71,-25.189291,1.7611744,Rabbit,Sylvilagus nuttallii
+72,-25.2601106,2.579952,Rabbit,Sylvilagus nuttallii
+73,-25.4045735,0.8457694,Rabbit,Sylvilagus nuttallii
+74,-22.50963503,8.162082667,Rabbit,Sylvilagus nuttallii
+75,-14.26022858,6.706757206,Domestic Cat,Felis catus
+76,-15.13926618,6.831496336,Domestic Cat,Felis catus
+77,-15.91176413,6.391796908,Domestic Cat,Felis catus
+78,-20.2504115,5.11497675,Domestic Cat,Felis catus
+79,-13.5617545,5.57459425,Domestic Cat,Felis catus
+80,-14.5731294,6.8694024,Domestic Cat,Felis catus
+81,-14.7197844,6.4625688,Domestic Cat,Felis catus
+82,-17.799856,5.7066794,Domestic Cat,Felis catus
+83,-16.5715482,7.260708,Domestic Cat,Felis catus
+84,-17.4309465,7.5826552,Domestic Cat,Felis catus
+85,-15.632209,6.5346025,Domestic Cat,Felis catus
+86,-15.0201798,6.26126,Domestic Cat,Felis catus
+87,-11.56431368,7.387187812,Domestic Cat,Felis catus
+88,-20.2663119,2.642960798,Domestic Chicken,Gallus domesticus
+89,-18.3044645,3.04994615,Domestic Chicken,Gallus domesticus
+90,-14.728249,4.84051435,Domestic Chicken,Gallus domesticus
+91,-19.7265861,4.9294376,Domestic Chicken,Gallus domesticus
+92,-16.190879,3.6259529,Domestic Chicken,Gallus domesticus
+93,-14.060525,6.36095185,Domestic Dog,Canis familiaris
+94,-15.255175,7.782888,Domestic Dog,Canis familiaris
+95,-15.0581345,5.856132,Domestic Dog,Canis familiaris
+96,-16.0051185,5.65355875,Domestic Dog,Canis familiaris
+97,-21.0689682,6.6225072,Domestic Dog,Canis familiaris
+98,-21.44587155,6.6147432,Domestic Dog,Canis familiaris
+99,-18.892608,7.3000456,Domestic Dog,Canis familiaris
+100,-18.257103,7.855948,Domestic Dog,Canis familiaris
+101,-15.3914643,7.11578,Domestic Dog,Canis familiaris
+102,-17.8368836,7.478088,Domestic Dog,Canis familiaris
+103,-18.3608466,6.533716,Domestic Dog,Canis familiaris
+104,-21.5989234,7.101586,Coyote,Canis latrans
+105,-21.26549365,7.2919204,Coyote,Canis latrans
+106,-21.3655305,8.8501325,Coyote,Canis latrans
+107,-21.4358025,7.1204737,Coyote,Canis latrans
+108,-17.2562416,6.145729,Raccoon,Procyon lotor
+109,-19.9469494,7.59188325,Raccoon,Procyon lotor
+110,-20.6400922,7.784341,Raccoon,Procyon lotor
+111,-18.9693674,7.7347836,Raccoon,Procyon lotor
+112,-19.9057726,8.19448875,Raccoon,Procyon lotor
+113,-21.1921135,5.82159045,Raccoon,Procyon lotor
+114,-20.3229085,10.847232,Raccoon,Procyon lotor
+115,-20.239241,8.534404,Raccoon,Procyon lotor
+116,-18.1737435,7.2135313,Raccoon,Procyon lotor
+117,-18.4909873,8.2114416,Raccoon,Procyon lotor
+118,-20.1082252,7.7180445,Red Fox,Vulpes vulpes
+119,-21.923926,7.149082,Red Fox,Vulpes vulpes
+120,-19.9440082,7.91742875,Red Fox,Vulpes vulpes
+121,-21.0312718,7.59782025,Red Fox,Vulpes vulpes
+122,-18.79022975,7.1483904,Red Fox,Vulpes vulpes
+123,-21.6314004,6.3749212,Red Fox,Vulpes vulpes
+124,-21.18853282,7.917801892,Red Fox,Vulpes vulpes
+125,-20.1675394,6.8472845,Red Fox,Vulpes vulpes
+126,-20.41294875,10.3629576,Skunk,Mephitis mephitis
+127,-20.3862394,6.604434,Skunk,Mephitis mephitis
+128,-21.548923,7.1164285,Skunk,Mephitis mephitis
+129,-22.4401066,5.79890925,Skunk,Mephitis mephitis
+130,-22.1170648,6.77950375,Skunk,Mephitis mephitis
+131,-21.0866644,7.7002335,Skunk,Mephitis mephitis
+132,-21.360196,5.22598875,Skunk,Mephitis mephitis
+133,-21.1910935,7.12276935,Skunk,Mephitis mephitis
+134,-23.28937,8.1231144,Skunk,Mephitis mephitis
+135,-21.2352165,8.3592545,Skunk,Mephitis mephitis
+136,-21.2071045,5.552418,Skunk,Mephitis mephitis
+137,-18.96520122,4.144127362,Squirrel,Sciurus spp.
+138,-20.40603152,6.673739427,Squirrel,Sciurus spp.
+139,-21.24733492,7.785980098,Squirrel,Sciurus spp.
+140,-18.9405222,5.951720628,Squirrel,Sciurus spp.
+141,-22.0421254,10.74148,Squirrel,Sciurus spp.

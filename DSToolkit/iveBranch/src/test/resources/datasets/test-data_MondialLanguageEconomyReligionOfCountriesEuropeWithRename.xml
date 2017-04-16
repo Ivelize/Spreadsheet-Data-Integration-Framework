@@ -1,0 +1,57 @@
+<dataset>
+	
+	<EconomyE CountryE="D" GDPE="1.4522e+06" AgricultureE="1" ServiceE="34.2" IndustryE="64.8" InflationE="0"/>
+	<EconomyE CountryE="DK" GDPE="112800" AgricultureE="3" ServiceE="23.5" IndustryE="73.5" InflationE="2.4"/>
+	<EconomyE CountryE="GB" GDPE="1.1384e+06" AgricultureE="1.7" ServiceE="27.7" IndustryE="70.6" InflationE="3.1"/>
+	<EconomyE CountryE="IRL" GDPE="54600" AgricultureE="6.8" ServiceE="35.3" IndustryE="57.9" InflationE="2.8"/>
+	
+	<PopulationE CountryE="D" Population_GrowthE="0.67" Infant_MortalityE="6"/>
+	<PopulationE CountryE="DK" Population_GrowthE="0.38" Infant_MortalityE="4.8"/>
+	<PopulationE CountryE="GB" Population_GrowthE="0.22" Infant_MortalityE="6.4"/>
+	<PopulationE CountryE="IRL" Population_GrowthE="-0.22" Infant_MortalityE="6.4"/>
+	
+	<PoliticsE CountryE="D" IndependenceE="1871-01-18" DependentE="NA" GovernmentE="federal republic"/>
+	<PoliticsE CountryE="DK" IndependenceE="1000-01-01" DependentE="NA" GovernmentE="constitutional monarchy"/>
+	<PoliticsE CountryE="GB" IndependenceE="1801-01-01" DependentE="NA" GovernmentE="constitutional monarchy"/>	
+	<PoliticsE CountryE="IRL" IndependenceE="1921-12-06" DependentE="NA" GovernmentE="republic"/>
+
+	<LanguageE CountryE="D" NameE="German" PercentageE="100"/>
+	
+	<ReligionE CountryE="D" NameE="Protestant" PercentageE="45"/>
+	<ReligionE CountryE="D" NameE="Roman Catholic" PercentageE="37"/>
+	<ReligionE CountryE="DK" NameE="Protestant" PercentageE="91"/>
+	<ReligionE CountryE="DK" NameE="Roman Catholic" PercentageE="2"/>
+	<ReligionE CountryE="IRL" NameE="Anglican" PercentageE="3"/>
+	<ReligionE CountryE="IRL" NameE="Roman Catholic" PercentageE="93"/>
+	
+	<EthnicGroupE CountryE="D" NameE="German" PercentageE="95.1"/>
+	<EthnicGroupE CountryE="D" NameE="Greek" PercentageE="0.4"/>
+	<EthnicGroupE CountryE="D" NameE="Italian" PercentageE="0.7"/>
+	<EthnicGroupE CountryE="D" NameE="Polish" PercentageE="0.4"/>
+	<EthnicGroupE CountryE="D" NameE="Turkish" PercentageE="2.3"/>
+	<EthnicGroupE CountryE="GB" NameE="English" PercentageE="81.5"/>
+	<EthnicGroupE CountryE="GB" NameE="Irish" PercentageE="2.4"/>
+	<EthnicGroupE CountryE="GB" NameE="Scottish" PercentageE="9.6"/>
+	<EthnicGroupE CountryE="GB" NameE="Ulster" PercentageE="1.8"/>
+	<EthnicGroupE CountryE="GB" NameE="Welsh" PercentageE="1.9"/>
+	
+	<OrganizationE AbbreviationE="C" NameE="Commonwealth" CityE="London" CountryE="GB" ProvinceE="Greater London" EstablishedE="1931-12-31"/>
+	<OrganizationE AbbreviationE="EBRD" NameE="European Bank for Reconstruction and Development" CityE="London" CountryE="GB" Province="Greater London" EstablishedE="1991-04-15"/>
+	<OrganizationE AbbreviationE="IMO" NameE="International Maritime Organization" CityE="London" CountryE="GB" ProvinceE="Greater London" EstablishedE="1958-03-17"/>
+	<OrganizationE AbbreviationE="Inmarsat" NameE="International Mobile Satellite Organization" CityE="London" CountryE="GB" ProvinceE="Greater London" EstablishedE="1976-09-03"/>
+	
+	<isMemberE CountryE="GB" OrganizationE="C" TypeE="member"/>
+	<isMemberE CountryE="D" OrganizationE="EBRD" TypeE="member"/>
+	<isMemberE CountryE="DK" OrganizationE="EBRD" TypeE="member"/>
+	<isMemberE CountryE="GB" OrganizationE="EBRD" TypeE="member"/>
+	<isMemberE CountryE="IRL" OrganizationE="EBRD" TypeE="member"/>
+	<isMemberE CountryE="D" OrganizationE="IMO" TypeE="member"/>
+	<isMemberE CountryE="DK" OrganizationE="IMO" TypeE="member"/>
+	<isMemberE CountryE="GB" OrganizationE="IMO" TypeE="member"/>
+	<isMemberE CountryE="IRL" OrganizationE="IMO" TypeE="member"/>
+	<isMemberE CountryE="D" OrganizationE="Inmarsat" TypeE="member"/>
+	<isMemberE CountryE="DK" OrganizationE="Inmarsat" TypeE="member"/>
+	<isMemberE CountryE="GB" OrganizationE="Inmarsat" TypeE="member"/>
+	
+</dataset>
+

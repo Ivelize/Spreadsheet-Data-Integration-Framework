@@ -1,0 +1,4 @@
+SELECT c.name, country
+FROM country c, city t 
+WHERE c.code = t.country
+AND c.population > 1000000;

@@ -1,0 +1,3 @@
+Name,Total Nodes, Terminal Nodes,Training Error,Training RMSE,Testing Error,Testing RMSE,Validation Error,Validation RMSE
+Actual Label           ,3,     0.000,     0.694,,
+Actual Count           ,8,     1.000 1.09756,     0.694, 3.25106,

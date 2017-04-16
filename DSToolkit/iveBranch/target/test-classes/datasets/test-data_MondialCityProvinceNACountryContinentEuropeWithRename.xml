@@ -1,0 +1,29 @@
+<dataset>
+    <ContinentE NameE="Europe" AreaE="9.56249e+06"/>
+	
+	<CountryE NameE="United Kingdom" CodeE="GB" CapitalE="London" ProvinceE="NA" AreaE="244820" PopulationE="58489975"/>
+	<CountryE NameE="Germany" CodeE="D" CapitalE="Berlin" ProvinceE="NA" AreaE="356910" PopulationE="83536115"/>
+	<CountryE NameE="Ireland" CodeE="IRL" CapitalE="Dublin" ProvinceE="NA" AreaE="70280" PopulationE="3566833"/>
+	<CountryE NameE="Denmark" CodeE="DK" CapitalE="Copenhagen" ProvinceE="NA" AreaE="43070" PopulationE="5249632"/>
+	
+	<EncompassesE CountryE="GB" ContinentE="Europe" PercentageE="100"/>
+	<EncompassesE CountryE="D" ContinentE="Europe" PercentageE="100"/>
+	<EncompassesE CountryE="IRL" ContinentE="Europe" PercentageE="100"/>
+	<EncompassesE CountryE="DK" ContinentE="Europe" PercentageE="100"/>
+	
+	<BordersE Country1E="D" Country2E="DK" LengthE="68"/>
+	<BordersE Country1E="GB" Country2E="IRL" LengthE="360"/>	
+			
+	<CityE NameE="Berlin" CountryE="D" ProvinceE="NA" PopulationE="3472009" LongitudeE="13.3" LatitudeE="52.45"/>
+	<CityE NameE="Hamburg" CountryE="D" ProvinceE="NA" PopulationE="1705872" LongitudeE="9.96667" LatitudeE="53.55"/>
+	<CityE NameE="Munich" CountryE="D" ProvinceE="NA" PopulationE="1290079" LongitudeE="11.5667" LatitudeE="48.15"/>
+	<CityE NameE="Dublin" CountryE="IRL" ProvinceE="NA" PopulationE="502337" LongitudeE="-6.35" LatitudeE="53.3667"/>
+	<CityE NameE="Copenhagen" CountryE="DK" ProvinceE="NA" PopulationE="1358540" LongitudeE="12.55" LatitudeE="55.6833"/>
+	<CityE NameE="Aarhus" CountryE="DK" ProvinceE="NA" PopulationE="194345" LongitudeE="10.1" LatitudeE="56.1"/>
+	<CityE NameE="Manchester" CountryE="GB" ProvinceE="NA" PopulationE="431100" LongitudeE="0" LatitudeE="0"/>	
+	<CityE NameE="London" CountryE="GB" ProvinceE="NA" PopulationE="6967500" LongitudeE="0" LatitudeE="51.4833"/>
+	<CityE NameE="Birmingham" CountryE="GB" ProvinceE="NA" PopulationE="1008400" LongitudeE="-1.93333" LatitudeE="52.4833"/>
+	<CityE NameE="Leeds" CountryE="GB" ProvinceE="NA" PopulationE="724400" LongitudeE="0" LatitudeE="0"/>
+	
+</dataset>
+

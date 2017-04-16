@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<RDFEntityTypes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="RDFSchema.xsd">
+
+<!-- I need to store each of the vocabularies URIs as metadata  -->
+<!-- I need to store each of the URIs of the   -->
+     <RDFSchemaMetadata>
+     	<NameSpace>xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"</NameSpace>   
+     	<NameSpace>xmlns:vocab="http://localhost:2020/vocab/resource/</NameSpace>
+     </RDFSchemaMetadata>
+
+	<RDFEntityType uri="example.com">
+    	<RDFEntityTypeName>Student</RDFEntityTypeName>
+    	<SimpleAttrOfRDFEntityType namespace="vocab">Name</SimpleAttrOfRDFEntityType>
+    	<SimpleAttrOfRDFEntityType namespace="vocab">Lastname</SimpleAttrOfRDFEntityType>
+    	<MultiAttrOfRDFEntityType namespace="vocab">PhoneNumber</MultiAttrOfRDFEntityType>
+    	<CompositeAttrOfRDFEntityType namespace="vocab">
+    		<!-- Address from BNode thus no URI -->
+      		<CompositeAttrName>Address</CompositeAttrName>
+      		<SimpleAttrOfRDFEntityType namespace="vocab">City</SimpleAttrOfRDFEntityType>
+      		<SimpleAttrOfRDFEntityType namespace="vocab">Postcode</SimpleAttrOfRDFEntityType>
+    	</CompositeAttrOfRDFEntityType>
+   		<RDFBinaryRelationshipType namespace="vocab">
+      		<RDFRelationshipName>Register_To</RDFRelationshipName>
+      		<FromRDFEntityType>Students</FromRDFEntityType>
+    		<ToRDFEntityType>Universities</ToRDFEntityType>
+      		<CardinalityRatio>1:N</CardinalityRatio>
+    	</RDFBinaryRelationshipType>
+    	<RDFWeakEntityType>
+      		<RDFWeakEntityTypeName>Category</RDFWeakEntityTypeName>
+      		<SimpleAttrOfRDFWeakEntityType namespace="vocab">description</SimpleAttrOfRDFWeakEntityType>
+      		<SimpleAttrOfRDFWeakEntityType namespace="vocab">name</SimpleAttrOfRDFWeakEntityType>
+      		<MultiAttrOfRDFWeakEntityType>PhoneNumber</MultiAttrOfRDFWeakEntityType>
+      		<RDFIdentifiedRelationshipType>
+        		<RDFRelationshipName>Register_To</RDFRelationshipName>
+        		<FromRDFEntityType>Universities</FromRDFEntityType>
+        		<ToRDFEntityType>Universities</ToRDFEntityType>
+        		<CardinalityRatio>1:N</CardinalityRatio>
+      		</RDFIdentifiedRelationshipType>
+    	</RDFWeakEntityType>    
+  </RDFEntityType>
+
+</RDFEntityTypes>

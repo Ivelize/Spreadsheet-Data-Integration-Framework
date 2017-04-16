@@ -1,0 +1,8 @@
+SPARQLserviceURL = http://italy.rkbexplorer.com/sparql/ 
+createSample = true
+dbServer = jdbc:mysql://localhost/
+dbUserName = root
+dbPassword = root
+dbDriverClass = com.mysql.jdbc.Driver
+schemaURL = NULL
+description = SPARQL end-point interface for academia in Italy

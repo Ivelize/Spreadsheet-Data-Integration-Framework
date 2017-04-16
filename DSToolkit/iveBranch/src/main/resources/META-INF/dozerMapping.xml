@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mappings xmlns="http://dozer.sourceforge.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://dozer.sourceforge.net http://dozer.sourceforge.net/schema/beanmapping.xsd">
+	<mapping stop-on-errors="true" wildcard="true" date-format="dd/MM/yyyy HH:mm">
+		<class-a>uk.ac.manchester.dstoolkit.domain.models.meta.Schema
+		</class-a>
+		<class-b>uk.ac.manchester.dstoolkit.dto.models.meta.SchemaDTO
+		</class-b>
+	</mapping>
+	<mapping>
+		<class-a>uk.ac.manchester.dstoolkit.domain.models.canonical.SuperAbstract
+		</class-a>
+		<class-b>uk.ac.manchester.dstoolkit.dto.models.canonical.TableSchemaDTO
+		</class-b>
+	</mapping>
+	<mapping>
+		<class-a>uk.ac.manchester.dstoolkit.domain.models.canonical.SuperLexical
+		</class-a>
+		<class-b>uk.ac.manchester.dstoolkit.dto.models.canonical.AttributeDTO
+		</class-b>
+	</mapping>
+	<mapping>
+		<class-a>uk.ac.manchester.dstoolkit.domain.models.meta.DataSource
+		</class-a>
+		<class-b>uk.ac.manchester.dstoolkit.dto.models.meta.DataSourceDTO
+		</class-b>
+	</mapping>
+	<mapping>
+		<class-a>uk.ac.manchester.dstoolkit.domain.models.query.Query
+		</class-a>
+		<class-b>uk.ac.manchester.dstoolkit.dto.models.query.QueryDTO
+		</class-b>
+	</mapping>
+</mappings>

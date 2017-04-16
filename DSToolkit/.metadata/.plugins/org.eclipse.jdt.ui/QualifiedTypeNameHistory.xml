@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.sql.DriverManager"/>
+<fullyQualifiedTypeName name="java.sql.SQLException"/>
+<fullyQualifiedTypeName name="javax.persistence.Version"/>
+<fullyQualifiedTypeName name="java.util.logging.Level"/>
+<fullyQualifiedTypeName name="java.sql.ResultSet"/>
+<fullyQualifiedTypeName name="java.sql.Date"/>
+<fullyQualifiedTypeName name="java.sql.Statement"/>
+<fullyQualifiedTypeName name="java.sql.Connection"/>
+<fullyQualifiedTypeName name="com.mysql.jdbc.ResultSetMetaData"/>
+<fullyQualifiedTypeName name="java.sql.ResultSetMetaData"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="it.unibas.spicy.test.attributematch.TestMatcher"/>
+<fullyQualifiedTypeName name="uk.ac.manchester.dstoolkit.domain.models.meta.ModelType"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="uk.ac.manchester.dstoolkit.service.impl.meta.SchemaServiceImpl"/>
+<fullyQualifiedTypeName name="uk.ac.manchester.dstoolkit.service.meta.SchemaService"/>
+<fullyQualifiedTypeName name="uk.ac.manchester.dstoolkit.domain.models.morphisms.matching.Matching"/>
+<fullyQualifiedTypeName name="uk.ac.manchester.dstoolkit.service.impl.meta.RDF.RDFSchemaServiceImplIntegrTopDown"/>
+<fullyQualifiedTypeName name="uk.ac.manchester.dstoolkit.SpreadAbstractIntegrationTest"/>
+<fullyQualifiedTypeName name="uk.ac.manchester.dstoolkit.service.impl.meta.DataSourceServiceImpl"/>
+<fullyQualifiedTypeName name="uk.ac.manchester.dstoolkit.SpreadsheetAbstractIntegrationTest"/>
+<fullyQualifiedTypeName name="uk.ac.manchester.dstoolkit.service.morphisms.mapping.MappingService"/>
+<fullyQualifiedTypeName name="java.util.Set"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="uk.ac.manchester.dstoolkit.domain.models.morphisms.mapping.Mapping"/>
+<fullyQualifiedTypeName name="scala.xml.Null"/>
+<fullyQualifiedTypeName name="uk.ac.manchester.dstoolkit.service.impl.morphisms.matching.DirectionType"/>
+<fullyQualifiedTypeName name="uk.ac.manchester.dstoolkit.domain.models.canonical.CanonicalModelConstruct"/>
+<fullyQualifiedTypeName name="uk.ac.manchester.dstoolkit.domain.models.canonical.SuperAbstract"/>
+<fullyQualifiedTypeName name="uk.ac.manchester.dstoolkit.domain.models.canonical.SuperLexical"/>
+<fullyQualifiedTypeName name="uk.ac.manchester.dstoolkit.domain.models.morphisms.schematiccorrespondence.DirectionalityType"/>
+<fullyQualifiedTypeName name="uk.ac.manchester.dstoolkit.domain.models.meta.DataSource"/>
+<fullyQualifiedTypeName name="uk.ac.manchester.dstoolkit.service.morphisms.schematiccorrespondence.InferCorrespondenceService"/>
+<fullyQualifiedTypeName name="java.util.HashSet"/>
+<fullyQualifiedTypeName name="uk.ac.manchester.dstoolkit.domain.models.meta.Schema"/>
+<fullyQualifiedTypeName name="uk.ac.manchester.dstoolkit.domain.models.morphisms.schematiccorrespondence.SchematicCorrespondence"/>
+</qualifiedTypeNameHistroy>

@@ -1,0 +1,6 @@
+databaseName = EnsemblOntology
+connectionURL = jdbc:mysql://iceberg.cs.man.ac.uk/ensembl_ontology_57
+driverClass = com.mysql.jdbc.Driver
+username = root
+password = root
+description = EnsemblOntology

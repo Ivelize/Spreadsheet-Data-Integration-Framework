@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExpMatrix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ExpMatrix.xsd">
+  <!-- Build Expectation Matrix for: Jamendo -->
+  <!-- This XML document holds the pairs of Constructs that actually match forming the Expectation matrix. The pairs that are not included -->
+  <!-- in this document do not share any relationship in the Expectation Matrix, thus their similarity is automatically assigned to zero -->  
+  
+  <!-- Namespace Prefixes -->
+  <NamespacePrefixes>
+    <NameSpace>tags=http://www.holygoat.co.uk/owl/redwood/0.1/tags/</NameSpace>
+    <NameSpace>dc=http://purl.org/dc/elements/1.1/</NameSpace>
+    <NameSpace>time=http://www.w3.org/2006/time#</NameSpace>
+    <NameSpace>tl=http://purl.org/NET/c4dm/timeline.owl#</NameSpace>
+    <NameSpace>mo=http://purl.org/ontology/mo/</NameSpace>
+    <NameSpace>foaf=http://xmlns.com/foaf/0.1/</NameSpace>
+    <NameSpace>event=http://purl.org/NET/c4dm/event.owl#</NameSpace>
+    <NameSpace>xsd=http://www.w3.org/2001/XMLSchema#</NameSpace>
+    <NameSpace>rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#</NameSpace>
+  </NamespacePrefixes>  
+  
+  <!-- Classes -->
+  <ClassesAlign>
+	<class1URI>foaf:Document</class1URI>
+	<class2URI>foaf:Document</class2URI>
+	<evidence>CSURI CSE CSN CHL</evidence>
+	<score>0.97</score>
+  </ClassesAlign>  
+  <ClassesAlign>
+	<class1URI>mo:Lyrics</class1URI>
+	<class2URI>mo:Lyrics</class2URI>
+	<evidence>CSURI CSE CSN CHL</evidence>
+	<score>0.97</score>
+  </ClassesAlign> 
+  <ClassesAlign>
+	<class1URI>mo:Playlist</class1URI>
+	<class2URI>mo:Playlist</class2URI>
+	<evidence>CSURI CSE CSN CHL</evidence>
+	<score>0.97</score>
+  </ClassesAlign>  
+  <ClassesAlign>
+	<class1URI>mo:Torrent</class1URI>
+	<class2URI>mo:Torrent</class2URI>
+	<evidence>CSURI CSE CSN CHL</evidence>
+	<score>0.97</score>
+  </ClassesAlign> 
+  <ClassesAlign>
+	<class1URI>mo:Torrent</class1URI>
+	<class2URI>mo:Medium</class2URI>
+	<evidence>CSN CSR</evidence>
+	<score>0.31</score>
+  </ClassesAlign>  
+  <ClassesAlign>
+	<class1URI>tags:Tag</class1URI>
+	<class2URI>tags:Tag</class2URI>
+	<evidence>CSURI CSE CSN CHL</evidence>
+	<score>0.97</score>
+  </ClassesAlign>
+  <ClassesAlign>
+	<class1URI>time:Interval</class1URI>
+	<class2URI>time:TemporalEntity</class2URI>
+	<evidence>CSN CSR</evidence>
+	<score>0.31</score>
+  </ClassesAlign>  
+  <ClassesAlign>
+	<class1URI>mo:ED2K</class1URI>
+	<class2URI>mo:Torrent</class2URI>
+	<evidence>CSN CHL CSP</evidence>
+	<score>0.28</score>
+  </ClassesAlign>  
+  <ClassesAlign>
+	<class1URI>mo:ED2K</class1URI>
+	<class2URI>mo:Medium</class2URI>
+	<evidence>CSN CHL CSP</evidence>
+	<score>0.31</score>
+  </ClassesAlign>         
+  <ClassesAlign>
+	<class1URI>mo:Signal</class1URI>
+	<class2URI>mo:Lyrics</class2URI>
+	<evidence>CSN CSP</evidence>
+	<score>0.31</score>
+  </ClassesAlign>        
+  <ClassesAlign>
+	<class1URI>mo:Signal</class1URI>
+	<class2URI>mo:AnalogSignal</class2URI>
+	<evidence>CSN CCS CSR</evidence>
+	<score>0.59</score>
+  </ClassesAlign> 
+  <ClassesAlign>
+	<class1URI>mo:Track</class1URI>
+	<class2URI>mo:Track</class2URI>
+	<evidence>CSURI CSE CSN CHL</evidence>
+	<score>0.97</score>
+  </ClassesAlign>  
+  <ClassesAlign>
+	<class1URI>mo:Track</class1URI>
+	<class2URI>mo:MusicalManifestation</class2URI>
+	<evidence>CSN CSR</evidence>
+	<score>0.31</score>
+  </ClassesAlign>
+  <ClassesAlign>
+	<class1URI>mo:MusicArtist</class1URI>
+	<class2URI>foaf:Agent</class2URI>
+	<evidence>CSN CSR</evidence>
+	<score>0.31</score>
+  </ClassesAlign>
+  <ClassesAlign>
+	<class1URI>mo:Record</class1URI>
+	<class2URI>mo:Track</class2URI>
+	<evidence>CSN CSP</evidence>
+	<score>0.31</score>
+  </ClassesAlign>  
+  <ClassesAlign>
+	<class1URI>mo:Record</class1URI>
+	<class2URI>mo:MusicalManifestation</class2URI>
+	<evidence>CSN CSR</evidence>
+	<score>0.31</score>
+  </ClassesAlign>        
+ 
+  <!-- Properties -->
+  <PredicatesAlign>
+    <prop1URI>mo:text</prop1URI>
+	<class1URI>mo:Lyrics</class1URI>
+	<prop2URI>mo:text</prop2URI>
+	<class2URI>mo:Lyrics</class2URI>
+	<evidence>PSURI PSE PSN PSD</evidence>
+	<score>0.97</score>
+  </PredicatesAlign>  
+  <PredicatesAlign>
+    <prop1URI>dc:format</prop1URI>
+	<class1URI>mo:Playlist</class1URI>
+	<prop2URI>dc:format</prop2URI>
+	<class2URI>mo:Playlist</class2URI>
+	<evidence>PSURI PSE PSN PSD</evidence>
+	<score>0.97</score>
+  </PredicatesAlign>
+  <PredicatesAlign>
+    <prop1URI>dc:format</prop1URI>
+	<class1URI>mo:Playlist</class1URI>
+	<prop2URI>dc:format</prop2URI>
+	<class2URI>mo:Torrent</class2URI>
+	<evidence>PSURI PSE PSN</evidence>
+	<score>0.22</score>
+  </PredicatesAlign>
+  <PredicatesAlign>
+    <prop1URI>dc:format</prop1URI>
+	<class1URI>mo:Playlist</class1URI>
+	<prop2URI>dc:format</prop2URI>
+	<class2URI>mo:Medium</class2URI>
+	<evidence>PSURI PSE PSN</evidence>
+	<score>0.22</score>
+  </PredicatesAlign>  
+  <PredicatesAlign>
+    <prop1URI>dc:format</prop1URI>
+	<class1URI>mo:Torrent</class1URI>
+	<prop2URI>dc:format</prop2URI>
+	<class2URI>mo:Playlist</class2URI>
+	<evidence>PSURI PSE PSN</evidence>
+	<score>0.22</score>
+  </PredicatesAlign> 
+  <PredicatesAlign>
+    <prop1URI>dc:format</prop1URI>
+	<class1URI>mo:Torrent</class1URI>
+	<prop2URI>dc:format</prop2URI>
+	<class2URI>mo:Torrent</class2URI>
+	<evidence>PSURI PSE PSN PSD</evidence>
+	<score>0.97</score>
+  </PredicatesAlign>
+  <PredicatesAlign>
+    <prop1URI>dc:format</prop1URI>
+	<class1URI>mo:Torrent</class1URI>
+	<prop2URI>dc:format</prop2URI>
+	<class2URI>mo:Medium</class2URI>
+	<evidence>PSURI PSE PSN DCSR</evidence>
+	<score>0.44</score>
+  </PredicatesAlign>
+  <PredicatesAlign>
+    <prop1URI>tags:tagName</prop1URI>
+	<class1URI>tags:Tag</class1URI>
+	<prop2URI>tags:tagName</prop2URI>
+	<class2URI>tags:Tag</class2URI>
+	<evidence>PSURI PSE PSN PSD</evidence>
+	<score>0.97</score>
+  </PredicatesAlign>
+  <PredicatesAlign>
+    <prop1URI>tl:onTimeLine</prop1URI>
+  	<class1URI>time:Interval</class1URI>
+	<prop2URI>tl:onTimeLine</prop2URI>
+	<class2URI>time:TemporalEntity</class2URI>
+	<evidence>PSURI PSE PSN DCSR</evidence>
+	<score>0.44</score>
+  </PredicatesAlign>  
+  <PredicatesAlign>
+    <prop1URI>dc:format</prop1URI>
+	<class1URI>mo:ED2K</class1URI>
+	<prop2URI>dc:format</prop2URI>
+	<class2URI>mo:Playlist</class2URI>
+	<evidence>PSURI PSE PSN</evidence>
+	<score>0.22</score>
+  </PredicatesAlign>  
+  <PredicatesAlign>
+    <prop1URI>dc:format</prop1URI>
+	<class1URI>mo:ED2K</class1URI>
+	<prop2URI>dc:format</prop2URI>
+	<class2URI>mo:Torrent</class2URI>
+	<evidence>PSURI PSE PSN DCSR</evidence>
+	<score>0.44</score>
+  </PredicatesAlign>
+  <PredicatesAlign>
+    <prop1URI>dc:format</prop1URI>
+	<class1URI>mo:ED2K</class1URI>
+	<prop2URI>dc:format</prop2URI>
+	<class2URI>mo:Medium</class2URI>
+	<evidence>PSURI PSE PSN DCSR</evidence>
+	<score>0.44</score>
+  </PredicatesAlign>  
+  <PredicatesAlign>
+    <prop1URI>mo:published_as</prop1URI>
+	<class1URI>mo:Signal</class1URI>
+	<prop2URI>mo:publishedAs</prop2URI>
+	<class2URI>mo:AnalogSignal</class2URI>
+	<evidence>PSC PSN PSD PEP</evidence>
+	<score>0.94</score>
+  </PredicatesAlign>  
+  <PredicatesAlign>
+    <prop1URI>mo:time</prop1URI>
+	<class1URI>mo:Signal</class1URI>
+	<prop2URI>mo:signalTime</prop2URI>
+	<class2URI>mo:AnalogSignal</class2URI>
+	<evidence>PSC PSN PSD PEP</evidence>
+	<score>0.94</score>
+  </PredicatesAlign>   
+  <PredicatesAlign>
+    <prop1URI>mo:track_number</prop1URI>
+	<class1URI>mo:Track</class1URI>
+	<prop2URI>mo:trackNum</prop2URI>
+	<class2URI>mo:Track</class2URI>
+	<evidence>PSC PSN PSD PEP</evidence>
+	<score>0.94</score>
+  </PredicatesAlign>  
+  <PredicatesAlign>
+    <prop1URI>mo:license</prop1URI>
+	<class1URI>mo:Track</class1URI>
+	<prop2URI>mo:license</prop2URI>
+	<class2URI>mo:Track</class2URI>
+	<evidence>PSURI PSE PSN PSD</evidence>
+	<score>0.97</score>
+  </PredicatesAlign>   
+  <PredicatesAlign>
+    <prop1URI>mo:available_as</prop1URI>
+	<class1URI>mo:Track</class1URI>
+	<prop2URI>mo:availableAs</prop2URI>
+	<class2URI>mo:Track</class2URI>
+	<evidence>PSC PSN PSD PEP</evidence>
+	<score>0.94</score>
+  </PredicatesAlign>  
+  <PredicatesAlign>
+    <prop1URI>mo:available_as</prop1URI>
+	<class1URI>mo:Track</class1URI>
+	<prop2URI>mo:availableAs</prop2URI>
+	<class2URI>mo:MusicalManifestation</class2URI>
+	<evidence>PSC PSN DCSR</evidence>
+	<score>0.38</score>
+  </PredicatesAlign>    
+  <PredicatesAlign>
+    <prop1URI>dc:title</prop1URI>
+	<class1URI>mo:Track</class1URI>
+	<prop2URI>dc:title</prop2URI>
+	<class2URI>mo:Track</class2URI>
+	<evidence>PSURI PSE PSN PSD</evidence>
+	<score>0.97</score>
+  </PredicatesAlign>
+  <PredicatesAlign>
+    <prop1URI>dc:title</prop1URI>
+	<class1URI>mo:Track</class1URI>
+	<prop2URI>dc:title</prop2URI>
+	<class2URI>mo:MusicalManifestation</class2URI>
+	<evidence>PSURI PSE PSN DCSR</evidence>
+	<score>0.44</score>
+  </PredicatesAlign>  
+  <PredicatesAlign>
+    <prop1URI>foaf:made</prop1URI>
+    <class1URI>mo:MusicArtist</class1URI>
+	<prop2URI>foaf:made</prop2URI>
+	<class2URI>foaf:Agent</class2URI>
+	<evidence>PSURI PSE PSN DCSR</evidence>
+	<score>0.44</score>
+  </PredicatesAlign>  
+  <PredicatesAlign>
+    <prop1URI>mo:biography</prop1URI>
+    <class1URI>mo:MusicArtist</class1URI>
+	<prop2URI>mo:discography</prop2URI>
+	<class2URI>foaf:Agent</class2URI>
+	<evidence>PCS PSP PSN DCSR</evidence>
+	<score>0.3</score>
+  </PredicatesAlign> 
+  <PredicatesAlign>
+    <prop1URI>foaf:name</prop1URI>
+    <class1URI>mo:MusicArtist</class1URI>
+	<prop2URI>foaf:name</prop2URI>
+	<class2URI>foaf:Agent</class2URI>
+	<evidence>PSURI PSE PSN DCSR</evidence>
+	<score>0.44</score>
+  </PredicatesAlign>
+  <PredicatesAlign>
+    <prop1URI>foaf:based_near</prop1URI>
+    <class1URI>mo:MusicArtist</class1URI>
+	<prop2URI>foaf:based_near</prop2URI>
+	<class2URI>foaf:Agent</class2URI>
+	<evidence>PSURI PSE PSN DCSR</evidence>
+	<score>0.44</score>
+  </PredicatesAlign> 
+  <PredicatesAlign>
+    <prop1URI>foaf:img</prop1URI>
+    <class1URI>mo:MusicArtist</class1URI>
+	<prop2URI>foaf:img</prop2URI>
+	<class2URI>foaf:Agent</class2URI>
+	<evidence>PSURI PSE PSN DCSR</evidence>
+	<score>0.44</score>
+  </PredicatesAlign>  
+  <PredicatesAlign>
+    <prop1URI>foaf:homepage</prop1URI>
+    <class1URI>mo:MusicArtist</class1URI>
+	<prop2URI>foaf:weblog</prop2URI>
+	<class2URI>foaf:Agent</class2URI>
+	<evidence>PSN PSP DCSR</evidence>
+	<score>0.3</score>
+  </PredicatesAlign>  
+  <PredicatesAlign>
+    <prop1URI>foaf:maker</prop1URI>
+    <class1URI>mo:Record</class1URI>
+	<prop2URI>foaf:maker</prop2URI>
+	<class2URI>mo:MusicalManifestation</class2URI>
+	<evidence>PSURI PSE PSN DCSR</evidence>
+	<score>0.44</score>
+  </PredicatesAlign>  
+  <PredicatesAlign>
+    <prop1URI>mo:image</prop1URI>
+    <class1URI>mo:Record</class1URI>
+	<prop2URI>mo:image</prop2URI>
+	<class2URI>mo:MusicalManifestation</class2URI>
+	<evidence>PSURI PSE PSN DCSR</evidence>
+	<score>0.44</score>
+  </PredicatesAlign> 
+  <PredicatesAlign>
+    <prop1URI>tags:taggedWithTag</prop1URI>
+    <class1URI>mo:Record</class1URI>
+	<prop2URI>tags:taggedWithTag</prop2URI>
+	<class2URI>mo:MusicalManifestation</class2URI>
+	<evidence>PSURI PSE PSN DCSR</evidence>
+	<score>0.44</score>
+  </PredicatesAlign>                                                     
+  <PredicatesAlign>
+    <prop1URI>dc:description</prop1URI>
+    <class1URI>mo:Record</class1URI>
+	<prop2URI>dc:description</prop2URI>
+	<class2URI>mo:MusicalManifestation</class2URI>
+	<evidence>PSURI PSE PSN DCSR</evidence>
+	<score>0.44</score>
+  </PredicatesAlign>
+  <PredicatesAlign>
+    <prop1URI>mo:available_as</prop1URI>
+    <class1URI>mo:Record</class1URI>
+	<prop2URI>mo:availableAs</prop2URI>
+	<class2URI>mo:Track</class2URI>
+	<evidence>PSURI PSE PSN DCCPR</evidence>
+	<score>0.44</score>
+  </PredicatesAlign>  
+  <PredicatesAlign>
+    <prop1URI>mo:available_as</prop1URI>
+    <class1URI>mo:Record</class1URI>
+	<prop2URI>mo:availableAs</prop2URI>
+	<class2URI>mo:MusicalManifestation</class2URI>
+	<evidence>PSURI PSE PSN DCSR</evidence>
+	<score>0.44</score>
+  </PredicatesAlign>  
+  <PredicatesAlign>
+    <prop1URI>dc:date</prop1URI>
+    <class1URI>mo:Record</class1URI>
+	<prop2URI>dc:date</prop2URI>
+	<class2URI>mo:MusicalManifestation</class2URI>
+	<evidence>PSURI PSE PSN DCSR</evidence>
+	<score>0.44</score>
+  </PredicatesAlign>
+  <PredicatesAlign>
+    <prop1URI>dc:title</prop1URI>
+    <class1URI>mo:Record</class1URI>
+	<prop2URI>dc:title</prop2URI>
+	<class2URI>mo:Track</class2URI>
+	<evidence>PSURI PSE PSN DCCPR</evidence>
+	<score>0.44</score>
+  </PredicatesAlign>     
+  <PredicatesAlign>
+    <prop1URI>dc:title</prop1URI>
+    <class1URI>mo:Record</class1URI>
+	<prop2URI>dc:title</prop2URI>
+	<class2URI>mo:MusicalManifestation</class2URI>
+	<evidence>PSURI PSE PSN DCSR</evidence>
+	<score>0.44</score>
+  </PredicatesAlign>
+  <PredicatesAlign>
+    <prop1URI>mo:track</prop1URI>
+    <class1URI>mo:Record</class1URI>
+	<prop2URI>mo:has_track</prop2URI>
+	<class2URI>mo:MusicalManifestation</class2URI>
+	<evidence>PSURI PSE PEP DCSR</evidence>
+	<score>0.81</score>
+  </PredicatesAlign>
+</ExpMatrix>

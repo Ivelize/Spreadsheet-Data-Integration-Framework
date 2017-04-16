@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This schema is used create the data structure needed for -->
+<!-- holding a simple RDF Model consisting of CLASS, PROPERTY, PREDICATE, BNODE -->
+<!-- Author: Klitos Christodoulou -->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+	<!-- Complex Element: RDFEntityTypes -->	
+	<xs:element name="RDFModel">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element maxOccurs="unbounded" minOccurs="0"	ref="RDFClass" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>	
+	
+	<!-- Complex Element: SimpleRDFDataModel -->
+	<xs:element name="RDFClass">
+		<xs:complexType>
+			<xs:sequence>
+		      <xs:element maxOccurs="1" minOccurs="1" name="className" type="xs:string" />
+		      <xs:element maxOccurs="1" minOccurs="1" name="classNS" type="xs:string" />
+	          <xs:element maxOccurs="1" minOccurs="1" name="BNode" type="xs:boolean" />
+	          <xs:element maxOccurs="unbounded" minOccurs="0" ref="RDFProperty" />
+	          <xs:element maxOccurs="unbounded" minOccurs="0" ref="RDFPredicate" />	          
+	          <xs:element maxOccurs="unbounded" minOccurs="0" ref="RDFBlankNode" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<!-- Complex Element: RDFProperty -->
+	<xs:element name="RDFProperty">
+		<xs:complexType>
+			<xs:sequence>
+		      <xs:element maxOccurs="1" minOccurs="1" name="propertyName" type="xs:string" />
+		      <xs:element maxOccurs="1" minOccurs="1" name="propertyType" type="xs:string" />
+		      <xs:element maxOccurs="1" minOccurs="1" name="propertyNS" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<!-- Complex Element: RDFPredicate -->
+	<xs:element name="RDFPredicate">
+		<xs:complexType>
+			<xs:sequence>
+		      <xs:element maxOccurs="1" minOccurs="1" name="predicateName" type="xs:string" />
+		      <xs:element maxOccurs="1" minOccurs="1" name="predicateNS" type="xs:string" />
+		      	<!-- Name of ObjectClassOID -->
+		      <xs:element maxOccurs="1" minOccurs="1" name="referencedObject" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<!-- Complex Element: RDFBlankNode -->
+	<xs:element name="RDFBlankNode">
+		<xs:complexType>
+			<xs:sequence>
+		      <xs:element maxOccurs="1" minOccurs="1" name="bnodeType" type="xs:string" />
+		      <xs:element maxOccurs="unbounded" minOccurs="0" ref="RDFProperty" />
+	          <xs:element maxOccurs="unbounded" minOccurs="0" ref="RDFPredicate" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>	
+</xs:schema>

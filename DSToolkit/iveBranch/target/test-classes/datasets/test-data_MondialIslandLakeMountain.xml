@@ -1,0 +1,137 @@
+<dataset>
+	
+	<Island Name="Bornholm" Islands="NA" Area="588" Height="162" Type="NA" Longitude="14.9" Latitude="55.1"/>
+	<Island Name="Falster" Islands="NA" Area="514" Height="0" Type="NA" Longitude="12" Latitude="54.8"/>
+	<Island Name="Fuenen" Islands="NA" Area="2976" Height="0" Type="NA" Longitude="10.25" Latitude="55.35"/>
+	<Island Name="Langeland" Islands="NA" Area="284" Height="0" Type="NA" Longitude="10.5" Latitude="55"/>
+	<Island Name="Lolland" Islands="NA" Area="1241" Height="0" Type="NA" Longitude="11.5" Latitude="54.4"/>
+	<Island Name="Seeland" Islands="NA" Area="7439" Height="0" Type="NA" Longitude="12" Latitude="55.3"/>
+	<Island Name="Great Britain" Islands="British Isles" Area="229850" Height="1344" Type="NA" Longitude="-1.5" Latitude="53"/>
+	<Island Name="Ireland" Islands="British Isles" Area="84421" Height="1041" Type="NA" Longitude="-7.8" Latitude="53.5"/>	
+	
+	<Sea Name="Baltic Sea" Depth="459"/>
+	<Sea Name="Kattegat" Depth="94"/>
+	<Sea Name="North Sea" Depth="200"/>
+	<Sea Name="Skagerrak" Depth="725"/>
+	<Sea Name="Atlantic Ocean" Depth="9219"/>
+	<Sea Name="Irish Sea" Depth="272"/>	
+	
+	<River Name="Donau" River="NA" Lake="NA" Sea="NA" Length="2845" SourceLongitude="8.52" SourceLatitude="47.95" Mountains="Black Forest" SourceAltitude="686" EstuaryLongitude="29.65" EstuaryLatitude="45.16"/>
+	<River Name="Inn" River="Donau" Lake="NA" Sea="NA" Length="517" SourceLongitude="9.67" SourceLatitude="46.41" Mountains="Alps" SourceAltitude="2484" EstuaryLongitude="13.47" EstuaryLatitude="48.57"/>
+	<River Name="Isar" River="Donau" Lake="NA" Sea="NA" Length="295" SourceLongitude="11.4" SourceLatitude="47.37" Mountains="Alps" SourceAltitude="1.16" EstuaryLongitude="12.98" EstuaryLatitude="48.8"/>
+	<River Name="Alz" River="Inn" Lake="Chiemsee" Sea="NA" Length="150" SourceLongitude="12.35" SourceLatitude="47.3" Mountains="Alps" SourceAltitude="0" EstuaryLongitude="12.8" EstuaryLatitude="48.3"/>
+	<River Name="Ammer" River="Isar" Lake="Ammersee" Sea="NA" Length="168" SourceLongitude="11.05" SourceLatitude="47.57" Mountains="Alps" SourceAltitude="850" EstuaryLongitude="11.96" EstuaryLatitude="48.5"/>
+	<River Name="Iller" River="Donau" Lake="NA" Sea="NA" Length="147" SourceLongitude="10.27" SourceLatitude="47.43" Mountains="Alps" SourceAltitude="783" EstuaryLongitude="9.97" EstuaryLatitude="48.38"/>
+	<River Name="Lech" River="Donau" Lake="NA" Sea="NA" Length="264" SourceLongitude="10" SourceLatitude="47.17" Mountains="Alps" SourceAltitude="1840" EstuaryLongitude="10.93" EstuaryLatitude="48.73"/>
+	<River Name="Salzach" River="Inn" Lake="NA" Sea="NA" Length="225" SourceLongitude="12.11" SourceLatitude="47.3" Mountains="Alps" SourceAltitude="2300" EstuaryLongitude="12.92" EstuaryLatitude="48.21"/>
+	<River Name="Wurm" River="Ammer" Lake="Starnberger See" Sea="NA" Length="35" SourceLongitude="11.35" SourceLatitude="48" Mountains="NA" SourceAltitude="596" EstuaryLongitude="11.5" EstuaryLatitude="48.3"/>	
+	<River Name="Rhein" River="NA" Lake="Bodensee" Sea="North Sea" Length="1324" SourceLongitude="8.7" SourceLatitude="46.6" Mountains="Alps" SourceAltitude="2345" EstuaryLongitude="4" EstuaryLatitude="51.9"/>
+	<River Name="Main" River="Rhein" Lake="NA" Sea="NA" Length="524" SourceLongitude="11.4" SourceLatitude="50.1" Mountains="Fichtelgebirge" SourceAltitude="887" EstuaryLongitude="8.29" EstuaryLatitude="49.99"/>
+	<River Name="Elbe" River="NA" Lake="NA" Sea="North Sea" Length="1091" SourceLongitude="15.54" SourceLatitude="50.78" Mountains="Sudety Mountains" SourceAltitude="1.386" EstuaryLongitude="8.71" EstuaryLatitude="53.89"/>
+	<River Name="Thames" River="NA" Lake="NA" Sea="North Sea" Length="346" SourceLongitude="-2.03" SourceLatitude="51.7" Mountains="NA" SourceAltitude="105" EstuaryLongitude="0.65" EstuaryLatitude="51.5"/>
+	
+	<Lake Name="Ammersee" Area="46.6" Depth="81.1" Altitude="533" Type="NA" River="Ammer" Longitude="11.6" Latitude="48"/>
+	<Lake Name="Bodensee" Area="538.5" Depth="254" Altitude="395" Type="NA" River="Rhein" Longitude="9.4" Latitude="47.6"/>
+	<Lake Name="Chiemsee" Area="80" Depth="73" Altitude="518" Type="NA" River="Alz" Longitude="12.4" Latitude="47.9"/>
+	<Lake Name="Starnberger See" Area="56.36" Depth="127.7" Altitude="584" Type="NA" River="Wurm" Longitude="11.32" Latitude="47.92"/>
+	<Lake Name="Arresoe" Area="40.2" Depth="5.6" Altitude="0" Type="NA" River="NA" Longitude="12.1" Latitude="56"/>
+	
+	<Mountain Name="Grosser Arber" Mountains="Bayrischer Wald" Height="1456" Type="NA" Longitude="13" Latitude="49.1"/>
+	<Mountain Name="Zugspitze" Mountains="Alps" Height="2963" Type="NA" Longitude="11.1" Latitude="47.3"/>
+	<Mountain Name="Ben Nevis" Mountains="Grampians" Height="1344" Type="NA" Longitude="-5" Latitude="56.8"/>
+
+	<MergesWith Sea1="Atlantic Ocean" Sea2="Irish Sea"/>
+	<MergesWith Sea1="Atlantic Ocean" Sea2="North Sea"/>
+	<MergesWith Sea1="Baltic Sea" Sea2="North Sea"/>
+	<MergesWith Sea1="North Sea" Sea2="Skagerrak"/>
+	<MergesWith Sea1="Kattegat" Sea2="Skagerrak"/>
+
+	<MountainOnIsland Mountain="Ben Nevis" Island="Great Britain"/>
+	
+	<located City="Munich" Province="Bayern" Country="D" River="Isar" Lake="NA" Sea="NA"/>
+	<located City="Hamburg" Province="Hamburg" Country="D" River="Elbe" Lake="NA" Sea="NA"/>
+	<located City="Copenhagen" Province="Denmark" Country="DK" River="NA" Lake="NA" Sea="Baltic Sea"/>
+	<located City="Aarhus" Province="Denmark" Country="DK" River="NA" Lake="NA" Sea="Kattegat"/>
+	<located City="London" Province="Greater London" Country="GB" River="Thames" Lake="NA" Sea="NA"/>
+	<located City="Dublin" Province="Ireland" Country="IRL" River="NA" Lake="NA" Sea="Irish Sea"/>
+	
+	<LocatedOn City="Birmingham" Province="West Midlands" Country="GB" Island="Great Britain"/>
+	<LocatedOn City="Copenhagen" Province="Denmark" Country="DK" Island="Seeland"/>
+	<LocatedOn City="Dublin" Province="Ireland" Country="IRL" Island="Ireland"/>
+	<LocatedOn City="Leeds" Province="West Yorkshire" Country="GB" Island="Great Britain"/>
+	<LocatedOn City="London" Province="Greater London" Country="GB" Island="Great Britain"/>
+	<LocatedOn City="Manchester" Province="Greater Manchester" Country="GB" Island="Great Britain"/>
+
+	<Geo_River River="Alz" Country="D" Province="Bayern"/>
+	<Geo_River River="Ammer" Country="D" Province="Bayern"/>
+	<Geo_River River="Donau" Country="D" Province="Bayern"/>
+	<Geo_River River="Iller" Country="D" Province="Bayern"/>
+	<Geo_River River="Inn" Country="D" Province="Bayern"/>
+	<Geo_River River="Isar" Country="D" Province="Bayern"/>
+	<Geo_River River="Lech" Country="D" Province="Bayern"/>
+	<Geo_River River="Main" Country="D" Province="Bayern"/>
+	<Geo_River River="Salzach" Country="D" Province="Bayern"/>
+	<Geo_River River="Wurm" Country="D" Province="Bayern"/>
+	<Geo_River River="Elbe" Country="D" Province="Hamburg"/>
+	<Geo_River River="Thames" Country="GB" Province="Greater London"/>
+	
+	<Geo_Sea Sea="Baltic Sea" Country="DK" Province="Denmark"/>
+	<Geo_Sea Sea="Kattegat" Country="DK" Province="Denmark"/>
+	<Geo_Sea Sea="North Sea" Country="DK" Province="Denmark"/>
+	<Geo_Sea Sea="Skagerrak" Country="DK" Province="Denmark"/>
+	<Geo_Sea Sea="North Sea" Country="GB" Province="Greater London"/>
+	<Geo_Sea Sea="Atlantic Ocean" Country="IRL" Province="Ireland"/>
+	<Geo_Sea Sea="Irish Sea" Country="IRL" Province="Ireland"/>
+	
+	<Geo_Source River="Alz" Country="D" Province="Bayern"/>
+	<Geo_Source River="Ammer" Country="D" Province="Bayern"/>
+	<Geo_Source River="Main" Country="D" Province="Bayern"/>
+	<Geo_Source River="Wurm" Country="D" Province="Bayern"/>
+		
+	<Geo_Mountain Mountain="Grosser Arber" Country="D" Province="Bayern"/>
+	<Geo_Mountain Mountain="Zugspitze" Country="D" Province="Bayern"/>
+	<Geo_Mountain Mountain="Ben Nevis" Country="GB" Province="Highland"/>
+		
+	<Geo_Lake Lake="Ammersee" Country="D" Province="Bayern"/>
+	<Geo_Lake Lake="Bodensee" Country="D" Province="Bayern"/>
+	<Geo_Lake Lake="Chiemsee" Country="D" Province="Bayern"/>
+	<Geo_Lake Lake="Starnberger See" Country="D" Province="Bayern"/>
+	<Geo_Lake Lake="Arresoe" Country="DK" Province="Denmark"/>	
+	
+	<IslandIn Island="Seeland" Sea="Kattegat" Lake="NA" River="NA"/>
+	<IslandIn Island="Seeland" Sea="Baltic Sea" Lake="NA" River="NA"/>
+	<IslandIn Island="Fuenen" Sea="Kattegat" Lake="NA" River="NA"/>
+	<IslandIn Island="Fuenen" Sea="Baltic Sea" Lake="NA" River="NA"/>
+	<IslandIn Island="Langeland" Sea="Baltic Sea" Lake="NA" River="NA"/>
+	<IslandIn Island="Falster" Sea="Baltic Sea" Lake="NA" River="NA"/>
+	<IslandIn Island="Lolland" Sea="Baltic Sea" Lake="NA" River="NA"/>
+	<IslandIn Island="Bornholm" Sea="Baltic Sea" Lake="NA" River="NA"/>
+	<IslandIn Island="Great Britain" Sea="North Sea" Lake="NA" River="NA"/>
+	<IslandIn Island="Great Britain" Sea="Atlantic Ocean" Lake="NA" River="NA"/>
+	<IslandIn Island="Great Britain" Sea="Irish Sea" Lake="NA" River="NA"/>
+	<IslandIn Island="Ireland" Sea="Atlantic Ocean" Lake="NA" River="NA"/>
+	<IslandIn Island="Ireland" Sea="Irish Sea" Lake="NA" River="NA"/>	
+	
+	<Geo_Island Island="Bornholm" Country="DK" Province="Denmark"/>
+	<Geo_Island Island="Falster" Country="DK" Province="Denmark"/>
+	<Geo_Island Island="Fuenen" Country="DK" Province="Denmark"/>
+	<Geo_Island Island="Langeland" Country="DK" Province="Denmark"/>
+	<Geo_Island Island="Lolland" Country="DK" Province="Denmark"/>
+	<Geo_Island Island="Seeland" Country="DK" Province="Denmark"/>
+	<Geo_Island Island="Great Britain" Country="GB" Province="Greater London"/>
+	<Geo_Island Island="Great Britain" Country="GB" Province="Greater Manchester"/>
+	<Geo_Island Island="Ireland" Country="IRL" Province="Ireland"/>
+	<Geo_Island Island="Great Britain" Country="GB" Province="West Midlands"/>
+	<Geo_Island Island="Great Britain" Country="GB" Province="West Yorkshire"/>
+		
+	<Geo_Estuary River="Alz" Country="D" Province="Bayern"/>
+	<Geo_Estuary River="Ammer" Country="D" Province="Bayern"/>
+	<Geo_Estuary River="Iller" Country="D" Province="Bayern"/>
+	<Geo_Estuary River="Inn" Country="D" Province="Bayern"/>
+	<Geo_Estuary River="Isar" Country="D" Province="Bayern"/>
+	<Geo_Estuary River="Lech" Country="D" Province="Bayern"/>
+	<Geo_Estuary River="Salzach" Country="D" Province="Bayern"/>
+	<Geo_Estuary River="Wurm" Country="D" Province="Bayern"/>
+	
+</dataset>
+

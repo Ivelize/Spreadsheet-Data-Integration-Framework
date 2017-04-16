@@ -1,0 +1,39 @@
+<dataset>
+    <ContinentE NameE="Europe" AreaE="9.56249e+06"/>
+	
+	<CountryE NameE="United Kingdom" CodeE="GB" CapitalE="London" ProvinceE="Greater London" AreaE="244820" PopulationE="58489975"/>
+	<CountryE NameE="Germany" CodeE="D" CapitalE="Berlin" ProvinceE="Berlin" AreaE="356910" PopulationE="83536115"/>
+	<CountryE NameE="Ireland" CodeE="IRL" CapitalE="Dublin" ProvinceE="Ireland" AreaE="70280" PopulationE="3566833"/>
+	<CountryE NameE="Denmark" CodeE="DK" CapitalE="Copenhagen" ProvinceE="Denmark" AreaE="43070" PopulationE="5249632"/>
+	
+	<EncompassesE CountryE="GB" ContinentE="Europe" PercentageE="100"/>
+	<EncompassesE CountryE="D" ContinentE="Europe" PercentageE="100"/>
+	<EncompassesE CountryE="IRL" ContinentE="Europe" PercentageE="100"/>
+	<EncompassesE CountryE="DK" ContinentE="Europe" PercentageE="100"/>
+	
+	<BordersE Country1E="D" Country2E="DK" LengthE="68"/>
+	<BordersE Country1E="GB" Country2E="IRL" LengthE="360"/>	
+	
+	<ProvinceE NameE="Greater London" CountryE="GB" PopulationE="6803100" AreaE="1579" CapitalE="London" CapProvE="Greater London"/>
+	<ProvinceE NameE="Berlin" CountryE="D" PopulationE="3472009" AreaE="889" CapitalE="Berlin" CapProvE="Berlin"/>
+	<ProvinceE NameE="Hamburg" CountryE="D" PopulationE="1705872" AreaE="755" CaptialE="Hamburg" CapProvE="Hamburg"/>
+	<ProvinceE NameE="Bayern" CountryE="D" PopulationE="11921944" AreaE="70546" CaptialE="Munich" CapProvE="Bayern"/>
+	<ProvinceE NameE="West Midlands" CountryE="GB" PopulationE="2619000" AreaE="899" CapitalE="Birmingham" CapProvE="West Midlands"/>
+	<ProvinceE NameE="West Yorkshire" CountryE="GB" PopulationE="2066200" AreaE="2039" CapitalE="Wakefield" CapProvE="West Yorkshire"/>
+	<ProvinceE NameE="Ireland" CountryE="IRL" PopulationE="3566833" AreaE="0" CapitalE="Dublin" CapProvE="Ireland"/>
+	<ProvinceE NameE="Denmark" CountryE="DK" PopulationE="5249632" AreaE="0" CapitalE="Copenhagen" CapProvE="Denmark"/>
+	<ProvinceE NameE="Greater Manchester" CountryE="GB" PopulationE="2561600" AreaE="1287" CapitalE="Manchester" CapProvE="Greater Manchester"/>
+		
+	<CityE NameE="Berlin" CountryE="D" ProvinceE="Berlin" PopulationE="3472009" LongitudeE="13.3" LatitudeE="52.45"/>
+	<CityE NameE="Hamburg" CountryE="D" ProvinceE="Hamburg" PopulationE="1705872" LongitudeE="9.96667" LatitudeE="53.55"/>
+	<CityE NameE="Munich" CountryE="D" ProvinceE="Bayern" PopulationE="1290079" LongitudeE="11.5667" LatitudeE="48.15"/>
+	<CityE NameE="Dublin" CountryE="IRL" ProvinceE="Ireland" PopulationE="502337" LongitudeE="-6.35" LatitudeE="53.3667"/>
+	<CityE NameE="Copenhagen" CountryE="DK" ProvinceE="Denmark" PopulationE="1358540" LongitudeE="12.55" LatitudeE="55.6833"/>
+	<CityE NameE="Aarhus" CountryE="DK" ProvinceE="Denmark" PopulationE="194345" LongitudeE="10.1" LatitudeE="56.1"/>
+	<CityE NameE="Manchester" CountryE="GB" ProvinceE="Greater Manchester" PopulationE="431100" LongitudeE="0" LatitudeE="0"/>	
+	<CityE NameE="London" CountryE="GB" ProvinceE="Greater London" PopulationE="6967500" LongitudeE="0" LatitudeE="51.4833"/>
+	<CityE NameE="Birmingham" CountryE="GB" ProvinceE="West Midlands" PopulationE="1008400" LongitudeE="-1.93333" LatitudeE="52.4833"/>
+	<CityE NameE="Leeds" CountryE="GB" ProvinceE="West Yorkshire" PopulationE="724400" LongitudeE="0" LatitudeE="0"/>
+	
+</dataset>
+

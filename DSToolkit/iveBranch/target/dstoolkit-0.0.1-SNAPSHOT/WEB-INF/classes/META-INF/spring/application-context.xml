@@ -1,0 +1,185 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+						http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+						http://www.springframework.org/schema/context
+						http://www.springframework.org/schema/context/spring-context-3.0.xsd
+						http://www.springframework.org/schema/tx
+       					http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+       					http://www.springframework.org/schema/aop
+       					http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
+						
+	<context:component-scan base-package="uk.ac.manchester.dstoolkit"/>
+	<context:spring-configured/>
+	<context:load-time-weaver/>
+	
+	<bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+        <property name="persistenceUnitName" value="myDSToolkit"/> 
+        <property name="dataSource" ref="dataSource" />
+        <property name="jpaDialect">
+			<bean class="org.springframework.orm.jpa.vendor.HibernateJpaDialect"/>
+		</property>
+        <property name="jpaVendorAdapter">
+            <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter" >
+            	<property name = "database" value = "POSTGRESQL" />
+            	<property name = "showSql" value = "false" />
+            	<property name = "databasePlatform" value="org.hibernate.dialect.PostgreSQLDialect"/>
+            </bean>
+        </property>        
+    </bean>
+
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+        <property name="driverClass" value="${jdbc.driverClassName}"/>
+        <property name="jdbcUrl" value="${jdbc.url}"/>
+        <property name="user" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+      	<!--<property name="maxIdleTime" value="5"/>-->
+      	<!--<property name="maxIdleTimeExcessConnections" value="3"/>-->
+       	<!-- <property name="testConnectionOnCheckin" value="true"/>-->
+        <!--<property name="unreturnedConnectionTimeout" value="10"/>-->
+        <!--<property name="debugUnreturnedConnectionStackTraces" value="true"/>-->
+        <!--<property name="automaticTestTable" value="true"/>--> 
+    </bean>
+    
+    <bean class="org.dozer.spring.DozerBeanMapperFactoryBean">
+        <property name="mappingFiles" value="classpath*:/*mapping.xml"/>
+    </bean>
+    
+    <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+    	<property name="dataSource" ref="dataSource"/>
+        <property name="entityManagerFactory" ref="entityManagerFactory" />
+    </bean>
+ 
+    <bean class="uk.ac.manchester.dstoolkit.service.morphisms.schematiccorrespondence.ec.FeasibleInitializerService" abstract="true">
+    	<property name="searchNeighbourhoodOfInfeasibleIndividualForFeasibleIndividualService">
+    		<bean class="uk.ac.manchester.dstoolkit.service.morphisms.schematiccorrespondence.util.SearchNeighbourhoodOfInfeasibleIndividualForFeasibleIndividualService"/>
+    	</property>
+    	<property name="pairsOfEntitySetsGeneratorService">
+    		<bean class="uk.ac.manchester.dstoolkit.service.morphisms.schematiccorrespondence.util.PairsOfEntitySetsGeneratorService"/>
+    	</property>
+    	<property name="feasibilityChecker">
+    		<bean class="uk.ac.manchester.dstoolkit.service.morphisms.schematiccorrespondence.util.FeasibilityCheckerService"/>
+    	</property>
+    	<property name="decoderService">
+    		<bean class="uk.ac.manchester.dstoolkit.service.morphisms.schematiccorrespondence.ec.DecoderService"/>
+    	</property>
+    </bean>
+    
+    <bean class="uk.ac.manchester.dstoolkit.service.morphisms.schematiccorrespondence.ec.FeasibleVectorMutationPipelineService" abstract="true">
+    	<property name="searchNeighbourhoodOfInfeasibleIndividualForFeasibleIndividualService">
+    		<bean class="uk.ac.manchester.dstoolkit.service.morphisms.schematiccorrespondence.util.SearchNeighbourhoodOfInfeasibleIndividualForFeasibleIndividualService"/>
+    	</property>
+    	<property name="pairsOfEntitySetsGeneratorService">
+    		<bean class="uk.ac.manchester.dstoolkit.service.morphisms.schematiccorrespondence.util.PairsOfEntitySetsGeneratorService"/>
+    	</property>
+    	<property name="feasibilityChecker">
+    		<bean class="uk.ac.manchester.dstoolkit.service.morphisms.schematiccorrespondence.util.FeasibilityCheckerService"/>
+    	</property>
+    	<property name="decoderService">
+    		<bean class="uk.ac.manchester.dstoolkit.service.morphisms.schematiccorrespondence.ec.DecoderService"/>
+    	</property>
+    </bean>
+    
+    <bean class="uk.ac.manchester.dstoolkit.service.morphisms.schematiccorrespondence.ec.FeasibleVectorCrossoverPipelineService" abstract="true">
+    	<property name="searchNeighbourhoodOfInfeasibleIndividualForFeasibleIndividualService">
+    		<bean class="uk.ac.manchester.dstoolkit.service.morphisms.schematiccorrespondence.util.SearchNeighbourhoodOfInfeasibleIndividualForFeasibleIndividualService"/>
+    	</property>
+    	<property name="pairsOfEntitySetsGeneratorService">
+    		<bean class="uk.ac.manchester.dstoolkit.service.morphisms.schematiccorrespondence.util.PairsOfEntitySetsGeneratorService"/>
+    	</property>
+    	<property name="feasibilityChecker">
+    		<bean class="uk.ac.manchester.dstoolkit.service.morphisms.schematiccorrespondence.util.FeasibilityCheckerService"/>
+    	</property>
+    	<property name="decoderService">
+    		<bean class="uk.ac.manchester.dstoolkit.service.morphisms.schematiccorrespondence.ec.DecoderService"/>
+    	</property>
+    </bean>
+    
+    <bean class="uk.ac.manchester.dstoolkit.service.impl.morphisms.schematiccorrespondence.ec.MaxFitnessProblem" abstract="true">
+    	<property name="decoderService">
+    		<bean class="uk.ac.manchester.dstoolkit.service.morphisms.schematiccorrespondence.ec.DecoderService"/>
+    	</property>
+    </bean>
+    
+    <bean class="uk.ac.manchester.dstoolkit.service.impl.morphisms.schematiccorrespondence.representation.entitylevelrelationship.ELREntityLevelRelationship" abstract="true">
+    	<property name="vectorSpaceVectorFactoryService">
+    		<bean class="uk.ac.manchester.dstoolkit.service.morphisms.schematiccorrespondence.representation.vectorspacemodel.VectorSpaceVectorFactoryService"/>
+    	</property>
+    </bean>
+    
+    <bean class="uk.ac.manchester.dstoolkit.service.impl.morphisms.schematiccorrespondence.representation.entitylevelrelationship.ELRChromosome" abstract="true">
+    	<property name="equivalentSuperLexicalsIdentifierService">
+    		<bean class="uk.ac.manchester.dstoolkit.service.morphisms.schematiccorrespondence.util.EquivalentSuperLexicalsIdentifierService"/>
+    	</property>
+    	<property name="derivedOneToOneMatchingsGeneratorService">
+    		<bean class="uk.ac.manchester.dstoolkit.service.morphisms.schematiccorrespondence.util.DerivedOneToOneMatchingsGeneratorService"/>
+    	</property>
+    </bean>
+    
+    <bean class="uk.ac.manchester.dstoolkit.service.morphisms.matching.ConstructBasedMatcherService" abstract="true">
+    	<property name="matchingProducerService">
+    		<bean class="uk.ac.manchester.dstoolkit.service.morphisms.matching.MatchingProducerService"/>
+    	</property>
+    	<property name="matchingService">
+    		<bean class="uk.ac.manchester.dstoolkit.service.morphisms.matching.MatchingService"/>
+    	</property>
+    </bean>
+    
+     <bean class="uk.ac.manchester.dstoolkit.service.morphisms.matching.StringBasedMatcherService" abstract="true">
+    	<property name="matchingProducerService">
+    		<bean class="uk.ac.manchester.dstoolkit.service.morphisms.matching.MatchingProducerService"/>
+    	</property>
+    </bean>
+    
+    <bean class="uk.ac.manchester.dstoolkit.service.morphisms.matching.InstanceBasedMatcherService" abstract="true">
+    	<property name="matchingProducerService">
+    		<bean class="uk.ac.manchester.dstoolkit.service.morphisms.matching.MatchingProducerService"/>
+    	</property>
+    	<property name="matchingProfilerServiceImpl">
+    		<bean class="uk.ac.manchester.dstoolkit.service.impl.morphisms.matching.profiler.MatchingProfilerServiceImpl"/>
+    	</property>
+    	<property name="queryService">
+    		<bean class="uk.ac.manchester.dstoolkit.service.query.QueryService"/>
+    	</property>
+    	<property name="queryRepository">
+    		<bean class="uk.ac.manchester.dstoolkit.repository.query.QueryRepository"/>
+    	</property>
+    	<property name="queryResultRepository">
+    		<bean class="uk.ac.manchester.dstoolkit.repository.query.queryresults.QueryResultRepository"/>
+    	</property>
+    </bean>
+    
+     <bean class="uk.ac.manchester.dstoolkit.service.impl.morphisms.schematiccorrespondence.representation.entitylevelrelationship.EntityLevelRelationship" abstract="true">
+    	<property name="vectorSpaceVectorFactoryService">
+    		<bean class="uk.ac.manchester.dstoolkit.service.morphisms.schematiccorrespondence.representation.vectorspacemodel.VectorSpaceVectorFactoryService"/>
+    	</property>
+    </bean>
+    
+    <bean class="uk.ac.manchester.dstoolkit.service.impl.morphisms.schematiccorrespondence.representation.entitylevelrelationship.ELRChromosome" abstract="true">
+    	<property name="equivalentSuperLexicalsIdentifierService">
+    		<bean class="uk.ac.manchester.dstoolkit.service.morphisms.schematiccorrespondence.util.EquivalentSuperLexicalsIdentifierService"/>
+    	</property>
+    	<property name="derivedOneToOneMatchingsGeneratorService">
+    		<bean class="uk.ac.manchester.dstoolkit.service.morphisms.schematiccorrespondence.util.DerivedOneToOneMatchingsGeneratorService"/>
+    	</property>
+    </bean>
+    
+    <context:property-placeholder
+        location="classpath:META-INF/spring/*.properties" />
+        
+    <bean id="properties" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+    <property name="locations">
+        <list>
+            <value>classpath:META-INF/spring/graphviz_mac_matching.properties</value>
+        	<value>classpath:META-INF/spring/graphviz_windows_matching.properties</value>
+            <value>classpath:META-INF/spring/graphviz_iceberg.properties</value>
+            <value>classpath:META-INF/spring/graphviz_mac.properties</value>
+            <value>classpath:META-INF/spring/mondialIntegration.properties</value>
+            <value>classpath:META-INF/spring/mondialSources.properties</value>
+            <!-- <value>classpath:META-INF/spring/GMPDatasources.properties</value>-->
+        </list>
+    </property>
+</bean>
+    <tx:annotation-driven />    
+</beans>

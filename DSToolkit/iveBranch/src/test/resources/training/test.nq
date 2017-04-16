@@ -1,0 +1,30 @@
+<http://purl.org/ontology/bibo/shortTitle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/ontology/bibo/> .
+<http://purl.org/ontology/bibo/shortTitle> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/bibo/> <http://purl.org/ontology/bibo/> .
+<http://purl.org/ontology/bibo/shortTitle> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/ontology/bibo/"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/ontology/bibo/> .
+<http://purl.org/ontology/bibo/shortTitle> <http://www.w3.org/2000/01/rdf-schema#label> "short title"@en <http://purl.org/ontology/bibo/> .
+<http://purl.org/ontology/bibo/shortTitle> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <http://purl.org/ontology/bibo/> .
+<http://purl.org/ontology/bibo/shortTitle> <http://www.w3.org/2000/01/rdf-schema#comment> "The abbreviation of a title."@en <http://purl.org/ontology/bibo/> .
+<http://purl.org/ontology/bibo/shortTitle> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/bibo/Document> <http://purl.org/ontology/bibo/> .
+<http://purl.org/ontology/bibo/shortTitle> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://purl.org/ontology/bibo/> .
+<http://purl.org/ontology/bibo/shortTitle> <http://purl.org/vocommons/voaf#occurrencesInVocabularies> "0"^^<http://www.w3.org/2001/XMLSchema#integer> <http://lov.okfn.org/dataset/lov/stats/lov_metrics.n3> .
+<http://purl.org/ontology/bibo/shortTitle> <http://purl.org/vocommons/voaf#occurrencesInDatasets> "0"^^<http://www.w3.org/2001/XMLSchema#integer> <http://lov.okfn.org/dataset/lov/stats/lov_metrics.n3> .
+<http://purl.org/ontology/bibo/shortTitle> <http://purl.org/vocommons/voaf#reusedByVocabularies> "0"^^<http://www.w3.org/2001/XMLSchema#integer> <http://lov.okfn.org/dataset/lov/stats/lov_metrics.n3> .
+<http://purl.org/ontology/bibo/shortTitle> <http://purl.org/vocommons/voaf#reusedByDatasets> "0"^^<http://www.w3.org/2001/XMLSchema#integer> <http://lov.okfn.org/dataset/lov/stats/lov_metrics.n3> .
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> <http://purl.org/swan/2.0/discourse-relationships/> .
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> <http://purl.org/ontology/daia> .
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> <http://lod.taxonconcept.org/ontology/txn.owl> .
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> <http://purl.org/ontology/bibo/> .
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> <http://purl.org/acco/ns> .
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> <http://purl.org/wai#> .
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> <http://purl.org/uco/ns#> .
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://lod.taxonconcept.org/ontology/txn.owl> .
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://rdfs.org/sioc/ns#> .
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://rdf.myexperiment.org/ontologies/base/> .
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/net/provenance/ns#> .
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://kdo.render-project.eu/kdo#> .
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/ontology/bibo/> .
+<http://purl.org/dc/terms/title> <http://purl.org/dc/terms/modified> "2010-10-11"^^<http://www.w3.org/2001/XMLSchema#date> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/title> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/title> <http://www.w3.org/2000/01/rdf-schema#label> "Title"@en <http://purl.org/dc/terms/> .
